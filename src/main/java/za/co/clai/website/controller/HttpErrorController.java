@@ -1,4 +1,4 @@
-package za.co.clai.webapp.controller;
+package za.co.clai.website.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
