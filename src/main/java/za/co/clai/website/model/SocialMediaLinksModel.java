@@ -1,4 +1,4 @@
-package za.co.clai.webapp.model;
+package za.co.clai.website.model;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

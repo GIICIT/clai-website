@@ -1,9 +1,9 @@
-package za.co.clai.webapp.controller;
+package za.co.clai.website.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import za.co.clai.webapp.model.SocialMediaLinksModel;
+import za.co.clai.website.model.SocialMediaLinksModel;
 
 @Controller
 public class HomeController {
