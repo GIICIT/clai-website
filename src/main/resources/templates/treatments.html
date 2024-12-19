@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="description" content="LuxurySpa - Spa & Beauty HTML Template">
+    <meta name="author" content="potenzaglobalsolutions.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>LuxurySpa - Spa & Beauty HTML Template</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" th:href="@{img}">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" th:href="@{css/font-awesome/all.min.css}">
+    <link rel="stylesheet" th:href="@{css/bootstrap/bootstrap.min.css}">
+
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" th:href="@{css/select2/select2.css}">
+    <link rel="stylesheet" th:href="@{css/datetimepicker/datetimepicker.min.css}">
+    <!-- Template Style -->
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" th:href="@{css/owl-carousel/owl.carousel.min.css}">
+    <link rel="stylesheet" th:href="@{css/slick/slick-theme.css}">
+  </head>
+  <body>
+    
+    <!--=================================
+    preloader -->
+    <div id="pre-loader">
+      <img src="/img/pre-loader/loader-01.svg" alt="">
+    </div>
+    <!--=================================
+    preloader -->
+    
+    <!--=================================
+    Header -->
+    <header class="header header-sticky default">
+      <nav class="navbar navbar-static-top navbar-expand-lg">
+        <div class="container-fluid main-header position-relative">
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><i class="fas fa-align-left"></i></button>
+          <a class="navbar-brand" th:href="@{home}">
+            <img class="img-fluid" src="/img/clai-logo-full-white.svg" alt="logo">
+            <img class="img-fluid sticky" src="/img/clai-logo-full-black.svg" alt="logo">
+          </a>
+          <div class="navbar-collapse collapse justify-content-center justify-content-lg-center">
+            <ul class="nav navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{home}" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
+              </li>
+              <li class="nav-item active"><a class="nav-link" th:href="@{#}"><span>Treatments</span></a></li>
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{blog}">Blog<i class="fa-solid"></i></a>
+              </li>
+              <li><a class="nav-link" th:href="@{contact-us}"><span>Contact us</span></a></li>
+            </ul>
+          </div>
+          <div class="add-listing">
+            <a class="menu-btn" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              <svg width="40" height="80" viewBox="0 0 80 80" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3333 60H33.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                <path d="M13.3333 40H53.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                <path d="M13.3333 20H66.6666" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a class="btn btn-primary" href="appointment.html">Book Now</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--=================================
+    Header -->
+    <!--=================================
+    Right menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"  style="background-image: url(/img/bg/bg-01.png); background-size: cover; background-position: center right;">
+      <div class="offcanvas-header text-end justify-content-end p-4">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-sm-5 d-flex align-content-between flex-wrap justify-content-center">
+        <div class="sidebar-menu">
+          <div class="logo">
+            <a href="index.html">
+              <img class="img-fluid logo-dark" src="/img/clai-logo-full-black.svg" alt="Main logo">
+            </a>
+          </div>
+          <div class="section-title mt-5">
+            <h3 class="title mb-3">About us</h3>
+            <p>Execution is the single biggest factor in achievement so the faster and better your execution.</p>
+          </div>
+          <div class="mt-5">
+            <h3 class="mb-3">Contact Info</h3>
+            <p>6580 Allison Turnpike Creminfort,<br> AL 32808-4509</p>
+            <p>Sunday to Tuesday <br> (09:00 To 22:00)</p>
+            <p>Friday to Saturday <br> (11:00 To 19:00)</p>
+          </div>
+          <div class="social-icon mt-5">
+            <ul>
+              <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--=================================
+    Right menu -->
+    <!--=================================
+    banner -->
+    <section class="inner-header bg-holder" style="background-image: url(/img/bg/02.jpg);">
+      <div class="container">
+        <div class="row  justify-content-center">
+          <div class="col-md-8 text-center">
+            <h1 class="text-white">Service</h1>
+            <ul class="breadcrumb mb-0 p-0">
+              <li class="breadcrumb-item"><a th:href="@{home}"><i class="fa fa-home pe-2"></i>Home</a></li>
+              <li class="breadcrumb-item active"><span>Treatments</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    banner -->
+    <!--=================================
+    Service -->
+    <section class="space-ptb">
+      <div class="container">
+        <div class="row mb-4 pb-3 pb-md-0 mb-md-5 align-items-center">
+          <div class="col-12 col-xl-5 col-lg-5">
+            <div class="section-title mb-0">
+              <span class="sub-title">Features</span>
+              <h2 class="title">Amazing Features</h2></div>
+          </div>
+          <div class="col-12 col-xl-5 col-lg-4 pe-xl-5">
+            <div class="section-title mb-0">
+              <p class="section-description">Motivation is not an accident or something that someone else can give you with the power to motivate you.</p>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-3 text-lg-end"><a href="#" class="btn btn-primary">Learn More</a></div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-md-0 mb-4">
+            <div class="feature-box feature-box-style-02 feature-box-light mb-3 mb-md-0">
+              <div class="feature-img">
+                <img src="/img/services/01.jpg" alt="services01">
+              </div>
+              <div class="feature-content">
+                <h3>Facial Message</h3>
+                <p class="mb-4">Give yourself the power of responsibility. Remind yourself the only thing stopping you is yourself.</p>
+                <a href="#">Make Appointment<i class="fas fa-arrow-right ms-2"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-md-0 mb-4">
+            <div class="feature-box feature-box-style-02 feature-box-light mb-3 mb-md-0">
+              <div class="feature-img">
+                <img src="/img/services/02.jpg" alt="services02">
+              </div>
+              <div class="feature-content">
+                <h3>Organic Therapy</h3>
+                <p class="mb-4">The best way is to develop and follow a plan. Start with your goals in mind and then work backwards.</p>
+                <a href="#">Make Appointment<i class="fas fa-arrow-right ms-2"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-box feature-box-style-02 feature-box-light border-end-0">
+              <div class="feature-img">
+                <img src="/img/services/03.jpg" alt="services03">
+              </div>
+              <div class="feature-content">
+                <h3>Treatments</h3>
+                <p class="mb-4">What steps are required to get you to the goals? Make the plan as detailed as possible.</p>
+                <a href="#">Make Appointment<i class="fas fa-arrow-right ms-2"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    Service -->
+    <!--=================================
+        Related products -->
+    <section class="space-pb">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="title mb-5">
+              <h2>Related products</h2>
+            </div>
+            <!-- owl-carousel -->
+            <div class="owl-carousel product" data-nav-dots="false" data-nav-arrow="true" data-items="4" data-sm-items="2" data-lg-items="3" data-md-items="3" data-xs-items="2" data-autoplay="true">
+              <!-- product-01 START -->
+              <div class="item">
+                <div class="product-item">
+                  <div class="product-image thumbnail-bg">
+                    <img class="img-fluid" src="/img/shop/01.jpg" alt="image">
+                    <div class="custom-icon">
+                      <ul class="list-unstyled">
+                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-content">
+                    <div class="product-info">
+                      <div class="product-title">
+                        <a href="shop-single.html">Set of Skincare</a>
+                      </div>
+                      <div class="product-star">
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a href="#" class="category">Beauty</a>
+                    <div class="product-prize">
+                      <p><span class="me-2">$24.99</span>$12.99</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product-01 END -->
+              <!-- product-02 START -->
+              <div class="item">
+                <div class="product-item">
+                  <div class="product-image thumbnail-bg">
+                    <img class="img-fluid" src="/img/shop/02.jpg" alt="image">
+                    <div class="custom-icon">
+                      <ul class="list-unstyled">
+                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-content">
+                    <div class="product-info">
+                      <div class="product-title">
+                        <a href="shop-single.html">Monstera </a>
+                      </div>
+                      <div class="product-star">
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a href="#" class="category">Beauty</a>
+                    <div class="product-prize">
+                      <p><span class="me-2">$35.90</span>$28.72</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product-02 END -->
+              <!-- product-03 START -->
+              <div class="item">
+                <div class="product-item">
+                  <div class="product-image thumbnail-bg">
+                    <img class="img-fluid" src="/img/shop/03.jpg" alt="image">
+                    <div class="custom-icon">
+                      <ul class="list-unstyled">
+                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-content">
+                    <div class="product-info">
+                      <div class="product-title">
+                        <a href="shop-single.html">Cinnamon Soap</a>
+                      </div>
+                      <div class="product-star">
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a href="#" class="category">Beauty</a>
+                    <div class="product-prize">
+                      <p>$12.72</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product-03 END -->
+              <!-- product-04 START -->
+              <div class="item">
+                <div class="product-item">
+                  <div class="product-image thumbnail-bg">
+                    <img class="img-fluid" src="/img/shop/04.jpg" alt="image">
+                    <div class="custom-icon">
+                      <ul class="list-unstyled">
+                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-content">
+                    <div class="product-info">
+                      <div class="product-title">
+                        <a href="shop-single.html">Body Care</a>
+                      </div>
+                      <div class="product-star">
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a href="#" class="category">Beauty</a>
+                    <div class="product-prize">
+                      <p>$13.70</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product-04 END -->
+              <!-- product-05 START -->
+              <div class="item">
+                <div class="product-item">
+                  <div class="product-image thumbnail-bg">
+                    <img class="img-fluid" src="/img/shop/05.jpg" alt="image">
+                    <div class="custom-icon">
+                      <ul class="list-unstyled">
+                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-content">
+                    <div class="product-info">
+                      <div class="product-title">
+                        <a href="shop-single.html">Personal Care Kit</a>
+                      </div>
+                      <div class="product-star">
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a href="#" class="category">Beauty</a>
+                    <div class="product-prize">
+                      <p><span class="me-2">$35.90</span>$17.72</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product-05 END -->
+              <!-- product-06 START -->
+              <div class="item">
+                <div class="product-item">
+                  <div class="product-image thumbnail-bg">
+                    <img class="img-fluid" src="/img/shop/06.jpg" alt="image">
+                    <div class="custom-icon">
+                      <ul class="list-unstyled">
+                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-content">
+                    <div class="product-info">
+                      <div class="product-title">
+                        <a href="shop-single.html">lavender bottle oil</a>
+                      </div>
+                      <div class="product-star">
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a href="#" class="category">Beauty</a>
+                    <div class="product-prize">
+                      <p><span class="me-2">$25.90</span>$18.72</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product-06 END -->
+            </div>
+            <!-- owl-carousel -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    Related products -->
+    <!--=================================
+    Make Appointment BG -->
+    <section class="space-ptb" style="background-image: url(/img/bg/bg-img-02.jpg); background-repeat: no-repeat; background-size: cover; background-position: left;">
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="col-lg-7 ">
+            <div class="bg-primary p-4 p-md-5">
+              <div class="section-title">
+                <h2 class="title text-white">Make Appointment</h2>
+                <p class="section-description text-white">We also know those epic stories, those modern-day legends surrounding the early failures of such supremely successful folks as Michael Jordan and Bill Gates.</p>
+              </div>
+              <form class="appointment-form">
+                <div class="row">
+                  <div class="mb-3 col-md-6">
+                    <input type="text" class="form-control" id="InputFullName" placeholder="Full Name">
+                  </div>
+                  <div class="mb-3 col-md-6">
+                    <input type="email" class="form-control" id="InputEmail" placeholder="Your Email">
+                  </div>
+                  <div class="mb-3 col-md-6">
+                    <input type="text" class="form-control" id="InputPhone" placeholder="Phone Number">
+                  </div>
+                  <div class="form-group select-border col-md-6 ">
+                    <select class="form-control basic-select" id="city">
+                      <option value="City">Select Subject</option>
+                      <option value="New york">New york</option>
+                      <option value="Los Angeles">Los angeles</option>
+                      <option value="Chicago">Chicago</option>
+                      <option value="Assam">Mumbai</option>
+                      <option value="Assam">Delhi</option>
+                    </select>
+                  </div>
+                  <div class="mb-3 col-md-12 datetimepickers">
+                    <div class="input-group date" id="datetimepicker-01" data-target-input="nearest">
+                      <input type="text" class="form-control datetimepicker-input" placeholder="Date" data-target="#datetimepicker-01">
+                      <div class="input-group-append" data-target="#datetimepicker-01" data-toggle="datetimepicker">
+                        <div class="input-group-text h-100"><i class="far fa-calendar-alt"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3 col-md-12">
+                    <textarea class="form-control" id="InputComment" rows="3" placeholder="Comment"></textarea>
+                  </div>
+                  <div class="d-flex">
+                    <a href="#" class="btn btn-secondary btn-secondary-white mt-4">Make Appointment<i class="fas fa-arrow-right ms-2"></i></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    Make Appointment BG -->
+    <!--=================================
+    Menu list -->
+    <section class="space-ptb position-relative">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8">
+            <div class="section-title text-center">
+              <span class="sub-title">Menu</span>
+              <h2 class="title">Natural Beauty Spa Center</h2>
+              <p class="section-description">I truly believe Augustine’s words are true and if you look at history you know it is true. There are many people in the world with amazing talents who realize.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-lg-6 mt-4">
+            <div class="menu-list menu-list-default">
+              <div class="menu-icon">
+                <img class="img-fluid" src="/img/menu/body-massage.png" alt="">
+              </div>
+              <div class="menu-details">
+                <div class="menu-title">
+                  <a href="#">Full body massage</a>
+                  <p>Focus is having the unwavering</p>
+                </div>
+                <div class="menu-border"></div>
+                <div class="menu-price">
+                  <span class="price-min">$22.00</span>
+                  <span>$16.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-list menu-list-default">
+              <div class="menu-icon">
+                <img class="img-fluid" src="/img/menu/face-masks.png" alt="">
+              </div>
+              <div class="menu-details">
+                <div class="menu-title">
+                  <a href="#">Face masks</a>
+                  <p>The best way is to develop</p>
+                </div>
+                <div class="menu-border"></div>
+                <div class="menu-price">
+                  <span class="price-min">$18.00</span>
+                  <span>$14.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-list menu-list-default">
+              <div class="menu-icon">
+                <img class="img-fluid" src="/img/menu/nail-treatments.png" alt="">
+              </div>
+              <div class="menu-details">
+                <div class="menu-title">
+                  <a href="#">Nail Treatments</a>
+                  <p>I coach my clients to practice</p>
+                </div>
+                <div class="menu-border"></div>
+                <div class="menu-price">
+                  <span class="price-min">$50.00</span>
+                  <span>$40.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-list menu-list-default">
+              <div class="menu-icon">
+                <img class="img-fluid" src="/img/menu/aroma-therapy.png" alt="">
+              </div>
+              <div class="menu-details">
+                <div class="menu-title">
+                  <a href="#">Aroma therapy</a>
+                  <p>We all carry a lot of baggage</p>
+                </div>
+                <div class="menu-border"></div>
+                <div class="menu-price">
+                  <span class="price-min">$65.00</span>
+                  <span>$62.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-6 mt-5 mt-lg-4">
+            <div class="menu-list menu-list-default">
+              <div class="menu-icon">
+                <img class="img-fluid" src="/img/menu/skincare.png" alt="">
+              </div>
+              <div class="menu-details">
+                <div class="menu-title">
+                  <a href="#">Skincare Sunday</a>
+                  <p>It is truly amazing</p>
+                </div>
+                <div class="menu-border"></div>
+                <div class="menu-price">
+                  <span class="price-min">$48.00</span>
+                  <span>$42.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-list menu-list-default">
+              <div class="menu-icon">
+                <img class="img-fluid" src="/img/menu/relaxation.png" alt="">
+              </div>
+              <div class="menu-details">
+                <div class="menu-title">
+                  <a href="#">Relaxation</a>
+                  <p>Figure out what you want</p>
+                </div>
+                <div class="menu-border"></div>
+                <div class="menu-price">
+                  <span class="price-min">$35.00</span>
+                  <span>$30.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-list menu-list-default">
+              <div class="menu-icon">
+                <img class="img-fluid" src="/img/menu/medical-treatments.png" alt="">
+              </div>
+              <div class="menu-details">
+                <div class="menu-title">
+                  <a href="#">Medical Treatments</a>
+                  <p>You will begin to realise</p>
+                </div>
+                <div class="menu-border"></div>
+                <div class="menu-price">
+                  <span class="price-min">$40.00</span>
+                  <span>$35.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-list menu-list-default">
+              <div class="menu-icon">
+                <img class="img-fluid" src="/img/menu/face-treatments.png" alt="">
+              </div>
+              <div class="menu-details">
+                <div class="menu-title">
+                  <a href="#">Face Treatments</a>
+                  <p>The Truth About Success</p>
+                </div>
+                <div class="menu-border"></div>
+                <div class="menu-price">
+                  <span class="price-min">$59.00</span>
+                  <span>$52.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    Menu list -->
+    <!--=================================
+    footer-->
+    <footer class="footer bg-overlay-theme-10">
+      <div class="min-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <h5>Contact Information</h5>
+              <div class="footer-contact-info">
+                <ul class="list-unstyled mb-0">
+                  <li><i class="fas fa-fw fa-map-marker-alt text-primary"></i><span>6580 Allison Turnpike Creminfort, AL 32808-4509</span></li>
+                  <li><i class="fas fa-fw fa-phone text-primary"></i><span>(123) 345-6789</span></li>
+                  <li><i class="far fa-fw fa-envelope text-primary"></i><span>support@luxuryspa.com</span></li>
+                </ul>
+              </div>
+              <div class="social-icon mt-4">
+                <ul>
+                  <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mt-4 mt-md-0 pl-lg-5">
+              <div class="footer-link">
+                <h5>Navigation</h5>
+                <ul class="list-unstyled mb-0">
+                  <li><a href="about-us.html">About us</a></li>
+                  <li><a href="service.html">Service</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="team.html">Team</a></li>
+                  <li><a href="contact-us.html">Contact us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+              <div class="footer-link">
+                <h5>Useful Links</h5>
+                <ul class="list-unstyled mb-0">
+                  <li><a href="login.html">Login</a></li>
+                  <li><a href="register.html">Register</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+              <h5>Newsletter</h5>
+              <div class="footer-subscribe">
+                <p class="mb-3">Sign Up to our Newsletter to get the latest news and offers.</p>
+                <form>
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Get Notified</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row align-items-center copyright text-md-start text-center">
+            <div class="col-12 col-md-6 ">
+              <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="index.html"> LuxurySpa </a> All Rights Reserved</p>
+            </div>
+            <div class="col-12 col-md-6 text-md-end text-center mt-3 mt-md-0">
+              <p>Develop and design by <a href="#">Potenza Global Solutions</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--=================================
+    footer-->
+    <!--=================================
+    Back To Top-->
+    <div id="back-to-top" class="back-to-top">
+      <a href="#"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <!--=================================
+    Back To Top-->
+    <!--=================================
+    Javascript -->
+    <!-- JS Global Compulsory (Do not remove)-->
+    <script th:src="@{/js/jquery-3.7.1.min.js}"></script>
+    <script th:src="@{/js/popper/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <script th:src="@{/js/select2/select2.full.js}"></script>
+    <script th:src="@{/js/datetimepicker/moment.min.js}"></script>
+    <script th:src="@{/js/datetimepicker/datetimepicker.min.js}"></script>
+    <!-- Template Scripts (Do not remove)-->
+    <script th:src="@{/js/custom.js}"></script>
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <script th:src="@{js/owl-carousel/owl.carousel.min.js}"></script>
+    <script th:src="@{js/slick/slick.min.js}"></script>
+  </body>
+</html>
