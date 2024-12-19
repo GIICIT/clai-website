@@ -16,7 +16,7 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers("/css/**", "/fonts/**", "/img/**", "/js/**", "/sass/**",
-                                "/", "/home", "/treatments", "/blog", "/contact-us", "/404").permitAll()
+                                "/coming-soon","/", "/home", "/treatments", "/blog", "/contact-us", "/404").permitAll()
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(exceptionHandling -> exceptionHandling
