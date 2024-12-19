@@ -833,7 +833,8 @@ hr.hr-dark {
   position: relative;
   z-index: 1; }
   .bg-overlay-theme-10:before {
-    background: rgba(242, 166, 141, 0.1);
+    background: linear-gradient(to right, rgba(247, 247, 247, 1), rgba(240, 237, 225, 1), rgba(208, 200, 181, 1));
+    color: rgba(74, 74, 74, 1);
     content: "";
     height: 100%;
     left: 0;
@@ -6977,7 +6978,8 @@ Blog Style 01
 
 .footer .footer-bottom {
   padding: 20px 0;
-  background: rgba(242, 166, 141, 0.2); }
+  background: linear-gradient(to right, rgba(247, 247, 247, 1), rgba(240, 237, 225, 1), rgba(208, 200, 181, 1));
+  color: rgba(74, 74, 74, 1); }
   .footer .footer-bottom .copyright p {
     font-size: 15px;
     margin-bottom: 0; }
