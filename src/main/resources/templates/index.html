@@ -39,29 +39,24 @@
       <nav class="navbar navbar-static-top navbar-expand-lg">
         <div class="container-fluid main-header position-relative">
           <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><i class="fas fa-align-left"></i></button>
-          <a class="navbar-brand" th:href="@{home}">
+          <a class="navbar-brand" th:href="@{#}">
             <img class="img-fluid" src="/img/clai-logo-full-white.svg" alt="logo">
             <img class="img-fluid sticky" src="/img/clai-logo-full-black.svg" alt="logo">
           </a>
-          <div class="navbar-collapse collapse justify-content-end justify-content-lg-end">
+          <div class="navbar-collapse collapse justify-content-center justify-content-lg-center">
             <ul class="nav navbar-nav">
-              <li class="nav-item dropdown active">
-                <a class="nav-link" th:href="@{#}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
+              <li class="nav-item active">
+                <a class="nav-link" th:href="@{#}" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
               </li>
-              <li class="nav-item"><a class="nav-link" th:href="@{body-wellness}"><span>Body Wellness</span></a></li>
-              <li class="dropdown nav-item">
-                <a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown" th:href="@{skin-therapy}">Skin Therapy<i class="fa-solid"></i></a>
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{treatments}"><span>Treatments</span></a>
               </li>
-              <li class="dropdown nav-item">
-                <a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown" th:href="@{ivy-therapy}">Ivy Therapy<i class="fa-solid"></i></a>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)" th:href="@{blog}">Blog<i class="fa-solid"></i></a>
               </li>
-              <li class="dropdown nav-item">
-                <a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown" th:href="@{products}">Products<i class="fa-solid"></i></a>
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{contact-us}"><span>Contact us</span></a>
               </li>
-              <li class="dropdown nav-item">
-                <a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown" th:href="@{blog}">Blog<i class="fa-solid"></i></a>
-              </li>
-              <li><a class="nav-link" th:href="@{contact-us}"><span>Contact us</span></a></li>
             </ul>
           </div>
           <div class="add-listing">

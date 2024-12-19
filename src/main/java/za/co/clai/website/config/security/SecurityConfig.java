@@ -16,8 +16,13 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers("/css/**", "/fonts/**", "/img/**", "/js/**", "/sass/**",
-                                "/", "/home", "/contact-us", "/404").permitAll()
+                                "/", "/home", "/treatments", "/blog", "/contact-us", "/404").permitAll()
                         .anyRequest().authenticated()
+                )
+                .exceptionHandling(exceptionHandling -> exceptionHandling
+                        .authenticationEntryPoint((request, response, authException) -> {
+                            response.sendRedirect("/404");
+                        })
                 );
         return http.build();
     }

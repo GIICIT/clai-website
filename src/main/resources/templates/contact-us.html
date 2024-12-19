@@ -33,38 +33,35 @@
       <nav class="navbar navbar-static-top navbar-expand-lg">
         <div class="container-fluid main-header position-relative">
           <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><i class="fas fa-align-left"></i></button>
-          <a class="navbar-brand" th:href="@{/home}">
+          <a class="navbar-brand" th:href="@{home}">
             <img class="img-fluid" src="/img/clai-logo-full-white.svg" alt="logo">
             <img class="img-fluid sticky" src="/img/clai-logo-full-black.svg" alt="logo">
           </a>
-          <div class="navbar-collapse collapse justify-content-end justify-content-lg-end">
+          <div class="navbar-collapse collapse justify-content-center justify-content-lg-center">
             <ul class="nav navbar-nav">
-              <li><a class="nav-link" th:href="@{home}"><span>Home</span></a></li>
-              <li class="nav-item"><a class="nav-link" th:href="@{body-wellness}"><span>Body Wellness</span></a></li>
-              <li class="dropdown nav-item">
-                <a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown" th:href="@{skin-therapy}">Skin Therapy<i class="fa-solid"></i></a>
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{home}" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
               </li>
-              <li class="dropdown nav-item">
-                <a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown" th:href="@{ivy-therapy}">Ivy Therapy<i class="fa-solid fa-plus"></i></a>
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{treatments}"><span>Treatments</span></a>
               </li>
-              <li class="dropdown nav-item">
-                <a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown" th:href="@{ivy-therapy}">Products<i class="fa-solid fa-plus"></i></a>
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{blog}">Blog<i class="fa-solid"></i></a>
               </li>
-              <li class="dropdown nav-item">
-                <a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown" th:href="@{blog}">Blog<i class="fa-solid fa-plus"></i></a>
+              <li class="nav-item active">
+                <a class="nav-link" th:href="@{#}"><span>Contact us</span></a>
               </li>
-              <li class="active"><a class="nav-link" th:href="@{#}"><span>Contact us</span></a></li>
             </ul>
           </div>
           <div class="add-listing">
-             <a class="menu-btn" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <a class="menu-btn" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
               <svg width="40" height="80" viewBox="0 0 80 80" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.3333 60H33.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-              <path d="M13.3333 40H53.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-              <path d="M13.3333 20H66.6666" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                <path d="M13.3333 60H33.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                <path d="M13.3333 40H53.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                <path d="M13.3333 20H66.6666" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
               </svg>
             </a>
-             <a class="btn btn-primary" href="appointment.html">Book Now</a>
+            <a class="btn btn-primary" href="appointment.html">Book Now</a>
           </div>
         </div>
       </nav>
@@ -126,7 +123,7 @@
           <div class="col-md-8 text-center">
             <h1 class="text-white">Contact us</h1>
             <ul class="breadcrumb mb-0 p-0">
-              <li class="breadcrumb-item"><a th:href="@{/home}"><i class="fa fa-home pe-2"></i>Home</a></li>
+              <li class="breadcrumb-item"><a th:href="@{home}"><i class="fa fa-home pe-2"></i>Home</a></li>
               <li class="breadcrumb-item active"><span>Contact us</span></li>
             </ul>
           </div>
