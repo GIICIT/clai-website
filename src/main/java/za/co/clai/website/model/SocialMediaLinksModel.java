@@ -11,9 +11,6 @@ public class SocialMediaLinksModel {
     @Value("${instagram}")
     private String instagram;
 
-    @Value("${youtube}")
-    private String youtube;
-
     public String getFacebook() {
         return facebook;
     }
@@ -22,7 +19,4 @@ public class SocialMediaLinksModel {
         return instagram;
     }
 
-    public String getYoutube() {
-        return youtube;
-    }
 }

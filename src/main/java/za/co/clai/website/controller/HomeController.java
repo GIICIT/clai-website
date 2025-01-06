@@ -18,7 +18,6 @@ public class HomeController {
     public String homePage(Model model) {
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
-        model.addAttribute("youtube", socialMediaLinksModel.getYoutube());
         return "index";
     }
 
