@@ -286,15 +286,13 @@
                 <ul class="list-unstyled mb-0">
                   <li><i class="fas fa-fw fa-map-marker-alt text-primary"></i><span>6580 Allison Turnpike Creminfort, AL 32808-4509</span></li>
                   <li><i class="fas fa-fw fa-phone text-primary"></i><span>(123) 345-6789</span></li>
-                  <li><i class="far fa-fw fa-envelope text-primary"></i><span>support@luxuryspa.com</span></li>
+                  <li><i class="far fa-fw fa-envelope text-primary"></i><span>info@clai.co.za</span></li>
                 </ul>
               </div>
               <div class="social-icon mt-4">
                 <ul>
-                  <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
                 </ul>
               </div>
             </div>
@@ -302,24 +300,15 @@
               <div class="footer-link">
                 <h5>Navigation</h5>
                 <ul class="list-unstyled mb-0">
-                  <li><a href="about-us.html">About us</a></li>
-                  <li><a href="service.html">Service</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                  <li><a href="team.html">Team</a></li>
-                  <li><a href="contact-us.html">Contact us</a></li>
+                  <li><a th:href="@{home}">Home</a></li>
+                  <li><a th:href="@{treatments}">Treatments</a></li>
+                  <li><a th:href="@{blog}">Blog</a></li>
+                  <li><a th:href="@{contact-us}">Contact us</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
               <div class="footer-link">
-                <h5>Useful Links</h5>
-                <ul class="list-unstyled mb-0">
-                  <li><a href="login.html">Login</a></li>
-                  <li><a href="register.html">Register</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
-                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                </ul>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
@@ -341,10 +330,10 @@
         <div class="container">
           <div class="row align-items-center copyright text-md-start text-center">
             <div class="col-12 col-md-6 ">
-              <p class="mb-0 text-dark"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="index.html"> LuxurySpa </a> All Rights Reserved</p>
+              <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a th:href="@{home}"> CLAI </a> All Rights Reserved</p>
             </div>
             <div class="col-12 col-md-6 text-md-end text-center mt-3 mt-md-0">
-              <p>Develop and design by <a href="#">Potenza Global Solutions</a></p>
+              <p>Software house <a href="#">GIIC (PTY) LTD</a></p>
             </div>
           </div>
         </div>

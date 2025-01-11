@@ -18,7 +18,6 @@ public class TreatmentsController {
     public String treatmentsPage(Model model) {
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
-        model.addAttribute("youtube", socialMediaLinksModel.getYoutube());
         return "treatments";
     }
 }
