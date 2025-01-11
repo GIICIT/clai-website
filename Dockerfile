@@ -1,3 +1,3 @@
 FROM openjdk:17-jdk-alpine
-COPY target/clai-webapp.war clai-webapp.war
+COPY target/clai-website.war clai-website.war
 ENTRYPOINT ["java","-jar","/clai-webapp.war"]
