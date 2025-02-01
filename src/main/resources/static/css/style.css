@@ -7661,4 +7661,8 @@ Blog Style 01
   .navbar .navbar-nav .nav-link i {
     margin-top: 5px; } }
 
+.blog-post-content {
+  padding: 10px; /* Adjust as needed */
+}
+
 /*# sourceMappingURL=../css/style.css.map */
