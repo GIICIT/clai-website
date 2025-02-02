@@ -2384,12 +2384,12 @@ button {
           -ms-flex-pack: center;
               justify-content: center; }
     .item .category-box:hover .category-title {
-      bottom: 20px; }
+      top: -10px; }
     .item .category-box .category-title {
       left: 0;
       right: 0;
       position: absolute;
-      bottom: -60px;
+      top: -80px;
       background: #EDEAE7;
       padding: 10px;
       width: 90%;
@@ -7664,5 +7664,10 @@ Blog Style 01
 .blog-post-content {
   padding: 10px; /* Adjust as needed */
 }
+
+#contact-form #msg,
+#search-form #msg {
+  margin-top: 36px;
+  color: #f54337; }
 
 /*# sourceMappingURL=../css/style.css.map */

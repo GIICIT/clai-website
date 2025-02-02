@@ -20,7 +20,7 @@ public class EmailModel {
     String subject;
 
     @NotEmpty(message = "Message is required.")
-    @Size(min = 2, max = 1000, message = "Message must be between 2 and 30 characters")
+    @Size(min = 2, max = 1000, message = "Message must be between 2 and 1000 characters")
     String message;
 
     public String getName() {

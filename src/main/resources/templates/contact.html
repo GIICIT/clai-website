@@ -16,6 +16,16 @@
     <link rel="stylesheet" th:href="@{css/bootstrap/bootstrap.min.css}">
     <!-- Template Style -->
     <link rel="stylesheet" th:href="@{css/style.css}">
+
+    <style>
+      .error {
+        color: red;
+        font-size: 0.6em; /* Makes the text smaller */
+        margin-top: 0.25em; /* Adds a bit of space above the error message */
+        display: block; /* Ensures the error message appears on its own line */
+      }
+    </style>
+
   </head>
   <body>
     
@@ -49,7 +59,7 @@
                 <a class="nav-link" th:href="@{blog}">Blog<i class="fa-solid"></i></a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" th:href="@{#}"><span>Contact us</span></a>
+                <a class="nav-link" th:href="@{#}"><span>Contact</span></a>
               </li>
             </ul>
           </div>
@@ -122,7 +132,7 @@
             <h1 class="text-white">Contact us</h1>
             <ul class="breadcrumb mb-0 p-0">
               <li class="breadcrumb-item"><a th:href="@{home}"><i class="fa fa-home pe-2"></i>Home</a></li>
-              <li class="breadcrumb-item active"><span>Contact us</span></li>
+              <li class="breadcrumb-item active"><span>Contact</span></li>
             </ul>
           </div>
         </div>
@@ -225,27 +235,33 @@
                 <h3 class="title mb-4">We'd Love To Hear From You</h3>
                 <p>Get the oars in the water and start rowing. Execution is the single biggest factor in achievement so the faster and better your execution.</p>
               </div>
-              <form>
+              <form th:action="@{/email}" th:object="${emailModel}" method="post" id="contact-form" >
                 <div class="row">
                   <div class="mb-3 col-md-6">
-                    <label for="InputFullName" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="InputFullName" placeholder="Full Name">
+                    <label for="name" class="form-label"></label>
+                    <div class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+                    <input type="text" class="form-control" name="name" id="name" th:field="*{name}" placeholder="Full Name">
                   </div>
                   <div class="mb-3 col-md-6">
-                    <label for="InputEmail" class="form-label">Your Email</label>
-                    <input type="email" class="form-control" id="InputEmail" placeholder="Your Email">
+                    <label for="email" class="form-label"></label>
+                    <div class="error" th:if="${#fields.hasErrors('emailAddress')}" th:errors="*{emailAddress}"></div>
+                    <input type="text" class="form-control" name="emailAddress" id="email" th:field="*{emailAddress}" placeholder="Your Email">
                   </div>
                   <div class="mb-3 col-md-12">
-                    <label for="InputPhone" class="form-label">Phone Number</label>
-                    <input type="text" class="form-control" id="InputPhone" placeholder="Phone Number">
+                    <label for="subject" class="form-label"></label>
+                    <div class="error" th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}"></div>
+                    <input type="text" class="form-control" name="subject" id="subject" th:field="*{subject}" placeholder="Subject">
                   </div>
                   <div class="mb-3 col-md-12">
-                    <label for="InputComment" class="form-label">Comment</label>
-                    <textarea class="form-control" id="InputComment" rows="3" placeholder="Comment"></textarea>
+                    <label for="message" class="form-label"></label>
+                    <div class="error" th:if="${#fields.hasErrors('message')}" th:errors="*{message}"></div>
+                    <textarea class="form-control" name="message" id="message" rows="6" th:field="*{message}" placeholder="Your Message"></textarea>
                   </div>
                   <div class="col-md-6">
                     <div class="d-grid">
-                      <a href="#" class="btn btn-primary">Send Message</a>
+                      <input type="submit" id="submit-contact" class="btn btn-primary"
+                             value="Send Message">
+<!--                      <div id="msg" class="message"></div>-->
                     </div>
                   </div>
                 </div>
@@ -300,7 +316,7 @@
                   <li><a th:href="@{home}">Home</a></li>
                   <li><a th:href="@{treatments}">Skin Treatments</a></li>
                   <li><a th:href="@{blog}">Blog</a></li>
-                  <li><a th:href="@{contact-us}">Contact us</a></li>
+                  <li><a th:href="@{contact}">Contact us</a></li>
                 </ul>
               </div>
             </div>
