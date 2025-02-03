@@ -51,11 +51,11 @@
               <li class="nav-item">
                 <a class="nav-link" th:href="@{home}" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
               </li>
-              <li class="nav-item active"><a class="nav-link" th:href="@{#}"><span>Treatments</span></a></li>
+              <li class="nav-item active"><a class="nav-link" th:href="@{#}"><span>Skin Treatments</span></a></li>
               <li class="nav-item">
                 <a class="nav-link" th:href="@{blog}">Blog<i class="fa-solid"></i></a>
               </li>
-              <li><a class="nav-link" th:href="@{contact-us}"><span>Contact us</span></a></li>
+              <li><a class="nav-link" th:href="@{contact}"><span>Contact</span></a></li>
             </ul>
           </div>
           <div class="add-listing">
@@ -66,7 +66,7 @@
                 <path d="M13.3333 20H66.6666" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
               </svg>
             </a>
-            <a class="btn btn-primary" href="appointment.html">Book Now</a>
+
           </div>
         </div>
       </nav>
@@ -92,16 +92,14 @@
           </div>
           <div class="mt-5">
             <h3 class="mb-3">Contact Info</h3>
-            <p>6580 Allison Turnpike Creminfort,<br> AL 32808-4509</p>
-            <p>Sunday to Tuesday <br> (09:00 To 22:00)</p>
-            <p>Friday to Saturday <br> (11:00 To 19:00)</p>
+            <p>22 Van der Byl Avenue, Durbanville,<br> +27 77 370 5689</p>
+            <p>Monday to Thursday <br> (09:00 To 17:00)</p>
+            <p>Friday <br> (09:00 To 16:00)</p>
           </div>
           <div class="social-icon mt-5">
             <ul>
-              <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
             </ul>
           </div>
         </div>
@@ -115,10 +113,10 @@
       <div class="container">
         <div class="row  justify-content-center">
           <div class="col-md-8 text-center">
-            <h1 class="text-white">Service</h1>
+            <h1 class="text-white">Skin Treatments</h1>
             <ul class="breadcrumb mb-0 p-0">
               <li class="breadcrumb-item"><a th:href="@{home}"><i class="fa fa-home pe-2"></i>Home</a></li>
-              <li class="breadcrumb-item active"><span>Treatments</span></li>
+              <li class="breadcrumb-item active"><span>Skin Treatments</span></li>
             </ul>
           </div>
         </div>
@@ -133,15 +131,14 @@
         <div class="row mb-4 pb-3 pb-md-0 mb-md-5 align-items-center">
           <div class="col-12 col-xl-5 col-lg-5">
             <div class="section-title mb-0">
-              <span class="sub-title">Features</span>
-              <h2 class="title">Amazing Features</h2></div>
+              <span class="sub-title">Treatments</span>
+              <h2 class="title">Amazing Treatments</h2></div>
           </div>
           <div class="col-12 col-xl-5 col-lg-4 pe-xl-5">
             <div class="section-title mb-0">
               <p class="section-description">Motivation is not an accident or something that someone else can give you with the power to motivate you.</p>
             </div>
           </div>
-          <div class="col-xl-2 col-lg-3 text-lg-end"><a href="#" class="btn btn-primary">Learn More</a></div>
         </div>
         <div class="row">
           <div class="col-md-4 mb-md-0 mb-4">
@@ -150,33 +147,154 @@
                 <img src="/img/services/01.jpg" alt="services01">
               </div>
               <div class="feature-content">
-                <h3>Facial Message</h3>
-                <p class="mb-4">Give yourself the power of responsibility. Remind yourself the only thing stopping you is yourself.</p>
-                <a href="#">Make Appointment<i class="fas fa-arrow-right ms-2"></i></a>
+                <h3>Clinical Glow Medical Facial</h3>
+                <p class="mb-4">A personalized treatment that includes cleansing, exfoliation, extractions, a chemical peel, and a soothing mask with massage, all tailored to your skin's unique concerns for a radiant, refreshed glow.</p>
+                <a href="#">R1280<i class="fas ms-2"></i></a>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-md-0 mb-4">
             <div class="feature-box feature-box-style-02 feature-box-light mb-3 mb-md-0">
               <div class="feature-img">
-                <img src="/img/services/02.jpg" alt="services02">
+                <img src="/img/services/deep-cleanse.png" alt="services02">
               </div>
               <div class="feature-content">
-                <h3>Organic Therapy</h3>
-                <p class="mb-4">The best way is to develop and follow a plan. Start with your goals in mind and then work backwards.</p>
-                <a href="#">Make Appointment<i class="fas fa-arrow-right ms-2"></i></a>
+                <h3>Revive Deep Cleanse Treatments</h3>
+                <p class="mb-4">A customized treatment that includes cleansing, gentle exfoliation, extractions, a nourishing mask, and a relaxing massage, designed to refresh and rejuvenate your skin for a natural, healthy glow.</p>
+                <a href="#">R800<i class="fas ms-2"></i></a>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="feature-box feature-box-style-02 feature-box-light border-end-0">
               <div class="feature-img">
-                <img src="/img/services/03.jpg" alt="services03">
+                <img src="/img/services/zo-skin-renewal.png" alt="services03">
               </div>
               <div class="feature-content">
-                <h3>Treatments</h3>
-                <p class="mb-4">What steps are required to get you to the goals? Make the plan as detailed as possible.</p>
-                <a href="#">Make Appointment<i class="fas fa-arrow-right ms-2"></i></a>
+                <h3>ZO Skin Renewal Treatment</h3>
+                <p class="mb-4">A results-driven treatment featuring ZO products, tailored to your skin's specific needs. Includes deep cleansing, exfoliation, extractions, a ZO chemical peel, and a calming mask to promote a clear, radiant, and healthy complexion.</p>
+                <a href="#">R1500<i class="fas ms-2"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-md-0 mb-4">
+            <div class="feature-box feature-box-style-02 feature-box-light mb-3 mb-md-0">
+              <div class="feature-img">
+                <img src="/img/services/resurfacing-peel.png" alt="services01">
+              </div>
+              <div class="feature-content">
+                <h3>Ultimate Resurfacing Peel</h3>
+                <p class="mb-4">A powerful skin rejuvenation treatment using Mesoestetic’s Phen TCA and Melanoplus TCA peels to target pigmentation, fine lines, and uneven texture. This advanced medium to deep peel stimulates cell renewal, revealing smoother, brighter, and more youthful-looking skin.</p>
+                <a href="#">Mesoesetic Melanoplus Touch Face R1200<i class="fas ms-2"></i></a>
+                <a href="#">Mesoesetic Phen TCA Face R1500<i class="fas ms-2"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-md-0 mb-4">
+            <div class="feature-box feature-box-style-02 feature-box-light mb-3 mb-md-0">
+              <div class="feature-img">
+                <img src="/img/services/pro-peel.png" alt="services02">
+              </div>
+              <div class="feature-content">
+                <h3>SkinScience PRO Peels</h3>
+                <p class="mb-4">Professional-grade chemical peels designed to target concerns like acne, pigmentation, fine lines, and uneven texture. These customizable treatments offer effective skin renewal with minimal downtime, suitable for various skin types.</p>
+                <a href="#">from R850<i class="fas ms-2"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-box feature-box-style-02 feature-box-light border-end-0">
+              <div class="feature-img">
+                <img src="/img/services/md-peel.png" alt="services03">
+              </div>
+              <div class="feature-content">
+                <h3>SkinScience MD Peels</h3>
+                <p class="mb-4">Clinically advanced peels with higher concentrations of active ingredients to address more severe concerns, including deep pigmentation, stubborn acne, and advanced aging. Ideal for those seeking significant results under medical supervision.</p>
+                <a href="#">from R950<i class="fas ms-2"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-md-0 mb-4">
+            <div class="feature-box feature-box-style-02 feature-box-light mb-3 mb-md-0">
+              <div class="feature-img">
+                <img src="/img/services/needling-treatment.png" alt="services01">
+              </div>
+              <div class="feature-content">
+                <h3>SkinLift 3D Needling</h3>
+                <p class="mb-4">A personalized microneedling treatment using the Dermapen device, tailored to address each patient’s unique skin concerns. This advanced procedure combines targeted Mesoestetic serums with a soothing mask to deliver comprehensive skin rejuvenation and repair. Designed as a blueprint for your skin’s specific needs, it promotes optimal results and revitalization.</p>
+                <a href="#">from R2900<i class="fas ms-2"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-md-0 mb-4">
+            <div class="feature-box feature-box-style-02 feature-box-light mb-3 mb-md-0">
+              <div class="feature-img">
+                <img src="/img/services/prf-needling.png" alt="services02">
+              </div>
+              <div class="feature-content">
+                <h3>Fibrin/prf Renewal Treatment Needling</h3>
+                <p class="mb-4">An advanced skin rejuvenation procedure combining microneedling with Platelet-Rich Fibrin (PRF) therapy. This natural and effective treatment uses your body's own growth factors to promote collagen production, improve skin texture, reduce fine lines, and enhance overall skin health. Ideal for achieving a radiant, youthful complexion.</p>
+                <a href="#">R3100<i class="fas ms-2"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-box feature-box-style-02 feature-box-light border-end-0">
+              <div class="feature-img">
+                <img src="/img/services/3d-fibrin.png" alt="services03">
+              </div>
+              <div class="feature-content">
+                <h3>3D Fibrin/prf Renewal Treatment.</h3>
+                <p class="mb-4">A comprehensive skin rejuvenation treatment that uses mesotherapy injections of PRF (Platelet-Rich Fibrin) with superficial needling. This powerful dual approach enhances collagen production, deeply nourishes the skin, and addresses multiple concerns like fine lines, texture, and overall skin vitality. Tailored to deliver exceptional results for a radiant, youthful glow.</p>
+                <a href="#">R4200<i class="fas ms-2"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-md-0 mb-4">
+            <div class="feature-box feature-box-style-02 feature-box-light mb-3 mb-md-0">
+              <div class="feature-img">
+                <img src="/img/services/ipl.png" alt="services01">
+              </div>
+              <div class="feature-content">
+                <h3>IPL Skin Treatment</h3>
+                <p class="mb-4">A cutting-edge Intense Pulsed Light (IPL) treatment designed to target pigmentation, sun damage, redness, and vascular lesions. Lumecca delivers powerful light energy to rejuvenate the skin, improving tone and texture for a clearer, more radiant complexion with minimal downtime.</p>
+                <a href="#">from R2500<i class="fas ms-2"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-md-0 mb-4">
+            <div class="feature-box feature-box-style-02 feature-box-light mb-3 mb-md-0">
+              <div class="feature-img">
+                <img src="/img/services/ipl-skin-renew.png" alt="services02">
+              </div>
+              <div class="feature-content">
+                <h3>IPL Skin Renew Treatment</h3>
+                <p class="mb-4">A powerful combination of Lumecca IPL to target pigmentation and sun damage, paired with a medium-depth TCA chemical peel for enhanced exfoliation and skin renewal. This treatment improves skin tone, texture, and overall clarity for a refreshed and revitalized complexion.</p>
+                <a href="#">from R2800<i class="fas ms-2"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-box feature-box-style-02 feature-box-light border-end-0">
+              <div class="feature-img">
+                <img src="/img/services/meso-eclat.png" alt="services03">
+              </div>
+              <div class="feature-content">
+                <h3>Mesoeclat Skin Treatment</h3>
+                <p class="mb-4">A professional treatment that can be customized to address specific skin concerns. It's designed to activate the skin's natural healing process, which can help with signs of aging, fatigue, uneven skin tone, and dullness. The treatment can also be combined with other treatments.</p>
+                <a href="#">from R2500<i class="fas ms-2"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-md-0 mb-4">
+            <div class="feature-box feature-box-style-02 feature-box-light mb-3 mb-md-0">
+              <div class="feature-img">
+                <img src="/img/services/tri-therapy.png" alt="services01">
+              </div>
+              <div class="feature-content">
+                <h3>Tri Therapy Skin Treatment</h3>
+                <p class="mb-4">Our signature treatment combines multiple modalities to target a wide range of skin concerns, including pigmentation, acne, aging, redness, and more. This customized approach integrates chemical peels, superficial needling with targeted actives, and a specialized mask to deliver optimal results, leaving your skin refreshed and rejuvenated.</p>
+                <a href="#">from R2500<i class="fas ms-2"></i></a>
               </div>
             </div>
           </div>
@@ -187,437 +305,14 @@
     Service -->
     <!--=================================
         Related products -->
-    <section class="space-pb">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="title mb-5">
-              <h2>Related products</h2>
-            </div>
-            <!-- owl-carousel -->
-            <div class="owl-carousel product" data-nav-dots="false" data-nav-arrow="true" data-items="4" data-sm-items="2" data-lg-items="3" data-md-items="3" data-xs-items="2" data-autoplay="true">
-              <!-- product-01 START -->
-              <div class="item">
-                <div class="product-item">
-                  <div class="product-image thumbnail-bg">
-                    <img class="img-fluid" src="/img/shop/01.jpg" alt="image">
-                    <div class="custom-icon">
-                      <ul class="list-unstyled">
-                        <li><a href="#"><i class="far fa-heart"></i></a></li>
-                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-info">
-                      <div class="product-title">
-                        <a href="shop-single.html">Set of Skincare</a>
-                      </div>
-                      <div class="product-star">
-                        <ul class="list-unstyled">
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="far fa-star-half-alt"></i></li>
-                          <li><i class="far fa-star-half-alt"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <a href="#" class="category">Beauty</a>
-                    <div class="product-prize">
-                      <p><span class="me-2">$24.99</span>$12.99</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- product-01 END -->
-              <!-- product-02 START -->
-              <div class="item">
-                <div class="product-item">
-                  <div class="product-image thumbnail-bg">
-                    <img class="img-fluid" src="/img/shop/02.jpg" alt="image">
-                    <div class="custom-icon">
-                      <ul class="list-unstyled">
-                        <li><a href="#"><i class="far fa-heart"></i></a></li>
-                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-info">
-                      <div class="product-title">
-                        <a href="shop-single.html">Monstera </a>
-                      </div>
-                      <div class="product-star">
-                        <ul class="list-unstyled">
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="far fa-star-half-alt"></i></li>
-                          <li><i class="far fa-star-half-alt"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <a href="#" class="category">Beauty</a>
-                    <div class="product-prize">
-                      <p><span class="me-2">$35.90</span>$28.72</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- product-02 END -->
-              <!-- product-03 START -->
-              <div class="item">
-                <div class="product-item">
-                  <div class="product-image thumbnail-bg">
-                    <img class="img-fluid" src="/img/shop/03.jpg" alt="image">
-                    <div class="custom-icon">
-                      <ul class="list-unstyled">
-                        <li><a href="#"><i class="far fa-heart"></i></a></li>
-                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-info">
-                      <div class="product-title">
-                        <a href="shop-single.html">Cinnamon Soap</a>
-                      </div>
-                      <div class="product-star">
-                        <ul class="list-unstyled">
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="far fa-star-half-alt"></i></li>
-                          <li><i class="far fa-star-half-alt"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <a href="#" class="category">Beauty</a>
-                    <div class="product-prize">
-                      <p>$12.72</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- product-03 END -->
-              <!-- product-04 START -->
-              <div class="item">
-                <div class="product-item">
-                  <div class="product-image thumbnail-bg">
-                    <img class="img-fluid" src="/img/shop/04.jpg" alt="image">
-                    <div class="custom-icon">
-                      <ul class="list-unstyled">
-                        <li><a href="#"><i class="far fa-heart"></i></a></li>
-                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-info">
-                      <div class="product-title">
-                        <a href="shop-single.html">Body Care</a>
-                      </div>
-                      <div class="product-star">
-                        <ul class="list-unstyled">
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="far fa-star-half-alt"></i></li>
-                          <li><i class="far fa-star-half-alt"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <a href="#" class="category">Beauty</a>
-                    <div class="product-prize">
-                      <p>$13.70</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- product-04 END -->
-              <!-- product-05 START -->
-              <div class="item">
-                <div class="product-item">
-                  <div class="product-image thumbnail-bg">
-                    <img class="img-fluid" src="/img/shop/05.jpg" alt="image">
-                    <div class="custom-icon">
-                      <ul class="list-unstyled">
-                        <li><a href="#"><i class="far fa-heart"></i></a></li>
-                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-info">
-                      <div class="product-title">
-                        <a href="shop-single.html">Personal Care Kit</a>
-                      </div>
-                      <div class="product-star">
-                        <ul class="list-unstyled">
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="far fa-star-half-alt"></i></li>
-                          <li><i class="far fa-star-half-alt"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <a href="#" class="category">Beauty</a>
-                    <div class="product-prize">
-                      <p><span class="me-2">$35.90</span>$17.72</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- product-05 END -->
-              <!-- product-06 START -->
-              <div class="item">
-                <div class="product-item">
-                  <div class="product-image thumbnail-bg">
-                    <img class="img-fluid" src="/img/shop/06.jpg" alt="image">
-                    <div class="custom-icon">
-                      <ul class="list-unstyled">
-                        <li><a href="#"><i class="far fa-heart"></i></a></li>
-                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-info">
-                      <div class="product-title">
-                        <a href="shop-single.html">lavender bottle oil</a>
-                      </div>
-                      <div class="product-star">
-                        <ul class="list-unstyled">
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="fas fa-star"></i></li>
-                          <li><i class="far fa-star-half-alt"></i></li>
-                          <li><i class="far fa-star-half-alt"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <a href="#" class="category">Beauty</a>
-                    <div class="product-prize">
-                      <p><span class="me-2">$25.90</span>$18.72</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- product-06 END -->
-            </div>
-            <!-- owl-carousel -->
-          </div>
-        </div>
-      </div>
-    </section>
     <!--=================================
     Related products -->
     <!--=================================
     Make Appointment BG -->
-    <section class="space-ptb" style="background-image: url(/img/bg/bg-img-02.jpg); background-repeat: no-repeat; background-size: cover; background-position: left;">
-      <div class="container">
-        <div class="row justify-content-end">
-          <div class="col-lg-7 ">
-            <div class="bg-primary p-4 p-md-5">
-              <div class="section-title">
-                <h2 class="title text-white">Make Appointment</h2>
-                <p class="section-description text-white">We also know those epic stories, those modern-day legends surrounding the early failures of such supremely successful folks as Michael Jordan and Bill Gates.</p>
-              </div>
-              <form class="appointment-form">
-                <div class="row">
-                  <div class="mb-3 col-md-6">
-                    <input type="text" class="form-control" id="InputFullName" placeholder="Full Name">
-                  </div>
-                  <div class="mb-3 col-md-6">
-                    <input type="email" class="form-control" id="InputEmail" placeholder="Your Email">
-                  </div>
-                  <div class="mb-3 col-md-6">
-                    <input type="text" class="form-control" id="InputPhone" placeholder="Phone Number">
-                  </div>
-                  <div class="form-group select-border col-md-6 ">
-                    <select class="form-control basic-select" id="city">
-                      <option value="City">Select Subject</option>
-                      <option value="New york">New york</option>
-                      <option value="Los Angeles">Los angeles</option>
-                      <option value="Chicago">Chicago</option>
-                      <option value="Assam">Mumbai</option>
-                      <option value="Assam">Delhi</option>
-                    </select>
-                  </div>
-                  <div class="mb-3 col-md-12 datetimepickers">
-                    <div class="input-group date" id="datetimepicker-01" data-target-input="nearest">
-                      <input type="text" class="form-control datetimepicker-input" placeholder="Date" data-target="#datetimepicker-01">
-                      <div class="input-group-append" data-target="#datetimepicker-01" data-toggle="datetimepicker">
-                        <div class="input-group-text h-100"><i class="far fa-calendar-alt"></i></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mb-3 col-md-12">
-                    <textarea class="form-control" id="InputComment" rows="3" placeholder="Comment"></textarea>
-                  </div>
-                  <div class="d-flex">
-                    <a href="#" class="btn btn-secondary btn-secondary-white mt-4">Make Appointment<i class="fas fa-arrow-right ms-2"></i></a>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!--=================================
     Make Appointment BG -->
     <!--=================================
     Menu list -->
-    <section class="space-ptb position-relative">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8">
-            <div class="section-title text-center">
-              <span class="sub-title">Menu</span>
-              <h2 class="title">Natural Beauty Spa Center</h2>
-              <p class="section-description">I truly believe Augustine’s words are true and if you look at history you know it is true. There are many people in the world with amazing talents who realize.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 col-lg-6 mt-4">
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/body-massage.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Full body massage</a>
-                  <p>Focus is having the unwavering</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$22.00</span>
-                  <span>$16.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/face-masks.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Face masks</a>
-                  <p>The best way is to develop</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$18.00</span>
-                  <span>$14.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/nail-treatments.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Nail Treatments</a>
-                  <p>I coach my clients to practice</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$50.00</span>
-                  <span>$40.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/aroma-therapy.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Aroma therapy</a>
-                  <p>We all carry a lot of baggage</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$65.00</span>
-                  <span>$62.00</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-6 mt-5 mt-lg-4">
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/skincare.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Skincare Sunday</a>
-                  <p>It is truly amazing</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$48.00</span>
-                  <span>$42.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/relaxation.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Relaxation</a>
-                  <p>Figure out what you want</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$35.00</span>
-                  <span>$30.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/medical-treatments.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Medical Treatments</a>
-                  <p>You will begin to realise</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$40.00</span>
-                  <span>$35.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/face-treatments.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Face Treatments</a>
-                  <p>The Truth About Success</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$59.00</span>
-                  <span>$52.00</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!--=================================
     Menu list -->
     <!--=================================
@@ -630,8 +325,8 @@
               <h5>Contact Information</h5>
               <div class="footer-contact-info">
                 <ul class="list-unstyled mb-0">
-                  <li><i class="fas fa-fw fa-map-marker-alt text-primary"></i><span>6580 Allison Turnpike Creminfort, AL 32808-4509</span></li>
-                  <li><i class="fas fa-fw fa-phone text-primary"></i><span>(123) 345-6789</span></li>
+                  <li><i class="fas fa-fw fa-map-marker-alt text-primary"></i><span>22 Van der Byl Avenue, Durbanville</span></li>
+                  <li><i class="fas fa-fw fa-phone text-primary"></i><span>+27 77 370 5689</span></li>
                   <li><i class="far fa-fw fa-envelope text-primary"></i><span>info@clai.co.za</span></li>
                 </ul>
               </div>
@@ -647,9 +342,9 @@
                 <h5>Navigation</h5>
                 <ul class="list-unstyled mb-0">
                   <li><a th:href="@{home}">Home</a></li>
-                  <li><a th:href="@{treatments}">Treatments</a></li>
+                  <li><a th:href="@{treatments}">Skin Treatments</a></li>
                   <li><a th:href="@{blog}">Blog</a></li>
-                  <li><a th:href="@{contact-us}">Contact us</a></li>
+                  <li><a th:href="@{contact}">Contact us</a></li>
                 </ul>
               </div>
             </div>
@@ -679,7 +374,7 @@
               <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a th:href="@{home}"> CLAI </a> All Rights Reserved</p>
             </div>
             <div class="col-12 col-md-6 text-md-end text-center mt-3 mt-md-0">
-              <p>Software house <a href="#">GIIC (PTY) LTD</a></p>
+              <p>Software Development  <a href="#"> GIIC (PTY) LTD</a></p>
             </div>
           </div>
         </div>

@@ -42,11 +42,11 @@
               <li class="nav-item">
                 <a class="nav-link" th:href="@{home}" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
               </li>
-              <li class="nav-item"><a class="nav-link" th:href="@{treatments}"><span>Treatments</span></a></li>
+              <li class="nav-item"><a class="nav-link" th:href="@{treatments}"><span>Skin Treatments</span></a></li>
               <li class="nav-item">
                 <a class="nav-link" th:href="@{blog}">Blog<i class="fa-solid"></i></a>
               </li>
-              <li><a class="nav-link" th:href="@{contact-us}"><span>Contact us</span></a></li>
+              <li><a class="nav-link" th:href="@{contact}"><span>Contact</span></a></li>
             </ul>
           </div>
           <div class="add-listing">
@@ -57,7 +57,7 @@
                 <path d="M13.3333 20H66.6666" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
               </svg>
             </a>
-            <a class="btn btn-primary" href="appointment.html">Book Now</a>
+
           </div>
         </div>
       </nav>
@@ -94,16 +94,14 @@
           </div>
           <div class="mt-5">
             <h3 class="mb-3">Contact Info</h3>
-            <p>6580 Allison Turnpike Creminfort,<br> AL 32808-4509</p>
-            <p>Sunday to Tuesday <br> (09:00 To 22:00)</p>
-            <p>Friday to Saturday <br> (11:00 To 19:00)</p>
+            <p>22 Van der Byl Avenue, Durbanville,<br> +27 77 370 5689</p>
+            <p>Monday to Thursday <br> (09:00 To 17:00)</p>
+            <p>Friday <br> (09:00 To 16:00)</p><p>Friday <br> (09:00 To 16:00)</p>
           </div>
           <div class="social-icon mt-5">
             <ul>
-              <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
             </ul>
           </div>
         </div>
@@ -156,8 +154,8 @@
               <h5>Contact Information</h5>
               <div class="footer-contact-info">
                 <ul class="list-unstyled mb-0">
-                  <li><i class="fas fa-fw fa-map-marker-alt text-primary"></i><span>6580 Allison Turnpike Creminfort, AL 32808-4509</span></li>
-                  <li><i class="fas fa-fw fa-phone text-primary"></i><span>(123) 345-6789</span></li>
+                  <li><i class="fas fa-fw fa-map-marker-alt text-primary"></i><span>22 Van der Byl Avenue, Durbanville</span></li>
+                  <li><i class="fas fa-fw fa-phone text-primary"></i><span>+27 77 370 5689</span></li>
                   <li><i class="far fa-fw fa-envelope text-primary"></i><span>info@clai.co.za</span></li>
                 </ul>
               </div>
@@ -173,9 +171,9 @@
                 <h5>Navigation</h5>
                 <ul class="list-unstyled mb-0">
                   <li><a th:href="@{home}">Home</a></li>
-                  <li><a th:href="@{treatments}">Treatments</a></li>
+                  <li><a th:href="@{treatments}">Skin Treatments</a></li>
                   <li><a th:href="@{blog}">Blog</a></li>
-                  <li><a th:href="@{contact-us}">Contact us</a></li>
+                  <li><a th:href="@{contact}">Contact us</a></li>
                 </ul>
               </div>
             </div>
@@ -205,7 +203,7 @@
               <p class="mb-0 text-dark"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a th:href="@{home}"> CLAI </a> All Rights Reserved</p>
             </div>
             <div class="col-12 col-md-6 text-md-end text-center mt-3 mt-md-0">
-              <p>Software house <a href="#">GIIC (PTY) LTD</a></p>
+              <p>Software Development  <a href="#"> GIIC (PTY) LTD</a></p>
             </div>
           </div>
         </div>

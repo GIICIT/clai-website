@@ -49,13 +49,13 @@
                 <a class="nav-link" th:href="@{#}" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" th:href="@{treatments}"><span>Treatments</span></a>
+                <a class="nav-link" th:href="@{treatments}"><span>Skin Treatments</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)" th:href="@{blog}">Blog<i class="fa-solid"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" th:href="@{contact-us}"><span>Contact us</span></a>
+                <a class="nav-link" th:href="@{contact}"><span>Contact</span></a>
               </li>
             </ul>
           </div>
@@ -67,7 +67,6 @@
               <path d="M13.3333 20H66.6666" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
               </svg> 
             </a>
-            <a class="btn btn-primary" href="appointment.html">Book Now</a>
           </div>
         </div>
       </nav>
@@ -93,16 +92,14 @@
           </div>
           <div class="mt-5">
             <h3 class="mb-3">Contact Info</h3>
-            <p>6580 Allison Turnpike Creminfort,<br> AL 32808-4509</p>
-            <p>Sunday to Tuesday <br> (09:00 To 22:00)</p>
-            <p>Friday to Saturday <br> (11:00 To 19:00)</p>
+            <p>22 Van der Byl Avenue, Durbanville,<br> +27 77 370 5689</p>
+            <p>Monday to Thursday <br> (09:00 To 17:00)</p>
+            <p>Friday <br> (09:00 To 16:00)</p>
           </div>
           <div class="social-icon mt-5">
             <ul>
-              <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
             </ul>
           </div>
         </div>
@@ -112,7 +109,7 @@
     Right menu -->
     <!--=================================
     banner -->
-    <section class="inner-header space-ptb bg-holder" style="background-image: url(/img/bg/home-banner-6.jpeg);">
+    <section class="inner-header space-ptb bg-holder" style="background-image: url(/img/bg/home-banner.png);">
       <div id="main-slider" class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide slide-1 align-items-center d-flex">
@@ -136,7 +133,7 @@
     banner -->
     <!--=================================
     About us -->
-    <section class="space-ptb position-relative">
+    <section class=space-pt>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-8">
@@ -151,35 +148,37 @@
       </div>
     </section>
 
-    <section class="about space-pt">
+    <section class="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
             <div class="section-title">
-              <span class="sub-title">Whay chose Us</span>
-              <h2 class="title">Who we are and what we do</h2>
+              <span class="sub-title">Why choose Us</span>
+              <h2 class="title">What sets us apart</h2>
             </div>
             <div class="about-img pt-0 pt-lg-4">
-              <img class="img-fluid" src="/img/about/about-01.jpg" alt="#">
+              <img class="img-fluid" src="/img/about/what-sets-us-apart-1.png" alt="#">
             </div>
           </div>
           <div class="col-lg-6 position-relative">
             <div class="about-right mt-5 mt-lg-0">
               <div class="circle">
                 <div class="logo">
-                  10
+                  15
                 </div>
                 <div class="text">
                   <p>
-                    10 Years of Experiense in Spa -
+                    Over 15 Years of Experience -
                   </p>
                 </div>
               </div>
               <div class="about-img text-end">
-                <img class="img-fluid" src="/img/about/about1-02.jpg" alt="about1">
+                <img class="img-fluid" src="/img/about/what-sets-us-apart-2.png" alt="about1">
               </div>
-              <p class="mt-3">We know this in our gut, but what can we do about it? How can we motivate ourselves? One of the most difficult aspects of achieving success is staying motivated over the long haul.</p>
-              <a href="about-us.html" class="btn btn-lg btn-primary  mt-2">Discover More</a>
+              <p class="mt-3">At CLAI, we go beyond aesthetics—we create lasting transformations by integrating advanced,
+                evidence-based treatments with holistic wellness. Our personalized approach nurtures your body, mind, and
+                spirit, ensuring results that enhance not just your appearance but your confidence and vitality. With every
+                treatment, we empower you to feel balanced, radiant, and truly whole—because true beauty begins with well-being.</p>
             </div>
           </div>
         </div>
@@ -194,61 +193,41 @@
         <div class="row justify-content-center">
           <div class="col-xl-4 pb-4 pb-xl-0 pe-0 pe-xl-5">
             <div class="section-title">
-              <span class="sub-title">Category</span>
-              <h2 class="title">Selected category from our spa</h2>
-              <p class="section-description">If success is a process with a number of defined steps, then it is just like any other process.</p>
+              <span class="sub-title">Treatments</span>
+              <h2 class="title">Selected treatments from our clinic</h2>
+              <p class="section-description">True wellness is not just the absence of illness, but the presence of balance,
+                vitality, and deep relaxation—where the body heals, the mind unwinds, and the soul finds peace.</p>
             </div>
-            <a href="service.html" class="btn btn-primary mt-4">More Category</a>
           </div>
           <div class="col-xl-8">
-            <div class="owl-carousel owl-nav-bottom-center" data-nav-dots="false" data-nav-arrow="false" data-items="4" data-lg-items="3" data-md-items="4" data-sm-items="2" data-xs-items="2" data-space="20" data-autoheight="true">
+            <div class="owl-carousel owl-nav-bottom-center" data-nav-dots="false" data-nav-arrow="false" data-items="3" data-lg-items="3" data-md-items="3" data-sm-items="2" data-xs-items="2" data-space="20" data-autoheight="true">
               <div class="item">
                 <div class="category-box">
                   <div class="category-img">
-                    <img class="img-fluid" src="/img/category/category-01.jpg" alt="">
+                    <img class="img-fluid" src="/img/category/skin-treatments.png" alt="">
                   </div>
                   <div class="category-title text-center mt-4">
-                    <h4><a href="service-detail.html">Stone Massage</a></h4>
+                    <h4><a th:href="@{treatments}">Skin Treatments</a></h4>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="category-box">
                   <div class="category-img">
-                    <img class="img-fluid" src="/img/category/category-02.jpg" alt="">
+                    <img class="img-fluid" src="/img/category/ivy-therapy.png" alt="">
                   </div>
                   <div class="category-title text-center mt-4">
-                    <h4><a href="service-detail.html">Aroma Theraphy</a></h4>
+                    <h4><a th:href="@{coming-soon}">Ivy Therapy</a></h4>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="category-box">
                   <div class="category-img">
-                    <img class="img-fluid" src="/img/category/category-03.jpg" alt="">
+                    <img class="img-fluid" src="/img/category/body-wellness.png" alt="">
                   </div>
                   <div class="category-title text-center mt-4">
-                    <h4><a href="service-detail.html">Facial Care</a></h4>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="category-box">
-                  <div class="category-img">
-                    <img class="img-fluid" src="/img/category/category-04.jpg" alt="">
-                  </div>
-                  <div class="category-title text-center mt-4">
-                    <h4><a href="service-detail.html">Finnish Sauna</a></h4>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="category-box">
-                  <div class="category-img">
-                    <img class="img-fluid" src="/img/category/category-05.jpg" alt="">
-                  </div>
-                  <div class="category-title text-center mt-4">
-                    <h4><a href="service-detail.html">Scrub Massage</a></h4>
+                    <h4><a th:href="@{coming-soon}">Body Wellness</a></h4>
                   </div>
                 </div>
               </div>
@@ -261,206 +240,11 @@
     Category -->
     <!--=================================
     Features -->
-    <section class="bg-dark">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-6 col-lg-12" style="background-image: url(/img/bg/features-bg.jpg); background-position: center;
-          background-size: cover;">
-          </div>
-          <div class="col-xl-6 col-lg-12 features-section">
-            <div class="section-title">
-              <span class="sub-title text-white">Features</span>
-              <h2 class="title text-white">Amazing Features</h2>
-              <p class="section-description text-white">The first thing to remember about success is that it is a process – nothing more, nothing less. There is really no magic to it and it’s not reserved only for a select few people.</p>
-            </div>
-            <div class="feature-box mb-4">
-              <div class="feature-title-icon">
-                <div class="feature-icon me-3">
-                  <img class="img-fluid" src="/img/icon/hot-stones.png" alt="hot-stones">
-                </div>
-                <h3 class="text-white">Hot stones</h3>
-              </div>
-              <div class="feature-content text-white">
-                <p>Use a past defeat as a motivator. Remind yourself you have nowhere to go except up as you have already been at the bottom.</p>
-              </div>
-            </div>
-            <div class="feature-box mb-4">
-              <div class="feature-title-icon">
-                <div class="feature-icon me-3">
-                  <img class="img-fluid" src="/img/icon/relaxation.png" alt="relaxation">
-                </div>
-                <h3 class="text-white">Relaxation</h3>
-              </div>
-              <div class="feature-content text-white">
-                <p>Having clarity of purpose and a clear picture of what you desire, is probably the single most important factor in achievement.</p>
-              </div>
-            </div>
-            <div class="feature-box">
-              <div class="feature-title-icon">
-                <div class="feature-icon me-3">
-                  <img class="img-fluid" src="/img/icon/thai.png" alt="thai">
-                </div>
-                <h3 class="text-white">Thai</h3>
-              </div>
-              <div class="feature-content text-white">
-                <p>Trying to go through life without clarity is similar to sailing a rudder-less ship – no good thing can or will happen!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <!--=================================
     Features -->
     <!--=================================
     Menu list -->
-    <section class="space-ptb position-relative">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8">
-            <div class="section-title text-center">
-              <span class="sub-title">Menu</span>
-              <h2 class="title">Natural Beauty Spa Center</h2>
-              <p class="section-description">I truly believe Augustine’s words are true and if you look at history you know it is true. There are many people in the world with amazing talents who realize.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 col-lg-6 mt-4">
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/body-massage.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Full body massage</a>
-                  <p>Focus is having the unwavering</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$22.00</span>
-                  <span>$16.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/face-masks.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Face masks</a>
-                  <p>The best way is to develop</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$18.00</span>
-                  <span>$14.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/nail-treatments.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Nail Treatments</a>
-                  <p>I coach my clients to practice</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$50.00</span>
-                  <span>$40.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/aroma-therapy.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Aroma therapy</a>
-                  <p>We all carry a lot of baggage</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$65.00</span>
-                  <span>$62.00</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-6 mt-5 mt-lg-4">
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/skincare.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Skincare Sunday</a>
-                  <p>It is truly amazing</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$48.00</span>
-                  <span>$42.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/relaxation.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Relaxation</a>
-                  <p>Figure out what you want</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$35.00</span>
-                  <span>$30.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/medical-treatments.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Medical Treatments</a>
-                  <p>You will begin to realise</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$40.00</span>
-                  <span>$35.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-list menu-list-default">
-              <div class="menu-icon">
-                <img class="img-fluid" src="/img/menu/face-treatments.png" alt="">
-              </div>
-              <div class="menu-details">
-                <div class="menu-title">
-                  <a href="#">Face Treatments</a>
-                  <p>The Truth About Success</p>
-                </div>
-                <div class="menu-border"></div>
-                <div class="menu-price">
-                  <span class="price-min">$59.00</span>
-                  <span>$52.00</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!--=================================
     Menu list -->
     <!--=================================
@@ -470,9 +254,9 @@
         <div class="row justify-content-center">
           <div class="col-lg-8 mt-5">
             <div class="section-title text-center">
-              <a class="btn-icon btn-lg bg-primary rounded-circle btn-animation popup-youtube" href="https://www.youtube.com/watch?v=rGtcmKIZi5c"><i class="fas fa-play text-white fa-xs"></i></a>
               <h2 class="title text-white mt-5">Health And Relaxation</h2>
-              <p class="section-description text-white">Introspection is the trick. Understand what you want, why you want it and what it will do for you. This is a critical factor, and as such, is probably the most difficult step.</p>
+              <p class="section-description text-white">True wellness is not just the absence of illness, but the presence
+                of balance, vitality, and deep relaxation—where the body heals, the mind unwinds, and the soul finds peace</p>
             </div>
           </div>
         </div>
@@ -488,8 +272,9 @@
           <div class="col-md-8">
             <div class="section-title text-center">
               <span class="sub-title">Team</span>
-              <h2 class="title">Our Happy Team</h2>
-              <p class="section-description">So, how can we stay on course with all the distractions in our lives? Willpower is a good start, but it’s very difficult to stay on track simply through willpower.</p>
+              <h2 class="title">Our Team</h2>
+              <p class="section-description">Individually, we are skilled; together, we are unstoppable. At CLAI, our team
+                unites passion, expertise, and care to elevate your well-being and empower your transformation</p>
             </div>
           </div>
         </div>
@@ -545,88 +330,11 @@
     Team -->
     <!--=================================
     Testimonial -->
-    <section class="bg-primary">
-      <div class="space-ptb" style="background-image: url(/img/testimonial/testimonial-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title text-center">
-                <span class="sub-title text-white">What Other Say</span>
-                <h2 class="title text-white">Our Customer Reviews</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <div class="owl-carousel owl-nav-bottom-center" data-nav-dots="false" data-nav-arrow="false" data-items="1" data-lg-items="1" data-md-items="1" data-sm-items="1"  data-space="30" data-autoheight="true">
-                <div class="item">
-                  <div class="testimonial text-center mt-0">
-                    <div class="testimonial-quote-icon">
-                      <img class="img-fluid" src="/img/testimonial/quote.svg" alt="">
-                    </div>
-                    <div class="testimonial-info">
-                      <div class="testimonial-content"><i>Introspection is the trick. Understand what you want, why you want it and what it will do for you. This is a critical factor, and as such, is probably the most difficult step.</i></div>
-                    </div>
-                    <div class="testimonial-details">
-                      <div class="testimonial-name">
-                        <h6 class="author-name">Mellissa Doe</h6>
-                        <span class="text-primary">Relax massage</span>
-                      </div>
-                      <div class="avatar">
-                        <img class="img-fluid" src="/img/testimonial/01.jpg" alt="">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="testimonial text-center mt-0">
-                    <div class="testimonial-quote-icon">
-                      <img class="img-fluid" src="/img/testimonial/quote.svg" alt="">
-                    </div>
-                    <div class="testimonial-info">
-                      <div class="testimonial-content">So, there you have it; the six steps that will help you to the fabled land of achievement and success! You now have the opportunity to push ahead and reach your potential.</div>
-                    </div>
-                    <div class="testimonial-details">
-                      <div class="testimonial-name">
-                        <h6 class="author-name">Felica Queen</h6>
-                        <span class="text-primary">Relax massage</span>
-                      </div>
-                      <div class="avatar">
-                        <img class="img-fluid" src="/img/testimonial/02.jpg" alt="">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="testimonial text-center mt-0">
-                    <div class="testimonial-quote-icon">
-                      <img class="img-fluid" src="/img/testimonial/quote.svg" alt="">
-                    </div>
-                    <div class="testimonial-info">
-                      <div class="testimonial-content">What is the exact sequence of events that will take you to where you want to be? Have a think consciously of what you need to do. Every outcome begins with the first step</div>
-                    </div>
-                    <div class="testimonial-details">
-                      <div class="testimonial-name">
-                        <h6 class="author-name">Melanie Byrd</h6>
-                        <span class="text-primary">Relax massage</span>
-                      </div>
-                      <div class="avatar">
-                        <img class="img-fluid" src="/img/testimonial/04.jpg" alt="">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!--=================================
     Testimonial -->
     <!--=================================
     blog post -->
-    <section class="space-ptb position-relative">
+    <section class="space-pb position-relative">
       <!-- <img class="img-fluid blog-bg-pattern" src="img/blog/blog-bg.png" alt=""> -->
       <div class="container">
         <div class="row justify-content-center">
@@ -634,7 +342,8 @@
             <div class="section-title text-center">
               <span class="sub-title">Blog</span>
               <h2 class="title">Latest News & Blogs</h2>
-              <p class="section-description">Success really has nothing to do with luck, coincidence or fate. It really comes down to understanding the steps in the process and then executing on those steps.</p>
+              <p class="section-description">Knowledge empowers transformation. Through our blogs, we share expert insights,
+                holistic wellness tips, and evidence-based beauty solutions—guiding you toward a healthier, more radiant you</p>
             </div>
           </div>
         </div>
@@ -644,7 +353,7 @@
               <div class="blog-post-image">
                 <img class="img-fluid" src="/img/blog/blog-01.jpg" alt="">
               </div>
-              <div class="blog-post-content">
+              <div class="blog-post-content blog-post-content">
                 <div class="blog-post-details pb-0">
                   <div class="blog-post-title">
                     <h4><a href="blog-single.html">Pressure Points in Massage Therapy</a></h4>
@@ -667,7 +376,7 @@
               <div class="blog-post-image">
                 <img class="img-fluid" src="/img/blog/blog-02.jpg" alt="">
               </div>
-              <div class="blog-post-content">
+              <div class="blog-post-content blog-post-content">
                 <div class="blog-post-details pb-0">
                   <div class="blog-post-title">
                     <h4><a href="blog-single.html">The Benefits of Natural Cosmetics</a></h4>
@@ -690,7 +399,7 @@
               <div class="blog-post-image">
                 <img class="img-fluid" src="/img/blog/blog-03.jpg" alt="">
               </div>
-              <div class="blog-post-content">
+              <div class="blog-post-content blog-post-content">
                 <div class="blog-post-details pb-0">
                   <div class="blog-post-title">
                     <h4><a href="blog-single.html">Speed Cleaning Tips From Cleaners</a></h4>
@@ -723,8 +432,8 @@
               <h5>Contact Information</h5>
               <div class="footer-contact-info">
                 <ul class="list-unstyled mb-0">
-                  <li><i class="fas fa-fw fa-map-marker-alt text-primary"></i><span>6580 Allison Turnpike Creminfort, AL 32808-4509</span></li>
-                  <li><i class="fas fa-fw fa-phone text-primary"></i><span>(021) 345-6789</span></li>
+                  <li><i class="fas fa-fw fa-map-marker-alt text-primary"></i><span>22 Van der Byl Avenue, Durbanville</span></li>
+                  <li><i class="fas fa-fw fa-phone text-primary"></i><span>+27 77 370 5689</span></li>
                   <li><i class="far fa-fw fa-envelope text-primary"></i><span>info@clai.co.za</span></li>
                 </ul>
               </div>
@@ -740,9 +449,9 @@
                 <h5>Navigation</h5>
                 <ul class="list-unstyled mb-0">
                   <li><a th:href="@{home}">Home</a></li>
-                  <li><a th:href="@{treatments}">Treatments</a></li>
+                  <li><a th:href="@{treatments}">Skin Treatments</a></li>
                   <li><a th:href="@{blog}">Blog</a></li>
-                  <li><a th:href="@{contact-us}">Contact us</a></li>
+                  <li><a th:href="@{contact}">Contact us</a></li>
                 </ul>
               </div>
             </div>
@@ -772,7 +481,7 @@
               <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a th:href="@{#}"> CLAI </a> All Rights Reserved</p>
             </div>
             <div class="col-12 col-md-6 text-md-end text-center mt-3 mt-md-0">
-              <p>Software house <a href="#">GIIC (PTY) LTD</a></p>
+              <p>Software Development <a href="#"> GIIC (PTY) LTD</a></p>
             </div>
           </div>
         </div>
