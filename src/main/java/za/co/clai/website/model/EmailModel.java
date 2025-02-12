@@ -8,50 +8,38 @@ import jakarta.validation.constraints.Size;
 public class EmailModel {
     @NotEmpty(message = "Name is required")
     @Size(min = 2, max = 30, message = "Name must be between 2 and 30 characters")
-    String name;
+    String fullName;
 
     @NotEmpty(message = "Email is required")
     @Email(regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}",
             flags = Pattern.Flag.CASE_INSENSITIVE, message = "Email should be valid")
-    String emailAddress;
-
-    @NotEmpty(message = "Subject is required.")
-    @Size(min = 2, max = 30, message = "Subject must be between 2 and 30 characters")
-    String subject;
+    String email;
 
     @NotEmpty(message = "Message is required.")
     @Size(min = 2, max = 1000, message = "Message must be between 2 and 1000 characters")
-    String message;
+    String comment;
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public String getEmailAddress() {
-        return emailAddress;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getSubject() {
-        return subject;
+    public String getComment() {
+        return comment;
     }
 
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 }
