@@ -23,12 +23,12 @@ public class ContactUsController {
         this.emailService = emailService;
     }
 
-    @GetMapping(value = {"/contact",})
+    @GetMapping(value = {"/contact-us",})
     public String contactUsPage(Model model) {
         model.addAttribute("emailModel", new EmailModel());
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
-        return "contact";
+        return "contact-us";
     }
 
     @PostMapping("/email")
@@ -38,11 +38,11 @@ public class ContactUsController {
              Model model
             ) {
         if (bindingResult.hasErrors()) {
-            return "contact";
+            return "contact-us";
         }
 
         emailService.sendSimpleMessage(emailModel);
-        return "redirect:/contact";
+        return "redirect:/contact-us";
     }
 }
 
