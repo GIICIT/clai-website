@@ -17,32 +17,30 @@ public class ContactUsController {
     final SocialMediaLinksModel socialMediaLinksModel;
     final EmailService emailService;
 
-
     public ContactUsController(SocialMediaLinksModel socialMediaLinksModel, EmailService emailService) {
         this.socialMediaLinksModel = socialMediaLinksModel;
         this.emailService = emailService;
     }
 
-    @GetMapping(value = {"/contact",})
+    @GetMapping(value = {"/contact-us"})
     public String contactUsPage(Model model) {
         model.addAttribute("emailModel", new EmailModel());
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
-        return "contact";
+        return "contact-us";
     }
 
     @PostMapping("/email")
     public String email(
             @Valid @ModelAttribute("emailModel") EmailModel emailModel,
-             BindingResult bindingResult,
-             Model model
-            ) {
+            BindingResult bindingResult,
+            Model model) {
         if (bindingResult.hasErrors()) {
-            return "contact";
+            return "contact-us";
         }
 
         emailService.sendSimpleMessage(emailModel);
-        return "redirect:/contact";
+        return "redirect:/contact-us";
     }
 }
 

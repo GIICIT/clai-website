@@ -334,10 +334,10 @@ POTENZA.searchbar = function () {
         }
     });
     //Do not include! This prevents the form from submitting for DEMO purposes only!
-    $('form').submit(function(event) {
-        event.preventDefault();
-        return false;
-    })
+    // $('form').submit(function(event) {
+    //     event.preventDefault();
+    //     return false;
+    // })
    }
 }
 
@@ -462,35 +462,4 @@ POTENZA.searchbar = function () {
     POTENZA.animatedcircletext(),
     POTENZA.qty();
   });
-
-  /*-------------------------------------------------*/
-  /* =  Contact Form
-  /*-------------------------------------------------*/
-  var submitContact = $('#submit-contact'),
-      message = $('#msg');
-
-  submitContact.on('click', function(e) {
-    // e.preventDefault();
-
-    var $this = $(this);
-
-    $.ajax({
-      type: "POST",
-      url: '/email',
-      dataType: 'json',
-      cache: false,
-      data: $('#contact-form').serialize(),
-      success: function(data) {
-
-        console.log(data);
-        if (data.info !== 'error') {
-          $this.parents('form').find('input[type=text],textarea,select').filter(':visible').val('');
-          message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-        } else {
-          message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-        }
-      }
-    });
-  });
-
-})(jQuery);
+  })(jQuery);

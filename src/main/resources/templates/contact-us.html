@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>LuxurySpa - Spa & Beauty HTML Template</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" th:href="@{img}">
+    <link rel="shortcut icon" th:href="@{/img/clai-logo-full-black.svg}" type="image/x-icon">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- CSS Global Compulsory (Do not remove)-->
-    <link rel="stylesheet" th:href="@{css/font-awesome/all.min.css}">
-    <link rel="stylesheet" th:href="@{css/bootstrap/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/font-awesome/all.min.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
     <!-- Template Style -->
-    <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 
     <style>
       .error {
@@ -25,7 +25,6 @@
         display: block; /* Ensures the error message appears on its own line */
       }
     </style>
-
   </head>
   <body>
     
@@ -43,7 +42,7 @@
       <nav class="navbar navbar-static-top navbar-expand-lg">
         <div class="container-fluid main-header position-relative">
           <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><i class="fas fa-align-left"></i></button>
-          <a class="navbar-brand" th:href="@{home}">
+          <a class="navbar-brand" th:href="@{#}">
             <img class="img-fluid" src="/img/clai-logo-full-white.svg" alt="logo">
             <img class="img-fluid sticky" src="/img/clai-logo-full-black.svg" alt="logo">
           </a>
@@ -56,7 +55,7 @@
                 <a class="nav-link" th:href="@{treatments}"><span>Skin Treatments</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" th:href="@{blog}">Blog<i class="fa-solid"></i></a>
+                <a class="nav-link" href="javascript:void(0)" th:href="@{blog}">Blog<i class="fa-solid"></i></a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" th:href="@{#}"><span>Contact</span></a>
@@ -71,7 +70,6 @@
                 <path d="M13.3333 20H66.6666" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
               </svg>
             </a>
-
           </div>
         </div>
       </nav>
@@ -146,43 +144,43 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-6">
-              <div class="feature-item feature-box-style-03">
-                <div class="feature-icon">
-                  <object type="image/svg+xml" data="/img/icon/shipping.svg" class="icon "></object>
-                </div>
-                <div class="feature-content">
-                  <h4 class="feature-title">Free Shipping</h4>
-                  <p class="mb-0">
-                    Free shipping on all Local Area order above $200
-                  </p>
-                </div>
+            <div class="feature-item feature-box-style-03">
+              <div class="feature-icon">
+                <object type="image/svg+xml" data="/img/icon/shipping.svg" class="icon "></object>
               </div>
+              <div class="feature-content">
+                <h4 class="feature-title">Free Shipping</h4>
+                <p class="mb-0">
+                  Free shipping on all Local Area order above $200
+                </p>
+              </div>
+            </div>
           </div>
           <div class="col-lg-4 col-md-6">
-              <div class="feature-item feature-box-style-03">
-                <div class="feature-icon">
-                  <object type="image/svg+xml" data="/img/icon/support.svg" class="icon "></object>
-                </div>
-                <div class="feature-content">
-                  <h4 class="feature-title">24/7 Support</h4>
-                  <p class="mb-0">
-                    Our Customer Support Team is ready and available to help.
-                  </p>
-                </div>
+            <div class="feature-item feature-box-style-03">
+              <div class="feature-icon">
+                <object type="image/svg+xml" data="/img/icon/support.svg" class="icon "></object>
               </div>
+              <div class="feature-content">
+                <h4 class="feature-title">24/7 Support</h4>
+                <p class="mb-0">
+                  Our Customer Support Team is ready and available to help.
+                </p>
+              </div>
+            </div>
           </div>
           <div class="col-lg-4 col-md-6">
-              <div class="feature-item feature-box-style-03 mb-0">
-                <div class="feature-icon">
-                  <object type="image/svg+xml" data="/img/icon/return.svg" class="icon "></object>
-                </div>
-                <div class="feature-content">
-                  <h4 class="feature-title">30 Days Return</h4>
-                  <p class="mb-0">
-                    Product any fault within 30 days for an exchange.
-                  </p>
-                </div>
+            <div class="feature-item feature-box-style-03 mb-0">
+              <div class="feature-icon">
+                <object type="image/svg+xml" data="/img/icon/return.svg" class="icon "></object>
               </div>
+              <div class="feature-content">
+                <h4 class="feature-title">30 Days Return</h4>
+                <p class="mb-0">
+                  Product any fault within 30 days for an exchange.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -235,33 +233,34 @@
                 <h3 class="title mb-4">We'd Love To Hear From You</h3>
                 <p>Get the oars in the water and start rowing. Execution is the single biggest factor in achievement so the faster and better your execution.</p>
               </div>
-              <form th:action="@{/email}" th:object="${emailModel}" method="post" id="contact-form" >
+              <form id="contactForm" th:action="@{/email}" th:object="${emailModel}" method="post" >
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
                 <div class="row">
+                  <!-- Full Name Field -->
                   <div class="mb-3 col-md-6">
-                    <label for="name" class="form-label"></label>
-                    <div class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
-                    <input type="text" class="form-control" name="name" id="name" th:field="*{name}" placeholder="Full Name">
+                    <label for="fullName" ></label>
+                    <div class="error" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"></div>
+                    <input type="text" class="form-control" id="fullName" th:field="*{fullName}" placeholder="Full Name">
                   </div>
+
+                  <!-- Email Field -->
                   <div class="mb-3 col-md-6">
-                    <label for="email" class="form-label"></label>
-                    <div class="error" th:if="${#fields.hasErrors('emailAddress')}" th:errors="*{emailAddress}"></div>
-                    <input type="text" class="form-control" name="emailAddress" id="email" th:field="*{emailAddress}" placeholder="Your Email">
+                    <label for="email"></label>
+                    <div class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+                    <input type="email" class="form-control" id="email" th:field="*{email}" placeholder="Your Email">
                   </div>
+
+                  <!-- Comment Field -->
                   <div class="mb-3 col-md-12">
-                    <label for="subject" class="form-label"></label>
-                    <div class="error" th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}"></div>
-                    <input type="text" class="form-control" name="subject" id="subject" th:field="*{subject}" placeholder="Subject">
+                    <label for="comment" ></label>
+                    <div class="error" th:if="${#fields.hasErrors('comment')}" th:errors="*{comment}"></div>
+                    <textarea class="form-control" id="comment" rows="3" th:field="*{comment}" placeholder="Your Message"></textarea>
                   </div>
-                  <div class="mb-3 col-md-12">
-                    <label for="message" class="form-label"></label>
-                    <div class="error" th:if="${#fields.hasErrors('message')}" th:errors="*{message}"></div>
-                    <textarea class="form-control" name="message" id="message" rows="6" th:field="*{message}" placeholder="Your Message"></textarea>
-                  </div>
+
+                  <!-- Submit Button -->
                   <div class="col-md-6">
                     <div class="d-grid">
-                      <input type="submit" id="submit-contact" class="btn btn-primary"
-                             value="Send Message">
-<!--                      <div id="msg" class="message"></div>-->
+                      <button type="submit" class="btn btn-primary">Send Message</button>
                     </div>
                   </div>
                 </div>
