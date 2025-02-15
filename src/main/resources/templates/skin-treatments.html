@@ -448,5 +448,116 @@
     <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
     <script th:src="@{js/owl-carousel/owl.carousel.min.js}"></script>
     <script th:src="@{js/slick/slick.min.js}"></script>
+
+    <!-- PDF Modal -->
+    <!-- Price List Modal -->
+    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-fullscreen-sm-down"> <!-- Fullscreen on small screens -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="pdfModalLabel">Price List</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <canvas id="pdf-viewer" class="w-100"></canvas> <!-- Canvas for rendering PDF -->
+            <div class="pdf-controls mt-3 d-flex justify-content-between">
+              <button class="btn btn-secondary" onclick="prevPage()">Previous</button>
+              <span id="page-info">Page <span id="current-page">1</span> of <span id="total-pages">?</span></span>
+              <button class="btn btn-secondary" onclick="nextPage()">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+
+    <script>
+      let pdfDoc = null, pageNum = 1, pageRendering = false, pageNumPending = null;
+      const canvas = document.getElementById("pdf-viewer");
+      const ctx = canvas.getContext("2d");
+      const pdfUrl = "/docs/pricelist.pdf"; // Adjust the path if necessary
+
+      function getScaleFactor() {
+        const screenWidth = window.innerWidth;
+        if (screenWidth < 576) return 0.75; // Faster loading on mobile
+        if (screenWidth < 768) return 1.0;  // Medium resolution for tablets
+        return 1.25; // High resolution for desktops
+      }
+
+      function openPDF() {
+        if (!pdfDoc) {
+          console.error("PDF not loaded yet!");
+          return;
+        }
+
+        var pdfModal = new bootstrap.Modal(document.getElementById("pdfModal"));
+        pdfModal.show();
+
+        pageNum = 1; // Reset to first page
+        document.getElementById("current-page").textContent = pageNum;
+        renderPage(pageNum);
+      }
+
+      function renderPage(num) {
+        if (pageRendering) {
+          pageNumPending = num;
+          return;
+        }
+
+        pageRendering = true;
+        let scale = getScaleFactor();
+
+        pdfDoc.getPage(num).then(function (page) {
+          let viewport = page.getViewport({ scale: scale });
+
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+
+          let renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+          };
+
+          let renderTask = page.render(renderContext);
+          renderTask.promise.then(function () {
+            pageRendering = false;
+            document.getElementById("current-page").textContent = num;
+
+            if (pageNumPending !== null) {
+              renderPage(pageNumPending);
+              pageNumPending = null;
+            }
+          });
+        });
+      }
+
+      function nextPage() {
+        if (pageNum < pdfDoc.numPages) {
+          pageNum++;
+          requestAnimationFrame(() => renderPage(pageNum));
+        }
+      }
+
+      function prevPage() {
+        if (pageNum > 1) {
+          pageNum--;
+          requestAnimationFrame(() => renderPage(pageNum));
+        }
+      }
+
+      window.addEventListener("resize", () => renderPage(pageNum)); // Adjust scale on window resize
+
+      // Preload PDF on page load for faster modal opening
+      document.addEventListener("DOMContentLoaded", function () {
+        pdfjsLib.getDocument({ url: pdfUrl, disableStream: false }).promise.then(function (pdf) {
+          pdfDoc = pdf;
+          document.getElementById("total-pages").textContent = pdf.numPages;
+        }).catch(error => console.error("Error loading PDF:", error));
+      });
+    </script>
+
+
   </body>
 </html>
