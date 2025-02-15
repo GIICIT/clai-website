@@ -19,4 +19,11 @@ public class BlogController {
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "blog";
     }
+
+    @GetMapping(value = {"/blog-single-why-clai"})
+    public String blogPageWhyClai(Model model) {
+        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
+        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
+        return "blog-single-why-clai";
+    }
 }

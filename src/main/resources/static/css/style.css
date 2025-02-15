@@ -7671,3 +7671,24 @@ Blog Style 01
   color: #f54337; }
 
 /*# sourceMappingURL=../css/style.css.map */
+
+/* Ensure canvas is centered and responsive */
+#pdf-viewer {
+  display: block;
+  margin: auto;
+  border: 1px solid #ccc; /* Optional border for visibility */
+}
+
+/* Style PDF navigation controls */
+.pdf-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.pdf-controls button {
+  padding: 5px 15px;
+  font-size: 14px;
+}
