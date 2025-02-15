@@ -524,17 +524,16 @@ Javascript -->
 <script th:src="@{/js/custom.js}"></script>
 
 <!-- PDF Modal -->
-<!-- PDF Modal -->
 <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg modal-fullscreen-sm-down"> <!-- Fullscreen on small screens -->
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="pdfModalLabel">Price List</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
-                <canvas id="pdf-viewer"></canvas>
-                <div class="pdf-controls mt-3">
+                <canvas id="pdf-viewer" class="w-100"></canvas> <!-- Ensure canvas width adapts -->
+                <div class="pdf-controls mt-3 d-flex justify-content-between">
                     <button class="btn btn-secondary" onclick="prevPage()">Previous</button>
                     <span id="page-info">Page <span id="current-page">1</span> of <span id="total-pages">?</span></span>
                     <button class="btn btn-secondary" onclick="nextPage()">Next</button>
@@ -554,18 +553,26 @@ Javascript -->
         pageNum = 1,
         pageRendering = false,
         pageNumPending = null,
-        scale = 0.95,
         canvas = document.getElementById("pdf-viewer"),
         ctx = canvas.getContext("2d");
+
+    function getScaleFactor() {
+        const screenWidth = window.innerWidth;
+        if (screenWidth < 576) return 0.6; // Smaller scale for mobile
+        if (screenWidth < 768) return 0.8; // Slightly larger for tablets
+        return 1.0; // Full scale for larger screens
+    }
 
     function openPDF() {
         var url = "/docs/pricelist.pdf"; // Ensure the correct path
 
-        // Show Bootstrap modal
         var pdfModal = new bootstrap.Modal(document.getElementById("pdfModal"));
         pdfModal.show();
 
-        // Load PDF
+        // Reset page to 1 before loading the PDF
+        pageNum = 1;
+        document.getElementById("current-page").textContent = pageNum;
+
         pdfjsLib.getDocument(url).promise.then(function (pdf) {
             pdfDoc = pdf;
             document.getElementById("total-pages").textContent = pdf.numPages;
@@ -575,8 +582,8 @@ Javascript -->
 
     function renderPage(num) {
         pageRendering = true;
+        var scale = getScaleFactor();
 
-        // Load the page
         pdfDoc.getPage(num).then(function (page) {
             var viewport = page.getViewport({ scale: scale });
             canvas.height = viewport.height;
@@ -614,7 +621,11 @@ Javascript -->
             renderPage(pageNum);
         }
     }
+
+    window.addEventListener("resize", () => renderPage(pageNum)); // Adjust scale on window resize
 </script>
+
+
 
 
 

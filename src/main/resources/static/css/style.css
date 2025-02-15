@@ -7672,23 +7672,29 @@ Blog Style 01
 
 /*# sourceMappingURL=../css/style.css.map */
 
-/* Ensure canvas is centered and responsive */
 #pdf-viewer {
+  max-width: 100%;
+  height: auto;
   display: block;
   margin: auto;
-  border: 1px solid #ccc; /* Optional border for visibility */
 }
 
-/* Style PDF navigation controls */
 .pdf-controls {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  font-size: 16px;
+  flex-wrap: wrap;
 }
 
 .pdf-controls button {
   padding: 5px 15px;
   font-size: 14px;
 }
+
+@media (max-width: 576px) {
+  .pdf-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
