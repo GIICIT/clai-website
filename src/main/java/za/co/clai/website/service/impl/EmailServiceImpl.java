@@ -28,6 +28,7 @@ public class EmailServiceImpl implements EmailService {
         message.setFrom(emailFrom);
         message.setTo(emailTo);
         message.setReplyTo(emailModel.getEmail());
+        message.setSubject("CLAI Website Enquiry." );
         message.setText(emailModel.getComment());
         emailSender.send(message);
     }
