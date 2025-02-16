@@ -46,7 +46,7 @@
                 <a class="nav-link" th:href="@{home}" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" th:href="@{treatments}" id="navbarDropdown" role="button"
+                <a class="nav-link" id="navbarDropdown" role="button"
                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Treatments<i
                         class="fa-solid fa-plus"></i></a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -96,7 +96,8 @@
     Search -->
     <!--=================================
     Right menu -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"  style="background-image: url(/img/bg/bg-01.png); background-size: cover; background-position: center right;">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+         style="background-image: url(/img/bg/right-menu-01.png); background-size: cover; background-position: center right;">
       <div class="offcanvas-header text-end justify-content-end p-4">
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
@@ -104,18 +105,17 @@
         <div class="sidebar-menu">
           <div class="logo">
             <a th:href="@{home}">
-              <img class="img-fluid logo-dark" src="/img/clai-logo-full-black.svg" alt="Main logo">
+              <img class="img-fluid logo-dark" src="/img/clai-logo-full-stone.svg" alt="Main logo">
             </a>
           </div>
           <div class="section-title mt-5">
-            <h3 class="title mb-3">About us</h3>
-            <p>Execution is the single biggest factor in achievement so the faster and better your execution.</p>
           </div>
           <div class="mt-5">
             <h3 class="mb-3">Contact Info</h3>
             <p>22 Van der Byl Avenue, Durbanville,<br> +27 77 370 5689</p>
-            <p>Monday to Thursday <br> (09:00 To 17:00)</p>
-            <p>Friday <br> (09:00 To 16:00)</p>
+            <p>Monday to Friday <br> (09:00 To 16:30)</p>
+            <p>Saturday - Sunday  <br> (Closed)</p>
+            <p>Public Holidays  <br> (Closed)</p>
           </div>
           <div class="social-icon mt-5">
             <ul>
@@ -130,15 +130,15 @@
     Right menu -->
     <!--=================================
     banner -->
-    <section class="inner-header space-ptb bg-holder" style="background-image: url(/img/bg/02.jpg);">
+    <section class="inner-header space-ptb bg-holder" style="background-image: url(/img/bg/blog-why-clai.png);">
       <div class="container">
         <div class="row  justify-content-center">
           <div class="col-md-8 text-center">
-            <h2 class="text-black-50">Why CLAI ?</h2>
+            <h1 class="text-black-50">Blog</h1>
             <ul class="breadcrumb mb-0 p-0">
-              <li class="breadcrumb-item"><a th:href="@{home}"><i class="fa fa-home pe-2"></i>Home</a></li>
-              <li class="breadcrumb-item"><a th:href="@{#}">Blog</a></li>
-              <li class="breadcrumb-item active"><span>Why CLAI ?</span></li>
+<!--              <li class="breadcrumb-item"><a th:href="@{home}"><i class="fa fa-home pe-2"></i>Home</a></li>-->
+<!--              <li class="breadcrumb-item"><a th:href="@{#}">Blog</a></li>-->
+<!--              <li class="breadcrumb-item active"><span>Why CLAI ?</span></li>-->
             </ul>
           </div>
         </div>
@@ -161,21 +161,103 @@
                 <div class="blog-post-content">
                   <div class="blog-post-details pb-0">
                     <div class="blog-post-title">
-                      <h5><a href="#">The Benefits of Natural Cosmetics</a></h5>
+                      <h5><a href="#">Why Clai? A look inside the future of Aesthetic well being.</a></h5>
                     </div>
                     <div class="blog-post-time">
                       <i class="far fa-clock"></i>
-                      <a href="#">February 4, 2021</a>
+                      <a href="#">February 14, 2025</a>
                       <i class="far fa-user ps-3"></i>
-                      <a href="#">By admin</a>
+                      <a href="#">By Kim Van Zyl</a>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- blog-post-Description START -->
               <div class="blog-post-description">
-                <p>Then he practiced each one for a certain length of time. To make these virtues a habit, Franklin can up with a method to grade himself on his daily actions. In a journal he drew a table with a row for every virtue and a column for every day of the week. Every time he made a fault, he made a mark in the appropriate column.</p>
-                <p class="mb-0"><b>He began with temperance</b>, which included the moderating of every pleasure or inclination to develop undesirable habits, because temperance “tends to procure that coolness and clearance and head that is so necessary where constant vigilance is to be kept up and guard maintained against the unremitting attraction of ancient habits and the force of perpetual temptations.</p>
+                <p>Skincare is no longer about quick fixes or following trends—it’s about science-driven solutions, personalised care and long-term wellness. At CLAI, we understand that achieving healthy, radiant skin requires more than just external treatments. It’s about nourishing your skin from within, supporting your body’s natural healing processes and addressing the root causes of skin concerns.
+                  That’s why we take a holistic approach, ensuring every client receives a customised Blueprint Plan tailored to their unique skin and body wellness needs.</p>
+                <p class="mb-0"><b>A Personalised Approach to Skin & Body Health</b>
+                  <br>Your skin is a reflection of your overall health, which is why we start with an in-depth consultation. Whether you’re undergoing a VISIA Skin Analysis to assess your skin’s condition or a Body Wellness Consultation to evaluate internal factors affecting your skin, we take a 360-degree approach to wellness.
+                  We recognise that factors such as genetics, lifestyle, stress and environmental exposure all impact well being. Instead of offering one-size-fits-all solutions, we design personalised treatment journeys that evolve with your changing needs, ensuring you achieve long-lasting results.
+                </p>
+
+                <br>
+                <p class="mb-0"><b>Expert Care for Complex Skin Concerns</b>
+                  <br>At CLAI, we specialise in treating a range of skin concerns with science-backed treatments designed to target the root causes of skin issues. Every treatment is customised based on your skin’s unique needs, ensuring long-lasting results and improved overall skin health.</p>
+                <br>
+                <p class="mb-0"><b>Acne & Acne Scarring</b>
+                  <br>Acne is one of the most common skin conditions, affecting individuals of all ages. It can be triggered by hormones, genetics, lifestyle and stress, leading to persistent breakouts, inflammation and scarring. At CLAI, we take a comprehensive approach to acne treatment by:</p>
+                <ul style="padding-left: 30px;">
+                  <li>Controlling excess oil production with medical-grade skincare and treatments like chemical peels.</li>
+                  <li>Reducing active breakouts and inflammation with targeted treatments such as Lumecca IPL, LED therapy and personalised home care routines.</li>
+                  <li>Minimising post-acne scars and uneven skin texture using collagen-stimulating procedures like microneedling, PRP/PRF therapy and mesotherapy.</li>
+                  <li>Addressing internal factors such as gut health, nutrition and hormonal imbalances that contribute to persistent acne.</li>
+                </ul>
+
+                <b>Pigmentation & Sun Damage</b>
+                  <br>Hyperpigmentation and sun damage are common concerns, especially in those with prolonged sun exposure or hormonal changes (such as melasma). Pigmentation can manifest as:
+                <ul style="padding-left: 30px;">
+                  <li>Dark spots and age spots caused by UV exposure.</li>
+                  <li>Melasma, a condition often linked to hormonal fluctuations.</li>
+                  <li>Post-inflammatory hyperpigmentation (PIH) from acne or skin irritation.</li>
+                </ul>
+
+                <p class="mb-0"><b>Rosacea & Sensitive Skin</b>
+                  <br>Rosacea and sensitivity are characterised by redness, flushing, inflammation and fragile skin that reacts easily to triggers. Many people with these conditions experience:</p>
+                <ul style="padding-left: 30px;">
+                  <li>Persistent redness and visible blood vessels.</li>
+                  <li>Burning, stinging, or irritation when using skincare products.</li>
+                  <li>Flare-ups triggered by heat, spicy foods, alcohol, or stress.</li>
+                </ul>
+
+                <p class="mb-0"><b>Severe Sensitivity & Barrier Repair</b>
+                  <br>For those with compromised skin barriers, the skin becomes weakened, dehydrated and more prone
+                  to irritation. This can result from:</p>
+                <ul style="padding-left: 30px;">
+                  <li>Overuse of harsh skincare products.</li>
+                  <li>Environmental damage (pollution, extreme weather).</li>
+                  <li>Chronic skin conditions like eczema or dermatitis.</li>
+                </ul>
+
+                <p class="mb-0"><b>Aging & Skin Rejuvenation</b>
+                  <br>As we age, collagen production slows down, leading to:</p>
+                <ul style="padding-left: 30px;">
+                  <li>Fine lines and wrinkles.</li>
+                  <li>Loss of firmness and elasticity.</li>
+                  <li>Dullness and uneven skin texture.</li>
+                </ul>
+
+                <p class="mb-0"><b>Science-Backed Treatments for Skin & Body Wellness</b>
+                  <br>At CLAI, we combine cutting-edge technology with expert knowledge to provide treatments that not
+                  only improve your skin’s appearance but also enhance its health at a deeper level. Each treatment is
+                  carefully selected to address specific skin concerns, ensuring long-term benefits rather than just
+                  temporary improvements.</p>
+                <ul style="padding-left: 30px;">
+                  <li>Lumecca IPL Therapy – Targeting Pigmentation, Redness & Sun Damage</li>
+                  <li>Mesoestetic & ZO Peels – Resurfacing & Skin Renewal</li>
+                  <li>PRP (Platelet-Rich Plasma) and PRF (Platelet-Rich Fibrin) use your own body’s growth factors to
+                    stimulate collagen production, repair damaged tissue and promote overall skin rejuvenation.</li>
+                  <li>IV Therapy – Skin, Health & Energy from Within</li>
+                </ul>
+
+                <p class="mb-0"><b>IV Drip Therapy: Nourishment from the Inside Out</b>
+                  <br>At CLAI, we believe healthy skin starts from within. Our IV Drip Therapy delivers essential nutrients, vitamins and hydration directly into the bloodstream, ensuring maximum absorption for optimal results. This is not only beneficial for skin health but also supports overall physical and mental well-being.
+                  Some key benefits of IV therapy include:</p>
+                <ul style="padding-left: 30px;">
+                  <li>Hydration – Replenishes moisture levels, keeping skin plump and radiant while preventing dryness and irritation.</li>
+                  <li>Nutrient Boost – Delivers key vitamins such as Vitamin C, B-complex and antioxidants, which help fight free radicals, reduce inflammation and promote collagen production.</li>
+                  <li>Increased Energy & Vitality – Supports the immune system, reduces fatigue and enhances mental clarity.</li>
+                  <li>Stress & Detox Support – Helps to flush out toxins, reduce oxidative stress and improve overall body function.</li>
+                  <li>Skin Glow from Within – Provides essential nutrients that promote a brighter, clearer and more youthful complexion.</li>
+                </ul>
+
+                <p class="mb-0"><b></b>
+                  <br>Whether you're looking to improve skin radiance, boost immunity, enhance recovery, or combat fatigue, our IV drips are customised to your specific needs. By combining skincare with internal wellness, we ensure that you feel as good as you look.
+                  A Holistic Approach to Lasting Beauty & Well-Being
+                  At CLAI, we don’t just focus on aesthetics—we prioritise your long-term health. By integrating advanced aesthetic treatments with internal wellness solutions like IV therapy, we provide a comprehensive approach to skincare that delivers real, lasting transformation.
+                  Because true beauty isn’t just about how you look—it’s about how you feel. And at CLAI, we’re here to help you feel your best, inside and out.</p>
+
+
               </div>
               <!-- blog-post-Description END -->
               <!-- Testimonial -->
@@ -185,35 +267,35 @@
                     <i class="flaticon-quote"></i>
                   </div>
                   <div class="blockquote-content">
-                    Psycare is the next killer app. Psycare did exactly what you said it does. I will let my mum know about this, she could really make use of Psycare! Thank you for making it painless, pleasant and most of all hassle free!
+                    "Focus on progress, not perfection. Every healthy choice you make adds up, even if progress feels slow."
                     <div class="blockquote-author">
                       <div class="blockquote-name">
-                        <h6>Harry Russell</h6>
-                        <span class="text-muted">- Vice President</span>
+                        <h6>CLAI</h6>
+                        <span class="text-muted">- The Science of Health, the Art of Living.</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- Testimonial -->
-              <div class="blog-post-description">
-                <p>We also know those epic stories, those modern-day legends surrounding the early failures of such supremely successful folks as Michael Jordan and Bill Gates. Success really has nothing to do with luck, coincidence or fate. It really comes down to understanding the steps in the process and then executing on those steps.</p>
-                <ul>
-                  <li>Give yourself the power of responsibility. Remind yourself the only.</li>
-                  <li>Having clarity of purpose and a clear picture of what you desire.</li>
-                  <li>Remind yourself the only thing stopping you is yourself.</li>
-                  <li>The price is something not necessarily defined as financial.</li>
-                </ul>
-                <div class="row">
-                  <div class="col-md-7">
-                    <img class="img-fluid mt-3" src="images/blog/blog-single.jpg" alt="">
-                  </div>
-                  <div class="col-md-5">
-                    <img class="img-fluid mt-3" src="images/blog/blog-single-01.jpg" alt="">
-                  </div>
-                </div>
-                <p class="mt-4">Success really has nothing to do with luck, coincidence or fate. It really <b>comes down to understanding</b> the steps in the process and then executing on those steps. We also know those epic stories, those modern-day legends surrounding the early failures of such supremely successful folks as Michael Jordan and Bill Gates.</p>
-              </div>
+<!--              <div class="blog-post-description">-->
+<!--                <p>We also know those epic stories, those modern-day legends surrounding the early failures of such supremely successful folks as Michael Jordan and Bill Gates. Success really has nothing to do with luck, coincidence or fate. It really comes down to understanding the steps in the process and then executing on those steps.</p>-->
+<!--                <ul>-->
+<!--                  <li>Give yourself the power of responsibility. Remind yourself the only.</li>-->
+<!--                  <li>Having clarity of purpose and a clear picture of what you desire.</li>-->
+<!--                  <li>Remind yourself the only thing stopping you is yourself.</li>-->
+<!--                  <li>The price is something not necessarily defined as financial.</li>-->
+<!--                </ul>-->
+<!--                <div class="row">-->
+<!--                  <div class="col-md-7">-->
+<!--                    <img class="img-fluid mt-3" src="images/blog/blog-single.jpg" alt="">-->
+<!--                  </div>-->
+<!--                  <div class="col-md-5">-->
+<!--                    <img class="img-fluid mt-3" src="images/blog/blog-single-01.jpg" alt="">-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <p class="mt-4">Success really has nothing to do with luck, coincidence or fate. It really <b>comes down to understanding</b> the steps in the process and then executing on those steps. We also know those epic stories, those modern-day legends surrounding the early failures of such supremely successful folks as Michael Jordan and Bill Gates.</p>-->
+<!--              </div>-->
               <hr>
               </div>
             </div>

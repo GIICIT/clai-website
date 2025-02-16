@@ -44,7 +44,7 @@
                 <a class="nav-link" th:href="@{home}" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" th:href="@{treatments}" id="navbarDropdown" role="button"
+                <a class="nav-link" id="navbarDropdown" role="button"
                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Treatments<i
                         class="fa-solid fa-plus"></i></a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -94,7 +94,8 @@
     Search -->
     <!--=================================
     Right menu -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"  style="background-image: url(/img/bg/bg-01.png); background-size: cover; background-position: center right;">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+         style="background-image: url(/img/bg/right-menu-01.png); background-size: cover; background-position: center right;">
       <div class="offcanvas-header text-end justify-content-end p-4">
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
@@ -102,18 +103,17 @@
         <div class="sidebar-menu">
           <div class="logo">
             <a th:href="@{home}">
-              <img class="img-fluid logo-dark" src="/img/clai-logo-full-black.svg" alt="Main logo">
+              <img class="img-fluid logo-dark" src="/img/clai-logo-full-stone.svg" alt="Main logo">
             </a>
           </div>
           <div class="section-title mt-5">
-            <h3 class="title mb-3">About us</h3>
-            <p>Execution is the single biggest factor in achievement so the faster and better your execution.</p>
           </div>
           <div class="mt-5">
             <h3 class="mb-3">Contact Info</h3>
             <p>22 Van der Byl Avenue, Durbanville,<br> +27 77 370 5689</p>
-            <p>Monday to Thursday <br> (09:00 To 17:00)</p>
-            <p>Friday <br> (09:00 To 16:00)</p><p>Friday <br> (09:00 To 16:00)</p>
+            <p>Monday to Friday <br> (09:00 To 16:30)</p>
+            <p>Saturday - Sunday  <br> (Closed)</p>
+            <p>Public Holidays  <br> (Closed)</p>
           </div>
           <div class="social-icon mt-5">
             <ul>

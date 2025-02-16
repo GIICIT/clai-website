@@ -53,9 +53,9 @@
                 <a class="nav-link" th:href="@{home}" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
               </li>
               <li class="nav-item active dropdown">
-                <a class="nav-link" th:href="@{treatments}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Treatments<i class="fa-solid fa-plus"></i></a>
+                <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Treatments<i class="fa-solid fa-plus"></i></a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" th:href="@{skin-treatments}"><span>Skin Treatments</span></a>
+                  <li><a class="dropdown-item" th:href="@{#}"><span>Skin Treatments</span></a>
                   </li>
                   <li><a class="dropdown-item" th:href="@{coming-soon}"><span>Body Wellness</span></a></li>
                   <li><a class="dropdown-item" th:href="@{coming-soon}"><span>Ivy Therapy</span></a></li>
@@ -90,7 +90,8 @@
     Header -->
     <!--=================================
     Right menu -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"  style="background-image: url(/img/bg/bg-01.png); background-size: cover; background-position: center right;">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+         style="background-image: url(/img/bg/right-menu-01.png); background-size: cover; background-position: center right;">
       <div class="offcanvas-header text-end justify-content-end p-4">
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
@@ -98,18 +99,17 @@
         <div class="sidebar-menu">
           <div class="logo">
             <a th:href="@{home}">
-              <img class="img-fluid logo-dark" src="/img/clai-logo-full-black.svg" alt="Main logo">
+              <img class="img-fluid logo-dark" src="/img/clai-logo-full-stone.svg" alt="Main logo">
             </a>
           </div>
           <div class="section-title mt-5">
-            <h3 class="title mb-3">About us</h3>
-            <p>Execution is the single biggest factor in achievement so the faster and better your execution.</p>
           </div>
           <div class="mt-5">
             <h3 class="mb-3">Contact Info</h3>
             <p>22 Van der Byl Avenue, Durbanville,<br> +27 77 370 5689</p>
-            <p>Monday to Thursday <br> (09:00 To 17:00)</p>
-            <p>Friday <br> (09:00 To 16:00)</p>
+            <p>Monday to Friday <br> (09:00 To 16:30)</p>
+            <p>Saturday - Sunday  <br> (Closed)</p>
+            <p>Public Holidays  <br> (Closed)</p>
           </div>
           <div class="social-icon mt-5">
             <ul>
@@ -128,10 +128,10 @@
       <div class="container">
         <div class="row  justify-content-center">
           <div class="col-md-8 text-center">
-            <h2 class="text-black-50">Skin Treatments</h2>
+            <h1 class="text-black-50">Skin Treatments</h1>
             <ul class="breadcrumb mb-0 p-0">
-              <li class="breadcrumb-item"><a th:href="@{home}"><i class="fa fa-home pe-2"></i>Home</a></li>
-              <li class="breadcrumb-item active"><span>Skin Treatments</span></li>
+<!--              <li class="breadcrumb-item"><a th:href="@{home}"><i class="fa fa-home pe-2"></i>Home</a></li>-->
+<!--              <li class="breadcrumb-item active"><span>Skin Treatments</span></li>-->
             </ul>
           </div>
         </div>
@@ -151,8 +151,8 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
               <div class="section-title text-center">
-              <span class="sub-title">Treatments</span>
-<!--              <h2 class="title">Natural Beauty Spa Center</h2>-->
+<!--              <span class="sub-title">Treatments</span>-->
+<!--              <h2 class="title">Treatments</h2>-->
             </div>
           </div>
           <div class="col-12 col-xl-5 col-lg-4 pe-xl-5">
@@ -165,11 +165,11 @@
           <div class="col-md-4 mb-md-0 mb-4">
             <div class="feature-box feature-box-style-02 feature-box-light mb-3 mb-md-0">
               <div class="feature-img">
-                <img src="/img/services/01.jpg" alt="services01">
+                <img src="/img/services/meso-glow-facial.png" alt="services01">
               </div>
               <div class="feature-content">
                 <h3>Medical Meso Glow Facial</h3>
-                <p class="mb-4">A personalized treatment that includes cleansing, exfoliation, extractions, a chemical peel, and a soothing mask with massage, all tailored to your skin's unique concerns for a radiant, refreshed glow.</p>
+                <p class="mb-4">A personalized treatment that includes cleansing, exfoliation, extractions, a chemical peel and a soothing mask with massage, all tailored to your skin's unique concerns for a radiant, refreshed glow.</p>
 <!--                <a href="#">R1280<i class="fas ms-2"></i></a>-->
               </div>
             </div>
@@ -181,7 +181,7 @@
               </div>
               <div class="feature-content">
                 <h3>Revive Deep Cleanse Facial</h3>
-                <p class="mb-4">A customized treatment that includes cleansing, gentle exfoliation, extractions, a nourishing mask, and a relaxing massage, designed to refresh and rejuvenate your skin for a natural, healthy glow.</p>
+                <p class="mb-4">A customized treatment that includes cleansing, gentle exfoliation, extractions, a nourishing mask and a relaxing massage, designed to refresh and rejuvenate your skin for a natural, healthy glow.</p>
 <!--                <a href="#">R800<i class="fas ms-2"></i></a>-->
               </div>
             </div>
@@ -193,7 +193,7 @@
               </div>
               <div class="feature-content">
                 <h3>ZO Medical Facial</h3>
-                <p class="mb-4">A results-driven treatment featuring ZO products, tailored to your skin's specific needs. Includes deep cleansing, exfoliation, extractions, a ZO chemical peel, and a calming mask to promote a clear, radiant, and healthy complexion.</p>
+                <p class="mb-4">A results-driven treatment featuring ZO products, tailored to your skin's specific needs. Includes deep cleansing, exfoliation, extractions, a ZO chemical peel and a calming mask to promote a clear, radiant and healthy complexion.</p>
 <!--                <a href="#">R1500<i class="fas ms-2"></i></a>-->
               </div>
             </div>
@@ -205,7 +205,7 @@
               </div>
               <div class="feature-content">
                 <h3>Ultimate Resurfacing Peel</h3>
-                <p class="mb-4">A powerful skin rejuvenation treatment using Mesoestetic’s Phen TCA and Melanoplus TCA peels to target pigmentation, fine lines, and uneven texture. This advanced medium to deep peel stimulates cell renewal, revealing smoother, brighter, and more youthful-looking skin.</p>
+                <p class="mb-4">A powerful skin rejuvenation treatment using Mesoestetic’s Phen TCA and Melanoplus TCA peels to target pigmentation, fine lines and uneven texture. This advanced medium to deep peel stimulates cell renewal, revealing smoother, brighter and more youthful-looking skin.</p>
 <!--                <a href="#">Mesoesetic Melanoplus Touch Face R1200<i class="fas ms-2"></i></a>-->
 <!--                <a href="#">Mesoesetic Phen TCA Face R1500<i class="fas ms-2"></i></a>-->
               </div>
@@ -218,7 +218,7 @@
               </div>
               <div class="feature-content">
                 <h3>Mesoestetic PRO Peels</h3>
-                <p class="mb-4">Professional-grade chemical peels designed to target concerns like acne, pigmentation, fine lines, and uneven texture. These customizable treatments offer effective skin renewal with minimal downtime, suitable for various skin types.</p>
+                <p class="mb-4">Professional-grade chemical peels designed to target concerns like acne, pigmentation, fine lines and uneven texture. These customizable treatments offer effective skin renewal with minimal downtime, suitable for various skin types.</p>
 <!--                <a href="#">from R850<i class="fas ms-2"></i></a>-->
               </div>
             </div>
@@ -230,7 +230,7 @@
               </div>
               <div class="feature-content">
                 <h3>Mesoestetic MD Peels</h3>
-                <p class="mb-4">Clinically advanced peels with higher concentrations of active ingredients to address more severe concerns, including deep pigmentation, stubborn acne, and advanced aging. Ideal for those seeking significant results under medical supervision.</p>
+                <p class="mb-4">Clinically advanced peels with higher concentrations of active ingredients to address more severe concerns, including deep pigmentation, stubborn acne and advanced aging. Ideal for those seeking significant results under medical supervision.</p>
 <!--                <a href="#">from R950<i class="fas ms-2"></i></a>-->
               </div>
             </div>
@@ -254,7 +254,7 @@
               </div>
               <div class="feature-content">
                 <h3>PRF Renewal Needling</h3>
-                <p class="mb-4">An advanced skin rejuvenation procedure combining microneedling with Platelet-Rich Fibrin (PRF) therapy. This natural and effective treatment uses your body's own growth factors to promote collagen production, improve skin texture, reduce fine lines, and enhance overall skin health. Ideal for achieving a radiant, youthful complexion.</p>
+                <p class="mb-4">An advanced skin rejuvenation procedure combining microneedling with Platelet-Rich Fibrin (PRF) therapy. This natural and effective treatment uses your body's own growth factors to promote collagen production, improve skin texture, reduce fine lines and enhance overall skin health. Ideal for achieving a radiant, youthful complexion.</p>
 <!--                <a href="#">R3100<i class="fas ms-2"></i></a>-->
               </div>
             </div>
@@ -266,7 +266,7 @@
               </div>
               <div class="feature-content">
                 <h3>3D PRF Renewal Treatment.</h3>
-                <p class="mb-4">A comprehensive skin rejuvenation treatment that uses mesotherapy injections of PRF (Platelet-Rich Fibrin) with superficial needling. This powerful dual approach enhances collagen production, deeply nourishes the skin, and addresses multiple concerns like fine lines, texture, and overall skin vitality. Tailored to deliver exceptional results for a radiant, youthful glow.</p>
+                <p class="mb-4">A comprehensive skin rejuvenation treatment that uses mesotherapy injections of PRF (Platelet-Rich Fibrin) with superficial needling. This powerful dual approach enhances collagen production, deeply nourishes the skin and addresses multiple concerns like fine lines, texture and overall skin vitality. Tailored to deliver exceptional results for a radiant, youthful glow.</p>
 <!--                <a href="#">R4200<i class="fas ms-2"></i></a>-->
               </div>
             </div>
@@ -278,7 +278,7 @@
               </div>
               <div class="feature-content">
                 <h3>IPL Skin Treatment</h3>
-                <p class="mb-4">A cutting-edge Intense Pulsed Light (IPL) treatment designed to target pigmentation, sun damage, redness, and vascular lesions. Lumecca delivers powerful light energy to rejuvenate the skin, improving tone and texture for a clearer, more radiant complexion with minimal downtime.</p>
+                <p class="mb-4">A cutting-edge Intense Pulsed Light (IPL) treatment designed to target pigmentation, sun damage, redness and vascular lesions. Lumecca delivers powerful light energy to rejuvenate the skin, improving tone and texture for a clearer, more radiant complexion with minimal downtime.</p>
 <!--                <a href="#">from R2500<i class="fas ms-2"></i></a>-->
               </div>
             </div>
@@ -290,7 +290,7 @@
               </div>
               <div class="feature-content">
                 <h3>Skin Renew IPL</h3>
-                <p class="mb-4">A powerful combination of Lumecca IPL to target pigmentation and sun damage, paired with a medium-depth TCA chemical peel for enhanced exfoliation and skin renewal. This treatment improves skin tone, texture, and overall clarity for a refreshed and revitalized complexion.</p>
+                <p class="mb-4">A powerful combination of Lumecca IPL to target pigmentation and sun damage, paired with a medium-depth TCA chemical peel for enhanced exfoliation and skin renewal. This treatment improves skin tone, texture and overall clarity for a refreshed and revitalized complexion.</p>
 <!--                <a href="#">from R2800<i class="fas ms-2"></i></a>-->
               </div>
             </div>
@@ -302,7 +302,7 @@
               </div>
               <div class="feature-content">
                 <h3>Mesoeclat</h3>
-                <p class="mb-4">A professional treatment that can be customized to address specific skin concerns. It's designed to activate the skin's natural healing process, which can help with signs of aging, fatigue, uneven skin tone, and dullness. The treatment can also be combined with other treatments.</p>
+                <p class="mb-4">A professional treatment that can be customized to address specific skin concerns. It's designed to activate the skin's natural healing process, which can help with signs of aging, fatigue, uneven skin tone and dullness. The treatment can also be combined with other treatments.</p>
 <!--                <a href="#">from R2500<i class="fas ms-2"></i></a>-->
               </div>
             </div>
@@ -314,7 +314,7 @@
               </div>
               <div class="feature-content">
                 <h3>Tri Therapy Treatment</h3>
-                <p class="mb-4">Our signature treatment combines multiple modalities to target a wide range of skin concerns, including pigmentation, acne, aging, redness, and more. This customized approach integrates chemical peels, superficial needling with targeted actives, and a specialized mask to deliver optimal results, leaving your skin refreshed and rejuvenated.</p>
+                <p class="mb-4">Our signature treatment combines multiple modalities to target a wide range of skin concerns, including pigmentation, acne, aging, redness and more. This customized approach integrates chemical peels, superficial needling with targeted actives and a specialized mask to deliver optimal results, leaving your skin refreshed and rejuvenated.</p>
 <!--                <a href="#">from R2500<i class="fas ms-2"></i></a>-->
               </div>
             </div>
@@ -327,7 +327,7 @@
               </div>
               <div class="feature-content">
                 <h3>Visia</h3>
-                <p class="mb-4">A VISIA Skin Consultation is an advanced skin analysis using the VISIA Imaging System, which captures high-resolution images of your skin to assess various concerns, including pigmentation, wrinkles, texture, pores, UV damage and redness. This in-depth analysis provides a detailed understanding of your skin’s condition, helping to create a personalised treatment plan for optimal skin health. The consultation is quick, non-invasive, and offers valuable insights into both surface and underlying skin concerns.</p>
+                <p class="mb-4">A VISIA Skin Consultation is an advanced skin analysis using the VISIA Imaging System, which captures high-resolution images of your skin to assess various concerns, including pigmentation, wrinkles, texture, pores, UV damage and redness. This in-depth analysis provides a detailed understanding of your skin’s condition, helping to create a personalised treatment plan for optimal skin health. The consultation is quick, non-invasive and offers valuable insights into both surface and underlying skin concerns.</p>
 <!--                <a href="#">from R2500<i class="fas ms-2"></i></a>-->
               </div>
             </div>
