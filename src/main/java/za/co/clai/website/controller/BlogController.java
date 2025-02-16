@@ -13,13 +13,6 @@ public class BlogController {
         this.socialMediaLinksModel = socialMediaLinksModel;
     }
 
-    @GetMapping(value = {"/blog"})
-    public String blogPage(Model model) {
-        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
-        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
-        return "blog";
-    }
-
     @GetMapping(value = {"/blog-single-why-clai"})
     public String blogPageWhyClai(Model model) {
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
