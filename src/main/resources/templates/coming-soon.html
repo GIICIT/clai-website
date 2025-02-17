@@ -22,8 +22,49 @@
     <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
     <!-- Template Style -->
     <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <style>
+      /* Floating WhatsApp Icon Styling */
+      /* Floating WhatsApp Icon Styling */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 120px;
+        right: 40px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        z-index: 9999; /* Ensures it's always on top */
+      }
+
+      /* WhatsApp Icon Styling */
+      .whatsapp-float img {
+        width: 50px;
+        height: 50px;
+        transition: transform 0.3s;
+      }
+
+      /* Slight zoom effect on hover */
+      .whatsapp-float:hover img {
+        transform: scale(1.1);
+      }
+
+    </style>
+    <script>
+      function openWhatsApp() {
+        window.open("https://wa.me/27773705689?text=Hello%2C%20I%20am%20interested%20in%20your%20services!", "_blank");
+      }
+    </script>
+
   </head>
   <body>
+
+  <!-- Floating WhatsApp Button with Official Logo -->
+  <a href="javascript:void(0);" class="whatsapp-float" onclick="openWhatsApp()">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
 
     <!--=================================
     preloader -->
