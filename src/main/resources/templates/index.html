@@ -103,21 +103,21 @@ Header -->
                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Treatments<i
                                 class="fa-solid fa-plus"></i></a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" th:href="@{skin-treatments}"><span>Skin Treatments</span></a>
+                            <li><a class="dropdown-item" th:href="@{/skin-treatments}"><span>Skin Treatments</span></a>
                             </li>
-                            <li><a class="dropdown-item" th:href="@{coming-soon}"><span>Body Wellness</span></a></li>
-                            <li><a class="dropdown-item" th:href="@{coming-soon}"><span>Ivy Therapy</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/coming-soon}"><span>Body Wellness</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/coming-soon}"><span>Ivy Therapy</span></a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)" th:href="@{#}" onclick="openPDF();">Price List<i class="fa-solid"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" th:href="@{blog-single-why-clai}" >Blog<i
+                        <a class="nav-link" href="javascript:void(0)" th:href="@{/blog-single-why-clai}" >Blog<i
                                 class="fa-solid"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{contact-us}" >Contact</a>
+                        <a class="nav-link" th:href="@{/contact-us}" >Contact</a>
                     </li>
                 </ul>
             </div>
@@ -146,7 +146,7 @@ Right menu -->
     <div class="offcanvas-body p-4 p-sm-5 d-flex align-content-between flex-wrap justify-content-center">
         <div class="sidebar-menu">
             <div class="logo">
-                <a th:href="@{home}">
+                <a th:href="@{/home}">
                     <img class="img-fluid logo-dark" src="/img/clai-logo-full-stone.svg" alt="Main logo">
                 </a>
             </div>
@@ -294,7 +294,7 @@ Category -->
                                 <img class="img-fluid" src="/img/category/skin-treatments.jpg" alt="">
                             </div>
                             <div class="category-title text-center mt-4">
-                                <h4><a th:href="@{skin-treatments}">Skin Treatments</a></h4>
+                                <h4><a th:href="@{/skin-treatments}">Skin Treatments</a></h4>
                             </div>
                         </div>
                     </div>
@@ -304,7 +304,7 @@ Category -->
                                 <img class="img-fluid" src="/img/category/ivy-therapy.jpg" alt="">
                             </div>
                             <div class="category-title text-center mt-4">
-                                <h4><a th:href="@{coming-soon}">Ivy Therapy</a></h4>
+                                <h4><a th:href="@{/coming-soon}">Ivy Therapy</a></h4>
                             </div>
                         </div>
                     </div>
@@ -314,7 +314,7 @@ Category -->
                                 <img class="img-fluid" src="/img/category/body-wellness.jpg" alt="">
                             </div>
                             <div class="category-title text-center mt-4">
-                                <h4><a th:href="@{coming-soon}">Body Wellness</a></h4>
+                                <h4><a th:href="@{/coming-soon}">Body Wellness</a></h4>
                             </div>
                         </div>
                     </div>
@@ -411,18 +411,18 @@ blog post -->
                     <div class="blog-post-content blog-post-content">
                         <div class="blog-post-details pb-0">
                             <div class="blog-post-title">
-                                <h4><a th:href="@{blog-single-why-clai}">Why CLAI? A Look Inside the Future of Skin
+                                <h4><a th:href="@{/blog-single-why-clai}">Why CLAI? A Look Inside the Future of Skin
                                     Health.</a></h4>
                             </div>
                             <div class="mt-3 d-flex">
-                                <a class="btn-link" th:href="@{blog-single-why-clai}">Read More <i
+                                <a class="btn-link" th:href="@{/blog-single-why-clai}">Read More <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
                             <div class="blog-post-time">
                                 <i class="far fa-clock"></i>
-                                <a th:href="@{blog-single-why-clai}">February 14, 2025</a>
+                                <a th:href="@{/blog-single-why-clai}">February 14, 2025</a>
                                 <i class="far fa-user ps-3"></i>
-                                <a th:href="@{blog-single-why-clai}">By Kim Van Zyl</a>
+                                <a th:href="@{/blog-single-why-clai}">By Kim Van Zyl</a>
                             </div>
                         </div>
                     </div>
@@ -461,9 +461,9 @@ footer-->
                         <h5>Navigation</h5>
                         <ul class="list-unstyled mb-0">
                             <li><a th:href="@{#}">Home</a></li>
-                            <li><a th:href="@{skin-treatments}">Skin Treatments</a></li>
-                            <li><a th:href="@{blog-single-why-clai}">Blog</a></li>
-                            <li><a th:href="@{contact-us}">Contact Us</a></li>
+                            <li><a th:href="@{/skin-treatments}">Skin Treatments</a></li>
+                            <li><a th:href="@{/blog-single-why-clai}">Blog</a></li>
+                            <li><a th:href="@{/contact-us}">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -475,7 +475,7 @@ footer-->
             <div class="row align-items-center copyright text-md-start text-center">
                 <div class="col-12 col-md-6 ">
                     <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>
-                        <a th:href="@{home}"> CLAI </a> All Rights Reserved
+                        <a th:href="@{/home}"> CLAI </a> All Rights Reserved
                     </p>
                 </div>
                 <div class="col-12 col-md-6 text-md-end text-center mt-3 mt-md-0">
