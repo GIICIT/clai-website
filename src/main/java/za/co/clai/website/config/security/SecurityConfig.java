@@ -19,7 +19,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers("/css/**", "/fonts/**", "/img/**", "/js/**", "/sass/**", "/docs/**",
                                 "/coming-soon","/", "/home", "/skin-treatments", "/contact-us", "/email",
-                                "/404", "/blog-single-why-clai").permitAll()
+                                "/404", "/blog-single-why-clai", "/sitemap.xml", "/robots.txt").permitAll()
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(exceptionHandling -> exceptionHandling
