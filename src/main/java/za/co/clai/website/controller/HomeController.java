@@ -3,6 +3,7 @@ package za.co.clai.website.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.view.RedirectView;
 import za.co.clai.website.model.SocialMediaLinksModel;
 
 @Controller
@@ -14,11 +15,16 @@ public class HomeController {
         this.socialMediaLinksModel = socialMediaLinksModel;
     }
 
-    @GetMapping(value = {"/", "/home"})
+    @GetMapping("/")
     public String homePage(Model model) {
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "index";
+    }
+
+    @GetMapping("/home")
+    public RedirectView redirectToRoot() {
+        return new RedirectView("/", true);
     }
 
 }
