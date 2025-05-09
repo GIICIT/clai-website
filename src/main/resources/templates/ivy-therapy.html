@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81M8RGH9NY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-81M8RGH9NY');
+    </script>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="author" content="giicit.co.za">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CLAI - The Science of Health, the Art of Living</title>
+    <meta name="description" content="At CLAI, we believe that true beauty starts with optimal skin health and overall well-being. Our approach merges state-of-the-art technology, advanced scientific research and expert knowledge to provide personalised treatments that deliver real, lasting results.">
+
+    <meta property="og:title" content="CLAI - The Science of Health, the Art of Living">
+    <meta property="og:description" content="At CLAI, we believe that true beauty starts with optimal skin health and overall well-being. Our approach merges state-of-the-art technology, advanced scientific research and expert knowledge to provide personalised treatments that deliver real, lasting results.">
+    <meta property="og:image" content="https://clai.co.za/img/full-logo-lockup-black-50.png">
+    <meta property="og:url" content="https://clai.co.za">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <!--    <link rel="shortcut icon" th:href="@{/img/clai-logo-full-black.svg}" type="image/x-icon">-->
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" th:href="@{/img/favicon/favicon.ico}">
+
+    <!-- PNG favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" th:href="@{/img/favicon/favicon-32x32.png}">
+    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/img/favicon/favicon-16x16.png}">
+
+    <!-- Apple Touch Icon (for iPhones & iPads) -->
+    <link rel="apple-touch-icon" th:href="@{/img/favicon/apple-touch-icon.png}">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" th:href="@{/img/favicon/android-chrome-192x192.png}">
+    <link rel="icon" type="image/png" sizes="512x512" th:href="@{/img/favicon/android-chrome-512x512.png}">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" th:href="@{/img/favicon/site.webmanifest}">
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" th:href="@{/css/font-awesome/all.min.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
+
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" th:href="@{/css/select2/select2.css}">
+    <link rel="stylesheet" th:href="@{/css/datetimepicker/datetimepicker.min.css}">
+    <!-- Template Style -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" th:href="@{/css/owl-carousel/owl.carousel.min.css}">
+    <link rel="stylesheet" th:href="@{/css/slick/slick-theme.css}">
+
+    <style>
+      /* Floating WhatsApp Icon Styling */
+      /* Floating WhatsApp Icon Styling */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 120px;
+        right: 40px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        z-index: 9999; /* Ensures it's always on top */
+      }
+
+      /* WhatsApp Icon Styling */
+      .whatsapp-float img {
+        width: 50px;
+        height: 50px;
+        transition: transform 0.3s;
+      }
+
+      /* Slight zoom effect on hover */
+      .whatsapp-float:hover img {
+        transform: scale(1.1);
+      }
+
+    </style>
+    <script>
+      function openWhatsApp() {
+        window.open("https://wa.me/27773705689?text=Hello%2C%20I%20am%20interested%20in%20your%20services!", "_blank");
+      }
+    </script>
+
+  </head>
+  <body>
+
+  <!-- Floating WhatsApp Button with Official Logo -->
+  <a href="javascript:void(0);" class="whatsapp-float" onclick="openWhatsApp()">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+    
+    <!--=================================
+    preloader -->
+    <div id="pre-loader">
+      <img src="/img/pre-loader/clai-loader-black-50.svg" alt="">
+    </div>
+    <!--=================================
+    preloader -->
+    
+    <!--=================================
+    Header -->
+    <header class="header header-sticky default">
+      <nav class="navbar navbar-static-top navbar-expand-lg">
+        <div class="container-fluid main-header position-relative">
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><i
+                  class="fas fa-align-left"></i></button>
+          <a class="navbar-brand" th:href="@{/home}">
+            <img class="img-fluid" src="/img/full-logo-lockup-black-50-opacity.svg" alt="logo">
+            <img class="img-fluid sticky" src="/img/full-logo-lockup-black-50-opacity.svg" alt="logo">
+          </a>
+          <div class="navbar-collapse collapse justify-content-center justify-content-lg-center">
+            <ul class="nav navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/home}" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" id="navbarDropdown" role="button"
+                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Treatments<i
+                        class="fa-solid fa-plus"></i></a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" th:href="@{/skin-treatments}"><span>Skin Treatments</span></a>
+                  </li>
+                  <li><a class="dropdown-item" th:href="@{/ivy-therapy}"><span>Ivy Therapy</span></a></li>
+                  <li><a class="dropdown-item" th:href="@{/coming-soon}"><span>Body Wellness</span></a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)" th:href="@{#}" onclick="openPDF();">Price List<i class="fa-solid"></i></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" id="blogNavbarDropdown" role="button"
+                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Blog<i
+                        class="fa-solid fa-plus"></i></a>
+                <ul class="dropdown-menu" aria-labelledby="blogNavbarDropdown">
+                  <li><a class="dropdown-item" th:href="@{/blog-single-why-clai}"><span>Why CLAI</span></a>
+                  </li>
+                  <li><a class="dropdown-item" th:href="@{/winter-skin-prep}"><span>Winter Skin Prep</span></a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/contact-us}" >Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="add-listing">
+            <a class="menu-btn" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+               aria-controls="offcanvasRight">
+              <svg width="40" height="80" viewBox="0 0 80 80" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3333 60H33.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                <path d="M13.3333 40H53.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                <path d="M13.3333 20H66.6666" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--=================================
+    Header -->
+    <!--=================================
+    Right menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+         style="background-image: url(/img/bg/right-menu-01.png); background-size: cover; background-position: center right;">
+      <div class="offcanvas-header text-end justify-content-end p-4">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-sm-5 d-flex align-content-between flex-wrap justify-content-center">
+        <div class="sidebar-menu">
+          <div class="logo">
+            <a th:href="@{/home}">
+              <img class="img-fluid logo-dark" src="/img/clai-logo-full-stone.svg" alt="Main logo">
+            </a>
+          </div>
+          <div class="section-title mt-5">
+          </div>
+          <div class="mt-5">
+            <h3 class="mb-3">Contact Info</h3>
+            <p>22 Van der Byl Avenue, Durbanville,<br> +27 77 370 5689</p>
+            <p>Monday to Friday <br> (09:00 To 16:30)</p>
+            <p>Saturday - Sunday  <br> (Closed)</p>
+            <p>Public Holidays  <br> (Closed)</p>
+          </div>
+          <div class="social-icon mt-5">
+            <ul>
+              <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--=================================
+    Right menu -->
+    <!--=================================
+    banner -->
+    <section class="inner-header bg-holder" style="background-image: url(/img/bg/skin-treatments.png);">
+      <div class="container">
+        <div class="row  justify-content-center">
+          <div class="col-md-8 text-center">
+            <h1 class="text-black-50">Ivy Therapy</h1>
+            <ul class="breadcrumb mb-0 p-0">
+<!--              <li class="breadcrumb-item"><a th:href="@{/home}"><i class="fa fa-home pe-2"></i>Home</a></li>-->
+<!--              <li class="breadcrumb-item active"><span>Skin Treatments</span></li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    banner -->
+    <!--=================================
+   product single -->
+  <section class="space-pb shop-single">
+    <div class="container">
+<!--      <div class="row">-->
+<!--        <div class="col-lg-12">-->
+<!--          <div class="row">-->
+<!--            <div class="col-md-5 mb-4 mb-lg-0">-->
+<!--              <div class="slider-slick">-->
+<!--                <div class="slider slider-for detail-big-car-gallery">-->
+<!--                  <div class="bg-light"><img class="img-fluid" src="images/shop/01.jpg" alt=""></div>-->
+<!--                  <div class="bg-light"><img class="img-fluid" src="images/shop/02.jpg" alt=""></div>-->
+<!--                  <div class="bg-light"><img class="img-fluid" src="images/shop/03.jpg" alt=""></div>-->
+<!--                  <div class="bg-light"><img class="img-fluid" src="images/shop/04.jpg" alt=""></div>-->
+<!--                  <div class="bg-light"><img class="img-fluid" src="images/shop/05.jpg" alt=""></div>-->
+<!--                  <div class="bg-light"><img class="img-fluid" src="images/shop/06.jpg" alt=""></div>-->
+<!--                </div>-->
+<!--                <div class="slider slider-nav mt-2">-->
+<!--                  <div class="bg-light">-->
+<!--                    <img class="img-fluid" src="images/shop/01.jpg" alt="">-->
+<!--                  </div>-->
+<!--                  <div class="bg-light">-->
+<!--                    <img class="img-fluid" src="images/shop/02.jpg" alt="">-->
+<!--                  </div>-->
+<!--                  <div class="bg-light">-->
+<!--                    <img class="img-fluid" src="images/shop/03.jpg" alt="">-->
+<!--                  </div>-->
+<!--                  <div class="bg-light">-->
+<!--                    <img class="img-fluid" src="images/shop/04.jpg" alt="">-->
+<!--                  </div>-->
+<!--                  <div class="bg-light">-->
+<!--                    <img class="img-fluid" src="images/shop/05.jpg" alt="">-->
+<!--                  </div>-->
+<!--                  <div class="bg-light">-->
+<!--                    <img class="img-fluid" src="images/shop/06.jpg" alt="">-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-7">-->
+<!--              <div class="product-detail">-->
+<!--                <div class="product-rating d-flex mb-3 align-items-center">-->
+<!--                  <i class="fas fa-star text-warning"></i>-->
+<!--                  <i class="fas fa-star text-warning"></i>-->
+<!--                  <i class="fas fa-star text-warning"></i>-->
+<!--                  <i class="fas fa-star-half-alt text-warning"></i>-->
+<!--                  <i class="far fa-star text-warning"></i>-->
+<!--                  <a href="#reviews" class="text-dark ms-3" rel="nofollow"><span class="count">4</span> customer reviews</a>-->
+<!--                </div>-->
+<!--                <h2 class="mb-4">Sandalwood Soap</h2>-->
+<!--                <div class="product-price-rating">-->
+<!--                  <div class="product-prize">-->
+<!--                    <p><span class="me-2">$24.99</span>$12.99</p>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <p class="pb-3">We know this in our gut, but what can we do about it? How can we motivate ourselves? One of the most difficult aspects of achieving success is staying motivated over the long haul,it must come from within as the natural product of your desire to achieve something and your belief that you are capable to succeed.</p>-->
+<!--                <p class="mb-0">Commitment is something that comes from understanding that everything has its price and then having the willingness to pay that price. This is important because nobody wants to put significant effort into something, only to find out after the fact that the price was too high.The price is something not necessarily defined as financial.</p>-->
+<!--                <hr class="hr-dark">-->
+<!--                <div class="justify-content-start align-items-center d-flex flex-wrap add-to-cart-input">-->
+<!--                  <div class="product-summary">-->
+<!--                    <a class="" href="#"><i class="far fa-heart"></i></a>-->
+<!--                  </div>-->
+<!--                  <div class="qty">-->
+<!--                    <span class="minus">-</span>-->
+<!--                    <input type="number" class="count qty" name="qty" value="0" min="0" max="10">-->
+<!--                    <span class="plus">+</span>-->
+<!--                  </div>-->
+<!--                  <a class="btn btn-primary" href="#"> <span> Buy now </span> </a>-->
+<!--                </div>-->
+<!--                <div class="product-detail-meta mt-4">-->
+<!--                  <span>Category: <a href="#">Beauty, </a> <a href="#"> Massage,</a> <a href="#">Luxury</a></span>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+      <div class="row mt-lg-5 mt-3">
+        <div class="col-lg-12">
+          <div class="nav-tabs-02">
+            <nav>
+              <ul class="nav nav-tabs mb-4 justify-content-center" id="myTab2" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="nav-inflammation-tab" data-bs-toggle="tab" href="#nav-inflammation" role="tab" aria-controls="nav-inflammation" aria-selected="true">Inflammation</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="nav-acne-tab" data-bs-toggle="tab" href="#nav-acne" role="tab" aria-controls="nav-acne" aria-selected="false">Acne</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="nav-pigmentation-tab" data-bs-toggle="tab" href="#nav-pigmentation" role="tab" aria-controls="nav-pigmentation" aria-selected="false">Pigmentation</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="nav-ageing-tab" data-bs-toggle="tab" href="#nav-ageing" role="tab" aria-controls="nav-ageing" aria-selected="false">Ageing</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="nav-vitamin-boost-tab" data-bs-toggle="tab" href="#nav-vitamin-boost" role="tab" aria-controls="nav-vitamin-boost" aria-selected="false">Vitamin Boost</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-inflammation" role="tabpanel" aria-labelledby="nav-inflammation-tab">
+                <div class="row">
+                  <div class="col-sm-12">
+
+                    <h3 class="mb-3"><b>Inflammation</b></h3>
+                    <p class="mb-4">Anti-Inflame Drip / Soothe & Repair Infusion / Calm & Restore Elixir / Inflammation Relief Drip / Healing Hydration Infusion</p>
+                    <h3 class="mb-3">Ingredients:</h3>
+                    <ul style="padding-left: 30px;">
+                      <li>Vitamin C 2000mg</li>
+                      <li>Mg</li>
+                      <li>Glutathione</li>
+                      <li>Selenium</li>
+                      <li>Zu</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-acne" role="tabpanel" aria-labelledby="nav-acne-tab">
+                <div class="row">
+                  <div class="col-12">
+                    <h3 class="mb-3"><b>Acne</b></h3>
+                    <p class="mb-4">Clear Skin Drip / Blemish Control Infusion / Purifying Glow Elixir / Clarifying Complexion Drip / Skin Detox Infusion</p>
+                    <h3 class="mb-3">Ingredients:</h3>
+                    <ul style="padding-left: 30px;">
+                      <li>Vitamin C 2000mg</li>
+                      <li>B Comp</li>
+                      <li>Glutathione</li>
+                      <li>Zu</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-pigmentation" role="tabpanel" aria-labelledby="nav-pigmentation-tab">
+                <div class="row">
+                  <div class="col-12">
+                    <h3 class="mb-3"><b>Pigmentation</b></h3>
+                    <p class="mb-4">Even Tone Drip / Bright & Balance Infusion / Luminous Glow Elixir / Radiance Renewal Drip / Pigment Correct Infusion</p>
+                    <h3 class="mb-3">Ingredients:</h3>
+                    <ul style="padding-left: 30px;">
+                      <li>Vitamin C 2000mg</li>
+                      <li>AA (list)</li>
+                      <li>Dex Panthenol</li>
+                      <li>Glutathione</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-ageing" role="tabpanel" aria-labelledby="nav-ageing-tab">
+                <div class="row">
+                  <div class="col-12">
+                    <h3 class="mb-3"><b>Ageing</b></h3>
+                    <p class="mb-4">Youthful Glow Drip / Rejuvenation Infusion / Age-Defy Elixir / Collagen Boost Drip / Timeless Beauty Infusion</p>
+                    <h3 class="mb-3">Ingredients:</h3>
+                    <ul style="padding-left: 30px;">
+                      <li>Vitamin C 2000mg</li>
+                      <li>AA (list)</li>
+                      <li>Biotin</li>
+                      <li>Glutathione</li>
+                      <li>B Comp</li>
+                      <li>ALA</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-vitamin-boost" role="tabpanel" aria-labelledby="nav-vitamin-boost-tab">
+                <div class="row">
+                  <div class="col-12">
+                    <h3 class="mb-3"><b>Vitamin Boost</b></h3>
+                    <p class="mb-4">Vitality Drip / Essential Nutrient Infusion / Wellness Recharge Elixir / Immune Boost Drip / Energize & Revive Infusion</p>
+                    <h3 class="mb-3">Ingredients (Myers cocktail):</h3>
+                    <ul style="padding-left: 30px;">
+                      <li>Mg 25mg</li>
+                      <li>Calcium Gluconate 8mg</li>
+                      <li>Methylcobalamine 50 aug</li>
+                      <li>Pyridoxine 4mg</li>
+                      <li>Riboflavin</li>
+                      <li>Thiamine 0,4mg</li>
+                      <li>D panthenol</li>
+                      <li>Nicotineamide</li>
+                      <li>Ascrobic Acid</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+  product single -->
+  <!--=================================
+      Related products -->
+    <!--=================================
+    Related products -->
+    <!--=================================
+    Make Appointment BG -->
+    <!--=================================
+    Make Appointment BG -->
+    <!--=================================
+    Menu list -->
+    <!--=================================
+    Menu list -->
+    <!--=================================
+    footer-->
+    <footer class="footer bg-overlay-theme-10">
+      <div class="min-footer">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6">
+              <h5>Contact Information</h5>
+              <div class="footer-contact-info">
+                <ul class="list-unstyled mb-0">
+                  <li><i class="fas fa-fw fa-map-marker-alt text-primary"></i><span>22 Van der Byl Avenue, Durbanville</span>
+                  </li>
+                  <li><i class="fas fa-fw fa-phone text-primary"></i><span>+27 77 370 5689</span></li>
+                  <li><i class="far fa-fw fa-envelope text-primary"></i><span>info@clai.co.za</span></li>
+                </ul>
+              </div>
+              <div class="social-icon mt-4">
+                <ul>
+                  <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mt-4 mt-md-0 pl-lg-5">
+              <div class="footer-link">
+                <h5>Navigation</h5>
+                <ul class="list-unstyled mb-0">
+                  <li><a th:href="@{/home}">Home</a></li>
+                  <li><a th:href="@{#}">Skin Treatments</a></li>
+                  <li><a th:href="@{/blog-single-why-clai}">Blog</a></li>
+                  <li><a th:href="@{/contact-us}">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row align-items-center copyright text-md-start text-center">
+            <div class="col-12 col-md-6 ">
+              <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>
+                <a th:href="@{/home}"> CLAI </a> All Rights Reserved
+              </p>
+            </div>
+            <div class="col-12 col-md-6 text-md-end text-center mt-3 mt-md-0">
+              <p>Software Development <a href="#"> GIIC (PTY) LTD</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--=================================
+    footer-->
+    <!--=================================
+    Back To Top-->
+    <div id="back-to-top" class="back-to-top">
+      <a href="#"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <!--=================================
+    Back To Top-->
+    <!--=================================
+    Javascript -->
+    <!-- JS Global Compulsory (Do not remove)-->
+    <script th:src="@{/js/jquery-3.7.1.min.js}"></script>
+    <script th:src="@{/js/popper/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <script th:src="@{/js/select2/select2.full.js}"></script>
+    <script th:src="@{/js/datetimepicker/moment.min.js}"></script>
+    <script th:src="@{/js/datetimepicker/datetimepicker.min.js}"></script>
+    <!-- Template Scripts (Do not remove)-->
+    <script th:src="@{/js/custom.js}"></script>
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <script th:src="@{js/owl-carousel/owl.carousel.min.js}"></script>
+    <script th:src="@{js/slick/slick.min.js}"></script>
+
+    <!-- PDF Modal -->
+    <!-- Price List Modal -->
+    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-fullscreen-sm-down"> <!-- Fullscreen on small screens -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="pdfModalLabel">Price List</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <canvas id="pdf-viewer" class="w-100"></canvas> <!-- Canvas for rendering PDF -->
+            <div class="pdf-controls mt-3 d-flex justify-content-between">
+              <button class="btn btn-secondary" onclick="prevPage()">Previous</button>
+              <span id="page-info">Page <span id="current-page">1</span> of <span id="total-pages">?</span></span>
+              <button class="btn btn-secondary" onclick="nextPage()">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+
+    <script>
+      let pdfDoc = null, pageNum = 1, pageRendering = false, pageNumPending = null;
+      const canvas = document.getElementById("pdf-viewer");
+      const ctx = canvas.getContext("2d");
+      const pdfUrl = "/docs/pricelist.pdf"; // Adjust the path if necessary
+
+      function getScaleFactor() {
+        const screenWidth = window.innerWidth;
+        if (screenWidth < 576) return 0.75; // Faster loading on mobile
+        if (screenWidth < 768) return 1.0;  // Medium resolution for tablets
+        return 1.25; // High resolution for desktops
+      }
+
+      function openPDF() {
+        if (!pdfDoc) {
+          console.error("PDF not loaded yet!");
+          return;
+        }
+
+        var pdfModal = new bootstrap.Modal(document.getElementById("pdfModal"));
+        pdfModal.show();
+
+        pageNum = 1; // Reset to first page
+        document.getElementById("current-page").textContent = pageNum;
+        renderPage(pageNum);
+      }
+
+      function renderPage(num) {
+        if (pageRendering) {
+          pageNumPending = num;
+          return;
+        }
+
+        pageRendering = true;
+        let scale = getScaleFactor();
+
+        pdfDoc.getPage(num).then(function (page) {
+          let viewport = page.getViewport({ scale: scale });
+
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+
+          let renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+          };
+
+          let renderTask = page.render(renderContext);
+          renderTask.promise.then(function () {
+            pageRendering = false;
+            document.getElementById("current-page").textContent = num;
+
+            if (pageNumPending !== null) {
+              renderPage(pageNumPending);
+              pageNumPending = null;
+            }
+          });
+        });
+      }
+
+      function nextPage() {
+        if (pageNum < pdfDoc.numPages) {
+          pageNum++;
+          requestAnimationFrame(() => renderPage(pageNum));
+        }
+      }
+
+      function prevPage() {
+        if (pageNum > 1) {
+          pageNum--;
+          requestAnimationFrame(() => renderPage(pageNum));
+        }
+      }
+
+      window.addEventListener("resize", () => renderPage(pageNum)); // Adjust scale on window resize
+
+      // Preload PDF on page load for faster modal opening
+      document.addEventListener("DOMContentLoaded", function () {
+        pdfjsLib.getDocument({ url: pdfUrl, disableStream: false }).promise.then(function (pdf) {
+          pdfDoc = pdf;
+          document.getElementById("total-pages").textContent = pdf.numPages;
+        }).catch(error => console.error("Error loading PDF:", error));
+      });
+    </script>
+
+
+  </body>
+</html>

@@ -20,4 +20,11 @@ public class TreatmentsController {
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "skin-treatments";
     }
+
+    @GetMapping(value = { "/ivy-therapy"})
+    public String ivyTherapyPage(Model model) {
+        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
+        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
+        return "ivy-therapy";
+    }
 }
