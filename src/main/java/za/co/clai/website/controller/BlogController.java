@@ -19,4 +19,11 @@ public class BlogController {
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "blog-single-why-clai";
     }
+
+    @GetMapping(value = {"/winter-skin-prep"})
+    public String blogPageWinterSkinPrep(Model model) {
+        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
+        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
+        return "winter-skin-prep";
+    }
 }
