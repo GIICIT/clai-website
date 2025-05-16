@@ -128,17 +128,18 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" th:href="@{/skin-treatments}"><span>Skin Treatments</span></a>
                   </li>
+                  <li><a class="dropdown-item" th:href="@{/ivy-therapy}"><span>IV Therapy</span></a></li>
                   <li><a class="dropdown-item" th:href="@{/coming-soon}"><span>Body Wellness</span></a></li>
-                  <li><a class="dropdown-item" th:href="@{/coming-soon}"><span>Ivy Therapy</span></a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)" th:href="@{#}" onclick="openPDF();">Price List<i class="fa-solid"></i></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)" th:href="@{/blog-single-why-clai}" >Blog<i
-                        class="fa-solid"></i></a>
-              </li>
+              <ul class="dropdown-menu" aria-labelledby="blogNavbarDropdown">
+                <li><a class="dropdown-item" th:href="@{/blog-single-why-clai}"><span>Why CLAI</span></a>
+                </li>
+                <li><a class="dropdown-item" th:href="@{/winter-skin-prep}"><span>Winter Skin Prep</span></a></li>
+              </ul>
               <li class="nav-item">
                 <a class="nav-link" th:href="@{/contact-us}" >Contact</a>
               </li>
