@@ -1,0 +1,42 @@
+<!-- src/main/resources/templates/fragments/whatsapp-float.html -->
+
+<div th:fragment="whatsapp-button" xmlns:th="http://www.w3.org/1999/xhtml">
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #212121;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            z-index: 9999;
+        }
+        .whatsapp-float img {
+            width: 42px;
+            height: 42px;
+            filter: brightness(0) invert(1);
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        .whatsapp-float:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+
+    <script>
+        function openWhatsApp() {
+            window.open("https://wa.me/27773705689?text=Hello%2C%20I%20am%20interested%20in%20your%20services!", "_blank");
+        }
+    </script>
+
+    <a href="javascript:void(0);" class="whatsapp-float" onclick="openWhatsApp()">
+        <img src="https://static.elfsight.com/icons/app-chats-whatsapp-chat-multicolor.svg" alt="WhatsApp">
+    </a>
+</div>
