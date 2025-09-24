@@ -740,24 +740,3 @@ POTENZA.searchbar = function () {
     }
   }, true);
 })();
-
-/* Treatments: ensure Owl measures after images are ready */
-jQuery(function () {
-  function refreshTreatments() {
-    jQuery('.treatments .owl-carousel').each(function () {
-      try { jQuery(this).trigger('refresh.owl.carousel'); } catch (e) {}
-    });
-  }
-
-  // After full load (images sized)
-  jQuery(window).on('load', function () {
-    setTimeout(refreshTreatments, 50);
-  });
-
-  // If you change orientation / cross the mobile breakpoint, re-measure
-  var mq = window.matchMedia('(max-width: 991.98px)');
-  function onChange() { setTimeout(refreshTreatments, 50); }
-  if (mq.addEventListener) mq.addEventListener('change', onChange);
-  else if (mq.addListener) mq.addListener(onChange); // Safari
-});
-
