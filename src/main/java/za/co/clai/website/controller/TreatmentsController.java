@@ -16,6 +16,11 @@ public class TreatmentsController {
 
     @GetMapping(value = { "/skin-treatments"})
     public String treatmentsPage(Model model) {
+        model.addAttribute("isHomeActive", false);
+        model.addAttribute("isTreatmentsActive", true);
+        model.addAttribute("isPriceListActive", false);
+        model.addAttribute("isBlogActive", false);
+        model.addAttribute("isContactUsActive", false);
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "skin-treatments";
@@ -23,6 +28,11 @@ public class TreatmentsController {
 
     @GetMapping(value = { "/ivy-therapy"})
     public String ivyTherapyPage(Model model) {
+        model.addAttribute("isHomeActive", false);
+        model.addAttribute("isTreatmentsActive", true);
+        model.addAttribute("isPriceListActive", false);
+        model.addAttribute("isBlogActive", false);
+        model.addAttribute("isContactUsActive", false);
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "ivy-therapy";

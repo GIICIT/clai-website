@@ -56,48 +56,10 @@
     <!-- Template Style -->
     <link rel="stylesheet" th:href="@{/css/style.css}">
 
-    <style>
-      /* Floating WhatsApp Icon Styling */
-      /* Floating WhatsApp Icon Styling */
-      .whatsapp-float {
-        position: fixed;
-        bottom: 120px;
-        right: 40px;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        z-index: 9999; /* Ensures it's always on top */
-      }
-
-      /* WhatsApp Icon Styling */
-      .whatsapp-float img {
-        width: 50px;
-        height: 50px;
-        transition: transform 0.3s;
-      }
-
-      /* Slight zoom effect on hover */
-      .whatsapp-float:hover img {
-        transform: scale(1.1);
-      }
-
-    </style>
-    <script>
-      function openWhatsApp() {
-        window.open("https://wa.me/27773705689?text=Hello%2C%20I%20am%20interested%20in%20your%20services!", "_blank");
-      }
-    </script>
-
   </head>
   <body>
-
   <!-- Floating WhatsApp Button with Official Logo -->
-  <a href="javascript:void(0);" class="whatsapp-float" onclick="openWhatsApp()">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
+  <div th:insert="fragments/whatsapp-float :: whatsapp-button"></div>
     
     <!--=================================
     preloader -->
@@ -110,60 +72,7 @@
     <!--=================================
     Header -->
     <header class="header header-sticky default">
-      <nav class="navbar navbar-static-top navbar-expand-lg">
-        <div class="container-fluid main-header position-relative">
-          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><i
-                  class="fas fa-align-left"></i></button>
-          <a class="navbar-brand" th:href="@{/home}">
-            <img class="img-fluid" src="/img/full-logo-lockup-black-50-opacity.svg" alt="logo">
-            <img class="img-fluid sticky" src="/img/full-logo-lockup-black-50-opacity.svg" alt="logo">
-          </a>
-          <div class="navbar-collapse collapse justify-content-center justify-content-lg-center">
-            <ul class="nav navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" th:href="@{/home}" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" id="navbarDropdown" role="button"
-                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Treatments<i
-                        class="fa-solid fa-plus"></i></a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" th:href="@{/skin-treatments}"><span>Skin Treatments</span></a>
-                  </li>
-                  <li><a class="dropdown-item" th:href="@{/ivy-therapy}"><span>IV Therapy</span></a></li>
-                  <li><a class="dropdown-item" th:href="@{/coming-soon}"><span>Body Wellness</span></a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)" th:href="@{#}" onclick="openPDF();">Price List<i class="fa-solid"></i></a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" id="blogNavbarDropdown" role="button"
-                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Blog<i
-                        class="fa-solid fa-plus"></i></a>
-                <ul class="dropdown-menu" aria-labelledby="blogNavbarDropdown">
-                  <li><a class="dropdown-item" th:href="@{/blog-single-why-clai}"><span>Why CLAI</span></a>
-                  </li>
-                  <li><a class="dropdown-item" th:href="@{/winter-skin-prep}"><span>Winter Skin Prep</span></a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" th:href="@{/contact-us}" >Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="add-listing">
-            <a class="menu-btn" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-               aria-controls="offcanvasRight">
-              <svg width="40" height="80" viewBox="0 0 80 80" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13.3333 60H33.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                <path d="M13.3333 40H53.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                <path d="M13.3333 20H66.6666" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </nav>
+        <div th:insert="fragments/navbar :: nav-bar"></div>
     </header>
     <!--=================================
     Header -->
@@ -258,7 +167,7 @@
               </div>
               <!-- blog-post-Description START -->
               <div class="blog-post-description">
-                <p>Skincare is no longer about quick fixes or following trends—it’s about science-driven solutions, personalised care and long-term wellness. At CLAI, we understand that achieving healthy, radiant skin requires more than just external treatments. It’s about nourishing your skin from within, supporting your body’s natural healing processes and addressing the root causes of skin concerns.
+                <p>Skincare is no longer about quick fixes or following trends-it’s about science-driven solutions, personalised care and long-term wellness. At CLAI, we understand that achieving healthy, radiant skin requires more than just external treatments. It’s about nourishing your skin from within, supporting your body’s natural healing processes and addressing the root causes of skin concerns.
                   That’s why we take a holistic approach, ensuring every client receives a customised Blueprint Plan tailored to their unique skin and body wellness needs.</p>
                 <p class="mb-0"><b>A Personalised Approach to Skin & Body Health</b>
                   <br>Your skin is a reflection of your overall health, which is why we start with an in-depth consultation. Whether you’re undergoing a VISIA Skin Analysis to assess your skin’s condition or a Body Wellness Consultation to evaluate internal factors affecting your skin, we take a 360-degree approach to wellness.
@@ -338,8 +247,8 @@
                 <p class="mb-0"><b></b>
                   <br>Whether you're looking to improve skin radiance, boost immunity, enhance recovery, or combat fatigue, our IV drips are customised to your specific needs. By combining skincare with internal wellness, we ensure that you feel as good as you look.
                   A Holistic Approach to Lasting Beauty & Well-Being
-                  At CLAI, we don’t just focus on aesthetics—we prioritise your long-term health. By integrating advanced aesthetic treatments with internal wellness solutions like IV therapy, we provide a comprehensive approach to skincare that delivers real, lasting transformation.
-                  Because true beauty isn’t just about how you look—it’s about how you feel. And at CLAI, we’re here to help you feel your best, inside and out.</p>
+                  At CLAI, we don’t just focus on aesthetics-we prioritise your long-term health. By integrating advanced aesthetic treatments with internal wellness solutions like IV therapy, we provide a comprehensive approach to skincare that delivers real, lasting transformation.
+                  Because true beauty isn’t just about how you look-it’s about how you feel. And at CLAI, we’re here to help you feel your best, inside and out.</p>
 
 
               </div>
@@ -390,63 +299,16 @@
       Blog -->
       <!--=================================
       footer-->
-    <footer class="footer bg-overlay-theme-10">
-      <div class="min-footer">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6">
-              <h5>Contact Information</h5>
-              <div class="footer-contact-info">
-                <ul class="list-unstyled mb-0">
-                  <li><i class="fas fa-fw fa-map-marker-alt text-primary"></i><span>22 Van der Byl Avenue, Durbanville</span>
-                  </li>
-                  <li><i class="fas fa-fw fa-phone text-primary"></i><span>+27 77 370 5689</span></li>
-                  <li><i class="far fa-fw fa-envelope text-primary"></i><span>info@clai.co.za</span></li>
-                </ul>
-              </div>
-              <div class="social-icon mt-4">
-                <ul>
-                  <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
-                  <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-6 mt-4 mt-md-0 pl-lg-5">
-              <div class="footer-link">
-                <h5>Navigation</h5>
-                <ul class="list-unstyled mb-0">
-                  <li><a th:href="@{/home}">Home</a></li>
-                  <li><a th:href="@{/skin-treatments}">Skin Treatments</a></li>
-                  <li><a th:href="@{#}">Blog</a></li>
-                  <li><a th:href="@{/contact-us}">Contact Us</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="row align-items-center copyright text-md-start text-center">
-            <div class="col-12 col-md-6 ">
-              <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>
-                <a th:href="@{/home}"> CLAI </a> All Rights Reserved
-              </p>
-            </div>
-            <div class="col-12 col-md-6 text-md-end text-center mt-3 mt-md-0">
-              <p>Software Development <a href="#"> GIIC (PTY) LTD</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+  <section>
+      <div th:insert="fragments/footer :: footer"></div>
+  </section>
       <!--=================================
       footer-->
       <!--=================================
       Back To Top-->
-      <div id="back-to-top" class="back-to-top">
-        <a href="#"><i class="fas fa-angle-up"></i></a>
-      </div>
+<!--      <div id="back-to-top" class="back-to-top">-->
+<!--        <a href="#"><i class="fas fa-angle-up"></i></a>-->
+<!--      </div>-->
       <!--=================================
       Back To Top-->
       <!--=================================

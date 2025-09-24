@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
   <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-81M8RGH9NY"></script>
@@ -54,48 +54,10 @@
     <!-- Template Style -->
     <link rel="stylesheet" th:href="@{/css/style.css}">
 
-    <style>
-      /* Floating WhatsApp Icon Styling */
-      /* Floating WhatsApp Icon Styling */
-      .whatsapp-float {
-        position: fixed;
-        bottom: 120px;
-        right: 40px;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        z-index: 9999; /* Ensures it's always on top */
-      }
-
-      /* WhatsApp Icon Styling */
-      .whatsapp-float img {
-        width: 50px;
-        height: 50px;
-        transition: transform 0.3s;
-      }
-
-      /* Slight zoom effect on hover */
-      .whatsapp-float:hover img {
-        transform: scale(1.1);
-      }
-
-    </style>
-    <script>
-      function openWhatsApp() {
-        window.open("https://wa.me/27773705689?text=Hello%2C%20I%20am%20interested%20in%20your%20services!", "_blank");
-      }
-    </script>
-
   </head>
   <body>
-
   <!-- Floating WhatsApp Button with Official Logo -->
-  <a href="javascript:void(0);" class="whatsapp-float" onclick="openWhatsApp()">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
+  <div th:insert="fragments/whatsapp-float :: whatsapp-button"></div>
 
     <!--=================================
     preloader -->
@@ -109,13 +71,7 @@
       <!--=================================
       Header -->
       <header class="coming-soon-top">
-        <nav class="navbar">
-          <div class="container">
-            <a class="navbar-brand m-auto text-center" th:href="@{/home}">
-              <img class="img-fluid" src="/img/full-logo-lockup-black-50-opacity.svg" alt="logo">
-            </a>
-          </div>
-        </nav>
+          <div th:insert="fragments/navbar :: nav-bar"></div>
       </header>
       <!--=================================
       Header -->

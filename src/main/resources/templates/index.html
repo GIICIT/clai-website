@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-81M8RGH9NY"></script>
@@ -52,6 +52,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+
     <!-- CSS Global Compulsory (Do not remove)-->
     <link rel="stylesheet" th:href="@{/css/font-awesome/all.min.css}">
     <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
@@ -62,41 +65,6 @@
     <link rel="stylesheet" th:href="@{/css/magnific-popup/magnific-popup.css}">
     <!-- Template Style -->
     <link rel="stylesheet" th:href="@{/css/style.css}">
-
-    <style>
-        /* Floating WhatsApp Icon Styling */
-        /* Floating WhatsApp Icon Styling */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 120px;
-            right: 40px;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            z-index: 9999; /* Ensures it's always on top */
-        }
-
-        /* WhatsApp Icon Styling */
-        .whatsapp-float img {
-            width: 50px;
-            height: 50px;
-            transition: transform 0.3s;
-        }
-
-        /* Slight zoom effect on hover */
-        .whatsapp-float:hover img {
-            transform: scale(1.1);
-        }
-
-    </style>
-    <script>
-        function openWhatsApp() {
-            window.open("https://wa.me/27773705689?text=Hello%2C%20I%20am%20interested%20in%20your%20services!", "_blank");
-        }
-    </script>
 
     <script type="application/ld+json">
         {
@@ -131,9 +99,7 @@
 <body>
 
 <!-- Floating WhatsApp Button with Official Logo -->
-<a href="javascript:void(0);" class="whatsapp-float" onclick="openWhatsApp()">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
+<div th:insert="fragments/whatsapp-float :: whatsapp-button"></div>
 
 <!--=================================
 preloader -->
@@ -146,119 +112,37 @@ preloader -->
 <!--=================================
 Header -->
 <header class="header header-sticky default">
-    <nav class="navbar navbar-static-top navbar-expand-lg">
-        <div class="container-fluid main-header position-relative">
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><i
-                    class="fas fa-align-left"></i></button>
-            <a class="navbar-brand" th:href="@{#}">
-                <img class="img-fluid" src="/img/full-logo-lockup-black-50-opacity.svg" alt="logo">
-                <img class="img-fluid sticky" src="/img/full-logo-lockup-black-50-opacity.svg" alt="logo">
-            </a>
-            <div class="navbar-collapse collapse justify-content-center justify-content-lg-center">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" th:href="@{#}" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" id="navbarDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Treatments<i
-                                class="fa-solid fa-plus"></i></a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" th:href="@{/skin-treatments}"><span>Skin Treatments</span></a>
-                            </li>
-                            <li><a class="dropdown-item" th:href="@{/ivy-therapy}"><span>IV Therapy</span></a></li>
-                            <li><a class="dropdown-item" th:href="@{/coming-soon}"><span>Body Wellness</span></a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" th:href="@{#}" onclick="openPDF();">Price List<i class="fa-solid"></i></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" id="blogNavbarDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Blog<i
-                                class="fa-solid fa-plus"></i></a>
-                        <ul class="dropdown-menu" aria-labelledby="blogNavbarDropdown">
-                            <li><a class="dropdown-item" th:href="@{/blog-single-why-clai}"><span>Why CLAI</span></a>
-                            </li>
-                            <li><a class="dropdown-item" th:href="@{/winter-skin-prep}"><span>Winter Skin Prep</span></a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/contact-us}" >Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="add-listing">
-                <a class="menu-btn" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                   aria-controls="offcanvasRight">
-                    <svg width="40" height="80" viewBox="0 0 80 80" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13.3333 60H33.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                        <path d="M13.3333 40H53.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                        <path d="M13.3333 20H66.6666" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </nav>
+    <div th:insert="fragments/navbar :: nav-bar"></div>
 </header>
 <!--=================================
 Header -->
 <!--=================================
 Right menu -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-     style="background-image: url(/img/bg/right-menu-01.png); background-size: cover; background-position: center right;">
-    <div class="offcanvas-header text-end justify-content-end p-4">
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body p-4 p-sm-5 d-flex align-content-between flex-wrap justify-content-center">
-        <div class="sidebar-menu">
-            <div class="logo">
-                <a th:href="@{/home}">
-                    <img class="img-fluid logo-dark" src="/img/clai-logo-full-stone.svg" alt="Main logo">
-                </a>
-            </div>
-            <div class="section-title mt-5">
-            </div>
-            <div class="mt-5">
-                <h3 class="mb-3">Contact Info</h3>
-                <p>22 Van der Byl Avenue, Durbanville,<br> +27 77 370 5689</p>
-                <p>Monday to Friday <br> (09:00 To 16:30)</p>
-                <p>Saturday - Sunday  <br> (Closed)</p>
-                <p>Public Holidays  <br> (Closed)</p>
-            </div>
-            <div class="social-icon mt-5">
-                <ul>
-                    <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+
 <!--=================================
 Right menu -->
 <!--=================================
 banner -->
-<section class="inner-header space-ptb bg-holder" style="background-image: url(/img/bg/home-banner.jpeg);">
-    <div id="main-slider" class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide slide-1 align-items-center d-flex">
-                <div class="swipeinner container">
-                    <div class="row justify-content-center text-center">
-                        <div class="col-12 col-sm-10">
-                            <div class="slider-1">
-                                <div class="animated" data-swiper-animation="fadeInUp" data-duration="1s"
-                                     data-delay="0.25s">
-                                    <h1 class="animated text-black-50 mt-4 text-center" data-swiper-animation="fadeInUp"
-                                        data-duration="1.5s" data-delay="0.25s">Cape Lifestyle & Aesthetic
-                                        Institute.</h1>
-                                    <h4><span class="animated text-white sub-title-text  text-center"
-                                              data-swiper-animation="fadeInUp" data-duration="1.5s" data-delay="0.25s">The Science of Health, the Art of Living.</span>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<section class="inner-header space-ptb bg-holder"
+         style="background-image: url(/img/bg/lounge-area-1.jpg); height: 700px;">
+    <div class="container" style="padding-bottom: 80px;">
+        <div class="row justify-content-start">
+            <div class="col-12 col-sm-10" style="padding-left: 50px;">
+                <div class="slider-1">
+<!--                    <span style="color: #000; text-align: left; display: block; font-size: 34px; font-family: 'Playfair Display', serif; line-height: 1.1; font-weight: 200;">-->
+<!--                        NON SURGICAL-->
+<!--                        <br>-->
+<!--                        COSMETIC PROCEDURES-->
+<!--                        <br>-->
+<!--                        AND ANTI-AGING-->
+<!--                        <br>-->
+<!--                        SPECIALISTS-->
+<!--                    </span>-->
+
+<!--                    <section>-->
+<!--                        <div style="margin-top: 25px;" th:insert="fragments/book-appointment :: book-appointment"></div>-->
+<!--                    </section>-->
+
                 </div>
             </div>
         </div>
@@ -268,7 +152,55 @@ banner -->
 banner -->
 <!--=================================
 About us -->
-<section class=space-pt>
+
+<section>
+    <div th:insert="fragments/clai-logo-divider :: clai-logo-divider"></div>
+</section>
+
+<section class="products-banner">
+    <div class="container-fluid  p-0">
+        <div class="row g-0">
+            <div class="col-lg-5 col-md-12" style="background-image: url(img/bg/visia.jpg); background-position: center; background-size: cover;">
+                <img class="img-fluid d-block d-lg-none" src="img/bg/visia.jpg" alt="">
+            </div>
+            <div class="col-lg-7 col-md-12 features-section amazing-features">
+                <div class="section-title">
+                    <div class="title" style="color: #000; text-align: left; display: block; font-size: 34px; font-family: 'Playfair Display', serif; line-height: 1.1; font-weight: 200;">
+                        Where Your Skincare Journey Begins
+                    </div>
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-9">
+                            <div class="feature-box feature-box-style-05 mb-4 mb-md-5">
+                                <div class="feature-content">
+                                    <p style="color: #000; font-size: 12px; line-height: 1.3;">
+                                        At CLAI, every treatment plan begins with a VISIA Skin Analysis.
+                                        This advanced imaging system looks beneath the surface of your
+                                        skin to reveal what the eye can’t see - helping us understand your
+                                        unique skin profile. From there, we design a personalised skincare
+                                        journey tailored to your needs, ensuring every step is guided by
+                                        precision and care.</p>
+                                </div>
+                            </div>
+                            <section>
+                                <div th:insert="fragments/book-appointment :: book-appointment"></div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=================================
+Category -->
+<section>
+    <div th:insert="fragments/treatments :: treatments"></div>
+</section>
+<!--=================================
+Category -->
+
+<section class=space-p>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
@@ -279,14 +211,14 @@ About us -->
                         research and expert knowledge to provide personalised treatments that deliver real, lasting
                         results.</p>
                     <p class="section-description">We understand that skincare and body wellness go beyond surface-level
-                        aesthetics—they are essential components of confidence, vitality and quality of life. That’s
+                        aesthetics-they are essential components of confidence, vitality and quality of life. That’s
                         why we take a results-driven approach, combining evidence-based treatments with cutting-edge
                         solutions to restore, rejuvenate and enhance your natural beauty.</p>
                     <p class="section-description">Our highly skilled team is dedicated to offering tailored care that
                         aligns with your unique needs. Whether you’re looking to improve your skin health, address
                         specific concerns, or achieve a more radiant and youthful appearance, we provide customised
                         solutions designed to work with your body’s natural processes for long-term benefits.</p>
-                    <p class="section-description">At CLAI, we don’t just focus on how you look—we prioritise how you
+                    <p class="section-description">At CLAI, we don’t just focus on how you look-we prioritise how you
                         feel. By blending advanced science with a deep understanding of skin and body wellness, we guide
                         you on a transformative journey to healthier, more vibrant skin and a renewed sense of
                         confidence.</p>
@@ -323,11 +255,11 @@ About us -->
                     <div class="about-img text-end">
                         <img class="img-fluid" src="/img/about/what-sets-us-apart-2.png" alt="about1">
                     </div>
-                    <p class="mt-3">At CLAI, we believe everyone is unique—your skin, body and wellness goals deserve a
+                    <p class="mt-3">At CLAI, we believe everyone is unique-your skin, body and wellness goals deserve a
                         personalised approach. That’s why we create a Blueprint Plan tailored to your specific needs,
                         ensuring treatments that evolve with you.</p>
                     <p class="mt-3">By combining advanced technology, scientific expertise and individualised care, we
-                        go beyond one-size-fits-all solutions. Your journey with us is more than a treatment—it’s a
+                        go beyond one-size-fits-all solutions. Your journey with us is more than a treatment-it’s a
                         customized path to lasting skin health and overall well-being.</p>
                 </div>
             </div>
@@ -336,62 +268,6 @@ About us -->
 </section>
 <!--=================================
 About us -->
-<!--=================================
-Category -->
-<section class="category-section space-ptb position-relative px-md-5">
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-xl-4 pb-4 pb-xl-0 pe-0 pe-xl-5">
-                <div class="section-title">
-                    <span class="sub-title">Treatments</span>
-                    <h2 class="title">Selected treatments from our clinic</h2>
-                    <p class="section-description">True wellness is not just the absence of illness, but the presence of
-                        balance,
-                        vitality and deep relaxation—where the body heals, the mind unwinds and the soul finds
-                        peace.</p>
-                </div>
-            </div>
-            <div class="col-xl-8">
-                <div class="owl-carousel owl-nav-bottom-center" data-nav-dots="false" data-nav-arrow="false"
-                     data-items="3" data-lg-items="3" data-md-items="3" data-sm-items="2" data-xs-items="2"
-                     data-space="20" data-autoheight="true">
-                    <div class="item">
-                        <div class="category-box">
-                            <div class="category-img">
-                                <img class="img-fluid" src="/img/category/skin-treatments.jpg" alt="">
-                            </div>
-                            <div class="category-title text-center mt-4">
-                                <h4><a th:href="@{/skin-treatments}">Skin Treatments</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="category-box">
-                            <div class="category-img">
-                                <img class="img-fluid" src="/img/category/ivy-therapy.jpg" alt="">
-                            </div>
-                            <div class="category-title text-center mt-4">
-                                <h4><a th:href="@{/ivy-therapy}">IV Therapy</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="category-box">
-                            <div class="category-img">
-                                <img class="img-fluid" src="/img/category/body-wellness.jpg" alt="">
-                            </div>
-                            <div class="category-title text-center mt-4">
-                                <h4><a th:href="@{/coming-soon}">Body Wellness</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--=================================
-Category -->
 <!--=================================
 Features -->
 
@@ -409,7 +285,7 @@ Video banner -->
             <div class="col-lg-8 mt-5">
                 <div class="section-title text-center">
                     <h2 class="title text-white mt-5">The Science of Health</h2>
-                    <p class="section-description text-white">Healthy skin is not just about appearance—it’s a
+                    <p class="section-description text-white">Healthy skin is not just about appearance-it’s a
                         reflection of balance, care and optimal well-being.</p>
                 </div>
             </div>
@@ -420,7 +296,7 @@ Video banner -->
 Video banner -->
 <!--=================================
 Team -->
-<section class="space-ptb position-relative">
+<section class="space-pt position-relative">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -439,7 +315,7 @@ Team -->
                         expertise
                         with genuine care, guiding you on your journey to healthier skin and a renewed sense of
                         confidence. At CLAI,
-                        you’re not just a client—you’re part of our commitment to excellence in skin health and
+                        you’re not just a client-you’re part of our commitment to excellence in skin health and
                         wellness.</p>
                 </div>
             </div>
@@ -455,7 +331,6 @@ Testimonial -->
 <!--=================================
 blog post -->
 <section class="space-pb position-relative">
-    <!-- <img class="img-fluid blog-bg-pattern" src="img/blog/blog-bg.png" alt=""> -->
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -464,7 +339,7 @@ blog post -->
                     <h2 class="title">Latest News & Blogs</h2>
                     <p class="section-description">Knowledge empowers transformation. Through our blogs, we share expert
                         insights,
-                        holistic wellness tips and evidence-based aesthetic solutions—guiding you toward a healthier,
+                        holistic wellness tips and evidence-based aesthetic solutions-guiding you toward a healthier,
                         more radiant you</p>
                 </div>
             </div>
@@ -500,65 +375,23 @@ blog post -->
 </section>
 <!--=================================
 blog post -->
+
+<section>
+    <div th:insert="fragments/reviews :: reviews"></div>
+</section>
+
 <!--=================================
 footer-->
-<footer class="footer bg-overlay-theme-10">
-    <div class="min-footer">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-6">
-                    <h5>Contact Information</h5>
-                    <div class="footer-contact-info">
-                        <ul class="list-unstyled mb-0">
-                            <li><i class="fas fa-fw fa-map-marker-alt text-primary"></i><span>22 Van der Byl Avenue, Durbanville</span>
-                            </li>
-                            <li><i class="fas fa-fw fa-phone text-primary"></i><span>+27 77 370 5689</span></li>
-                            <li><i class="far fa-fw fa-envelope text-primary"></i><span>info@clai.co.za</span></li>
-                        </ul>
-                    </div>
-                    <div class="social-icon mt-4">
-                        <ul>
-                            <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 mt-4 mt-md-0 pl-lg-5">
-                    <div class="footer-link">
-                        <h5>Navigation</h5>
-                        <ul class="list-unstyled mb-0">
-                            <li><a th:href="@{#}">Home</a></li>
-                            <li><a th:href="@{/skin-treatments}">Skin Treatments</a></li>
-                            <li><a th:href="@{/blog-single-why-clai}">Blog</a></li>
-                            <li><a th:href="@{/contact-us}">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row align-items-center copyright text-md-start text-center">
-                <div class="col-12 col-md-6 ">
-                    <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>
-                        <a th:href="@{/home}"> CLAI </a> All Rights Reserved
-                    </p>
-                </div>
-                <div class="col-12 col-md-6 text-md-end text-center mt-3 mt-md-0">
-                    <p>Software Development <a href="#"> GIIC (PTY) LTD</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+<section>
+    <div th:insert="fragments/footer :: footer"></div>
+</section>
 <!--=================================
 footer-->
 <!--=================================
 Back To Top-->
-<div id="back-to-top" class="back-to-top">
-    <a href="#"><i class="fas fa-angle-up"></i></a>
-</div>
+<!--<div id="back-to-top" class="back-to-top">-->
+<!--    <a href="#"><i class="fas fa-angle-up"></i></a>-->
+<!--</div>-->
 <!--=================================
 Back To Top-->
 <!--=================================

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
   <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-81M8RGH9NY"></script>
@@ -49,6 +49,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100;200;300;400&display=swap" rel="stylesheet">
     <!-- CSS Global Compulsory (Do not remove)-->
     <link rel="stylesheet" th:href="@{/css/font-awesome/all.min.css}">
     <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
@@ -62,48 +63,10 @@
     <link rel="stylesheet" th:href="@{/css/owl-carousel/owl.carousel.min.css}">
     <link rel="stylesheet" th:href="@{/css/slick/slick-theme.css}">
 
-    <style>
-      /* Floating WhatsApp Icon Styling */
-      /* Floating WhatsApp Icon Styling */
-      .whatsapp-float {
-        position: fixed;
-        bottom: 120px;
-        right: 40px;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        z-index: 9999; /* Ensures it's always on top */
-      }
-
-      /* WhatsApp Icon Styling */
-      .whatsapp-float img {
-        width: 50px;
-        height: 50px;
-        transition: transform 0.3s;
-      }
-
-      /* Slight zoom effect on hover */
-      .whatsapp-float:hover img {
-        transform: scale(1.1);
-      }
-
-    </style>
-    <script>
-      function openWhatsApp() {
-        window.open("https://wa.me/27773705689?text=Hello%2C%20I%20am%20interested%20in%20your%20services!", "_blank");
-      }
-    </script>
-
   </head>
   <body>
-
   <!-- Floating WhatsApp Button with Official Logo -->
-  <a href="javascript:void(0);" class="whatsapp-float" onclick="openWhatsApp()">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
+  <div th:insert="fragments/whatsapp-float :: whatsapp-button"></div>
     
     <!--=================================
     preloader -->
@@ -116,60 +79,7 @@
     <!--=================================
     Header -->
     <header class="header header-sticky default">
-      <nav class="navbar navbar-static-top navbar-expand-lg">
-        <div class="container-fluid main-header position-relative">
-          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><i
-                  class="fas fa-align-left"></i></button>
-          <a class="navbar-brand" th:href="@{/home}">
-            <img class="img-fluid" src="/img/full-logo-lockup-black-50-opacity.svg" alt="logo">
-            <img class="img-fluid sticky" src="/img/full-logo-lockup-black-50-opacity.svg" alt="logo">
-          </a>
-          <div class="navbar-collapse collapse justify-content-center justify-content-lg-center">
-            <ul class="nav navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" th:href="@{/home}" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" id="navbarDropdown" role="button"
-                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Treatments<i
-                        class="fa-solid fa-plus"></i></a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" th:href="@{/skin-treatments}"><span>Skin Treatments</span></a>
-                  </li>
-                  <li><a class="dropdown-item" th:href="@{/ivy-therapy}"><span>IV Therapy</span></a></li>
-                  <li><a class="dropdown-item" th:href="@{/coming-soon}"><span>Body Wellness</span></a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)" th:href="@{#}" onclick="openPDF();">Price List<i class="fa-solid"></i></a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" id="blogNavbarDropdown" role="button"
-                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Blog<i
-                        class="fa-solid fa-plus"></i></a>
-                <ul class="dropdown-menu" aria-labelledby="blogNavbarDropdown">
-                  <li><a class="dropdown-item" th:href="@{/blog-single-why-clai}"><span>Why CLAI</span></a>
-                  </li>
-                  <li><a class="dropdown-item" th:href="@{/winter-skin-prep}"><span>Winter Skin Prep</span></a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" th:href="@{/contact-us}" >Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="add-listing">
-            <a class="menu-btn" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-               aria-controls="offcanvasRight">
-              <svg width="40" height="80" viewBox="0 0 80 80" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13.3333 60H33.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                <path d="M13.3333 40H53.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                <path d="M13.3333 20H66.6666" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </nav>
+        <div th:insert="fragments/navbar :: nav-bar"></div>
     </header>
     <!--=================================
     Header -->
@@ -228,21 +138,13 @@
     Service -->
     <section class="space-ptb">
       <div class="container">
-<!--        <div class="row mb-4 pb-3 pb-md-0 mb-md-5 align-items-center">-->
-<!--          <div class="col-12 col-xl-5 col-lg-5">-->
-<!--            <div class="section-title mb-0">-->
-<!--              <span class="sub-title">Treatments</span>-->
-<!--              <h2 class="title">Amazing Treatments</h2>-->
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
               <div class="section-title text-center">
-<!--              <span class="sub-title">Treatments</span>-->
-<!--              <h2 class="title">Treatments</h2>-->
             </div>
           </div>
           <div class="col-12 col-xl-5 col-lg-4 pe-xl-5">
             <div class="section-title mb-0">
-<!--              <p class="section-description">Motivation is not an accident or something that someone else can give you with the power to motivate you.</p>-->
             </div>
           </div>
         </div>
@@ -255,7 +157,6 @@
               <div class="feature-content">
                 <h3>Medical Meso Glow Facial</h3>
                 <p class="mb-4">A personalized treatment that includes cleansing, exfoliation, extractions, a chemical peel and a soothing mask with massage, all tailored to your skin's unique concerns for a radiant, refreshed glow.</p>
-<!--                <a href="#">R1280<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
@@ -267,7 +168,6 @@
               <div class="feature-content">
                 <h3>Revive Deep Cleanse Facial</h3>
                 <p class="mb-4">A customized treatment that includes cleansing, gentle exfoliation, extractions, a nourishing mask and a relaxing massage, designed to refresh and rejuvenate your skin for a natural, healthy glow.</p>
-<!--                <a href="#">R800<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
@@ -279,7 +179,6 @@
               <div class="feature-content">
                 <h3>ZO Medical Facial</h3>
                 <p class="mb-4">A results-driven treatment featuring ZO products, tailored to your skin's specific needs. Includes deep cleansing, exfoliation, extractions, a ZO chemical peel and a calming mask to promote a clear, radiant and healthy complexion.</p>
-<!--                <a href="#">R1500<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
@@ -291,8 +190,6 @@
               <div class="feature-content">
                 <h3>Ultimate Resurfacing Peel</h3>
                 <p class="mb-4">A powerful skin rejuvenation treatment using Mesoestetic’s Phen TCA and Melanoplus TCA peels to target pigmentation, fine lines and uneven texture. This advanced medium to deep peel stimulates cell renewal, revealing smoother, brighter and more youthful-looking skin.</p>
-<!--                <a href="#">Mesoesetic Melanoplus Touch Face R1200<i class="fas ms-2"></i></a>-->
-<!--                <a href="#">Mesoesetic Phen TCA Face R1500<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
@@ -304,7 +201,6 @@
               <div class="feature-content">
                 <h3>Mesoestetic PRO Peels</h3>
                 <p class="mb-4">Professional-grade chemical peels designed to target concerns like acne, pigmentation, fine lines and uneven texture. These customizable treatments offer effective skin renewal with minimal downtime, suitable for various skin types.</p>
-<!--                <a href="#">from R850<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
@@ -316,7 +212,6 @@
               <div class="feature-content">
                 <h3>Mesoestetic MD Peels</h3>
                 <p class="mb-4">Clinically advanced peels with higher concentrations of active ingredients to address more severe concerns, including deep pigmentation, stubborn acne and advanced aging. Ideal for those seeking significant results under medical supervision.</p>
-<!--                <a href="#">from R950<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
@@ -328,7 +223,6 @@
               <div class="feature-content">
                 <h3>Skin LIFT Needling</h3>
                 <p class="mb-4">A personalized microneedling treatment using the Dermapen device, tailored to address each patient’s unique skin concerns. This advanced procedure combines targeted Mesoestetic serums with a soothing mask to deliver comprehensive skin rejuvenation and repair. Designed as a blueprint for your skin’s specific needs, it promotes optimal results and revitalization.</p>
-<!--                <a href="#">from R2900<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
@@ -340,7 +234,6 @@
               <div class="feature-content">
                 <h3>PRF Renewal Needling</h3>
                 <p class="mb-4">An advanced skin rejuvenation procedure combining microneedling with Platelet-Rich Fibrin (PRF) therapy. This natural and effective treatment uses your body's own growth factors to promote collagen production, improve skin texture, reduce fine lines and enhance overall skin health. Ideal for achieving a radiant, youthful complexion.</p>
-<!--                <a href="#">R3100<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
@@ -352,7 +245,6 @@
               <div class="feature-content">
                 <h3>PRF Renewal Treatment.</h3>
                 <p class="mb-4">A comprehensive skin rejuvenation treatment that uses mesotherapy injections of PRF (Platelet-Rich Fibrin) with superficial needling. This powerful dual approach enhances collagen production, deeply nourishes the skin and addresses multiple concerns like fine lines, texture and overall skin vitality. Tailored to deliver exceptional results for a radiant, youthful glow.</p>
-<!--                <a href="#">R4200<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
@@ -364,7 +256,6 @@
               <div class="feature-content">
                 <h3>IPL Skin Treatment</h3>
                 <p class="mb-4">A cutting-edge Intense Pulsed Light (IPL) treatment designed to target pigmentation, sun damage, redness and vascular lesions. Lumecca delivers powerful light energy to rejuvenate the skin, improving tone and texture for a clearer, more radiant complexion with minimal downtime.</p>
-<!--                <a href="#">from R2500<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
@@ -376,7 +267,6 @@
               <div class="feature-content">
                 <h3>Skin Renew IPL</h3>
                 <p class="mb-4">A powerful combination of Lumecca IPL to target pigmentation and sun damage, paired with a medium-depth TCA chemical peel for enhanced exfoliation and skin renewal. This treatment improves skin tone, texture and overall clarity for a refreshed and revitalized complexion.</p>
-<!--                <a href="#">from R2800<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
@@ -388,7 +278,6 @@
               <div class="feature-content">
                 <h3>Mesoeclat</h3>
                 <p class="mb-4">A professional treatment that can be customized to address specific skin concerns. It's designed to activate the skin's natural healing process, which can help with signs of aging, fatigue, uneven skin tone and dullness. The treatment can also be combined with other treatments.</p>
-<!--                <a href="#">from R2500<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
@@ -400,11 +289,9 @@
               <div class="feature-content">
                 <h3>Tri Therapy Treatment</h3>
                 <p class="mb-4">Our signature treatment combines multiple modalities to target a wide range of skin concerns, including pigmentation, acne, aging, redness and more. This customized approach integrates chemical peels, superficial needling with targeted actives and a specialized mask to deliver optimal results, leaving your skin refreshed and rejuvenated.</p>
-<!--                <a href="#">from R2500<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
-
           <div class="col-md-4 mb-md-0 mb-4">
             <div class="feature-box feature-box-style-02 feature-box-light mb-3 mb-md-0">
               <div class="feature-img">
@@ -413,11 +300,9 @@
               <div class="feature-content">
                 <h3>Visia</h3>
                 <p class="mb-4">A VISIA Skin Consultation is an advanced skin analysis using the VISIA Imaging System, which captures high-resolution images of your skin to assess various concerns, including pigmentation, wrinkles, texture, pores, UV damage and redness. This in-depth analysis provides a detailed understanding of your skin’s condition, helping to create a personalised treatment plan for optimal skin health. The consultation is quick, non-invasive and offers valuable insights into both surface and underlying skin concerns.</p>
-<!--                <a href="#">from R2500<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
-
           <div class="col-md-4 mb-md-0 mb-4">
             <div class="feature-box feature-box-style-02 feature-box-light mb-3 mb-md-0">
               <div class="feature-img">
@@ -426,12 +311,9 @@
               <div class="feature-content">
                 <h3>MeLine</h3>
                 <p class="mb-4">ME LINE peels are an innovative treatment for treating pigmentation and sun damage. As well as hyperpigmentation and melano-hematic pigmentation, ME LINE also treats dermatitis, signs of ageing (lines) and acne in a process referred to as 'controlled chemical dermabrasion</p>
-<!--                <a href="#">from R2500<i class="fas ms-2"></i></a>-->
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
     </section>
@@ -451,63 +333,16 @@
     Menu list -->
     <!--=================================
     footer-->
-    <footer class="footer bg-overlay-theme-10">
-      <div class="min-footer">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6">
-              <h5>Contact Information</h5>
-              <div class="footer-contact-info">
-                <ul class="list-unstyled mb-0">
-                  <li><i class="fas fa-fw fa-map-marker-alt text-primary"></i><span>22 Van der Byl Avenue, Durbanville</span>
-                  </li>
-                  <li><i class="fas fa-fw fa-phone text-primary"></i><span>+27 77 370 5689</span></li>
-                  <li><i class="far fa-fw fa-envelope text-primary"></i><span>info@clai.co.za</span></li>
-                </ul>
-              </div>
-              <div class="social-icon mt-4">
-                <ul>
-                  <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
-                  <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-6 mt-4 mt-md-0 pl-lg-5">
-              <div class="footer-link">
-                <h5>Navigation</h5>
-                <ul class="list-unstyled mb-0">
-                  <li><a th:href="@{/home}">Home</a></li>
-                  <li><a th:href="@{#}">Skin Treatments</a></li>
-                  <li><a th:href="@{/blog-single-why-clai}">Blog</a></li>
-                  <li><a th:href="@{/contact-us}">Contact Us</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="row align-items-center copyright text-md-start text-center">
-            <div class="col-12 col-md-6 ">
-              <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>
-                <a th:href="@{/home}"> CLAI </a> All Rights Reserved
-              </p>
-            </div>
-            <div class="col-12 col-md-6 text-md-end text-center mt-3 mt-md-0">
-              <p>Software Development <a href="#"> GIIC (PTY) LTD</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+  <section>
+      <div th:insert="fragments/footer :: footer"></div>
+  </section>
     <!--=================================
     footer-->
     <!--=================================
     Back To Top-->
-    <div id="back-to-top" class="back-to-top">
-      <a href="#"><i class="fas fa-angle-up"></i></a>
-    </div>
+<!--    <div id="back-to-top" class="back-to-top">-->
+<!--      <a href="#"><i class="fas fa-angle-up"></i></a>-->
+<!--    </div>-->
     <!--=================================
     Back To Top-->
     <!--=================================

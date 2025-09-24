@@ -17,7 +17,7 @@ public class SecurityConfig {
                         .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
                 )
                 .authorizeHttpRequests(requests -> requests
-                        .requestMatchers("/css/**", "/fonts/**", "/img/**", "/js/**", "/sass/**", "/docs/**",
+                        .requestMatchers("/css/**", "/fonts/**", "/img/**", "/js/**", "/sass/**", "/docs/**", "/videos/**",
                                 "/coming-soon","/", "/home", "/skin-treatments", "/ivy-therapy", "/contact-us", "/email",
                                 "/404", "/blog-single-why-clai", "/winter-skin-prep", "/sitemap.xml", "/robots.txt").permitAll()
                         .anyRequest().authenticated()
