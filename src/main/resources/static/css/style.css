@@ -8794,3 +8794,14 @@ Blog Style 01
     line-height: 1.7;
   }
 }
+
+/* Ensure consistent sizing in Treatments cards on mobile */
+.treatments .owl-carousel .owl-item img {
+  display: block !important;
+  width: 100% !important;   /* override the global width:auto */
+  height: auto !important;
+}
+
+/* Guard against zero-height items */
+.treatments .owl-carousel .owl-item { min-height: 1px; }
+
