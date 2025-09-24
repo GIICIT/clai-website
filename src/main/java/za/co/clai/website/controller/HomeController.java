@@ -17,6 +17,11 @@ public class HomeController {
 
     @GetMapping("/")
     public String homePage(Model model) {
+        model.addAttribute("isHomeActive", true);
+        model.addAttribute("isTreatmentsActive", false);
+        model.addAttribute("isPriceListActive", false);
+        model.addAttribute("isBlogActive", false);
+        model.addAttribute("isContactUsActive", false);
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "index";

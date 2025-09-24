@@ -155,56 +155,9 @@
     error -->
     <!--=================================
     footer-->
-    <footer class="footer bg-overlay-theme-10">
-      <div class="min-footer">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6">
-              <h5>Contact Information</h5>
-              <div class="footer-contact-info">
-                <ul class="list-unstyled mb-0">
-                  <li><i class="fas fa-fw fa-map-marker-alt text-primary"></i><span>22 Van der Byl Avenue, Durbanville</span>
-                  </li>
-                  <li><i class="fas fa-fw fa-phone text-primary"></i><span>+27 77 370 5689</span></li>
-                  <li><i class="far fa-fw fa-envelope text-primary"></i><span>info@clai.co.za</span></li>
-                </ul>
-              </div>
-              <div class="social-icon mt-4">
-                <ul>
-                  <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
-                  <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-6 mt-4 mt-md-0 pl-lg-5">
-              <div class="footer-link">
-                <h5>Navigation</h5>
-                <ul class="list-unstyled mb-0">
-                  <li><a th:href="@{/home}">Home</a></li>
-                  <li><a th:href="@{/skin-treatments}">Skin Treatments</a></li>
-                  <li><a th:href="@{/blog-single-why-clai}">Blog</a></li>
-                  <li><a th:href="@{/contact-us}">Contact Us</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="row align-items-center copyright text-md-start text-center">
-            <div class="col-12 col-md-6 ">
-              <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>
-                <a th:href="@{/home}"> CLAI </a> All Rights Reserved
-              </p>
-            </div>
-            <div class="col-12 col-md-6 text-md-end text-center mt-3 mt-md-0">
-              <p>Software Development <a href="#"> GIIC (PTY) LTD</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+  <section>
+      <div th:insert="fragments/footer :: footer"></div>
+  </section>
     <!--=================================
     footer-->
     <!--=================================
