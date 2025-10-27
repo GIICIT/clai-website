@@ -36,14 +36,25 @@
                             <li><a class="dropdown-item" th:href="@{/winter-skin-prep}"><span>Winter Skin Prep</span></a></li>
                         </ul>
                     </li>
-                    <li class="nav-item" th:classappend="${isContactUsActive} ? ' active' : ''">
-                        <a class="nav-link" th:href="@{/contact-us}" >Contact Us</a>
+                    <li class="nav-item d-lg-none" th:classappend="${isContactUsActive} ? ' active' : ''">
+                        <a class="nav-link" th:href="@{/contact-us}">Contact Us</a>
                     </li>
                 </ul>
             </div>
             <div class="add-listing d-flex align-items-center">
                 <!-- Desktop only -->
                 <section class="book-appointment-desktop d-none d-lg-flex align-items-center">
+                    <!-- clone your navbar context -->
+                    <nav class="navbar navbar-light bg-transparent p-0"> <!-- use navbar-dark if your header uses dark -->
+                        <div class="navbar-collapse show p-0"><!-- keeps selector chain: .navbar .navbar-collapse .navbar-nav .nav-link -->
+                            <ul class="navbar-nav flex-row mb-0 me-3">
+                                <li class="nav-item" th:classappend="${isContactUsActive} ? ' active' : ''">
+                                    <a class="nav-link px-3" th:href="@{/contact-us}">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
                     <div th:insert="fragments/book-appointment :: book-appointment"></div>
                 </section>
 
@@ -58,6 +69,7 @@
                     </svg>
                 </a>
             </div>
+
 
         </div>
     </nav>

@@ -8794,3 +8794,41 @@ Blog Style 01
     line-height: 1.7;
   }
 }
+
+/* Keep navbar hover look for the moved link */
+.book-appointment-desktop .nav-link:hover,
+.book-appointment-desktop .nav-item.active > .nav-link,
+.book-appointment-desktop .nav-link.active {
+  background: transparent !important;
+  color: #d8c3a5 !important; /* same as your navbar hover color */
+}
+
+/* Mobile (collapsed menu) — one clean block */
+@media (max-width: 991.98px) {
+  .navbar .navbar-collapse { padding: 0 !important; }
+  .navbar .navbar-nav { margin: 0 !important; padding: 0 !important; }
+  .navbar .navbar-nav > li { margin: 0 !important; }
+  .navbar .navbar-nav > li + li { margin-top: 0 !important; }
+
+  .navbar .navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 0 14px !important;
+    line-height: 1.3 !important;
+    box-sizing: border-box;
+  }
+
+  .navbar .navbar-nav .nav-link i {  /* keep icons visible */
+    margin: 0 !important;
+    line-height: 1 !important;
+  }
+
+  .navbar .dropdown-menu .dropdown-item {
+    padding: 12px 14px !important;
+    line-height: 1.3 !important;
+  }
+}
+
+
