@@ -8831,4 +8831,211 @@ Blog Style 01
   }
 }
 
+/* ===== IVY THERAPY BANNER LAYOUT FIX ===== */
+.products-banner.ivy-tight .row.g-0{
+  align-items: stretch;
+}
+
+/* Image column controls section height */
+.products-banner.ivy-tight .col-lg-5[style*="background-image"]{
+  min-height: 560px; /* adjust to taste */
+}
+
+/* Right column becomes a vertical flex container */
+.products-banner.ivy-tight .features-section,
+.products-banner.ivy-tight .amazing-features,
+.products-banner.ivy-tight .section-title{
+  height: 100%;
+}
+
+.products-banner.ivy-tight .section-title{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;        /* center entire text block vertically */
+  padding:12px 0 !important;     /* small breathing room */
+  margin:0 !important;
+}
+
+/* Remove unwanted outer whitespace */
+.products-banner.ivy-tight .section-title > :first-child{
+  margin-top:0 !important;
+}
+.products-banner.ivy-tight .section-title > :last-child{
+  margin-bottom:0 !important;
+}
+
+/* Keep headings tight but natural */
+.products-banner.ivy-tight .title{
+  margin:0 0 8px 0 !important;
+  padding:0 !important;
+}
+
+/* Reduce bootstrap spacing inflation ONLY here */
+.products-banner.ivy-tight .feature-box.mb-4,
+.products-banner.ivy-tight .feature-box.mb-md-5{
+  margin-bottom:14px !important;
+}
+
+/* Paragraph spacing cleanup */
+.products-banner.ivy-tight .feature-content p{
+  margin-bottom:0 !important;
+}
+
+/* Rows shouldn't add big gaps */
+.products-banner.ivy-tight .section-title > .row{
+  margin-top:10px !important;
+  margin-bottom:0 !important;
+}
+
+/* Mobile: top align (looks better on narrow screens) */
+@media (max-width:991px){
+  .products-banner.ivy-tight .section-title{
+    justify-content:flex-start;
+    padding-top:20px !important;
+    padding-bottom:20px !important;
+  }
+}
+
+/* Make the right side a vertical layout */
+.products-banner.ivy-tight .section-title{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* Treat each section as a unit */
+.products-banner.ivy-tight .ivy-block{
+  display:flex;
+  flex-direction:column;
+}
+
+/* Create space BETWEEN the blocks WITHOUT increasing height */
+.products-banner.ivy-tight .ivy-block + .ivy-block{
+  margin-top:auto;
+  padding-top:24px;     /* visual gap */
+}
+
+/* Prevent padding from increasing container height */
+.products-banner.ivy-tight .ivy-block:last-child{
+  margin-bottom:auto;
+}
+
+
+/* MOBILE: use the <img>, kill the background-image so it doesn't double */
+@media (max-width: 991.98px){
+  .products-banner.ivy-tight .col-lg-5[style*="background-image"]{
+    background-image: none !important;
+    min-height: auto !important;
+  }
+
+  .products-banner.ivy-tight .col-lg-5 img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* DESKTOP+: use the background-image, hide the <img> */
+@media (min-width: 992px){
+  .products-banner.ivy-tight .col-lg-5 img{
+    display: none !important;
+  }
+}
+
+/* ===== Banner accordion: force CLAI black theme ===== */
+.products-banner.ivy-tight .ivy-accordion .card{
+  background: transparent;
+  border: 0;
+  border-bottom: 0;
+  border-radius: 0;
+}
+
+.products-banner.ivy-tight .ivy-accordion .card-header{
+  background: transparent;
+  border: 0;
+  padding: 14px 0;
+}
+
+.products-banner.ivy-tight .ivy-accordion .btn.btn-link{
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  color: #000 !important;
+  font-size: 14px;
+  line-height: 1.3;
+  font-family: inherit;
+  position: relative;
+  padding-right: 34px;
+}
+
+.products-banner.ivy-tight .ivy-accordion .btn.btn-link:hover,
+.products-banner.ivy-tight .ivy-accordion .btn.btn-link:focus{
+  color: #000 !important;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.products-banner.ivy-tight .ivy-accordion .btn:focus{
+  outline: none;
+  box-shadow: none !important;
+}
+
+/* plus/minus */
+.products-banner.ivy-tight .ivy-accordion .btn.btn-link::after{
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.products-banner.ivy-tight .ivy-accordion .btn.btn-link[aria-expanded="true"]::after{
+  content: "–";
+}
+
+.products-banner.ivy-tight .ivy-accordion .card-body{
+  padding: 0 0 14px 0;
+  background: transparent;
+}
+
+.products-banner.ivy-tight .ivy-accordion .card-body p{
+  color: #000 !important;
+  font-size: 12px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* ===== Make accordion buttons match BOOK APPOINTMENT ===== */
+
+.products-banner.ivy-tight .ivy-accordion .card-header .btn.btn-link{
+  font-family: 'Montserrat', sans-serif !important; /* match CTA font */
+  font-size: 16px !important;                        /* match CTA size */
+  font-weight: 400 !important;                       /* match CTA weight */
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;                      /* remove extra styling */
+  text-transform: none !important;                   /* NOT uppercase */
+  color: #000 !important;
+}
+
+/* Keep answer text smaller */
+.products-banner.ivy-tight .ivy-accordion .card-body,
+.products-banner.ivy-tight .ivy-accordion .card-body p{
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+  color: #000 !important;
+}
+
+/* Scale the + / – icon proportionally */
+.products-banner.ivy-tight .ivy-accordion .card-header .btn.btn-link::after{
+  font-size: 20px !important;
+}
+
+.header {
+  position: relative !important;
+}
 

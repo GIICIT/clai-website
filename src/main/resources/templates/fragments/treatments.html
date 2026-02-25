@@ -116,7 +116,7 @@
                                             <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Lumecca IPL And TCA Combo</span></a></li>
                                             <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Tri Therapy</span></a></li>
                                             <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Filler</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Toxin</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/toxin}" th:classappend="${isToxinActive} ? ' active' : ''"><span>Toxin</span></a></li>
                                             <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Sculptra</span></a></li>
                                             <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Skin Boosters</span></a></li>
                                         </ul>
@@ -245,14 +245,14 @@
                                     </div>
                                     <div class="category-tray">
                                         <ul class="tray-list">
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Microtox / Babytox</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Toxin For Migraines</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Toxin For Lines & Wrinkles</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Bruxism (Teeth Grinding)</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Chin Dimpling Treatment</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Hyperhidrosis (Excessive Sweating)</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Lip Flip</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Platysma Band Toxin / Nefertiti Lift</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/toxin}" th:classappend="${isToxinActive} ? ' active' : ''"><span>Microtox / Babytox</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/toxin}" th:classappend="${isToxinActive} ? ' active' : ''"><span>Toxin For Migraines</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/toxin}" th:classappend="${isToxinActive} ? ' active' : ''"><span>Toxin For Lines & Wrinkles</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/toxin}" th:classappend="${isToxinActive} ? ' active' : ''"><span>Bruxism (Teeth Grinding)</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/toxin}" th:classappend="${isToxinActive} ? ' active' : ''"><span>Chin Dimpling Treatment</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/toxin}" th:classappend="${isToxinActive} ? ' active' : ''"><span>Hyperhidrosis (Excessive Sweating)</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/toxin}" th:classappend="${isToxinActive} ? ' active' : ''"><span>Lip Flip</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/toxin}" th:classappend="${isToxinActive} ? ' active' : ''"><span>Platysma Band Toxin / Nefertiti Lift</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -269,21 +269,21 @@
 
                                 <div class="category-panel js-category-panel">
                                     <div class="category-title text-center js-category-toggle">
-                                        <h4><a>Derma filler +</a></h4>
+                                        <h4><a>Dermal filler +</a></h4>
                                     </div>
                                     <div class="category-tray">
                                         <ul class="tray-list">
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Cheek Filler</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Chin And Jawline Filler</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Hand Filler</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Lip Filler</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Liquid Facelift</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Marionette Line Filler</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Nasolabial Fold Filler</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Neck Filler</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Non-Surgical Rhinoplasty</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Tear Trough Filler</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Temple Filler</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/dermal-filler}" th:classappend="${isDermalFillerActive} ? ' active' : ''"><span>Cheek Filler</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/dermal-filler}" th:classappend="${isDermalFillerActive} ? ' active' : ''"><span>Chin And Jawline Filler</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/dermal-filler}" th:classappend="${isDermalFillerActive} ? ' active' : ''"><span>Hand Filler</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/dermal-filler}" th:classappend="${isDermalFillerActive} ? ' active' : ''"><span>Lip Filler</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/dermal-filler}" th:classappend="${isDermalFillerActive} ? ' active' : ''"><span>Liquid Facelift</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/dermal-filler}" th:classappend="${isDermalFillerActive} ? ' active' : ''"><span>Marionette Line Filler</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/dermal-filler}" th:classappend="${isDermalFillerActive} ? ' active' : ''"><span>Nasolabial Fold Filler</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/dermal-filler}" th:classappend="${isDermalFillerActive} ? ' active' : ''"><span>Neck Filler</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/dermal-filler}" th:classappend="${isDermalFillerActive} ? ' active' : ''"><span>Non-Surgical Rhinoplasty</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/dermal-filler}" th:classappend="${isDermalFillerActive} ? ' active' : ''"><span>Tear Trough Filler</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/dermal-filler}" th:classappend="${isDermalFillerActive} ? ' active' : ''"><span>Temple Filler</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -304,8 +304,8 @@
                                     </div>
                                     <div class="category-tray">
                                         <ul class="tray-list">
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Sculptra For The Face</span></a></li>
-                                            <li><a class="tray-link" th:href="@{#}" onclick="return false;"><span>Sculptra For The Body</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/biostimulators}" th:classappend="${isBiostimulatorsActive} ? ' active' : ''"><span>Sculptra For The Face</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/biostimulators}" th:classappend="${isBiostimulatorsActive} ? ' active' : ''"><span>Sculptra For The Body</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
