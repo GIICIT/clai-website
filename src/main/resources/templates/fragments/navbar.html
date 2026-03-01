@@ -17,10 +17,10 @@
                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Treatments<i
                                 class="fa-solid fa-plus"></i></a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" th:href="@{/skin-treatments}"><span>Skin Treatments</span></a>
-                            </li>
-                            <li><a class="dropdown-item" th:href="@{/ivy-therapy}"><span>IV Therapy</span></a></li>
-<!--                            <li><a class="dropdown-item" th:href="@{/coming-soon}"><span>Body Wellness</span></a></li>-->
+                            <li><a class="dropdown-item" th:href="@{/ivy-therapy}" th:classappend="${isIvyTherapyActive} ? ' active' : ''"><span>IV Therapy</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/toxin}" th:classappend="${isToxinActive} ? ' active' : ''"><span>Toxin</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/dermal-filler}" th:classappend="${isDermalFillerActive} ? ' active' : ''"><span>Dermal Filler</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/biostimulators}" th:classappend="${isBiostimulatorsActive} ? ' active' : ''"><span>Biostimulators</span></a></li>
                         </ul>
                     </li>
                     <li class="nav-item" th:classappend="${isPriceListActive} ? ' active' : ''">
@@ -31,9 +31,9 @@
                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Blog<i
                                 class="fa-solid fa-plus"></i></a>
                         <ul class="dropdown-menu" aria-labelledby="blogNavbarDropdown">
-                            <li><a class="dropdown-item" th:href="@{/blog-single-why-clai}"><span>Why CLAI</span></a>
+                            <li><a class="dropdown-item" th:href="@{/blog-single-why-clai}" th:classappend="${isWhyClaiActive} ? ' active' : ''"><span>Why CLAI</span></a>
                             </li>
-                            <li><a class="dropdown-item" th:href="@{/winter-skin-prep}"><span>Winter Skin Prep</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/winter-skin-prep}" th:classappend="${isWinterSkinPrepActive} ? ' active' : ''"><span>Winter Skin Prep</span></a></li>
                         </ul>
                     </li>
                     <li class="nav-item d-lg-none" th:classappend="${isContactUsActive} ? ' active' : ''">
