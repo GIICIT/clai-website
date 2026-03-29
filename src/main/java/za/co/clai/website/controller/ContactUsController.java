@@ -25,20 +25,6 @@ public class ContactUsController {
     @GetMapping(value = {"/contact-us"})
     public String contactUsPage(Model model) {
         model.addAttribute("emailModel", new EmailModel());
-        model.addAttribute("isHomeActive", false);
-
-        model.addAttribute("isTreatmentsActive", false);
-        model.addAttribute("isIvyTherapyActive", false);
-        model.addAttribute("isToxinActive", false);
-        model.addAttribute("isDermalFillerActive", false);
-        model.addAttribute("isBiostimulatorsActive", false);
-
-        model.addAttribute("isPriceListActive", false);
-
-        model.addAttribute("isBlogActive", false);
-        model.addAttribute("isWhyClaiActive", false);
-        model.addAttribute("isWinterSkinPrepActive", false);
-
         model.addAttribute("isContactUsActive", true);
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());

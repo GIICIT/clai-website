@@ -14,40 +14,10 @@ public class TreatmentsController {
         this.socialMediaLinksModel = socialMediaLinksModel;
     }
 
-//    @GetMapping(value = { "/skin-treatments"})
-//    public String treatmentsPage(Model model) {
-//        model.addAttribute("isHomeActive", false);
-//
-//        model.addAttribute("isTreatmentsActive", true);
-//        model.addAttribute("isSkinTreatmentsActive", true);
-//        model.addAttribute("isIvyTherapyActive", false);
-//        model.addAttribute("isToxinActive", false);
-//
-//        model.addAttribute("isPriceListActive", false);
-//
-//        model.addAttribute("isBlogActive", false);
-//        model.addAttribute("isWhyClaiActive", false);
-//        model.addAttribute("isWinterSkinPrepActive", false);
-//
-//        model.addAttribute("isContactUsActive", false);
-//        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
-//        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
-//        return "skin-treatments";
-//    }
-
     @GetMapping(value = { "/ivy-therapy"})
     public String ivyTherapyPage(Model model) {
-        model.addAttribute("isHomeActive", false);
-
         model.addAttribute("isTreatmentsActive", true);
         model.addAttribute("isIvyTherapyActive", true);
-        model.addAttribute("isToxinActive", false);
-        model.addAttribute("isDermalFillerActive", false);
-        model.addAttribute("isBiostimulatorsActive", false);
-
-        model.addAttribute("isPriceListActive", false);
-        model.addAttribute("isBlogActive", false);
-        model.addAttribute("isContactUsActive", false);
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "ivy-therapy";
@@ -55,17 +25,8 @@ public class TreatmentsController {
 
     @GetMapping(value = { "/toxin"})
     public String toxinPage(Model model) {
-        model.addAttribute("isHomeActive", false);
-
         model.addAttribute("isTreatmentsActive", true);
-        model.addAttribute("isIvyTherapyActive", false);
         model.addAttribute("isToxinActive", true);
-        model.addAttribute("isDermalFillerActive", false);
-        model.addAttribute("isBiostimulatorsActive", false);
-
-        model.addAttribute("isPriceListActive", false);
-        model.addAttribute("isBlogActive", false);
-        model.addAttribute("isContactUsActive", false);
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "toxin";
@@ -73,17 +34,8 @@ public class TreatmentsController {
 
     @GetMapping(value = { "/dermal-filler"})
     public String dermalFillerPage(Model model) {
-        model.addAttribute("isHomeActive", false);
-
         model.addAttribute("isTreatmentsActive", true);
-        model.addAttribute("isIvyTherapyActive", false);
-        model.addAttribute("isToxinActive", false);
         model.addAttribute("isDermalFillerActive", true);
-        model.addAttribute("isBiostimulatorsActive", false);
-
-        model.addAttribute("isPriceListActive", false);
-        model.addAttribute("isBlogActive", false);
-        model.addAttribute("isContactUsActive", false);
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "dermal-filler";
@@ -91,19 +43,64 @@ public class TreatmentsController {
 
     @GetMapping(value = { "/biostimulators"})
     public String biostimulatorsPage(Model model) {
-        model.addAttribute("isHomeActive", false);
-
         model.addAttribute("isTreatmentsActive", true);
-        model.addAttribute("isIvyTherapyActive", false);
-        model.addAttribute("isToxinActive", false);
-        model.addAttribute("isDermalFillerActive", false);
         model.addAttribute("isBiostimulatorsActive", true);
-
-        model.addAttribute("isPriceListActive", false);
-        model.addAttribute("isBlogActive", false);
-        model.addAttribute("isContactUsActive", false);
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "biostimulators";
+    }
+
+    @GetMapping(value = { "/hyper-pigmentation"})
+    public String hyperPigmentationsPage(Model model) {
+        model.addAttribute("isTreatmentsActive", true);
+        model.addAttribute("isHyperPigmentationActive", true);
+        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
+        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
+        return "hyper-pigmentation";
+    }
+
+    @GetMapping(value = { "/acne-and-acne-scaring"})
+    public String acneAndAcneScaringPage(Model model) {
+        model.addAttribute("isTreatmentsActive", true);
+        model.addAttribute("isAcneAndAcneScaringActive", true);
+        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
+        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
+        return "acne-and-acne-scaring";
+    }
+
+    @GetMapping(value = { "/rosacea-and-sensitive-skin"})
+    public String rosaceaAndSensitiveSkinPage(Model model) {
+        model.addAttribute("isTreatmentsActive", true);
+        model.addAttribute("isRosaceaAndSensitiveSkinActive", true);
+        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
+        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
+        return "rosacea-and-sensitive-skin";
+    }
+
+    @GetMapping(value = { "/hair-treatments"})
+    public String hairTreatmentsPage(Model model) {
+        model.addAttribute("isTreatmentsActive", true);
+        model.addAttribute("isHairTreatmentsActive", true);
+        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
+        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
+        return "hair-treatments";
+    }
+
+    @GetMapping(value = { "/intimate-wellness"})
+    public String intimateWellnessPage(Model model) {
+        model.addAttribute("isTreatmentsActive", true);
+        model.addAttribute("isIntimateWellnessActive", true);
+        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
+        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
+        return "intimate-wellness";
+    }
+
+    @GetMapping(value = { "/anti-ageing"})
+    public String antiAgeingPage(Model model) {
+        model.addAttribute("isTreatmentsActive", true);
+        model.addAttribute("isAntiAgeingActive", true);
+        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
+        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
+        return "anti-ageing";
     }
 }

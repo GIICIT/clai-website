@@ -15,22 +15,8 @@ public class BlogController {
 
     @GetMapping(value = {"/blog-single-why-clai"})
     public String blogPageWhyClai(Model model) {
-        model.addAttribute("isHomeActive", false);
-
-        model.addAttribute("isTreatmentsActive", false);
-        model.addAttribute("isIvyTherapyActive", false);
-        model.addAttribute("isToxinActive", false);
-        model.addAttribute("isDermalFillerActive", false);
-        model.addAttribute("isBiostimulatorsActive", false);
-
-        model.addAttribute("isPriceListActive", false);
-
         model.addAttribute("isBlogActive", true);
         model.addAttribute("isWhyClaiActive", true);
-        model.addAttribute("isWinterSkinPrepActive", false);
-
-
-        model.addAttribute("isContactUsActive", false);
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "blog-single-why-clai";
@@ -38,21 +24,8 @@ public class BlogController {
 
     @GetMapping(value = {"/winter-skin-prep"})
     public String blogPageWinterSkinPrep(Model model) {
-        model.addAttribute("isHomeActive", false);
-
-        model.addAttribute("isTreatmentsActive", false);
-        model.addAttribute("isIvyTherapyActive", false);
-        model.addAttribute("isToxinActive", false);
-        model.addAttribute("isDermalFillerActive", false);
-        model.addAttribute("isBiostimulatorsActive", false);
-
-        model.addAttribute("isPriceListActive", false);
-
         model.addAttribute("isBlogActive", true);
-        model.addAttribute("isWhyClaiActive", false);
         model.addAttribute("isWinterSkinPrepActive", true);
-
-        model.addAttribute("isContactUsActive", false);
         model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "winter-skin-prep";

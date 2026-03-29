@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81M8RGH9NY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-81M8RGH9NY');
+    </script>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="author" content="giicit.co.za">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CLAI - The Science of Health, the Art of Living</title>
+    <meta name="description" content="At CLAI, we believe that true beauty starts with optimal skin health and overall well-being. Our approach merges state-of-the-art technology, advanced scientific research and expert knowledge to provide personalised treatments that deliver real, lasting results.">
+
+    <meta property="og:title" content="CLAI - The Science of Health, the Art of Living">
+    <meta property="og:description" content="At CLAI, we believe that true beauty starts with optimal skin health and overall well-being. Our approach merges state-of-the-art technology, advanced scientific research and expert knowledge to provide personalised treatments that deliver real, lasting results.">
+    <meta property="og:image" content="https://clai.co.za/img/full-logo-lockup-black-50.png">
+    <meta property="og:url" content="https://clai.co.za">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <!--    <link rel="shortcut icon" th:href="@{/img/clai-logo-full-black.svg}" type="image/x-icon">-->
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" th:href="@{/img/favicon/favicon.ico}">
+
+    <!-- PNG favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" th:href="@{/img/favicon/favicon-32x32.png}">
+    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/img/favicon/favicon-16x16.png}">
+
+    <!-- Apple Touch Icon (for iPhones & iPads) -->
+    <link rel="apple-touch-icon" th:href="@{/img/favicon/apple-touch-icon.png}">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" th:href="@{/img/favicon/android-chrome-192x192.png}">
+    <link rel="icon" type="image/png" sizes="512x512" th:href="@{/img/favicon/android-chrome-512x512.png}">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" th:href="@{/img/favicon/site.webmanifest}">
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" th:href="@{/css/font-awesome/all.min.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
+
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" th:href="@{/css/select2/select2.css}">
+    <link rel="stylesheet" th:href="@{/css/datetimepicker/datetimepicker.min.css}">
+    <!-- Template Style -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" th:href="@{/css/owl-carousel/owl.carousel.min.css}">
+    <link rel="stylesheet" th:href="@{/css/slick/slick-theme.css}">
+  </head>
+  <body>
+  <!-- Floating WhatsApp Button with Official Logo -->
+  <div th:insert="fragments/whatsapp-float :: whatsapp-button"></div>
+    
+    <!--=================================
+    preloader -->
+    <div id="pre-loader">
+      <img src="/img/pre-loader/clai-loader-black-50.svg" alt="">
+    </div>
+    <!--=================================
+    preloader -->
+    
+    <!--=================================
+    Header -->
+    <header class="header header-sticky default">
+        <div th:insert="fragments/navbar :: nav-bar"></div>
+    </header>
+    <!--=================================
+    Header -->
+    <!--=================================
+    Right menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+         style="background-image: url(/img/bg/right-menu-01.png); background-size: cover; background-position: center right;">
+      <div class="offcanvas-header text-end justify-content-end p-4">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-sm-5 d-flex align-content-between flex-wrap justify-content-center">
+        <div class="sidebar-menu">
+          <div class="logo">
+            <a th:href="@{/home}">
+              <img class="img-fluid logo-dark" src="/img/clai-logo-full-stone.svg" alt="Main logo">
+            </a>
+          </div>
+          <div class="section-title mt-5">
+          </div>
+          <div class="mt-5">
+            <h3 class="mb-3">Contact Info</h3>
+            <p>22 Van der Byl Avenue, Durbanville,<br> +27 77 370 5689</p>
+            <p>Monday to Friday <br> (09:00 To 16:30)</p>
+            <p>Saturday - Sunday  <br> (Closed)</p>
+            <p>Public Holidays  <br> (Closed)</p>
+          </div>
+          <div class="social-icon mt-5">
+            <ul>
+              <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--=================================
+    Right menu -->
+    <!--================================= -->
+
+  <section class="service white-bg space-pt">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2 class="title">Rosacea & Sensitive Skin Types</h2>
+            <br><br>
+            <h3 class="title">What Is Rosacea?</h3>
+            <p class="section-description">
+              Rosacea is a chronic inflammatory skin condition that commonly appears on the cheeks, nose, forehead, or chin.
+              It often presents as persistent redness, flushing, visible capillaries and in some cases, bumps or pustules
+              that resemble acne. While the cause of rosacea isn’t fully understood, it’s often triggered by stress, heat,
+              sun exposure, spicy food or certain skincare products
+            </p>
+            <br><br>
+            <h3 class="title">Understanding Sensitive Skin</h3>
+            <p class="section-description">
+              Sensitive skin is a reactive skin type that can feel tight, stinging, itchy or red, especially when exposed
+              to environmental changes or certain ingredients. It often goes hand in hand with rosacea and requires gentle,
+              targeted care to keep it calm and balanced.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-banner ivy-tight space-p">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title">
+            <div class="title" style="color: #000; text-align: center; display: block; font-size:32px !important; font-family: 'Playfair Display', serif; line-height: 1.1; font-weight: 200;">
+              Types of Rosacea We Commonly Treat
+            </div>
+
+            <div class="row justify-content-center" style="margin-top: 15px;">
+              <div class="col-md-9">
+
+                <div class="accordion ivy-accordion" id="types-of-rosacea">
+
+                  <div class="card">
+                    <div class="card-header" id="typesOfAcneHeadingOne">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#typesOfAcneCollapseOne"
+                                aria-expanded="false"
+                                aria-controls="typesOfAcneCollapseOne">
+                          Flushing & Redness (ETR)
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="typesOfAcneCollapseOne"
+                         class="collapse accordion-content"
+                         aria-labelledby="typesOfAcneHeadingOne"
+                         data-bs-parent="#types-of-rosacea">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Persistent redness with visible capillaries.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="typesOfAcneHeadingTwo">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#typesOfAcneCollapseTwo"
+                                aria-expanded="false"
+                                aria-controls="typesOfAcneCollapseTwo">
+                          Inflammatory (Papulopustular)
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="typesOfAcneCollapseTwo"
+                         class="collapse accordion-content"
+                         aria-labelledby="typesOfAcneHeadingTwo"
+                         data-bs-parent="#types-of-rosacea">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Redness with bumps and breakouts.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="typesOfAcneHeadingThree">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#typesOfAcneCollapseThree"
+                                aria-expanded="false"
+                                aria-controls="typesOfAcneCollapseThree">
+                          Thickened Skin (Phymatous)
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="typesOfAcneCollapseThree"
+                         class="collapse accordion-content"
+                         aria-labelledby="typesOfAcneHeadingThree"
+                         data-bs-parent="#types-of-rosacea">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Skin becomes thickened or textured, often around the nose.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="typesOfAcneHeadingFour">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#typesOfAcneCollapseFour"
+                                aria-expanded="false"
+                                aria-controls="typesOfAcneCollapseFour">
+                          Ocular Rosacea
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="typesOfAcneCollapseFour"
+                         class="collapse accordion-content"
+                         aria-labelledby="typesOfAcneHeadingFour"
+                         data-bs-parent="#types-of-rosacea">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Irritation and redness around the eyes.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="row space-pt">
+        <div class="col-lg-12">
+          <div class="service-img">
+            <img class="img-fluid" src="img/treatments/rosacea-and-sensitive-skin/rosacea_and_sensitive_skin.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- Image -->
+
+    </div>
+  </section>
+
+  <section class="products-banner ivy-tight space-pt">
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+
+        <!-- ACCORDION (2nd on mobile, 1st on desktop) -->
+        <div class="col-lg-7 col-md-12 features-section amazing-features order-2 order-lg-1">
+          <div class="section-title">
+            <div class="title" style="color: #000; text-align: left; display: block; font-size:32px !important; font-family: 'Playfair Display', serif; line-height: 1.1; font-weight: 200;">
+              Rosacea & Sensitive Skin Treatments
+            </div>
+            <div class="row" style="margin-top: 15px;">
+              <div class="col-md-9">
+
+                <div class="accordion ivy-accordion" id="accordion-treatment-option">
+
+                  <div class="card">
+                    <div class="card-header" id="treatmentOptionHeadingOne">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#treatmentOptionCollapseOne"
+                                aria-expanded="false"
+                                aria-controls="treatmentOptionCollapseOne">
+                          Barrier Repair Facial
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="treatmentOptionCollapseOne"
+                         class="collapse accordion-content"
+                         aria-labelledby="treatmentOptionHeadingOne"
+                         data-bs-parent="#accordion-treatment-option">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Our Barrier Repair Facial for Rosacea & Sensitive Skin is a calming, restorative treatment designed to support delicate, reactive skin while reducing redness and enhancing resilience. This treatment is ideal for those experiencing rosacea flare-ups, chronic sensitivity or skin that has been compromised by environmental stressors or overly aggressive skincare.
+                          <br><br>
+                          We use carefully selected, soothing formulas rich in ceramides, niacinamide, anti-inflammatory botanicals and skin-repairing antioxidants to reduce irritation, strengthen the skin barrier and promote a calmer, more even complexion. Each step is tailored to minimise triggers and support the skin’s natural healing process.
+                          <br><br>
+                          By reinforcing the skin’s protective barrier, this facial helps soothe inflammation, reduce visible redness and restore hydration - creating an optimal environment for healthy, balanced skin. The result is a complexion that feels comfortable, strengthened and visibly more radiant over time.
+                          <br><br>
+                          <b>Price: R 1150</b>
+                          <br><br>
+                          <b>Time: 60 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="treatmentOptionHeadingTwo">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#treatmentOptionCollapseTwo"
+                                aria-expanded="false"
+                                aria-controls="treatmentOptionCollapseTwo">
+                          CLAI Signature Facial
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="treatmentOptionCollapseTwo"
+                         class="collapse accordion-content"
+                         aria-labelledby="treatmentOptionHeadingTwo"
+                         data-bs-parent="#accordion-treatment-option">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          This calming, restorative treatment is thoughtfully designed for rosacea-prone and sensitive skin, combining barrier-strengthening care with the controlled exfoliation of the Mesoestetic Jessner Peel. While traditionally known for its powerful resurfacing effects, the Jessner Peel is applied with precision and in a modified protocol to suit delicate skin types, helping to brighten the complexion, smooth texture  and reduce the appearance of redness and uneven tone.
+                          <br><br>
+                          Formulated with a balanced combination of salicylic acid, lactic acid and resorcinol, the Jessner Peel works by gently exfoliating the skin, supporting healthy cell turnover and targeting discoloration - such as post-inflammatory redness or pigmentation - without overwhelming compromised skin.
+                          <br><br>
+                          By pairing this medical-grade peel with anti-inflammatory botanicals, ceramides, niacinamide and antioxidants, the treatment works to soothe, strengthen and renew the skin barrier. Over time, it helps reduce visible redness, smooth rough patches and restore a calm, radiant complexion - making it a carefully curated solution for those seeking clarity and balance, even with reactive or rosacea-affected skin.
+                          <br><br>
+                          <b>Price: R 1150</b>
+                          <br><br>
+                          <b>Time: 60-75 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="treatmentOptionHeadingThree">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#treatmentOptionCollapseThree"
+                                aria-expanded="false"
+                                aria-controls="treatmentOptionCollapseThree">
+                          Mesoesetic Pro/MD peel
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="treatmentOptionCollapseThree"
+                         class="collapse accordion-content"
+                         aria-labelledby="treatmentOptionHeadingThree"
+                         data-bs-parent="#accordion-treatment-option">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Mesoestetic PRO and MD Peels are expertly formulated to support sensitive, rosacea-prone skin by reducing inflammation, promoting skin regeneration and improving overall tone and texture - without compromising the skin’s fragile barrier. These professional chemical peels are applied using a carefully customised protocol that prioritises comfort and barrier health while delivering visible results.
+                          <br><br>
+                          Featuring therapeutic ingredients such as azelaic acid, kojic acid and resorcinol, these peels work together to calm inflammation, gently exfoliate dead skin cells and address visible signs of irritation or pigmentation.
+                          <br><br>
+                          By supporting healthy cell turnover and strengthening the skin barrier, these treatments help reduce the appearance of redness, blotchiness and reactive skin flare-ups - leaving the skin visibly smoother, more even and radiant over time.
+                          <br><br>
+                          <b>Price: R 950 - R 1100</b>
+                          <br><br>
+                          <b>Time: 45 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="treatmentOptionHeadingFour">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#treatmentOptionCollapseFour"
+                                aria-expanded="false"
+                                aria-controls="treatmentOptionCollapseFour">
+                          Exosome Needling
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="treatmentOptionCollapseFour"
+                         class="collapse accordion-content"
+                         aria-labelledby="treatmentOptionHeadingFour"
+                         data-bs-parent="#accordion-treatment-option">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Exosomes are tiny, powerful messengers naturally produced by the body, rich in growth factors and healing molecules. When applied during treatments like microneedling, they boost the skin’s natural repair process - stimulating collagen production, calming inflammation and encouraging healthy cell regeneration.
+                          <br><br>
+                          For those with rosacea or sensitive skin, exosomes offer a gentle yet effective solution. They help reduce redness, soothe irritation and strengthen the skin barrier - making the skin more resilient over time. This leads to a calmer, clearer and more balanced complexion, without triggering sensitivity or flare-ups.
+                          <br><br>
+                          <b>Price: R 4450</b>
+                          <br><br>
+                          <b>Time: 120 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="treatmentOptionHeadingFive">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#treatmentOptionCollapseFive"
+                                aria-expanded="false"
+                                aria-controls="treatmentOptionCollapseFive">
+                          Mesotherapy Face
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="treatmentOptionCollapseFive"
+                         class="collapse accordion-content"
+                         aria-labelledby="treatmentOptionHeadingFive"
+                         data-bs-parent="#accordion-treatment-option">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Mesotherapy is a minimally invasive, targeted treatment that delivers a customised blend of vitamins, antioxidants, peptides and skin-repairing agents directly into the middle layer of the skin through fine microinjections. This precise delivery allows active ingredients to reach where they’re most effective - stimulating cell regeneration and enhancing the skin’s natural healing process.
+                          <br><br>
+                          For rosacea and sensitive skin, mesotherapy offers a gentle yet powerful solution to reduce redness, calm inflammation, and strengthen the skin barrier. The infusion of anti-inflammatory and restorative ingredients helps to soothe flare-ups, reduce skin reactivity, and support long-term skin health without overwhelming sensitive skin.
+                          <br><br>
+                          It also helps stimulate collagen and elastin, which are essential for strengthening and rebuilding fragile or weakened skin tissue.
+                          <br><br>
+                          <b>Example: Centella Asiatica Ampoule</b>
+                          <br>
+                          A popular choice for sensitive and rosacea-prone skin is a Centella Asiatica ampoule, known for its powerful soothing and skin-repairing properties. When used in mesotherapy, Centella Asiatica helps to reduce inflammation, calm redness and accelerate skin healing - making it ideal for reactive skin. Its natural ability to boost collagen synthesis also supports barrier repair and improves skin resilience over time.
+                          <br><br>
+                          The result is a calmer, more balanced complexion with visibly less redness, improved hydration and enhanced tolerance. Mesotherapy with targeted ingredients like Centella Asiatica provides a comprehensive, skin-strengthening approach ideal for managing the chronic sensitivity and visible symptoms associated with rosacea - without harsh or irritating treatments.
+                          <br><br>
+                          <b>Price: R 2675 - R 3100</b>
+                          <br><br>
+                          <b>Time: 120 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="treatmentOptionHeadingSix">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#treatmentOptionCollapseSix"
+                                aria-expanded="false"
+                                aria-controls="treatmentOptionCollapseSix">
+                          Signature PRP Renew Treatment
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="treatmentOptionCollapseSix"
+                         class="collapse accordion-content"
+                         aria-labelledby="treatmentOptionHeadingSix"
+                         data-bs-parent="#accordion-treatment-option">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Platelet-Rich Plasma (PRP) therapy is a natural, regenerative treatment that uses your body’s own platelets - rich in growth factors - to stimulate healing and skin renewal. This minimally invasive procedure enhances the skin’s ability to repair itself, making it particularly beneficial for rosacea-prone and sensitive skin.
+                          <br><br>
+                          When applied to delicate or reactive skin, PRP helps to calm inflammation, reduce redness and support barrier repair by accelerating healthy cell turnover and stimulating collagen production. This strengthens the skin over time, helping it become more resilient and less prone to flare-ups or irritation.
+                          <br><br>
+                          Because PRP uses your own biological material, it is exceptionally well-tolerated by sensitive skin and carries a low risk of adverse reactions. The growth factors in PRP promote gentle skin regeneration, reduce visible capillaries and flushing and improve overall skin tone and texture - without causing additional stress or sensitivity.
+                          <br><br>
+                          The result is skin that looks calmer, more even-toned and healthier, with reduced redness and improved hydration.
+                          <br><br>
+                          <b>From R 4890</b>
+                          <br><br>
+                          <b>Time: 120 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="treatmentOptionHeadingSeven">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#treatmentOptionCollapseSeven"
+                                aria-expanded="false"
+                                aria-controls="treatmentOptionCollapseSeven">
+                          PRP Needling with Botox
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="treatmentOptionCollapseSeven"
+                         class="collapse accordion-content"
+                         aria-labelledby="treatmentOptionHeadingSeven"
+                         data-bs-parent="#accordion-treatment-option">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          PRP Needling with Micro-Botox is an advanced, restorative treatment that combines the regenerative power of Platelet-Rich Plasma (PRP) with the calming, pore-refining effects of micro-Botox, delivered through gentle microneedling. This synergistic approach is ideal for rosacea-prone and sensitive skin, addressing inflammation, redness and compromised skin texture - without being overly aggressive or irritating.
+                          <br><br>
+                          Microneedling creates controlled micro-channels in the skin, stimulating collagen and elastin production to strengthen and rebuild the skin barrier. PRP, derived from your own blood, infuses the skin with growth factors that reduce inflammation, promote healing, and support long-term skin regeneration - making it especially beneficial for calming rosacea flare-ups and strengthening fragile skin.
+                          <br><br>
+                          Micro-Botox, delivered in tiny, superficial doses, works by gently regulating oil production, minimizing visible pores, and reducing redness - all without affecting facial movement. The result is a calmer, smoother and more resilient complexion, ideal for those with rosacea or highly sensitive skin looking for a natural, non-aggressive way to restore balance and radiance.
+                          <br><br>
+                          <b>Price: R 3350</b>
+                          <br><br>
+                          <b>Time: 120 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="treatmentOptionHeadingEight">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#treatmentOptionCollapseEight"
+                                aria-expanded="false"
+                                aria-controls="treatmentOptionCollapseEight">
+                          3D Needling with PRF
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="treatmentOptionCollapseEight"
+                         class="collapse accordion-content"
+                         aria-labelledby="treatmentOptionHeadingEight"
+                         data-bs-parent="#accordion-treatment-option">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          3D Needling with Platelet-Rich Fibrin (PRF) is an advanced, regenerative treatment that enhances the skin’s natural healing and renewal process - making it an excellent option for those with rosacea-prone and sensitive skin seeking to reduce inflammation, strengthen the skin barrier and improve texture without harsh interventions.
+                          <br><br>
+                          The treatment begins with microneedling, which creates precise micro-injuries in the skin to stimulate collagen production and support cellular renewal. Unlike more aggressive resurfacing techniques, this controlled stimulation helps reinforce the skin’s structure, making it more resilient and less reactive over time.
+                          <br><br>
+                          What makes this treatment particularly beneficial for sensitive and rosacea-affected skin is the addition of Platelet-Rich Fibrin (PRF). Derived from your own blood, PRF is a next-generation healing concentrate, rich in growth factors, white blood cells, stem cells and a fibrin matrix that promotes deep skin repair. It delivers powerful anti-inflammatory and regenerative signals to the skin, helping to calm redness, reduce sensitivity and enhance tissue recovery.
+                          <br><br>
+                          This cutting-edge, biologically based treatment is ideal for those seeking a natural, healing-focused approach to managing rosacea and sensitivity - helping the skin look and feel healthier, stronger and more radiant with each session.
+                          <br><br>
+                          <b>Price: R 2500</b>
+                          <br><br>
+                          <b>Time: 120 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="treatmentOptionHeadingNine">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#treatmentOptionCollapseNine"
+                                aria-expanded="false"
+                                aria-controls="treatmentOptionCollapseNine">
+                          Tri-Therapy with Needling  Face & Neck
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="treatmentOptionCollapseNine"
+                         class="collapse accordion-content"
+                         aria-labelledby="treatmentOptionHeadingNine"
+                         data-bs-parent="#accordion-treatment-option">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Tri-Therapy is a gentle yet highly effective multi-step treatment designed to calm inflammation, strengthen the skin barrier, and improve texture in rosacea-prone and sensitive skin. This targeted approach combines a mild chemical peel, superficial needling with barrier-repairing actives, and a soothing post-treatment mask - all carefully selected to respect and support delicate skin.
+                          <br><br>
+                          The treatment begins with a low-intensity chemical peel tailored for sensitive skin, which gently exfoliates dead skin cells, reduces surface buildup and helps smooth uneven texture - without triggering irritation or redness. This is followed by superficial microneedling, which enhances the delivery of calming, restorative ingredients such as niacinamide, peptides and antioxidants. These actives help reduce inflammation, strengthen capillaries and stimulate mild collagen production to support skin repair and resilience.
+                          <br><br>
+                          The treatment concludes with a cooling, anti-inflammatory mask designed to instantly soothe redness, hydrate the skin, and promote recovery - leaving the skin feeling calm, nourished, and refreshed.
+                          <br><br>
+                          Tri-Therapy is ideal for clients with reactive, sensitised skin, including those dealing with flushing, post-inflammatory pigmentation or mild scarring. It offers a comprehensive, non-irritating solution to improve skin clarity, comfort and long-term health.
+                          <br><br>
+                          <b>Price: R 2675</b>
+                          <br><br>
+                          <b>Time: 75 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="treatmentOptionHeadingTen">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#treatmentOptionCollapseTen"
+                                aria-expanded="false"
+                                aria-controls="treatmentOptionCollapseTen">
+                          Tri Therapy with Mesotherapy Face & Neck
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="treatmentOptionCollapseTen"
+                         class="collapse accordion-content"
+                         aria-labelledby="treatmentOptionHeadingTen"
+                         data-bs-parent="#accordion-treatment-option">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Tri-Therapy is a gentle yet comprehensive treatment designed to address the key concerns of rosacea-prone and sensitive skin, including redness, inflammation, weakened barrier function and textural irregularities. This carefully layered approach combines a mild chemical peel, superficial mesotherapy with calming actives and a soothing post-treatment mask - all tailored to restore balance without triggering irritation.
+                          <br><br>
+                          The treatment begins with a low-intensity chemical peel, selected specifically for sensitive skin, to gently remove dead skin cells, refine rough texture and prepare the skin for optimal absorption - without compromising the skin barrier. Next, superficial mesotherapy is used to infuse the skin with a targeted blend of anti-inflammatory agents, antioxidants and barrier-repairing compounds (such as niacinamide, panthenol and hyaluronic acid). This step helps to calm redness, reinforce the skin, and reduce sensitivity while promoting collagen production to support long-term skin health.
+                          <br><br>
+                          The treatment concludes with a calming, restorative mask formulated to soothe the skin, reduce flushing, and accelerate recovery - leaving the complexion feeling cool, hydrated, and comforted.
+                          <br><br>
+                          Tri-Therapy for rosacea and sensitive skin offers a non-aggressive, results-driven solution for clients seeking to reduce reactivity, strengthen their skin and achieve a healthier, more even-toned complexion over time.
+                          <br><br>
+                          <b>Price: R 2675</b>
+                          <br><br>
+                          <b>Time: 75-90 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- IMAGE (1st on mobile, 2nd on desktop) -->
+        <div class="col-lg-5 col-md-12 order-1 order-lg-2"
+             style="background-image: url(img/treatments/rosacea-and-sensitive-skin/rosacea_and_sensitive_skin_2.jpg); background-position: center; background-size: cover;">
+          <img class="img-fluid d-block d-lg-none" src="img/treatments/rosacea-and-sensitive-skin/rosacea_and_sensitive_skin_2.jpg" alt="">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!--=================================
+  product single -->
+  <!--=================================
+      Related products -->
+    <!--=================================
+    Related products -->
+    <!--=================================
+    Make Appointment BG -->
+    <!--=================================
+    Make Appointment BG -->
+    <!--=================================
+    Menu list -->
+    <!--=================================
+    Menu list -->
+    <!--=================================
+    footer-->
+  <section>
+      <div th:insert="fragments/footer :: footer"></div>
+  </section>
+    <!--=================================
+    footer-->
+    <!--=================================
+    Back To Top-->
+<!--    <div id="back-to-top" class="back-to-top">-->
+<!--      <a href="#"><i class="fas fa-angle-up"></i></a>-->
+<!--    </div>-->
+    <!--=================================
+    Back To Top-->
+    <!--=================================
+    Javascript -->
+    <!-- JS Global Compulsory (Do not remove)-->
+    <script th:src="@{/js/jquery-3.7.1.min.js}"></script>
+    <script th:src="@{/js/popper/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <script th:src="@{/js/select2/select2.full.js}"></script>
+    <script th:src="@{/js/datetimepicker/moment.min.js}"></script>
+    <script th:src="@{/js/datetimepicker/datetimepicker.min.js}"></script>
+    <!-- Template Scripts (Do not remove)-->
+    <script th:src="@{/js/custom.js}"></script>
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <script th:src="@{js/owl-carousel/owl.carousel.min.js}"></script>
+    <script th:src="@{js/slick/slick.min.js}"></script>
+
+    <!-- PDF Modal -->
+    <!-- Price List Modal -->
+    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-fullscreen-sm-down"> <!-- Fullscreen on small screens -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="pdfModalLabel">Price List</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <canvas id="pdf-viewer" class="w-100"></canvas> <!-- Canvas for rendering PDF -->
+            <div class="pdf-controls mt-3 d-flex justify-content-between">
+              <button class="btn btn-secondary" onclick="prevPage()">Previous</button>
+              <span id="page-info">Page <span id="current-page">1</span> of <span id="total-pages">?</span></span>
+              <button class="btn btn-secondary" onclick="nextPage()">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+
+    <script>
+      let pdfDoc = null, pageNum = 1, pageRendering = false, pageNumPending = null;
+      const canvas = document.getElementById("pdf-viewer");
+      const ctx = canvas.getContext("2d");
+      const pdfUrl = "/docs/pricelist.pdf"; // Adjust the path if necessary
+
+      function getScaleFactor() {
+        const screenWidth = window.innerWidth;
+        if (screenWidth < 576) return 0.75; // Faster loading on mobile
+        if (screenWidth < 768) return 1.0;  // Medium resolution for tablets
+        return 1.25; // High resolution for desktops
+      }
+
+      function openPDF() {
+        if (!pdfDoc) {
+          console.error("PDF not loaded yet!");
+          return;
+        }
+
+        var pdfModal = new bootstrap.Modal(document.getElementById("pdfModal"));
+        pdfModal.show();
+
+        pageNum = 1; // Reset to first page
+        document.getElementById("current-page").textContent = pageNum;
+        renderPage(pageNum);
+      }
+
+      function renderPage(num) {
+        if (pageRendering) {
+          pageNumPending = num;
+          return;
+        }
+
+        pageRendering = true;
+        let scale = getScaleFactor();
+
+        pdfDoc.getPage(num).then(function (page) {
+          let viewport = page.getViewport({ scale: scale });
+
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+
+          let renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+          };
+
+          let renderTask = page.render(renderContext);
+          renderTask.promise.then(function () {
+            pageRendering = false;
+            document.getElementById("current-page").textContent = num;
+
+            if (pageNumPending !== null) {
+              renderPage(pageNumPending);
+              pageNumPending = null;
+            }
+          });
+        });
+      }
+
+      function nextPage() {
+        if (pageNum < pdfDoc.numPages) {
+          pageNum++;
+          requestAnimationFrame(() => renderPage(pageNum));
+        }
+      }
+
+      function prevPage() {
+        if (pageNum > 1) {
+          pageNum--;
+          requestAnimationFrame(() => renderPage(pageNum));
+        }
+      }
+
+      window.addEventListener("resize", () => renderPage(pageNum)); // Adjust scale on window resize
+
+      // Preload PDF on page load for faster modal opening
+      document.addEventListener("DOMContentLoaded", function () {
+        pdfjsLib.getDocument({ url: pdfUrl, disableStream: false }).promise.then(function (pdf) {
+          pdfDoc = pdf;
+          document.getElementById("total-pages").textContent = pdf.numPages;
+        }).catch(error => console.error("Error loading PDF:", error));
+      });
+    </script>
+
+
+  </body>
+</html>
