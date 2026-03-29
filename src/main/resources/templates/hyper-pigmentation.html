@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81M8RGH9NY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-81M8RGH9NY');
+    </script>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="author" content="giicit.co.za">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CLAI - The Science of Health, the Art of Living</title>
+    <meta name="description" content="At CLAI, we believe that true beauty starts with optimal skin health and overall well-being. Our approach merges state-of-the-art technology, advanced scientific research and expert knowledge to provide personalised treatments that deliver real, lasting results.">
+
+    <meta property="og:title" content="CLAI - The Science of Health, the Art of Living">
+    <meta property="og:description" content="At CLAI, we believe that true beauty starts with optimal skin health and overall well-being. Our approach merges state-of-the-art technology, advanced scientific research and expert knowledge to provide personalised treatments that deliver real, lasting results.">
+    <meta property="og:image" content="https://clai.co.za/img/full-logo-lockup-black-50.png">
+    <meta property="og:url" content="https://clai.co.za">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <!--    <link rel="shortcut icon" th:href="@{/img/clai-logo-full-black.svg}" type="image/x-icon">-->
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" th:href="@{/img/favicon/favicon.ico}">
+
+    <!-- PNG favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" th:href="@{/img/favicon/favicon-32x32.png}">
+    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/img/favicon/favicon-16x16.png}">
+
+    <!-- Apple Touch Icon (for iPhones & iPads) -->
+    <link rel="apple-touch-icon" th:href="@{/img/favicon/apple-touch-icon.png}">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" th:href="@{/img/favicon/android-chrome-192x192.png}">
+    <link rel="icon" type="image/png" sizes="512x512" th:href="@{/img/favicon/android-chrome-512x512.png}">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" th:href="@{/img/favicon/site.webmanifest}">
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" th:href="@{/css/font-awesome/all.min.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
+
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" th:href="@{/css/select2/select2.css}">
+    <link rel="stylesheet" th:href="@{/css/datetimepicker/datetimepicker.min.css}">
+    <!-- Template Style -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" th:href="@{/css/owl-carousel/owl.carousel.min.css}">
+    <link rel="stylesheet" th:href="@{/css/slick/slick-theme.css}">
+  </head>
+  <body>
+  <!-- Floating WhatsApp Button with Official Logo -->
+  <div th:insert="fragments/whatsapp-float :: whatsapp-button"></div>
+    
+    <!--=================================
+    preloader -->
+    <div id="pre-loader">
+      <img src="/img/pre-loader/clai-loader-black-50.svg" alt="">
+    </div>
+    <!--=================================
+    preloader -->
+    
+    <!--=================================
+    Header -->
+    <header class="header header-sticky default">
+        <div th:insert="fragments/navbar :: nav-bar"></div>
+    </header>
+    <!--=================================
+    Header -->
+    <!--=================================
+    Right menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+         style="background-image: url(/img/bg/right-menu-01.png); background-size: cover; background-position: center right;">
+      <div class="offcanvas-header text-end justify-content-end p-4">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-sm-5 d-flex align-content-between flex-wrap justify-content-center">
+        <div class="sidebar-menu">
+          <div class="logo">
+            <a th:href="@{/home}">
+              <img class="img-fluid logo-dark" src="/img/clai-logo-full-stone.svg" alt="Main logo">
+            </a>
+          </div>
+          <div class="section-title mt-5">
+          </div>
+          <div class="mt-5">
+            <h3 class="mb-3">Contact Info</h3>
+            <p>22 Van der Byl Avenue, Durbanville,<br> +27 77 370 5689</p>
+            <p>Monday to Friday <br> (09:00 To 16:30)</p>
+            <p>Saturday - Sunday  <br> (Closed)</p>
+            <p>Public Holidays  <br> (Closed)</p>
+          </div>
+          <div class="social-icon mt-5">
+            <ul>
+              <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--=================================
+    Right menu -->
+    <!--================================= -->
+
+  <section class="service white-bg space-pt">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2 class="title">Hyperpigmentation</h2>
+            <p class="section-description">
+
+              Hyperpigmentation refers to areas of the skin that appear darker than the surrounding skin. This happens
+              when excess <b>melanin</b> - the pigment that gives skin its colour - is produced. It can become harmful and it
+              can affect your confidence and skin appearance.
+
+              <br>
+              <br>
+
+              At CLAI, we understand how frustrating uneven skin tone and dark spots can be. Hyperpigmentation is a
+              common skin concern that affects people of all skin tones and ages; however, the good news is that it’s
+              highly treatable with the right approach.
+
+              <br>
+              <br>
+
+              Whether your pigmentation is caused by sun exposure, hormones or past acne breakouts, our team offers
+              personalised treatments using the latest in medical aesthetics to help you achieve clear, radiant skin.
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Image -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="service-img">
+            <img class="img-fluid" src="img/treatments/hyper-pigmentation/hyper_pigmentation.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- Image -->
+    </div>
+  </section>
+
+  <!-- DROP-IN SECTION: products-banner with accordion (no extra title) -->
+  <section class="products-banner ivy-tight space-pt">
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+
+        <!-- ACCORDION (2nd on mobile, 1st on desktop) -->
+        <div class="col-lg-7 col-md-12 features-section amazing-features order-2 order-lg-1">
+          <div class="section-title">
+            <div class="title" style="color: #000; text-align: left; display: block; font-size:32px !important; font-family: 'Playfair Display', serif; line-height: 1.1; font-weight: 200;">
+              Types of Hyperpigmentation
+            </div>
+            <div class="row" style="margin-top: 15px;">
+              <div class="col-md-9">
+
+                <div class="accordion ivy-accordion" id="accordion-toxin">
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationHeadingOne">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationCollapseOne"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationCollapseOne">
+                          Post-Inflammatory Hyperpigmentation (PIH)
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationCollapseOne"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationHeadingOne"
+                         data-bs-parent="#accordion-toxin">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Dark marks left behind after acne, eczema or skin injuries.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationHeadingTwo">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationCollapseTwo"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationCollapseTwo">
+                          Melasma
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationCollapseTwo"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationHeadingTwo"
+                         data-bs-parent="#accordion-toxin">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Often triggered by hormones (pregnancy, birth control or sun exposure). Here, melasma appears
+                          as symmetrical brown or grey-brown patches, typically on the face.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationHeadingThree">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationCollapseThree"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationCollapseThree">
+                          Sunspots (Age Spots)
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationCollapseThree"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationHeadingThree"
+                         data-bs-parent="#accordion-toxin">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Flat brown spots that develop from years of sun exposure are commonly seen on the face, chest
+                          and hands.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationHeadingFour">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationCollapseFour"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationCollapseFour">
+                          Freckles
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationCollapseFour"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationHeadingFour"
+                         data-bs-parent="#accordion-toxin">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Genetically driven, often darkening with sun exposure.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationHeadingFive">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationCollapseFive"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationCollapseFive">
+                          Drug or Chemical-Induced Pigmentation
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationCollapseFive"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationHeadingFive"
+                         data-bs-parent="#accordion-toxin">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Can result from certain medications or chemical exposure.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- IMAGE (1st on mobile, 2nd on desktop) -->
+        <div class="col-lg-5 col-md-12 order-1 order-lg-2"
+             style="background-image: url(img/treatments/hyper-pigmentation/hyper_pigmentation_2.jpg); background-position: center; background-size: cover;">
+          <img class="img-fluid d-block d-lg-none" src="img/treatments/hyper-pigmentation/hyper_pigmentation_2.jpg" alt="">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="products-banner ivy-tight">
+    <div class="container-fluid p-0">
+      <div class="row g-0 justify-content-center">
+        <div class="col-lg-7 col-md-12 features-section amazing-features">
+          <div class="section-title">
+            <div class="title" style="color: #000; text-align: center; display: block; font-size:32px !important; font-family: 'Playfair Display', serif; line-height: 1.1; font-weight: 200;">
+              Hyperpigmentation Treatments
+            </div>
+
+            <div class="row justify-content-center" style="margin-top: 15px;">
+              <div class="col-md-9">
+
+                <div class="accordion ivy-accordion" id="accordion-hyperpigmentation">
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationTreatmentsHeadingOne">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationTreatmentsCollapseOne"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationTreatmentsCollapseOne">
+                          Medical Meso Glow Facial
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationTreatmentsCollapseOne"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationTreatmentsHeadingOne"
+                         data-bs-parent="#accordion-hyperpigmentation">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          This soothing treatment features a professional chemical peel that gently lifts away dead skin
+                          cells, revealing a brighter, more even-toned complexion. Using advanced Mesoestetic PRO and MD
+                          Peels, we specifically target hyperpigmentation by addressing excess melanin in the skin.
+                          Powered by key ingredients such as azelaic acid, kojic acid and resorcinol, these peels exfoliate,
+                          refine skin tone and diminish dark spots from sun exposure, melasma and post-inflammatory pigmentation
+                          <br><br>
+                          <b>Price: R 1280</b>
+                          <br><br>
+                          <b>Time: 45 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationTreatmentsHeadingTwo">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationTreatmentsCollapseTwo"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationTreatmentsCollapseTwo">
+                          QMS CLAI Signature Facial
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationTreatmentsCollapseTwo"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationTreatmentsHeadingTwo"
+                         data-bs-parent="#accordion-hyperpigmentation">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Tailored to your skin’s unique needs, this signature facial begins with skin-condition-specific
+                          active ingredients and a gentle enzyme exfoliation to effectively remove dead skin cells, brighten
+                          the complexion and promote a healthy skin tone.
+                          <br><br>
+                          This is followed by a targeted serum selected to address your specific concern - ranging from
+                          sensitivity and dehydration to compromised skin - working to restore balance and skin health. A
+                          customised mask is then applied to treat concerns such as acne, congestion, pigmentation, dehydration
+                          or inflammation. To complete the experience, a calming facial massage is included.
+                          <br><br>
+                          Note that this treatment can also be safely adapted for pregnant and breastfeeding mothers,
+                          using carefully selected ingredients that address skin concerns while prioritising safety and comfort.
+                          <br><br>
+                          <b>Price: R 1830</b>
+                          <br><br>
+                          <b>Time: 75 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationTreatmentsHeadingThree">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationTreatmentsCollapseThree"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationTreatmentsCollapseThree">
+                          Mesoesetic Touch TCA
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationTreatmentsCollapseThree"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationTreatmentsHeadingThree"
+                         data-bs-parent="#accordion-hyperpigmentation">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Tailored to your skin’s unique needs, this signature facial begins with skin-condition-specific
+                          active ingredients and a gentle enzyme exfoliation to effectively remove dead skin cells,
+                          brighten the complexion and promote a healthy skin tone.
+                          <br><br>
+                          This is followed by a targeted serum selected to address your specific concern - ranging from
+                          sensitivity and dehydration to compromised skin - working to restore balance and skin health. A
+                          customised mask is then applied to treat concerns such as acne, congestion, pigmentation, dehydration
+                          or inflammation. To complete the experience, a calming facial massage is included
+                          <br><br>
+                          Note that this treatment can also be safely adapted for pregnant and breastfeeding mothers, using
+                          carefully selected ingredients that address skin concerns while prioritising safety and comfort.
+                          <br><br>
+                          <b>Price: R 1830</b>
+                          <br><br>
+                          <b>Time: 75 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationTreatmentsHeadingFour">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationTreatmentsCollapseFour"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationTreatmentsCollapseFour">
+                          Mesoesetic Pro/MD peel
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationTreatmentsCollapseFour"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationTreatmentsHeadingFour"
+                         data-bs-parent="#accordion-hyperpigmentation">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Mesoestetic PRO and MD Peels are specially formulated to treat hyperpigmentation by targeting
+                          excess melanin in the skin. These professional-grade peels use powerful ingredients like azelaic
+                          acid, kojic acid, tranexamic acid, retinol and resorcinol to exfoliate, even out skin tone and
+                          reduce dark spots caused by sun damage, melasma or post-inflammatory pigmentation. By accelerating
+                          cell turnover and inhibiting melanin production, the result is smoother, clearer and more radiant skin.
+                          <br><br>
+                          <b>Pro-Peel R 950</b>
+                          <br><br>
+                          <b>MD-Peel R 1100</b>
+                          <br><br>
+                          <b>Time: 45 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationTreatmentsHeadingFive">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationTreatmentsCollapseFive"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationTreatmentsCollapseFive">
+                          Mesoetetic Cosmalan
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationTreatmentsCollapseFive"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationTreatmentsHeadingFive"
+                         data-bs-parent="#accordion-hyperpigmentation">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Cosmelan® by Mesoestetic is a world-renowned depigmentation treatment specifically designed to
+                          reduce stubborn hyperpigmentation, including melasma, sun spots and post-acne marks. This two-phase
+                          treatment works by inhibiting melanin production at the source, while promoting deep exfoliation
+                          and skin renewal. Unlike traditional peels, Cosmelan® offers long-lasting results by regulating
+                          pigment formation, leaving the skin visibly clearer, brighter and more evenly toned over time.
+                          <br><br>
+                          <b>Price: R 17 600</b>
+                          <br><br>
+                          <b>Time: 45 minute in clinic treatment incl 1 month home care products</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationTreatmentsHeadingSix">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationTreatmentsCollapseSix"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationTreatmentsCollapseSix">
+                          Me Line Peel
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationTreatmentsCollapseSix"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationTreatmentsHeadingSix"
+                         data-bs-parent="#accordion-hyperpigmentation">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          The ME LINE® Peel is a specialised depigmentation treatment formulated to target hyperpigmentation
+                          in all skin types, especially darker skin tones. It effectively treats melasma, sun damage and
+                          post-inflammatory pigmentation by combining powerful ingredients that reduce melanin production
+                          and promote controlled exfoliation. ME LINE® works both on the surface and deep within the skin
+                          to improve tone, texture and clarity-resulting in a visibly brighter, more uniform complexion
+                          with minimal irritation.
+                          <br><br>
+                          <b>Price: R 1800</b>
+                          <br><br>
+                          <b>Time: 45 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationTreatmentsHeadingSeven">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationTreatmentsCollapseSeven"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationTreatmentsCollapseSeven">
+                          Medical Needling Face/Face+Neck/Face,Neck + Chest
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationTreatmentsCollapseSeven"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationTreatmentsHeadingSeven"
+                         data-bs-parent="#accordion-hyperpigmentation">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Medical Needling (also known as microneedling) uses fine needles to create controlled micro-channels
+                          in the skin. This process encourages skin renewal and allows brightening serums, such as tranexamic
+                          acid, to penetrate more effectively. By targeting sun spots, melasma and post-inflammatory marks,
+                          the treatment helps achieve a clearer, smoother and more even-toned complexion on the face and neck.
+                          <br><br>
+                          <b>Price: R 2500</b>
+                          <br><br>
+                          <b>Time: 120 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationTreatmentsHeadingEight">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationTreatmentsCollapseEight"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationTreatmentsCollapseEight">
+                          Exosome Needling
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationTreatmentsCollapseEight"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationTreatmentsHeadingEight"
+                         data-bs-parent="#accordion-hyperpigmentation">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Exosome Needling delivers tiny vesicles packed with powerful messengers that help balance melanin
+                          production and calm inflammation. This targeted action works to fade hyperpigmentation, even out
+                          skin tone, and restore a brighter, more radiant complexion.
+                          <br><br>
+                          <b>Price: R 4450</b>
+                          <br><br>
+                          <b>Time: 120 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationTreatmentsHeadingNine">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationTreatmentsCollapseNine"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationTreatmentsCollapseNine">
+                          Signature PRP Renew Treatment
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationTreatmentsCollapseNine"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationTreatmentsHeadingNine"
+                         data-bs-parent="#accordion-hyperpigmentation">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Platelet-Rich Plasma (PRP) treatment uses your own blood’s platelets, which are packed with growth
+                          factors that stimulate skin healing and regeneration. When applied to the skin, PRP accelerates cell
+                          turnover, reduces inflammation and promotes collagen production. This helps fade hyperpigmentation
+                          by balancing melanin production and repairing damaged skin, resulting in a clearer, brighter and more
+                          even complexion.
+                          <br><br>
+                          <b>Price: R 4890</b>
+                          <br><br>
+                          <b>Time: 120 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationTreatmentsHeadingTen">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationTreatmentsCollapseTen"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationTreatmentsCollapseTen">
+                          3D Needling with PRF
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationTreatmentsCollapseTen"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationTreatmentsHeadingTen"
+                         data-bs-parent="#accordion-hyperpigmentation">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          3D Needling combined with Platelet-Rich Fibrin (PRF) enhances the skin’s natural healing and
+                          rejuvenation process. The microneedling creates controlled micro-injuries that stimulate collagen
+                          production and skin renewal, while PRF - rich in growth factors and healing proteins - boosts tissue
+                          repair and reduces inflammation. This powerful combination helps fade hyperpigmentation by promoting
+                          balanced melanin production.
+                          <br><br>
+                          <b>Price: R 3500</b>
+                          <br><br>
+                          <b>Time: 120 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationTreatmentsHeadingEleven">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationTreatmentsCollapseEleven"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationTreatmentsCollapseEleven">
+                          Lumecca IPL
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationTreatmentsCollapseEleven"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationTreatmentsHeadingEleven"
+                         data-bs-parent="#accordion-hyperpigmentation">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Lumecca IPL (Intense Pulsed Light) is an advanced light-based treatment that targets areas of
+                          excess melanin - the pigment responsible for dark spots and uneven skin tone. The device emits
+                          powerful, broad-spectrum light pulses that penetrate the skin and selectively heat pigmented cells,
+                          breaking them down without damaging surrounding tissue. This process triggers the body’s natural
+                          healing response to clear away the fragmented pigment.
+                          <br><br>
+                          <b>Price: R 2450</b>
+                          <br><br>
+                          <b>Time: 45 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationTreatmentsHeadingTwelve">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationTreatmentsCollapseTwelve"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationTreatmentsCollapseTwelve">
+                          Mesotherapy
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationTreatmentsCollapseTwelve"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationTreatmentsHeadingTwelve"
+                         data-bs-parent="#accordion-hyperpigmentation">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Mesotherapy is a minimally invasive treatment that delivers targeted skin-brightening ingredients,
+                          such as tranexamic acid, directly into the middle layer of the skin using fine microinjections.
+                          This approach helps inhibit excess melanin production, reducing dark spots, melasma and post-inflammatory
+                          marks. By improving the penetration of active ingredients, mesotherapy works to fade hyperpigmentation
+                          and reveal a clearer, more radiant and evenly toned complexion.
+                          <br><br>
+                          <b>Price: R 2675</b>
+                          <br><br>
+                          <b>Time: 75 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationTreatmentsHeadingThirteen">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationTreatmentsCollapseThirteen"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationTreatmentsCollapseThirteen">
+                          Tri-Therapy with Needling
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationTreatmentsCollapseThirteen"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationTreatmentsHeadingThirteen"
+                         data-bs-parent="#accordion-hyperpigmentation">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Tri-Therapy targets hyperpigmentation on multiple levels by combining a chemical peel, superficial
+                          needling with brightening actives, and a specialized post-treatment mask. The peel exfoliates
+                          and removes pigmented skin cells, while needling enhances the absorption of active ingredients
+                          that reduce melanin production. The final mask calms the skin and supports ongoing brightening.
+                          <br><br>
+                          <b>Price: R 2675</b>
+                          <br><br>
+                          <b>Time: 75 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="hyperPigmentationTreatmentsHeadingFourteen">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#hyperPigmentationTreatmentsCollapseFourteen"
+                                aria-expanded="false"
+                                aria-controls="hyperPigmentationTreatmentsCollapseFourteen">
+                          Tri-Therapy with Mesotherapy
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="hyperPigmentationTreatmentsCollapseFourteen"
+                         class="collapse accordion-content"
+                         aria-labelledby="hyperPigmentationTreatmentsHeadingFourteen"
+                         data-bs-parent="#accordion-hyperpigmentation">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Tri-Therapy targets hyperpigmentation on multiple levels by combining a chemical peel, superficial
+                          mesotherapy with brightening actives and a specialised post-treatment mask. The peel exfoliates
+                          and removes pigmented skin cells, while mesotherapy delivers targeted ingredients directly into the
+                          skin to reduce melanin production. The final mask calms the skin and supports ongoing brightening.
+                          <br><br>
+                          <b>Price: R 2675</b>
+                          <br><br>
+                          <b>Time: 75 minutes</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+  product single -->
+  <!--=================================
+      Related products -->
+    <!--=================================
+    Related products -->
+    <!--=================================
+    Make Appointment BG -->
+    <!--=================================
+    Make Appointment BG -->
+    <!--=================================
+    Menu list -->
+    <!--=================================
+    Menu list -->
+    <!--=================================
+    footer-->
+  <section>
+      <div th:insert="fragments/footer :: footer"></div>
+  </section>
+    <!--=================================
+    footer-->
+    <!--=================================
+    Back To Top-->
+<!--    <div id="back-to-top" class="back-to-top">-->
+<!--      <a href="#"><i class="fas fa-angle-up"></i></a>-->
+<!--    </div>-->
+    <!--=================================
+    Back To Top-->
+    <!--=================================
+    Javascript -->
+    <!-- JS Global Compulsory (Do not remove)-->
+    <script th:src="@{/js/jquery-3.7.1.min.js}"></script>
+    <script th:src="@{/js/popper/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <script th:src="@{/js/select2/select2.full.js}"></script>
+    <script th:src="@{/js/datetimepicker/moment.min.js}"></script>
+    <script th:src="@{/js/datetimepicker/datetimepicker.min.js}"></script>
+    <!-- Template Scripts (Do not remove)-->
+    <script th:src="@{/js/custom.js}"></script>
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <script th:src="@{js/owl-carousel/owl.carousel.min.js}"></script>
+    <script th:src="@{js/slick/slick.min.js}"></script>
+
+    <!-- PDF Modal -->
+    <!-- Price List Modal -->
+    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-fullscreen-sm-down"> <!-- Fullscreen on small screens -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="pdfModalLabel">Price List</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <canvas id="pdf-viewer" class="w-100"></canvas> <!-- Canvas for rendering PDF -->
+            <div class="pdf-controls mt-3 d-flex justify-content-between">
+              <button class="btn btn-secondary" onclick="prevPage()">Previous</button>
+              <span id="page-info">Page <span id="current-page">1</span> of <span id="total-pages">?</span></span>
+              <button class="btn btn-secondary" onclick="nextPage()">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+
+    <script>
+      let pdfDoc = null, pageNum = 1, pageRendering = false, pageNumPending = null;
+      const canvas = document.getElementById("pdf-viewer");
+      const ctx = canvas.getContext("2d");
+      const pdfUrl = "/docs/pricelist.pdf"; // Adjust the path if necessary
+
+      function getScaleFactor() {
+        const screenWidth = window.innerWidth;
+        if (screenWidth < 576) return 0.75; // Faster loading on mobile
+        if (screenWidth < 768) return 1.0;  // Medium resolution for tablets
+        return 1.25; // High resolution for desktops
+      }
+
+      function openPDF() {
+        if (!pdfDoc) {
+          console.error("PDF not loaded yet!");
+          return;
+        }
+
+        var pdfModal = new bootstrap.Modal(document.getElementById("pdfModal"));
+        pdfModal.show();
+
+        pageNum = 1; // Reset to first page
+        document.getElementById("current-page").textContent = pageNum;
+        renderPage(pageNum);
+      }
+
+      function renderPage(num) {
+        if (pageRendering) {
+          pageNumPending = num;
+          return;
+        }
+
+        pageRendering = true;
+        let scale = getScaleFactor();
+
+        pdfDoc.getPage(num).then(function (page) {
+          let viewport = page.getViewport({ scale: scale });
+
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+
+          let renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+          };
+
+          let renderTask = page.render(renderContext);
+          renderTask.promise.then(function () {
+            pageRendering = false;
+            document.getElementById("current-page").textContent = num;
+
+            if (pageNumPending !== null) {
+              renderPage(pageNumPending);
+              pageNumPending = null;
+            }
+          });
+        });
+      }
+
+      function nextPage() {
+        if (pageNum < pdfDoc.numPages) {
+          pageNum++;
+          requestAnimationFrame(() => renderPage(pageNum));
+        }
+      }
+
+      function prevPage() {
+        if (pageNum > 1) {
+          pageNum--;
+          requestAnimationFrame(() => renderPage(pageNum));
+        }
+      }
+
+      window.addEventListener("resize", () => renderPage(pageNum)); // Adjust scale on window resize
+
+      // Preload PDF on page load for faster modal opening
+      document.addEventListener("DOMContentLoaded", function () {
+        pdfjsLib.getDocument({ url: pdfUrl, disableStream: false }).promise.then(function (pdf) {
+          pdfDoc = pdf;
+          document.getElementById("total-pages").textContent = pdf.numPages;
+        }).catch(error => console.error("Error loading PDF:", error));
+      });
+    </script>
+
+
+  </body>
+</html>

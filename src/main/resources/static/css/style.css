@@ -9039,3 +9039,59 @@ Blog Style 01
   position: relative !important;
 }
 
+@media (max-width: 991.98px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  .products-banner.ivy-tight .ivy-accordion .btn.btn-link {
+    width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .products-banner.ivy-tight,
+  .products-banner.ivy-tight .container-fluid,
+  .products-banner.ivy-tight .row,
+  .products-banner.ivy-tight .col-lg-5,
+  .products-banner.ivy-tight .col-lg-7,
+  .products-banner.ivy-tight .section-title,
+  .products-banner.ivy-tight .ivy-accordion {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  #pdf-viewer {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* WHY CLAI / blog page: make first section sit flush under navbar */
+.blog-tight-top {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.blog-tight-top .container,
+.blog-tight-top .row,
+.blog-tight-top .col-lg-8,
+.blog-tight-top .blog-detail,
+.blog-tight-top .blog-post-image,
+.blog-tight-top .blog-post-content,
+.blog-tight-top .blog-post-details {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.blog-tight-top .blog-post:first-child {
+  margin-top: 8px !important;
+}
+
+.blog-tight-top .blog-post-image img {
+  display: block;
+}
+
