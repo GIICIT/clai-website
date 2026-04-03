@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<th:block th:fragment="pdf-modal(modalId, modalLabelId, canvasId, currentPageId, totalPagesId, pdfUrl, title)">
+    <!-- PDF Modal -->
+    <div class="modal fade"
+         th:id="${modalId}"
+         tabindex="-1"
+         th:attr="aria-labelledby=${modalLabelId}"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-fullscreen-sm-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"
+                        th:id="${modalLabelId}"
+                        th:text="${title}">PDF Viewer</h5>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body text-center">
+                    <canvas th:id="${canvasId}" class="w-100"></canvas>
+
+                    <div class="pdf-controls mt-3 d-flex justify-content-between">
+                        <button type="button"
+                                class="btn btn-secondary"
+                                th:attr="onclick=|window['pdfViewer_' + '${modalId}'].prevPage()|">
+                            Previous
+                        </button>
+
+                        <span>
+                            Page <span th:id="${currentPageId}">1</span> of
+                            <span th:id="${totalPagesId}">?</span>
+                        </span>
+
+                        <button type="button"
+                                class="btn btn-secondary"
+                                th:attr="onclick=|window['pdfViewer_' + '${modalId}'].nextPage()|">
+                            Next
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+
+    <!-- Self-contained viewer logic -->
+    <script th:inline="javascript">
+        (function () {
+            const modalId = /*[[${modalId}]]*/ 'pdfModal';
+            const canvasId = /*[[${canvasId}]]*/ 'pdf-viewer';
+            const currentPageId = /*[[${currentPageId}]]*/ 'current-page';
+            const totalPagesId = /*[[${totalPagesId}]]*/ 'total-pages';
+            const pdfUrl = /*[[${pdfUrl}]]*/ '/docs/pricelist.pdf';
+
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext("2d");
+
+            let pdfDoc = null;
+            let pageNum = 1;
+            let pageRendering = false;
+            let pageNumPending = null;
+
+            function getScaleFactor() {
+                const screenWidth = window.innerWidth;
+                if (screenWidth < 576) return 0.75;
+                if (screenWidth < 768) return 1.0;
+                return 1.25;
+            }
+
+            function renderPage(num) {
+                if (!pdfDoc) return;
+
+                if (pageRendering) {
+                    pageNumPending = num;
+                    return;
+                }
+
+                pageRendering = true;
+                const scale = getScaleFactor();
+
+                pdfDoc.getPage(num).then(function (page) {
+                    const viewport = page.getViewport({ scale: scale });
+
+                    canvas.width = viewport.width;
+                    canvas.height = viewport.height;
+
+                    const renderContext = {
+                        canvasContext: ctx,
+                        viewport: viewport
+                    };
+
+                    const renderTask = page.render(renderContext);
+
+                    renderTask.promise.then(function () {
+                        pageRendering = false;
+                        document.getElementById(currentPageId).textContent = num;
+
+                        if (pageNumPending !== null) {
+                            const pending = pageNumPending;
+                            pageNumPending = null;
+                            renderPage(pending);
+                        }
+                    });
+                });
+            }
+
+            function nextPage() {
+                if (!pdfDoc) return;
+                if (pageNum < pdfDoc.numPages) {
+                    pageNum++;
+                    requestAnimationFrame(() => renderPage(pageNum));
+                }
+            }
+
+            function prevPage() {
+                if (!pdfDoc) return;
+                if (pageNum > 1) {
+                    pageNum--;
+                    requestAnimationFrame(() => renderPage(pageNum));
+                }
+            }
+
+            function open() {
+                if (!pdfDoc) {
+                    console.error("PDF not loaded yet!");
+                    return;
+                }
+
+                const pdfModal = new bootstrap.Modal(document.getElementById(modalId));
+                pdfModal.show();
+
+                pageNum = 1;
+                document.getElementById(currentPageId).textContent = pageNum;
+                renderPage(pageNum);
+            }
+
+            function preload() {
+                pdfjsLib.getDocument({ url: pdfUrl, disableStream: false }).promise
+                    .then(function (pdf) {
+                        pdfDoc = pdf;
+                        document.getElementById(totalPagesId).textContent = pdf.numPages;
+                    })
+                    .catch(function (error) {
+                        console.error("Error loading PDF:", error);
+                    });
+            }
+
+            window['pdfViewer_' + modalId] = {
+                open: open,
+                nextPage: nextPage,
+                prevPage: prevPage,
+                renderPage: renderPage
+            };
+
+            document.addEventListener("DOMContentLoaded", preload);
+
+            window.addEventListener("resize", function () {
+                if (pdfDoc) {
+                    renderPage(pageNum);
+                }
+            });
+        })();
+    </script>
+</th:block>
+
+</body>
+</html>
