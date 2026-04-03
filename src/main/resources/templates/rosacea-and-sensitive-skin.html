@@ -23,9 +23,6 @@
     <meta property="og:url" content="https://clai.co.za">
     <meta property="og:type" content="website">
 
-    <!-- Favicon -->
-    <!--    <link rel="shortcut icon" th:href="@{/img/clai-logo-full-black.svg}" type="image/x-icon">-->
-
     <!-- Standard favicon -->
     <link rel="icon" type="image/x-icon" th:href="@{/img/favicon/favicon.ico}">
 
@@ -83,41 +80,6 @@
     </header>
     <!--=================================
     Header -->
-    <!--=================================
-    Right menu -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-         style="background-image: url(/img/bg/right-menu-01.png); background-size: cover; background-position: center right;">
-      <div class="offcanvas-header text-end justify-content-end p-4">
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body p-4 p-sm-5 d-flex align-content-between flex-wrap justify-content-center">
-        <div class="sidebar-menu">
-          <div class="logo">
-            <a th:href="@{/home}">
-              <img class="img-fluid logo-dark" src="/img/clai-logo-full-stone.svg" alt="Main logo">
-            </a>
-          </div>
-          <div class="section-title mt-5">
-          </div>
-          <div class="mt-5">
-            <h3 class="mb-3">Contact Info</h3>
-            <p>22 Van der Byl Avenue, Durbanville,<br> +27 77 370 5689</p>
-            <p>Monday to Friday <br> (09:00 To 16:30)</p>
-            <p>Saturday - Sunday  <br> (Closed)</p>
-            <p>Public Holidays  <br> (Closed)</p>
-          </div>
-          <div class="social-icon mt-5">
-            <ul>
-              <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--=================================
-    Right menu -->
-    <!--================================= -->
 
   <section class="service white-bg space-pt">
     <div class="container">
@@ -161,20 +123,20 @@
                 <div class="accordion ivy-accordion" id="types-of-rosacea">
 
                   <div class="card">
-                    <div class="card-header" id="typesOfAcneHeadingOne">
+                    <div class="card-header" id="typesOfRosaceaHeadingOne">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#typesOfAcneCollapseOne"
+                                data-bs-target="#typesOfRosaceaCollapseOne"
                                 aria-expanded="false"
-                                aria-controls="typesOfAcneCollapseOne">
+                                aria-controls="typesOfRosaceaCollapseOne">
                           Flushing & Redness (ETR)
                         </button>
                       </h5>
                     </div>
-                    <div id="typesOfAcneCollapseOne"
+                    <div id="typesOfRosaceaCollapseOne"
                          class="collapse accordion-content"
-                         aria-labelledby="typesOfAcneHeadingOne"
+                         aria-labelledby="typesOfRosaceaHeadingOne"
                          data-bs-parent="#types-of-rosacea">
                       <div class="card-body">
                         <p class="mb-0">
@@ -185,20 +147,20 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="typesOfAcneHeadingTwo">
+                    <div class="card-header" id="typesOfRosaceaHeadingTwo">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#typesOfAcneCollapseTwo"
+                                data-bs-target="#typesOfRosaceaCollapseTwo"
                                 aria-expanded="false"
-                                aria-controls="typesOfAcneCollapseTwo">
+                                aria-controls="typesOfRosaceaCollapseTwo">
                           Inflammatory (Papulopustular)
                         </button>
                       </h5>
                     </div>
-                    <div id="typesOfAcneCollapseTwo"
+                    <div id="typesOfRosaceaCollapseTwo"
                          class="collapse accordion-content"
-                         aria-labelledby="typesOfAcneHeadingTwo"
+                         aria-labelledby="typesOfRosaceaHeadingTwo"
                          data-bs-parent="#types-of-rosacea">
                       <div class="card-body">
                         <p class="mb-0">
@@ -209,20 +171,20 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="typesOfAcneHeadingThree">
+                    <div class="card-header" id="typesOfRosaceaHeadingThree">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#typesOfAcneCollapseThree"
+                                data-bs-target="#typesOfRosaceaCollapseThree"
                                 aria-expanded="false"
-                                aria-controls="typesOfAcneCollapseThree">
+                                aria-controls="typesOfRosaceaCollapseThree">
                           Thickened Skin (Phymatous)
                         </button>
                       </h5>
                     </div>
-                    <div id="typesOfAcneCollapseThree"
+                    <div id="typesOfRosaceaCollapseThree"
                          class="collapse accordion-content"
-                         aria-labelledby="typesOfAcneHeadingThree"
+                         aria-labelledby="typesOfRosaceaHeadingThree"
                          data-bs-parent="#types-of-rosacea">
                       <div class="card-body">
                         <p class="mb-0">
@@ -233,20 +195,20 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="typesOfAcneHeadingFour">
+                    <div class="card-header" id="typesOfRosaceaHeadingFour">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#typesOfAcneCollapseFour"
+                                data-bs-target="#typesOfRosaceaCollapseFour"
                                 aria-expanded="false"
-                                aria-controls="typesOfAcneCollapseFour">
+                                aria-controls="typesOfRosaceaCollapseFour">
                           Ocular Rosacea
                         </button>
                       </h5>
                     </div>
-                    <div id="typesOfAcneCollapseFour"
+                    <div id="typesOfRosaceaCollapseFour"
                          class="collapse accordion-content"
-                         aria-labelledby="typesOfAcneHeadingFour"
+                         aria-labelledby="typesOfRosaceaHeadingFour"
                          data-bs-parent="#types-of-rosacea">
                       <div class="card-body">
                         <p class="mb-0">
@@ -290,25 +252,25 @@
             <div class="row" style="margin-top: 15px;">
               <div class="col-md-9">
 
-                <div class="accordion ivy-accordion" id="accordion-treatment-option">
+                <div class="accordion ivy-accordion" id="accordion-rosacea-and-sensitive-skin-treatments">
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingOne">
+                    <div class="card-header" id="rosaceaAndSensitiveSkinTreatmentsHeadingOne">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseOne"
+                                data-bs-target="#rosaceaAndSensitiveSkinTreatmentsCollapseOne"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseOne">
+                                aria-controls="rosaceaAndSensitiveSkinTreatmentsCollapseOne">
                           Barrier Repair Facial
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseOne"
+                    <div id="rosaceaAndSensitiveSkinTreatmentsCollapseOne"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingOne"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="rosaceaAndSensitiveSkinTreatmentsHeadingOne"
+                         data-bs-parent="#accordion-rosacea-and-sensitive-skin-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Our Barrier Repair Facial for Rosacea & Sensitive Skin is a calming, restorative treatment designed to support delicate, reactive skin while reducing redness and enhancing resilience. This treatment is ideal for those experiencing rosacea flare-ups, chronic sensitivity or skin that has been compromised by environmental stressors or overly aggressive skincare.
@@ -326,22 +288,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingTwo">
+                    <div class="card-header" id="rosaceaAndSensitiveSkinTreatmentsHeadingTwo">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseTwo"
+                                data-bs-target="#rosaceaAndSensitiveSkinTreatmentsCollapseTwo"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseTwo">
+                                aria-controls="rosaceaAndSensitiveSkinTreatmentsCollapseTwo">
                           CLAI Signature Facial
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseTwo"
+                    <div id="rosaceaAndSensitiveSkinTreatmentsCollapseTwo"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingTwo"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="rosaceaAndSensitiveSkinTreatmentsHeadingTwo"
+                         data-bs-parent="#accordion-rosacea-and-sensitive-skin-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           This calming, restorative treatment is thoughtfully designed for rosacea-prone and sensitive skin, combining barrier-strengthening care with the controlled exfoliation of the Mesoestetic Jessner Peel. While traditionally known for its powerful resurfacing effects, the Jessner Peel is applied with precision and in a modified protocol to suit delicate skin types, helping to brighten the complexion, smooth texture  and reduce the appearance of redness and uneven tone.
@@ -359,22 +321,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingThree">
+                    <div class="card-header" id="rosaceaAndSensitiveSkinTreatmentsHeadingThree">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseThree"
+                                data-bs-target="#rosaceaAndSensitiveSkinTreatmentsCollapseThree"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseThree">
+                                aria-controls="rosaceaAndSensitiveSkinTreatmentsCollapseThree">
                           Mesoesetic Pro/MD peel
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseThree"
+                    <div id="rosaceaAndSensitiveSkinTreatmentsCollapseThree"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingThree"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="rosaceaAndSensitiveSkinTreatmentsHeadingThree"
+                         data-bs-parent="#accordion-rosacea-and-sensitive-skin-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Mesoestetic PRO and MD Peels are expertly formulated to support sensitive, rosacea-prone skin by reducing inflammation, promoting skin regeneration and improving overall tone and texture - without compromising the skin’s fragile barrier. These professional chemical peels are applied using a carefully customised protocol that prioritises comfort and barrier health while delivering visible results.
@@ -392,22 +354,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingFour">
+                    <div class="card-header" id="rosaceaAndSensitiveSkinTreatmentsHeadingFour">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseFour"
+                                data-bs-target="#rosaceaAndSensitiveSkinTreatmentsCollapseFour"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseFour">
+                                aria-controls="rosaceaAndSensitiveSkinTreatmentsCollapseFour">
                           Exosome Needling
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseFour"
+                    <div id="rosaceaAndSensitiveSkinTreatmentsCollapseFour"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingFour"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="rosaceaAndSensitiveSkinTreatmentsHeadingFour"
+                         data-bs-parent="#accordion-rosacea-and-sensitive-skin-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Exosomes are tiny, powerful messengers naturally produced by the body, rich in growth factors and healing molecules. When applied during treatments like microneedling, they boost the skin’s natural repair process - stimulating collagen production, calming inflammation and encouraging healthy cell regeneration.
@@ -423,22 +385,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingFive">
+                    <div class="card-header" id="rosaceaAndSensitiveSkinTreatmentsHeadingFive">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseFive"
+                                data-bs-target="#rosaceaAndSensitiveSkinTreatmentsCollapseFive"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseFive">
+                                aria-controls="rosaceaAndSensitiveSkinTreatmentsCollapseFive">
                           Mesotherapy Face
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseFive"
+                    <div id="rosaceaAndSensitiveSkinTreatmentsCollapseFive"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingFive"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="rosaceaAndSensitiveSkinTreatmentsHeadingFive"
+                         data-bs-parent="#accordion-rosacea-and-sensitive-skin-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Mesotherapy is a minimally invasive, targeted treatment that delivers a customised blend of vitamins, antioxidants, peptides and skin-repairing agents directly into the middle layer of the skin through fine microinjections. This precise delivery allows active ingredients to reach where they’re most effective - stimulating cell regeneration and enhancing the skin’s natural healing process.
@@ -462,22 +424,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingSix">
+                    <div class="card-header" id="rosaceaAndSensitiveSkinTreatmentsHeadingSix">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseSix"
+                                data-bs-target="#rosaceaAndSensitiveSkinTreatmentsCollapseSix"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseSix">
+                                aria-controls="rosaceaAndSensitiveSkinTreatmentsCollapseSix">
                           Signature PRP Renew Treatment
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseSix"
+                    <div id="rosaceaAndSensitiveSkinTreatmentsCollapseSix"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingSix"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="rosaceaAndSensitiveSkinTreatmentsHeadingSix"
+                         data-bs-parent="#accordion-rosacea-and-sensitive-skin-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Platelet-Rich Plasma (PRP) therapy is a natural, regenerative treatment that uses your body’s own platelets - rich in growth factors - to stimulate healing and skin renewal. This minimally invasive procedure enhances the skin’s ability to repair itself, making it particularly beneficial for rosacea-prone and sensitive skin.
@@ -497,22 +459,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingSeven">
+                    <div class="card-header" id="rosaceaAndSensitiveSkinTreatmentsHeadingSeven">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseSeven"
+                                data-bs-target="#rosaceaAndSensitiveSkinTreatmentsCollapseSeven"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseSeven">
+                                aria-controls="rosaceaAndSensitiveSkinTreatmentsCollapseSeven">
                           PRP Needling with Botox
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseSeven"
+                    <div id="rosaceaAndSensitiveSkinTreatmentsCollapseSeven"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingSeven"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="rosaceaAndSensitiveSkinTreatmentsHeadingSeven"
+                         data-bs-parent="#accordion-rosacea-and-sensitive-skin-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           PRP Needling with Micro-Botox is an advanced, restorative treatment that combines the regenerative power of Platelet-Rich Plasma (PRP) with the calming, pore-refining effects of micro-Botox, delivered through gentle microneedling. This synergistic approach is ideal for rosacea-prone and sensitive skin, addressing inflammation, redness and compromised skin texture - without being overly aggressive or irritating.
@@ -530,22 +492,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingEight">
+                    <div class="card-header" id="rosaceaAndSensitiveSkinTreatmentsHeadingEight">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseEight"
+                                data-bs-target="#rosaceaAndSensitiveSkinTreatmentsCollapseEight"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseEight">
+                                aria-controls="rosaceaAndSensitiveSkinTreatmentsCollapseEight">
                           3D Needling with PRF
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseEight"
+                    <div id="rosaceaAndSensitiveSkinTreatmentsCollapseEight"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingEight"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="rosaceaAndSensitiveSkinTreatmentsHeadingEight"
+                         data-bs-parent="#accordion-rosacea-and-sensitive-skin-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           3D Needling with Platelet-Rich Fibrin (PRF) is an advanced, regenerative treatment that enhances the skin’s natural healing and renewal process - making it an excellent option for those with rosacea-prone and sensitive skin seeking to reduce inflammation, strengthen the skin barrier and improve texture without harsh interventions.
@@ -565,22 +527,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingNine">
+                    <div class="card-header" id="rosaceaAndSensitiveSkinTreatmentsHeadingNine">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseNine"
+                                data-bs-target="#rosaceaAndSensitiveSkinTreatmentsCollapseNine"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseNine">
+                                aria-controls="rosaceaAndSensitiveSkinTreatmentsCollapseNine">
                           Tri-Therapy with Needling  Face & Neck
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseNine"
+                    <div id="rosaceaAndSensitiveSkinTreatmentsCollapseNine"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingNine"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="rosaceaAndSensitiveSkinTreatmentsHeadingNine"
+                         data-bs-parent="#accordion-rosacea-and-sensitive-skin-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Tri-Therapy is a gentle yet highly effective multi-step treatment designed to calm inflammation, strengthen the skin barrier, and improve texture in rosacea-prone and sensitive skin. This targeted approach combines a mild chemical peel, superficial needling with barrier-repairing actives, and a soothing post-treatment mask - all carefully selected to respect and support delicate skin.
@@ -600,22 +562,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingTen">
+                    <div class="card-header" id="rosaceaAndSensitiveSkinTreatmentsHeadingTen">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseTen"
+                                data-bs-target="#rosaceaAndSensitiveSkinTreatmentsCollapseTen"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseTen">
+                                aria-controls="rosaceaAndSensitiveSkinTreatmentsCollapseTen">
                           Tri Therapy with Mesotherapy Face & Neck
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseTen"
+                    <div id="rosaceaAndSensitiveSkinTreatmentsCollapseTen"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingTen"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="rosaceaAndSensitiveSkinTreatmentsHeadingTen"
+                         data-bs-parent="#accordion-rosacea-and-sensitive-skin-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Tri-Therapy is a gentle yet comprehensive treatment designed to address the key concerns of rosacea-prone and sensitive skin, including redness, inflammation, weakened barrier function and textural irregularities. This carefully layered approach combines a mild chemical peel, superficial mesotherapy with calming actives and a soothing post-treatment mask - all tailored to restore balance without triggering irritation.
@@ -649,22 +611,6 @@
       </div>
     </div>
   </section>
-
-
-  <!--=================================
-  product single -->
-  <!--=================================
-      Related products -->
-    <!--=================================
-    Related products -->
-    <!--=================================
-    Make Appointment BG -->
-    <!--=================================
-    Make Appointment BG -->
-    <!--=================================
-    Menu list -->
-    <!--=================================
-    Menu list -->
     <!--=================================
     footer-->
   <section>
@@ -672,13 +618,19 @@
   </section>
     <!--=================================
     footer-->
-    <!--=================================
-    Back To Top-->
-<!--    <div id="back-to-top" class="back-to-top">-->
-<!--      <a href="#"><i class="fas fa-angle-up"></i></a>-->
-<!--    </div>-->
-    <!--=================================
-    Back To Top-->
+  <!--=================================
+  PDF Price List-->
+  <div th:replace="fragments/pdf-modal :: pdf-modal(
+    'pdfModal',
+    'pdfModalLabel',
+    'pdf-viewer',
+    'current-page',
+    'total-pages',
+    '/docs/pricelist.pdf',
+    'Price List'
+)"></div>
+  <!--=================================
+  PDF Price List-->
     <!--=================================
     Javascript -->
     <!-- JS Global Compulsory (Do not remove)-->
@@ -694,116 +646,5 @@
     <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
     <script th:src="@{js/owl-carousel/owl.carousel.min.js}"></script>
     <script th:src="@{js/slick/slick.min.js}"></script>
-
-    <!-- PDF Modal -->
-    <!-- Price List Modal -->
-    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-fullscreen-sm-down"> <!-- Fullscreen on small screens -->
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="pdfModalLabel">Price List</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body text-center">
-            <canvas id="pdf-viewer" class="w-100"></canvas> <!-- Canvas for rendering PDF -->
-            <div class="pdf-controls mt-3 d-flex justify-content-between">
-              <button class="btn btn-secondary" onclick="prevPage()">Previous</button>
-              <span id="page-info">Page <span id="current-page">1</span> of <span id="total-pages">?</span></span>
-              <button class="btn btn-secondary" onclick="nextPage()">Next</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PDF.js Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
-
-    <script>
-      let pdfDoc = null, pageNum = 1, pageRendering = false, pageNumPending = null;
-      const canvas = document.getElementById("pdf-viewer");
-      const ctx = canvas.getContext("2d");
-      const pdfUrl = "/docs/pricelist.pdf"; // Adjust the path if necessary
-
-      function getScaleFactor() {
-        const screenWidth = window.innerWidth;
-        if (screenWidth < 576) return 0.75; // Faster loading on mobile
-        if (screenWidth < 768) return 1.0;  // Medium resolution for tablets
-        return 1.25; // High resolution for desktops
-      }
-
-      function openPDF() {
-        if (!pdfDoc) {
-          console.error("PDF not loaded yet!");
-          return;
-        }
-
-        var pdfModal = new bootstrap.Modal(document.getElementById("pdfModal"));
-        pdfModal.show();
-
-        pageNum = 1; // Reset to first page
-        document.getElementById("current-page").textContent = pageNum;
-        renderPage(pageNum);
-      }
-
-      function renderPage(num) {
-        if (pageRendering) {
-          pageNumPending = num;
-          return;
-        }
-
-        pageRendering = true;
-        let scale = getScaleFactor();
-
-        pdfDoc.getPage(num).then(function (page) {
-          let viewport = page.getViewport({ scale: scale });
-
-          canvas.width = viewport.width;
-          canvas.height = viewport.height;
-
-          let renderContext = {
-            canvasContext: ctx,
-            viewport: viewport
-          };
-
-          let renderTask = page.render(renderContext);
-          renderTask.promise.then(function () {
-            pageRendering = false;
-            document.getElementById("current-page").textContent = num;
-
-            if (pageNumPending !== null) {
-              renderPage(pageNumPending);
-              pageNumPending = null;
-            }
-          });
-        });
-      }
-
-      function nextPage() {
-        if (pageNum < pdfDoc.numPages) {
-          pageNum++;
-          requestAnimationFrame(() => renderPage(pageNum));
-        }
-      }
-
-      function prevPage() {
-        if (pageNum > 1) {
-          pageNum--;
-          requestAnimationFrame(() => renderPage(pageNum));
-        }
-      }
-
-      window.addEventListener("resize", () => renderPage(pageNum)); // Adjust scale on window resize
-
-      // Preload PDF on page load for faster modal opening
-      document.addEventListener("DOMContentLoaded", function () {
-        pdfjsLib.getDocument({ url: pdfUrl, disableStream: false }).promise.then(function (pdf) {
-          pdfDoc = pdf;
-          document.getElementById("total-pages").textContent = pdf.numPages;
-        }).catch(error => console.error("Error loading PDF:", error));
-      });
-    </script>
-
-
   </body>
 </html>

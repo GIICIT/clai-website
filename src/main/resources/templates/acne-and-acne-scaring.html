@@ -23,9 +23,6 @@
     <meta property="og:url" content="https://clai.co.za">
     <meta property="og:type" content="website">
 
-    <!-- Favicon -->
-    <!--    <link rel="shortcut icon" th:href="@{/img/clai-logo-full-black.svg}" type="image/x-icon">-->
-
     <!-- Standard favicon -->
     <link rel="icon" type="image/x-icon" th:href="@{/img/favicon/favicon.ico}">
 
@@ -83,41 +80,6 @@
     </header>
     <!--=================================
     Header -->
-    <!--=================================
-    Right menu -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-         style="background-image: url(/img/bg/right-menu-01.png); background-size: cover; background-position: center right;">
-      <div class="offcanvas-header text-end justify-content-end p-4">
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body p-4 p-sm-5 d-flex align-content-between flex-wrap justify-content-center">
-        <div class="sidebar-menu">
-          <div class="logo">
-            <a th:href="@{/home}">
-              <img class="img-fluid logo-dark" src="/img/clai-logo-full-stone.svg" alt="Main logo">
-            </a>
-          </div>
-          <div class="section-title mt-5">
-          </div>
-          <div class="mt-5">
-            <h3 class="mb-3">Contact Info</h3>
-            <p>22 Van der Byl Avenue, Durbanville,<br> +27 77 370 5689</p>
-            <p>Monday to Friday <br> (09:00 To 16:30)</p>
-            <p>Saturday - Sunday  <br> (Closed)</p>
-            <p>Public Holidays  <br> (Closed)</p>
-          </div>
-          <div class="social-icon mt-5">
-            <ul>
-              <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--=================================
-    Right menu -->
-    <!--================================= -->
 
   <section class="service white-bg space-pt">
     <div class="container">
@@ -272,7 +234,7 @@
                     <div id="typesOfAcneScarringCollapseOne"
                          class="collapse accordion-content"
                          aria-labelledby="typesOfAcneScarringHeadingOne"
-                         data-bs-parent="#types-of-acne-Scarring">
+                         data-bs-parent="#types-of-acne-scarring">
                       <div class="card-body">
                         <p class="mb-0">
                           <b>Ice Pick Scars:</b> Deep, narrow indentations.
@@ -309,25 +271,25 @@
             <div class="row" style="margin-top: 15px;">
               <div class="col-md-9">
 
-                <div class="accordion ivy-accordion" id="accordion-treatment-option">
+                <div class="accordion ivy-accordion" id="accordion-acne-and-acne-scarring-treatments">
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingOne">
+                    <div class="card-header" id="acneAndAcneScarringTreatmentsHeadingOne">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseOne"
+                                data-bs-target="#acneAndAcneScarringTreatmentsCollapseOne"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseOne">
+                                aria-controls="acneAndAcneScarringTreatmentsCollapseOne">
                           Medical Meso Glow Facial
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseOne"
+                    <div id="acneAndAcneScarringTreatmentsCollapseOne"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingOne"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="acneAndAcneScarringTreatmentsHeadingOne"
+                         data-bs-parent="#accordion-acne-and-acne-scarring-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           We use a chemical peel in this relaxing treatment that gently removes dead skin cells, refines
@@ -351,22 +313,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingTwo">
+                    <div class="card-header" id="acneAndAcneScarringTreatmentsHeadingTwo">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseTwo"
+                                data-bs-target="#acneAndAcneScarringTreatmentsCollapseTwo"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseTwo">
+                                aria-controls="acneAndAcneScarringTreatmentsCollapseTwo">
                           Barrier Repair Facial
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseTwo"
+                    <div id="acneAndAcneScarringTreatmentsCollapseTwo"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingTwo"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="acneAndAcneScarringTreatmentsHeadingTwo"
+                         data-bs-parent="#accordion-acne-and-acne-scarring-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Our Barrier Repair Facial for Acne & Acne Scarring is a calming, restorative treatment designed to support compromised, breakout-prone skin while promoting healing and improving overall skin texture.
@@ -384,22 +346,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingThree">
+                    <div class="card-header" id="acneAndAcneScarringTreatmentsHeadingThree">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseThree"
+                                data-bs-target="#acneAndAcneScarringTreatmentsCollapseThree"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseThree">
+                                aria-controls="acneAndAcneScarringTreatmentsCollapseThree">
                           Revive Deep Cleanse Facial
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseThree"
+                    <div id="acneAndAcneScarringTreatmentsCollapseThree"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingThree"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="acneAndAcneScarringTreatmentsHeadingThree"
+                         data-bs-parent="#accordion-acne-and-acne-scarring-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Our Revive Deep Facial for Acne & Acne Scarring is an intensive, results-driven treatment designed to purify the skin, target breakouts and support long-term skin renewal.
@@ -419,22 +381,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingFour">
+                    <div class="card-header" id="acneAndAcneScarringTreatmentsHeadingFour">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseFour"
+                                data-bs-target="#acneAndAcneScarringTreatmentsCollapseFour"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseFour">
+                                aria-controls="acneAndAcneScarringTreatmentsCollapseFour">
                           CLAI Signature Facial
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseFour"
+                    <div id="acneAndAcneScarringTreatmentsCollapseFour"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingFour"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="acneAndAcneScarringTreatmentsHeadingFour"
+                         data-bs-parent="#accordion-acne-and-acne-scarring-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           A chemical peel is used in this relaxing treatment that gently removes dead skin cells, brightens the complexion and promotes healthy, even-toned skin.
@@ -452,22 +414,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingFive">
+                    <div class="card-header" id="acneAndAcneScarringTreatmentsHeadingFive">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseFive"
+                                data-bs-target="#acneAndAcneScarringTreatmentsCollapseFive"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseFive">
+                                aria-controls="acneAndAcneScarringTreatmentsCollapseFive">
                           Mesoesetic Pro/MD Peel
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseFive"
+                    <div id="acneAndAcneScarringTreatmentsCollapseFive"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingFive"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="acneAndAcneScarringTreatmentsHeadingFive"
+                         data-bs-parent="#accordion-acne-and-acne-scarring-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Mesoestetic PRO and MD Peels are expertly formulated to effectively treat acne and acne scarring by targeting the root causes of breakouts and promoting skin regeneration. These professional-grade chemical peels combine potent ingredients such as azelaic acid, kojic acid and resorcinol, which work synergistically to deeply exfoliate dead skin cells, reduce excess oil sand calm inflammation.
@@ -487,22 +449,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingSix">
+                    <div class="card-header" id="acneAndAcneScarringTreatmentsHeadingSix">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseSix"
+                                data-bs-target="#acneAndAcneScarringTreatmentsCollapseSix"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseSix">
+                                aria-controls="acneAndAcneScarringTreatmentsCollapseSix">
                           Medical Needling
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseSix"
+                    <div id="acneAndAcneScarringTreatmentsCollapseSix"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingSix"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="acneAndAcneScarringTreatmentsHeadingSix"
+                         data-bs-parent="#accordion-acne-and-acne-scarring-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Medical Needling (also known as microneedling) uses fine needles to create controlled micro-channels in the skin. This process encourages skin renewal and allows brightening serums, such as tranexamic acid, to penetrate more effectively. By targeting sun spots, melasma and post-inflammatory marks, the treatment helps achieve a clearer, smoother and more even-toned complexion on the face and neck.
@@ -518,22 +480,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingSeven">
+                    <div class="card-header" id="acneAndAcneScarringTreatmentsHeadingSeven">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseSeven"
+                                data-bs-target="#acneAndAcneScarringTreatmentsCollapseSeven"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseSeven">
+                                aria-controls="acneAndAcneScarringTreatmentsCollapseSeven">
                           Mesotherapy Face/Face+Neck
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseSeven"
+                    <div id="acneAndAcneScarringTreatmentsCollapseSeven"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingSeven"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="acneAndAcneScarringTreatmentsHeadingSeven"
+                         data-bs-parent="#accordion-acne-and-acne-scarring-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Mesotherapy is a minimally invasive, targeted treatment that delivers a carefully customised blend of vitamins, antioxidants, peptides, and skin-repairing agents directly into the middle layer of the skin through fine microinjections. This precise delivery method allows active ingredients to penetrate deeply where they are most effective, promoting cell regeneration and accelerating the skin’s natural healing processes.
@@ -553,22 +515,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingEight">
+                    <div class="card-header" id="acneAndAcneScarringTreatmentsHeadingEight">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseEight"
+                                data-bs-target="#acneAndAcneScarringTreatmentsCollapseEight"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseEight">
+                                aria-controls="acneAndAcneScarringTreatmentsCollapseEight">
                           Signature PRP Renew Treatment
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseEight"
+                    <div id="acneAndAcneScarringTreatmentsCollapseEight"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingEight"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="tacneAndAcneScarringTreatmentsHeadingEight"
+                         data-bs-parent="#accordion-acne-and-acne-scarring-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Platelet-Rich Plasma (PRP) treatment uses your body’s own platelets, rich in growth factors, to stimulate skin healing and regeneration. When applied to acne-prone or scarred skin, PRP accelerates cell turnover, reduces inflammation and boosts collagen production, helping to repair damaged tissue and smooth out textural irregularities.
@@ -584,22 +546,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingNine">
+                    <div class="card-header" id="acneAndAcneScarringTreatmentsHeadingNine">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseNine"
+                                data-bs-target="#acneAndAcneScarringTreatmentsCollapseNine"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseNine">
+                                aria-controls="acneAndAcneScarringTreatmentsCollapseNine">
                           PRP Needling with Botox
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseNine"
+                    <div id="acneAndAcneScarringTreatmentsCollapseNine"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingNine"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="acneAndAcneScarringTreatmentsHeadingNine"
+                         data-bs-parent="#accordion-acne-and-acne-scarring-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           PRP Needling with Botox is a cutting-edge treatment that combines the regenerative power of Platelet-Rich Plasma (PRP) with the skin-refining benefits of micro-Botox, delivered through microneedling. This synergistic approach targets both active acne and post-acne scarring, offering visible improvements in skin texture, clarity and overall health.
@@ -619,22 +581,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingTen">
+                    <div class="card-header" id="acneAndAcneScarringTreatmentsHeadingTen">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseTen"
+                                data-bs-target="#acneAndAcneScarringTreatmentsCollapseTen"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseTen">
+                                aria-controls="acneAndAcneScarringTreatmentsCollapseTen">
                           Needling with PRF
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseTen"
+                    <div id="acneAndAcneScarringTreatmentsCollapseTen"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingTen"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="acneAndAcneScarringTreatmentsHeadingTen"
+                         data-bs-parent="#accordion-acne-and-acne-scarring-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Needling combined with Platelet-Rich Fibrin (PRF) is an advanced, regenerative treatment that significantly enhances the skin’s natural healing process - making it highly effective for treating acne and acne scarring.
@@ -650,22 +612,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingEleven">
+                    <div class="card-header" id="acneAndAcneScarringTreatmentsHeadingEleven">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseEleven"
+                                data-bs-target="#acneAndAcneScarringTreatmentsCollapseEleven"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseEleven">
+                                aria-controls="acneAndAcneScarringTreatmentsCollapseEleven">
                           Tri-Therapy with Needling
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseEleven"
+                    <div id="acneAndAcneScarringTreatmentsCollapseEleven"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingEleven"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="acneAndAcneScarringTreatmentsHeadingEleven"
+                         data-bs-parent="#accordion-acne-and-acne-scarring-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Tri-Therapy is a multi-step treatment designed to target acne and acne scarring on multiple levels by combining a chemical peel, superficial needling with skin-repairing actives, and a specialised post-treatment mask.
@@ -685,22 +647,22 @@
                   </div>
 
                   <div class="card">
-                    <div class="card-header" id="treatmentOptionHeadingTwelve">
+                    <div class="card-header" id="acneAndAcneScarringTreatmentsHeadingTwelve">
                       <h5 class="accordion-title mb-0">
                         <button class="btn btn-link d-flex align-items-center me-auto collapsed"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#treatmentOptionCollapseTwelve"
+                                data-bs-target="#acneAndAcneScarringTreatmentsCollapseTwelve"
                                 aria-expanded="false"
-                                aria-controls="treatmentOptionCollapseTwelve">
+                                aria-controls="acneAndAcneScarringTreatmentsCollapseTwelve">
                           Tri-Therapy with Mesotherapy Face & Neck
                         </button>
                       </h5>
                     </div>
 
-                    <div id="treatmentOptionCollapseTwelve"
+                    <div id="acneAndAcneScarringTreatmentsCollapseTwelve"
                          class="collapse accordion-content"
-                         aria-labelledby="treatmentOptionHeadingTwelve"
-                         data-bs-parent="#accordion-treatment-option">
+                         aria-labelledby="acneAndAcneScarringTreatmentsHeadingTwelve"
+                         data-bs-parent="#accordion-acne-and-acne-scarring-treatments">
                       <div class="card-body">
                         <p class="mb-0">
                           Tri-Therapy is a comprehensive treatment that targets acne and acne scarring on multiple levels by combining a chemical peel, superficial mesotherapy with skin-repairing actives and a specialised post-treatment mask.
@@ -733,21 +695,6 @@
     </div>
   </section>
 
-
-  <!--=================================
-  product single -->
-  <!--=================================
-      Related products -->
-    <!--=================================
-    Related products -->
-    <!--=================================
-    Make Appointment BG -->
-    <!--=================================
-    Make Appointment BG -->
-    <!--=================================
-    Menu list -->
-    <!--=================================
-    Menu list -->
     <!--=================================
     footer-->
   <section>
@@ -755,13 +702,20 @@
   </section>
     <!--=================================
     footer-->
-    <!--=================================
-    Back To Top-->
-<!--    <div id="back-to-top" class="back-to-top">-->
-<!--      <a href="#"><i class="fas fa-angle-up"></i></a>-->
-<!--    </div>-->
-    <!--=================================
-    Back To Top-->
+  <!--=================================
+  PDF Price List-->
+  <div th:replace="fragments/pdf-modal :: pdf-modal(
+    'pdfModal',
+    'pdfModalLabel',
+    'pdf-viewer',
+    'current-page',
+    'total-pages',
+    '/docs/pricelist.pdf',
+    'Price List'
+)"></div>
+  <!--=================================
+  PDF Price List-->
+
     <!--=================================
     Javascript -->
     <!-- JS Global Compulsory (Do not remove)-->
@@ -777,116 +731,6 @@
     <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
     <script th:src="@{js/owl-carousel/owl.carousel.min.js}"></script>
     <script th:src="@{js/slick/slick.min.js}"></script>
-
-    <!-- PDF Modal -->
-    <!-- Price List Modal -->
-    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-fullscreen-sm-down"> <!-- Fullscreen on small screens -->
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="pdfModalLabel">Price List</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body text-center">
-            <canvas id="pdf-viewer" class="w-100"></canvas> <!-- Canvas for rendering PDF -->
-            <div class="pdf-controls mt-3 d-flex justify-content-between">
-              <button class="btn btn-secondary" onclick="prevPage()">Previous</button>
-              <span id="page-info">Page <span id="current-page">1</span> of <span id="total-pages">?</span></span>
-              <button class="btn btn-secondary" onclick="nextPage()">Next</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PDF.js Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
-
-    <script>
-      let pdfDoc = null, pageNum = 1, pageRendering = false, pageNumPending = null;
-      const canvas = document.getElementById("pdf-viewer");
-      const ctx = canvas.getContext("2d");
-      const pdfUrl = "/docs/pricelist.pdf"; // Adjust the path if necessary
-
-      function getScaleFactor() {
-        const screenWidth = window.innerWidth;
-        if (screenWidth < 576) return 0.75; // Faster loading on mobile
-        if (screenWidth < 768) return 1.0;  // Medium resolution for tablets
-        return 1.25; // High resolution for desktops
-      }
-
-      function openPDF() {
-        if (!pdfDoc) {
-          console.error("PDF not loaded yet!");
-          return;
-        }
-
-        var pdfModal = new bootstrap.Modal(document.getElementById("pdfModal"));
-        pdfModal.show();
-
-        pageNum = 1; // Reset to first page
-        document.getElementById("current-page").textContent = pageNum;
-        renderPage(pageNum);
-      }
-
-      function renderPage(num) {
-        if (pageRendering) {
-          pageNumPending = num;
-          return;
-        }
-
-        pageRendering = true;
-        let scale = getScaleFactor();
-
-        pdfDoc.getPage(num).then(function (page) {
-          let viewport = page.getViewport({ scale: scale });
-
-          canvas.width = viewport.width;
-          canvas.height = viewport.height;
-
-          let renderContext = {
-            canvasContext: ctx,
-            viewport: viewport
-          };
-
-          let renderTask = page.render(renderContext);
-          renderTask.promise.then(function () {
-            pageRendering = false;
-            document.getElementById("current-page").textContent = num;
-
-            if (pageNumPending !== null) {
-              renderPage(pageNumPending);
-              pageNumPending = null;
-            }
-          });
-        });
-      }
-
-      function nextPage() {
-        if (pageNum < pdfDoc.numPages) {
-          pageNum++;
-          requestAnimationFrame(() => renderPage(pageNum));
-        }
-      }
-
-      function prevPage() {
-        if (pageNum > 1) {
-          pageNum--;
-          requestAnimationFrame(() => renderPage(pageNum));
-        }
-      }
-
-      window.addEventListener("resize", () => renderPage(pageNum)); // Adjust scale on window resize
-
-      // Preload PDF on page load for faster modal opening
-      document.addEventListener("DOMContentLoaded", function () {
-        pdfjsLib.getDocument({ url: pdfUrl, disableStream: false }).promise.then(function (pdf) {
-          pdfDoc = pdf;
-          document.getElementById("total-pages").textContent = pdf.numPages;
-        }).catch(error => console.error("Error loading PDF:", error));
-      });
-    </script>
-
 
   </body>
 </html>

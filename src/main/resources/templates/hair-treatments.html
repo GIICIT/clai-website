@@ -23,9 +23,6 @@
     <meta property="og:url" content="https://clai.co.za">
     <meta property="og:type" content="website">
 
-    <!-- Favicon -->
-    <!--    <link rel="shortcut icon" th:href="@{/img/clai-logo-full-black.svg}" type="image/x-icon">-->
-
     <!-- Standard favicon -->
     <link rel="icon" type="image/x-icon" th:href="@{/img/favicon/favicon.ico}">
 
@@ -83,40 +80,6 @@
     </header>
     <!--=================================
     Header -->
-    <!--=================================
-    Right menu -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-         style="background-image: url(/img/bg/right-menu-01.png); background-size: cover; background-position: center right;">
-      <div class="offcanvas-header text-end justify-content-end p-4">
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body p-4 p-sm-5 d-flex align-content-between flex-wrap justify-content-center">
-        <div class="sidebar-menu">
-          <div class="logo">
-            <a th:href="@{/home}">
-              <img class="img-fluid logo-dark" src="/img/clai-logo-full-stone.svg" alt="Main logo">
-            </a>
-          </div>
-          <div class="section-title mt-5">
-          </div>
-          <div class="mt-5">
-            <h3 class="mb-3">Contact Info</h3>
-            <p>22 Van der Byl Avenue, Durbanville,<br> +27 77 370 5689</p>
-            <p>Monday to Friday <br> (09:00 To 16:30)</p>
-            <p>Saturday - Sunday  <br> (Closed)</p>
-            <p>Public Holidays  <br> (Closed)</p>
-          </div>
-          <div class="social-icon mt-5">
-            <ul>
-              <li><a th:href="${facebook}"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a th:href="${instagram}"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--=================================
-    Right menu -->
     <!--================================= -->
 
   <section class="service white-bg space-pt">
@@ -243,20 +206,6 @@
       </div>
     </div>
   </section>
-  <!--=================================
-  product single -->
-  <!--=================================
-      Related products -->
-    <!--=================================
-    Related products -->
-    <!--=================================
-    Make Appointment BG -->
-    <!--=================================
-    Make Appointment BG -->
-    <!--=================================
-    Menu list -->
-    <!--=================================
-    Menu list -->
     <!--=================================
     footer-->
   <section>
@@ -264,13 +213,20 @@
   </section>
     <!--=================================
     footer-->
-    <!--=================================
-    Back To Top-->
-<!--    <div id="back-to-top" class="back-to-top">-->
-<!--      <a href="#"><i class="fas fa-angle-up"></i></a>-->
-<!--    </div>-->
-    <!--=================================
-    Back To Top-->
+
+  <!--=================================
+  PDF Price List-->
+  <div th:replace="fragments/pdf-modal :: pdf-modal(
+    'pdfModal',
+    'pdfModalLabel',
+    'pdf-viewer',
+    'current-page',
+    'total-pages',
+    '/docs/pricelist.pdf',
+    'Price List'
+)"></div>
+  <!--=================================
+  PDF Price List-->
     <!--=================================
     Javascript -->
     <!-- JS Global Compulsory (Do not remove)-->
@@ -286,116 +242,5 @@
     <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
     <script th:src="@{js/owl-carousel/owl.carousel.min.js}"></script>
     <script th:src="@{js/slick/slick.min.js}"></script>
-
-    <!-- PDF Modal -->
-    <!-- Price List Modal -->
-    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-fullscreen-sm-down"> <!-- Fullscreen on small screens -->
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="pdfModalLabel">Price List</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body text-center">
-            <canvas id="pdf-viewer" class="w-100"></canvas> <!-- Canvas for rendering PDF -->
-            <div class="pdf-controls mt-3 d-flex justify-content-between">
-              <button class="btn btn-secondary" onclick="prevPage()">Previous</button>
-              <span id="page-info">Page <span id="current-page">1</span> of <span id="total-pages">?</span></span>
-              <button class="btn btn-secondary" onclick="nextPage()">Next</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PDF.js Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
-
-    <script>
-      let pdfDoc = null, pageNum = 1, pageRendering = false, pageNumPending = null;
-      const canvas = document.getElementById("pdf-viewer");
-      const ctx = canvas.getContext("2d");
-      const pdfUrl = "/docs/pricelist.pdf"; // Adjust the path if necessary
-
-      function getScaleFactor() {
-        const screenWidth = window.innerWidth;
-        if (screenWidth < 576) return 0.75; // Faster loading on mobile
-        if (screenWidth < 768) return 1.0;  // Medium resolution for tablets
-        return 1.25; // High resolution for desktops
-      }
-
-      function openPDF() {
-        if (!pdfDoc) {
-          console.error("PDF not loaded yet!");
-          return;
-        }
-
-        var pdfModal = new bootstrap.Modal(document.getElementById("pdfModal"));
-        pdfModal.show();
-
-        pageNum = 1; // Reset to first page
-        document.getElementById("current-page").textContent = pageNum;
-        renderPage(pageNum);
-      }
-
-      function renderPage(num) {
-        if (pageRendering) {
-          pageNumPending = num;
-          return;
-        }
-
-        pageRendering = true;
-        let scale = getScaleFactor();
-
-        pdfDoc.getPage(num).then(function (page) {
-          let viewport = page.getViewport({ scale: scale });
-
-          canvas.width = viewport.width;
-          canvas.height = viewport.height;
-
-          let renderContext = {
-            canvasContext: ctx,
-            viewport: viewport
-          };
-
-          let renderTask = page.render(renderContext);
-          renderTask.promise.then(function () {
-            pageRendering = false;
-            document.getElementById("current-page").textContent = num;
-
-            if (pageNumPending !== null) {
-              renderPage(pageNumPending);
-              pageNumPending = null;
-            }
-          });
-        });
-      }
-
-      function nextPage() {
-        if (pageNum < pdfDoc.numPages) {
-          pageNum++;
-          requestAnimationFrame(() => renderPage(pageNum));
-        }
-      }
-
-      function prevPage() {
-        if (pageNum > 1) {
-          pageNum--;
-          requestAnimationFrame(() => renderPage(pageNum));
-        }
-      }
-
-      window.addEventListener("resize", () => renderPage(pageNum)); // Adjust scale on window resize
-
-      // Preload PDF on page load for faster modal opening
-      document.addEventListener("DOMContentLoaded", function () {
-        pdfjsLib.getDocument({ url: pdfUrl, disableStream: false }).promise.then(function (pdf) {
-          pdfDoc = pdf;
-          document.getElementById("total-pages").textContent = pdf.numPages;
-        }).catch(error => console.error("Error loading PDF:", error));
-      });
-    </script>
-
-
   </body>
 </html>
