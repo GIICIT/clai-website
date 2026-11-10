@@ -20,16 +20,17 @@
                 <div class="feature-box feature-box-style-05 mb-4 mb-md-5">
                   <div class="feature-content">
                     <p style="color: #000; font-size: 12px; line-height: 1.3;">
-                      Sculptra is a unique, collagen-stimulating injectable that works beneath the skin to gradually restore
-                      volume, improve skin quality, and enhance natural contours. Unlike traditional fillers, which provide
-                      instant volume, Sculptra encourages your body to rebuild its own collagen for results that develop subtly
-                      and last up to two years.
-
-                      <br>
-                      <br>
-
-                      Our <b>Sculptra treatments</b> are priced from <b>R7,900 per vial</b>, with a <b>discounted rate</b> available when <b>multiple vials</b> are used during the same session.
-
+                      <b>What Are Biostimulators</b>
+                      <br><br>
+                      Biostimulators are advanced injectable treatments that stimulate your body&rsquo;s natural collagen production, helping restore skin firmness, improve elasticity, and support a more youthful appearance over time.
+                      <br><br>
+                      As we age, collagen production naturally declines, contributing to changes in skin structure, firmness and facial volume. Biostimulators encourage the skin&rsquo;s natural regenerative processes, gradually improving its underlying support and overall quality.
+                      <br><br>
+                      Unlike traditional dermal fillers, which primarily focus on adding volume and contour, biostimulators focus on stimulating collagen production for progressive, natural-looking results.
+                      <br><br>
+                      The result? Skin that looks firmer, smoother and better supported, with improvements that develop gradually over time.
+                      <br><br>
+                      At CLAI, every treatment begins with an individual assessment to determine the most appropriate approach for your skin, anatomy and aesthetic goals.
                     </p>
                   </div>
                 </div>
@@ -60,57 +61,11 @@
 
                 <div class="accordion ivy-accordion" id="accordion-biostimulators-treatments">
 
-                  <div class="card">
-                    <div class="card-header" id="accordion-biostimulators-treatmentsHeadingOne">
-                      <h5 class="accordion-title mb-0">
-                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#accordion-biostimulators-treatmentsCollapseOne"
-                                aria-expanded="false"
-                                aria-controls="accordion-biostimulators-treatmentsCollapseOne">
-                          Sculptra for the Face
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="accordion-biostimulators-treatmentsCollapseOne"
-                         class="collapse accordion-content"
-                         aria-labelledby="accordion-biostimulators-treatmentsHeadingOne"
-                         data-bs-parent="#accordion-biostimulators-treatments">
-                      <div class="card-body">
-                        <p class="mb-0">
-                          Facial Sculptra treatments are ideal for restoring volume in areas affected by aging, such as
-                          hollow cheeks, temples, and jawline. It smooths lines, improves skin thickness, and provides a
-                          refreshed, natural look that evolves over time.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  <div th:replace="~{fragments/treatments/sculptra :: card('accordion-biostimulators-treatments', 'biostimulatorsTreatments', 'One')}"></div>
 
-                  <div class="card">
-                    <div class="card-header" id="accordion-biostimulators-treatmentsHeadingTwo">
-                      <h5 class="accordion-title mb-0">
-                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#accordion-biostimulators-treatmentsCollapseTwo"
-                                aria-expanded="false"
-                                aria-controls="accordion-biostimulators-treatmentsCollapseTwo">
-                          Sculptra for the Body
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="accordion-biostimulators-treatmentsCollapseTwo"
-                         class="collapse accordion-content"
-                         aria-labelledby="accordion-biostimulators-treatmentsHeadingTwo"
-                         data-bs-parent="#accordion-biostimulators-treatments">
-                      <div class="card-body">
-                        <p class="mb-0">
-                          Sculptra can also be used to improve skin quality and contour in areas such as the buttocks,
-                          thighs, arms, and décolletage. By stimulating collagen production, it enhances firmness, smooths
-                          crepey skin, and improves overall skin texture.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  <div th:replace="~{fragments/treatments/radiesse :: card('accordion-biostimulators-treatments', 'biostimulatorsTreatments', 'Two')}"></div>
+
+                  <div th:replace="~{fragments/treatments/sunekos :: card('accordion-biostimulators-treatments', 'biostimulatorsTreatments', 'Three')}"></div>
 
                 </div>
 

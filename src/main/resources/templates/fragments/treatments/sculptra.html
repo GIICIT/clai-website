@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+  Sculptra (biostimulator), KAN-7. Shown on: biostimulators.
+  The card holds a description and its own nested accordion (Sculptra Face, Sculptra Body).
+  Edit the text here once; every page that includes it updates.
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<!-- Accordion card: pass the accordion's id, its id prefix and a card number -->
+<div th:fragment="card(parentId, prefix, num)"
+     th:replace="~{fragments/accordion :: card(${parentId}, ${prefix}, ${num}, 'Sculptra',
+                   ~{fragments/treatments/sculptra :: content(${prefix + num})})}"></div>
+
+<!-- Card body. idBase keeps the nested accordion's ids unique if Sculptra is used on several pages. -->
+<th:block th:fragment="content(idBase)">
+<p class="mb-0">
+                          Sculptra is a unique, collagen-stimulating injectable that works beneath the skin to gradually restore volume, improve skin quality, and enhance natural contours. Unlike traditional fillers, which provide instant volume, Sculptra encourages your body to rebuild its own collagen for results that develop subtly and last up to two years.
+                          <br><br>
+                          Our <b>Sculptra treatments</b> start at <b>R7,900 per vial</b>, with a <b>discounted rate</b> available when you use <b>multiple vials</b> in the same session.
+</p>
+<div class="accordion ivy-accordion ivy-accordion-nested mt-3" th:id="${'accordion-' + idBase + 'Sculptra'}">
+  <div th:replace="~{fragments/accordion :: card(${'accordion-' + idBase + 'Sculptra'}, ${idBase + 'Sculptra'}, 'One', 'Sculptra Face', ~{fragments/treatments/sculptra :: sculptraFace})}"></div>
+  <div th:replace="~{fragments/accordion :: card(${'accordion-' + idBase + 'Sculptra'}, ${idBase + 'Sculptra'}, 'Two', 'Sculptra Body', ~{fragments/treatments/sculptra :: sculptraBody})}"></div>
+</div>
+</th:block>
+
+<th:block th:fragment="sculptraFace">
+<p class="mb-0">
+                          Facial Sculptra treatments are ideal for restoring volume in areas affected by aging, such as hollow cheeks, temples, and jawline. It smooths lines, improves skin thickness, and provides a refreshed, natural look that evolves.
+</p>
+</th:block>
+
+<th:block th:fragment="sculptraBody">
+<p class="mb-0">
+                          Sculptra can also be used to improve skin quality and contour in areas such as the buttocks, thighs, arms, and d&eacute;colletage. By stimulating collagen production, it enhances firmness, smooths crepey skin, and improves overall skin texture.
+</p>
+</th:block>
+
+</body>
+</html>

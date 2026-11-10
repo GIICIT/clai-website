@@ -9069,6 +9069,25 @@ Blog Style 01
   }
 }
 
+/* ===== Nested accordion: a treatment with its own sub-treatments (e.g. Sculptra > Face / Body) =====
+   Indented with a thin rule and a slightly smaller title so it reads as part of the parent card. */
+.products-banner.ivy-tight .ivy-accordion .ivy-accordion-nested{
+  padding-left: 16px;
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.products-banner.ivy-tight .ivy-accordion .ivy-accordion-nested .card-header{
+  padding: 10px 0;
+}
+
+.products-banner.ivy-tight .ivy-accordion .ivy-accordion-nested .card-header .btn.btn-link{
+  font-size: 14px !important;
+}
+
+.products-banner.ivy-tight .ivy-accordion .ivy-accordion-nested .card-header .btn.btn-link::after{
+  font-size: 18px !important;
+}
+
 /* WHY CLAI / blog page: make first section sit flush under navbar */
 .blog-tight-top {
   padding-top: 0 !important;

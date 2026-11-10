@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--
+  Radiesse (biostimulator), KAN-7. Shown on: biostimulators.
+  Edit the text here once; every page that includes it updates.
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<!-- Accordion card: pass the accordion's id, its id prefix and a card number -->
+<div th:fragment="card(parentId, prefix, num)"
+     th:replace="~{fragments/accordion :: card(${parentId}, ${prefix}, ${num}, 'Radiesse',
+                   ~{fragments/treatments/radiesse :: content})}"></div>
+
+<th:block th:fragment="content">
+<p class="mb-0">
+                          Radiesse is an advanced injectable treatment that combines immediate structural support with long-term collagen stimulation. Formulated with calcium hydroxylapatite (CaHA), it helps stimulate your skin&rsquo;s natural collagen and elastin production, improving firmness, elasticity and definition over time. Treatment is tailored to your individual anatomy and aesthetic goals.
+                          <br><br>
+                          Our <b>Radiesse treatments</b> are priced from <b>R8,500 per vial</b>, with a <b>discounted rate</b> available when <b>multiple vials</b> are used during the same session.
+</p>
+</th:block>
+
+</body>
+</html>
