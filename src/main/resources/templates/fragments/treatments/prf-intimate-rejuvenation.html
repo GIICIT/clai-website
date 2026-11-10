@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+  PRF Intimate Rejuvenation (O-Shot + G-Shot), KAN-3. Shown on: intimate-wellness.
+  Edit the text here once; every page that includes it updates.
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<!-- Accordion card: pass the accordion's id, its id prefix and a card number -->
+<div th:fragment="card(parentId, prefix, num)"
+     th:replace="~{fragments/accordion :: card(${parentId}, ${prefix}, ${num}, 'PRF Intimate Rejuvenation',
+                   ~{fragments/treatments/prf-intimate-rejuvenation :: content})}"></div>
+
+<!-- Card body. Keep it wrapped in th:block: a <p> fragment would be cut off at the first <ul>. -->
+<th:block th:fragment="content">
+<p class="mb-0">
+                          The O-Shot + G-Shot is an intimate rejuvenation treatment using Platelet-Rich Fibrin (PRF) prepared from your own blood.
+                          <br><br>
+                          Designed to support intimate tissue quality and sensitivity, the treatment combines targeted PRF placement in both the O-Shot and G-Shot areas for a more comprehensive approach to female intimate wellness.
+                          <br><br>
+                          <b>What is PRF?</b>
+                          <br>
+                          PRF is a concentrated component of your own blood containing platelets, fibrin and naturally occurring growth factors.
+                          <br><br>
+                          Once prepared, it forms a fibrin-rich matrix that allows growth factors to be released gradually within the treated tissue, supporting the body's natural repair and regenerative processes.
+                          <br><br>
+                          <b>O-Shot = Regeneration &amp; Sensitivity</b>
+                          <br>
+                          PRF is carefully placed into specific areas of the external and internal intimate tissue.
+                          <br><br>
+                          The treatment is designed to support tissue quality, circulation and sensitivity, particularly where women have noticed changes following childbirth, hormonal changes or ageing.
+                          <br><br>
+                          <b>G-Shot = Targeted Enhancement</b>
+                          <br>
+                          PRF is placed into the G-area of the anterior vaginal wall, creating a subtle increase in tissue volume while also providing the regenerative benefits of PRF.
+                          <br><br>
+                          The aim is to increase prominence and awareness of this area, which may enhance sensation for some women.
+                          <br><br>
+                          <b>Why Combine the O-Shot + G-Shot?</b>
+                          <br>
+                          Combining both techniques allows us to address intimate rejuvenation from two perspectives:
+                          <br>
+                          <ul>
+                            <li>O-Shot &rarr; tissue regeneration &amp; sensitivity</li>
+                            <li>G-Shot &rarr; targeted enhancement &amp; regenerative support</li>
+                          </ul>
+                          <b>Who May Consider This Treatment?</b>
+                          <br>
+                          The O-Shot + G-Shot may be considered by women experiencing changes associated with:
+                          <br>
+                          <ul>
+                            <li>Ageing</li>
+                            <li>Hormonal changes</li>
+                            <li>Postpartum changes</li>
+                            <li>Reduced intimate sensitivity</li>
+                            <li>Changes in sexual experience</li>
+                            <li>Changes in intimate tissue quality</li>
+                          </ul>
+                          <b>A Treatment Using Your Own Biology</b>
+                          <br>
+                          Because PRF is prepared entirely from your own blood, the treatment works with your body's own biological components rather than introducing a synthetic regenerative product.
+                          <br><br>
+                          Every treatment begins with a private consultation to discuss your concerns, medical history and expectations and to determine whether PRF intimate rejuvenation is appropriate for you.
+                          <br><br>
+                          Individual responses vary. PRF intimate rejuvenation is an emerging treatment and improvements in sexual function, orgasm, sensation or urinary symptoms cannot be guaranteed.
+                          <br><br>
+                          <b>Price: R 5290</b>
+                          <br><br>
+                          <b>Time: 45 minutes</b>
+</p>
+</th:block>
+
+</body>
+</html>
