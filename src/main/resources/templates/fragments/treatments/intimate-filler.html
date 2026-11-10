@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+  Intimate Filler. Shown on: (see the pages that include fragments/treatments/intimate-filler).
+  Edit the text here once; every page that includes it updates.
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<!-- Accordion card: pass the accordion's id, its id prefix and a card number -->
+<div th:fragment="card(parentId, prefix, num)"
+     th:replace="~{fragments/accordion :: card(${parentId}, ${prefix}, ${num}, 'Intimate Filler',
+                   ~{fragments/treatments/intimate-filler :: content})}"></div>
+
+<!-- Card body. Keep it wrapped in th:block: a <p> fragment would be cut off at the first <ul>. -->
+<th:block th:fragment="content">
+<p class="mb-0">
+                          Intimate Filler is a non-surgical aesthetic treatment designed to restore volume, hydration and softness to the external intimate area.
+                          <br><br>
+                          Just like the skin on the face, the intimate area can change with ageing, hormonal changes, pregnancy, childbirth and changes in body composition. Over time, the labia majora may lose volume and appear less plump or supported.
+                          <br><br>
+                          <b>How Does Intimate Filler Work?</b>
+                          <br>
+                          A carefully selected hyaluronic acid dermal filler is placed into the labia majora to restore lost volume and improve the appearance and quality of the external intimate tissue.
+                          <br><br>
+                          Hyaluronic acid naturally attracts and retains water, helping to create a softer, smoother and more hydrated appearance.
+                          <br><br>
+                          <b>What Can Intimate Filler Help With?</b>
+                          <br>
+                          Intimate Filler may be considered for women wanting to improve:
+                          <br>
+                          <ul>
+                            <li>Loss of labial volume</li>
+                            <li>Deflation or flattening</li>
+                            <li>Asymmetry</li>
+                            <li>External tissue hydration</li>
+                            <li>Age-related changes</li>
+                            <li>Overall appearance of the labia majora</li>
+                          </ul>
+                          <b>More Than Aesthetics</b>
+                          <br>
+                          For some women, restoring volume to the labia majora may also provide additional cushioning and support to the external intimate area, particularly where tissue volume has reduced over time.
+                          <br><br>
+                          <b>A Personalised Approach</b>
+                          <br>
+                          There is no single ideal appearance when it comes to intimate anatomy.
+                          <br><br>
+                          Our approach is focused on natural-looking restoration rather than changing normal anatomy. The amount and placement of filler are carefully tailored to your individual anatomy, concerns and desired outcome.
+                          <br><br>
+                          Every Intimate Filler treatment begins with a private consultation to assess suitability, discuss expectations and develop an individualised treatment plan.
+                          <br><br>
+                          Results and longevity vary between individuals. As with all injectable treatments, potential risks, side effects and aftercare will be discussed during your consultation.
+                          <br><br>
+                          <b>Price: R 11 990</b>
+                          <br><br>
+                          <b>Time: 75 minutes</b>
+</p>
+</th:block>
+
+</body>
+</html>
