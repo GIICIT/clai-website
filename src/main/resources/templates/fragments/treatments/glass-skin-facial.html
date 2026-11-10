@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+  Glass Skin Facial (KAN-1). Shown on: anti-ageing, acne-and-acne-scaring, hyper-pigmentation.
+  Edit the text here once; every page that includes it updates.
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<!-- Accordion card: pass the accordion's id, its id prefix and a card number -->
+<div th:fragment="card(parentId, prefix, num)"
+     th:replace="~{fragments/accordion :: card(${parentId}, ${prefix}, ${num}, 'Glass Skin Facial',
+                   ~{fragments/treatments/glass-skin-facial :: content})}"></div>
+
+<!-- Card body. Keep it wrapped in th:block: a <p> fragment would be cut off at the first <ul>. -->
+<th:block th:fragment="content">
+<p class="mb-0">
+                          The CLAI Glass Skin Facial is an advanced combination treatment designed to improve the skin from multiple levels in a single treatment session.
+                          <br><br>
+                          Rather than focusing on only one concern, we combine IPL, Morpheus8 RF microneedling and superficial microneedling with your own PRP to target pigmentation, skin texture, pores, collagen production and overall skin quality.
+                          <br><br>
+                          <b>How the treatment works</b>
+                          <br><br>
+                          <b>IPL = Tone &amp; Clarity</b>
+                          <br>
+                          IPL targets unwanted pigmentation, helping to create a clearer, brighter and more even-looking complexion.
+                          <br><br>
+                          <b>Morpheus8 = Firm &amp; Remodel</b>
+                          <br>
+                          Morpheus8 combines microneedling with radiofrequency energy to stimulate collagen and elastin within the deeper layers of the skin. This helps improve firmness, fine lines, enlarged pores and uneven texture.
+                          <br><br>
+                          <b>Superficial Microneedling + PRP = Repair &amp; Refine</b>
+                          <br>
+                          We finish with controlled superficial microneedling combined with Platelet-Rich Plasma (PRP) derived from your own blood. This supports the skin's natural repair processes while helping improve hydration, texture and overall skin quality.
+                          <br><br>
+                          <b>Why combine all three?</b>
+                          <br>
+                          Each technology works at a different level of the skin.
+                          <br>
+                          <ul>
+                            <li>IPL &rarr; improves colour and clarity</li>
+                            <li>Morpheus8 &rarr; remodels and stimulates collagen</li>
+                            <li>Microneedling + PRP &rarr; supports regeneration and surface refinement</li>
+                          </ul>
+                          By combining these modalities strategically, we can address tone, texture and skin quality in one comprehensive treatment.
+                          <br><br>
+                          <b>Ideal for</b>
+                          <br>
+                          <ul>
+                            <li>Uneven skin tone</li>
+                            <li>Sun damage</li>
+                            <li>Enlarged pores</li>
+                            <li>Fine lines</li>
+                            <li>Uneven texture</li>
+                            <li>Dull or tired-looking skin</li>
+                          </ul>
+                          A consultation is required to determine suitability. Treatment settings and combinations are customised according to skin type, skin condition and individual treatment goals.
+                          <br><br>
+                          <b>Price: R 7200</b>
+                          <br><br>
+                          <b>Time: 120 minutes</b>
+</p>
+</th:block>
+
+</body>
+</html>

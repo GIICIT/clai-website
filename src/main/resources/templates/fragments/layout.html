@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--
+  Shared page shell. Every page uses these three pieces, so a change here applies site-wide:
+
+    <head th:replace="~{fragments/layout :: head('treatment')}"></head>
+    <body>
+      <th:block th:replace="~{fragments/layout :: page-top}"></th:block>
+      ... page sections ...
+      <th:block th:replace="~{fragments/layout :: page-end('treatment')}"></th:block>
+    </body>
+
+  type = 'treatment' | 'blog' | 'contact' | 'home'. It selects the plugin CSS/JS and structured data.
+  Optional model attributes (set in the controller) override the defaults:
+    pageTitle, pageDescription
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head(type)">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81M8RGH9NY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-81M8RGH9NY');
+    </script>
+    <th:block th:with="title=${pageTitle} ?: 'CLAI - The Science of Health, the Art of Living',
+                       description=${pageDescription} ?: 'At CLAI, we believe that true beauty starts with optimal skin health and overall well-being. Our approach merges state-of-the-art technology, advanced scientific research and expert knowledge to provide personalised treatments that deliver real, lasting results.'">
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="author" content="giicit.co.za">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title th:text="${title}">CLAI</title>
+    <meta name="description" th:content="${description}">
+
+    <meta property="og:title" th:content="${title}">
+    <meta property="og:description" th:content="${description}">
+    <meta property="og:image" content="https://clai.co.za/img/full-logo-lockup-black-50.png">
+    <meta property="og:url" content="https://clai.co.za">
+    <meta property="og:type" content="website">
+    </th:block>
+    <link th:if="${type == 'home'}" rel="canonical" href="https://clai.co.za/">
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" th:href="@{/img/favicon/favicon.ico}">
+
+    <!-- PNG favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" th:href="@{/img/favicon/favicon-32x32.png}">
+    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/img/favicon/favicon-16x16.png}">
+
+    <!-- Apple Touch Icon (for iPhones & iPads) -->
+    <link rel="apple-touch-icon" th:href="@{/img/favicon/apple-touch-icon.png}">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" th:href="@{/img/favicon/android-chrome-192x192.png}">
+    <link rel="icon" type="image/png" sizes="512x512" th:href="@{/img/favicon/android-chrome-512x512.png}">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" th:href="@{/img/favicon/site.webmanifest}">
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link th:if="${type == 'treatment' or type == 'home'}" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" th:href="@{/css/font-awesome/all.min.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
+
+    <!-- Plugin CSS that must load before the theme -->
+    <th:block th:if="${type == 'treatment'}">
+    <link rel="stylesheet" th:href="@{/css/select2/select2.css}">
+    <link rel="stylesheet" th:href="@{/css/datetimepicker/datetimepicker.min.css}">
+    </th:block>
+    <th:block th:if="${type == 'blog' or type == 'home'}">
+    <link rel="stylesheet" th:href="@{/css/owl-carousel/owl.carousel.min.css}">
+    </th:block>
+    <th:block th:if="${type == 'home'}">
+    <link rel="stylesheet" th:href="@{/css/swiper/swiper.min.css}">
+    <link rel="stylesheet" th:href="@{/css/animate/animate.min.css}">
+    <link rel="stylesheet" th:href="@{/css/magnific-popup/magnific-popup.css}">
+    </th:block>
+
+    <!-- Template Style -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <!-- Plugin CSS that loads after the theme -->
+    <th:block th:if="${type == 'treatment'}">
+    <link rel="stylesheet" th:href="@{/css/owl-carousel/owl.carousel.min.css}">
+    <link rel="stylesheet" th:href="@{/css/slick/slick-theme.css}">
+    </th:block>
+
+    <!-- Structured data -->
+    <script th:if="${type == 'contact'}" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CLAI",
+        "url": "https://clai.co.za",
+        "logo": "https://clai.co.za/static/img/full-logo-lockup-black-50.png"
+      }
+    </script>
+    <script th:if="${type == 'home'}" type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "CLAI",
+            "url": "https://clai.co.za",
+            "logo": "https://clai.co.za/img/full-logo-lockup-black-50.png",
+            "image": "https://clai.co.za/img/full-logo-lockup-black-50.png",
+            "description": "The Science of Health, the Art of Living.",
+            "telephone": "+27 77 370 5689",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "22 Van der Byl Avenue, Durbanville",
+                "addressLocality": "Cape Town",
+                "addressRegion": "Western Cape",
+                "postalCode": "7550",
+                "addressCountry": "ZA"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "-33.834384",
+                "longitude": "18.652697"
+            },
+            "sameAs": [
+                "https://www.instagram.com/clai_durbanville/"
+            ]
+        }
+    </script>
+</head>
+
+<body>
+
+<!-- Top of every page: WhatsApp button, preloader, sticky header with navbar -->
+<th:block th:fragment="page-top">
+  <!-- Floating WhatsApp Button with Official Logo -->
+  <div th:insert="fragments/whatsapp-float :: whatsapp-button"></div>
+
+    <!--=================================
+    preloader -->
+    <div id="pre-loader">
+      <img src="/img/pre-loader/clai-loader-black-50.svg" alt="">
+    </div>
+
+    <!--=================================
+    Header -->
+    <header class="header header-sticky default">
+        <div th:insert="fragments/navbar :: nav-bar"></div>
+    </header>
+</th:block>
+
+<!-- Bottom of every page: footer, price-list modal, scripts -->
+<th:block th:fragment="page-end(type)">
+  <!--=================================
+  footer-->
+  <section>
+      <div th:insert="fragments/footer :: footer"></div>
+  </section>
+
+  <!--=================================
+  PDF Price List (opened from the navbar "Price List" item)-->
+  <div th:replace="fragments/pdf-modal :: pdf-modal(
+    'pdfModal',
+    'pdfModalLabel',
+    'pdf-viewer',
+    'current-page',
+    'total-pages',
+    '/docs/pricelist.pdf',
+    'Price List'
+)"></div>
+
+    <!--=================================
+    Javascript -->
+    <!-- JS Global Compulsory (Do not remove)-->
+    <script th:src="@{/js/jquery-3.7.1.min.js}"></script>
+    <script th:src="@{/js/popper/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
+    <!-- Plugins that load before custom.js -->
+    <th:block th:if="${type == 'treatment'}">
+    <script th:src="@{/js/select2/select2.full.js}"></script>
+    <script th:src="@{/js/datetimepicker/moment.min.js}"></script>
+    <script th:src="@{/js/datetimepicker/datetimepicker.min.js}"></script>
+    </th:block>F
+    <th:block th:if="${type == 'blog' or type == 'home'}">
+    <script th:src="@{/js/owl-carousel/owl.carousel.min.js}"></script>
+    </th:block>
+    <th:block th:if="${type == 'home'}">
+    <script th:src="@{/js/swiper/swiper.min.js}"></script>
+    <script th:src="@{/js/swiperanimation/SwiperAnimation.min.js}"></script>
+    <script th:src="@{/js/magnific-popup/jquery.magnific-popup.js}"></script>
+    </th:block>
+    <!-- Template Scripts (Do not remove)-->
+    <script th:src="@{/js/custom.js}"></script>
+    <!-- Plugins that load after custom.js -->
+    <th:block th:if="${type == 'treatment'}">
+    <script th:src="@{/js/owl-carousel/owl.carousel.min.js}"></script>
+    <script th:src="@{/js/slick/slick.min.js}"></script>
+    </th:block>
+</th:block>
+
+</body>
+</html>

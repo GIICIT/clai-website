@@ -1,78 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81M8RGH9NY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-81M8RGH9NY');
-    </script>
-    <meta charset="utf-8">
-    <meta name="keywords" content="HTML5 Template">
-    <meta name="author" content="giicit.co.za">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>CLAI - The Science of Health, the Art of Living</title>
-    <meta name="description" content="At CLAI, we believe that true beauty starts with optimal skin health and overall well-being. Our approach merges state-of-the-art technology, advanced scientific research and expert knowledge to provide personalised treatments that deliver real, lasting results.">
-
-    <meta property="og:title" content="CLAI - The Science of Health, the Art of Living">
-    <meta property="og:description" content="At CLAI, we believe that true beauty starts with optimal skin health and overall well-being. Our approach merges state-of-the-art technology, advanced scientific research and expert knowledge to provide personalised treatments that deliver real, lasting results.">
-    <meta property="og:image" content="https://clai.co.za/img/full-logo-lockup-black-50.png">
-    <meta property="og:url" content="https://clai.co.za">
-    <meta property="og:type" content="website">
-
-    <!-- Standard favicon -->
-    <link rel="icon" type="image/x-icon" th:href="@{/img/favicon/favicon.ico}">
-
-    <!-- PNG favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" th:href="@{/img/favicon/favicon-32x32.png}">
-    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/img/favicon/favicon-16x16.png}">
-
-    <!-- Apple Touch Icon (for iPhones & iPads) -->
-    <link rel="apple-touch-icon" th:href="@{/img/favicon/apple-touch-icon.png}">
-
-    <!-- Android Chrome Icons -->
-    <link rel="icon" type="image/png" sizes="192x192" th:href="@{/img/favicon/android-chrome-192x192.png}">
-    <link rel="icon" type="image/png" sizes="512x512" th:href="@{/img/favicon/android-chrome-512x512.png}">
-
-    <!-- Web App Manifest -->
-    <link rel="manifest" th:href="@{/img/favicon/site.webmanifest}">
-
-    <!-- Theme color for mobile browsers -->
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- CSS Global Compulsory (Do not remove)-->
-    <link rel="stylesheet" th:href="@{/css/font-awesome/all.min.css}">
-    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
-    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
-    <link rel="stylesheet" th:href="@{/css/owl-carousel/owl.carousel.min.css}">
-    <!-- Template Style -->
-    <link rel="stylesheet" th:href="@{/css/style.css}">
-
-  </head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="~{fragments/layout :: head('blog')}"></head>
   <body>
-  <!-- Floating WhatsApp Button with Official Logo -->
-  <div th:insert="fragments/whatsapp-float :: whatsapp-button"></div>
-    
-    <!--=================================
-    preloader -->
-    <div id="pre-loader">
-      <img src="/img/pre-loader/clai-loader-black-50.svg" alt="">
-    </div>
-    <!--=================================
-    preloader -->
-    
-    <!--=================================
-    Header -->
-    <header class="header header-sticky default">
-        <div th:insert="fragments/navbar :: nav-bar"></div>
-    </header>
-    <!--=================================
-    Header -->
+  <th:block th:replace="~{fragments/layout :: page-top}"></th:block>
     <!--=================================
     Blog -->
   <section class="space-pb pt-0 ">
@@ -236,35 +166,6 @@
       </section>
       <!--=================================
       Blog -->
-      <!--=================================
-      footer-->
-  <section>
-      <div th:insert="fragments/footer :: footer"></div>
-  </section>
-      <!--=================================
-      footer-->
-  <!--=================================
-  PDF Price List-->
-  <div th:replace="fragments/pdf-modal :: pdf-modal(
-    'pdfModal',
-    'pdfModalLabel',
-    'pdf-viewer',
-    'current-page',
-    'total-pages',
-    '/docs/pricelist.pdf',
-    'Price List'
-)"></div>
-  <!--=================================
-  PDF Price List-->
-      <!--=================================
-      Javascript -->
-      <!-- JS Global Compulsory (Do not remove)-->
-      <script src="js/jquery-3.7.1.min.js"></script>
-      <script src="js/popper/popper.min.js"></script>
-      <script src="js/bootstrap/bootstrap.min.js"></script>
-      <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
-      <script src="js/owl-carousel/owl.carousel.min.js"></script>
-      <!-- Template Scripts (Do not remove)-->
-      <script src="js/custom.js"></script>
+  <th:block th:replace="~{fragments/layout :: page-end('blog')}"></th:block>
   </body>
   </html>

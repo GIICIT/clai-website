@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+  Glass Skin Touch. Shown on: (see the pages that include fragments/treatments/glass-skin-touch).
+  Edit the text here once; every page that includes it updates.
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<!-- Accordion card: pass the accordion's id, its id prefix and a card number -->
+<div th:fragment="card(parentId, prefix, num)"
+     th:replace="~{fragments/accordion :: card(${parentId}, ${prefix}, ${num}, 'Glass Skin Touch',
+                   ~{fragments/treatments/glass-skin-touch :: content})}"></div>
+
+<!-- Card body. Keep it wrapped in th:block: a <p> fragment would be cut off at the first <ul>. -->
+<th:block th:fragment="content">
+<p class="mb-0">
+                          The CLAI Glass Skin Touch is an advanced combination treatment designed to improve skin tone, texture, firmness and overall skin quality.
+                          <br><br>
+                          This treatment combines a carefully selected superficial chemical peel, targeted Morpheus8 and superficial microneedling with PRP, allowing us to work at different levels of the skin within one treatment.
+                          <br><br>
+                          It is particularly suited to skin where we want to focus on uneven tone, texture and overall rejuvenation.
+                          <br><br>
+                          <b>The Treatment</b>
+                          <br><br>
+                          <b>RESURFACE &mdash; Professional Peel</b>
+                          <br>
+                          We begin with a carefully selected superficial chemical peel to gently refresh the skin and encourage a brighter, smoother complexion.
+                          <br><br>
+                          <b>TIGHTEN &mdash; Morpheus8</b>
+                          <br>
+                          Morpheus8 is used strategically, focusing predominantly on the lower face where tightening and collagen remodelling are needed most.
+                          <br><br>
+                          Radiofrequency energy is delivered into the deeper layers of the skin to stimulate collagen and improve firmness, definition and skin laxity.
+                          <br><br>
+                          <b>RENEW &mdash; Superficial Microneedling + PRP</b>
+                          <br>
+                          We finish with superficial microneedling combined with your own Platelet-Rich Plasma (PRP).
+                          <br><br>
+                          This final step focuses on overall skin quality, helping to support natural regeneration while refining texture and creating a healthier, more luminous appearance.
+                          <br><br>
+                          <b>Who Is Glass Skin Touch For?</b>
+                          <br>
+                          Ideal for concerns including:
+                          <br>
+                          <ul>
+                            <li>Dullness</li>
+                            <li>Uneven skin tone</li>
+                            <li>Uneven texture</li>
+                            <li>Enlarged pores</li>
+                            <li>Fine lines</li>
+                            <li>Loss of radiance</li>
+                          </ul>
+                          <b>Price: R 5800</b>
+                          <br><br>
+                          <b>Time: 120 minutes</b>
+</p>
+</th:block>
+
+</body>
+</html>

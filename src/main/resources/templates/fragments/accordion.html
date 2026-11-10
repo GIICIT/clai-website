@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+  One accordion card (treatment item). The markup lives here once; pages only pass data.
+
+    parentId : id of the surrounding <div class="accordion ivy-accordion" id="...">
+    prefix   : id prefix unique to that accordion, e.g. 'antiAgeingTreatments'
+    num      : card number word, unique within the accordion, e.g. 'Fourteen'
+    title    : button label
+    content  : fragment with the card body, usually <p class="mb-0">...</p>.
+               Declare it on a <th:block th:fragment="content">, never on the <p> itself:
+               the parser closes a <p> at the first <ul>, which would cut the text off.
+
+  Generated ids: <prefix>Heading<num> and <prefix>Collapse<num>.
+
+  Use directly:
+    <div th:replace="~{fragments/accordion :: card('accordion-x', 'xTreatments', 'One', 'Title',
+                       ~{fragments/treatments/some-treatment :: content})}"></div>
+  or through a shared treatment file (preferred, keeps the title with the text):
+    <div th:replace="~{fragments/treatments/glass-skin-facial :: card('accordion-x', 'xTreatments', 'One')}"></div>
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:fragment="card(parentId, prefix, num, title, content)" class="card">
+                    <div class="card-header" th:id="${prefix + 'Heading' + num}">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                th:attr="data-bs-target=${'#' + prefix + 'Collapse' + num},aria-controls=${prefix + 'Collapse' + num}"
+                                aria-expanded="false"
+                                th:text="${title}">Title</button>
+                      </h5>
+                    </div>
+                    <div th:id="${prefix + 'Collapse' + num}"
+                         class="collapse accordion-content"
+                         th:attr="aria-labelledby=${prefix + 'Heading' + num},data-bs-parent=${'#' + parentId}">
+                      <div class="card-body">
+                        <th:block th:replace="${content}"></th:block>
+                      </div>
+                    </div>
+</div>
+
+</body>
+</html>
