@@ -18,7 +18,7 @@ public class SecurityConfig {
                 )
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers("/css/**", "/fonts/**", "/img/**", "/js/**", "/sass/**", "/docs/**", "/videos/**",
-                                "/", "/home", "/ivy-therapy", "/toxin", "/dermal-filler", "/biostimulators", "/hyper-pigmentation",
+                                "/", "/home", "/ivy-therapy", "/toxin", "/dermal-filler", "/biostimulators", "/skin-boosters", "/hyper-pigmentation",
                                 "/acne-and-acne-scaring", "/rosacea-and-sensitive-skin", "/hair-treatments", "/intimate-wellness",
                                 "/anti-ageing", "/contact-us", "/email", "/blog-single-why-clai", "/winter-skin-prep",
                                 "/sitemap.xml", "/robots.txt")

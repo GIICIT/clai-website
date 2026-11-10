@@ -103,4 +103,13 @@ public class TreatmentsController {
         model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "anti-ageing";
     }
+
+    @GetMapping(value = { "/skin-boosters"})
+    public String skinBoostersPage(Model model) {
+        model.addAttribute("isTreatmentsActive", true);
+        model.addAttribute("isSkinBoostersActive", true);
+        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
+        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
+        return "skin-boosters";
+    }
 }
