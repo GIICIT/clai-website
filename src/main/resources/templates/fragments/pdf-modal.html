@@ -157,6 +157,7 @@
             }
 
             function open() {
+                if (window.claiTrack) window.claiTrack('price_list_open', { link_location: 'header' });
                 const pdfModal = bootstrap.Modal.getOrCreateInstance(document.getElementById(modalId));
                 pdfModal.show();
 

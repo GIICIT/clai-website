@@ -1,7 +1,7 @@
 <div th:fragment="nav-bar" xmlns:th="http://www.w3.org/1999/xhtml">
     <nav class="navbar navbar-static-top navbar-expand-lg" xmlns:th="http://www.w3.org/1999/xhtml">
         <div class="container-fluid main-header position-relative">
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><i
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-label="Open menu" aria-expanded="false"><i
                     class="fas fa-align-left"></i></button>
             <a class="navbar-brand" th:href="@{/home}">
                 <img class="img-fluid" src="/img/full-logo-lockup-white.svg" alt="CLAI home">
@@ -32,7 +32,7 @@
                     </li>
                     <li class="nav-item" th:classappend="${isPriceListActive} ? ' active' : ''">
                         <a class="nav-link"
-                           href="#"
+                           th:href="@{/docs/pricelist.pdf}"
                            onclick="window.pdfViewer_pdfModal.open(); return false;">
                             Price List<i class="fa-solid"></i>
                         </a>
@@ -69,16 +69,6 @@
                     <div th:insert="fragments/book-appointment :: book-appointment"></div>
                 </section>
 
-                <!-- Mobile / Tablet only -->
-                <a class="menu-btn d-inline-flex d-lg-none" href="#"
-                   data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                   aria-controls="offcanvasRight">
-                    <svg width="40" height="80" viewBox="0 0 80 80" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13.3333 60H33.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                        <path d="M13.3333 40H53.3333" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                        <path d="M13.3333 20H66.6666" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                    </svg>
-                </a>
             </div>
 
 
