@@ -9100,6 +9100,30 @@ Blog Style 01
   .blog-post .blog-post-title h1{ font-size: 18px; }
 }
 
+/* ===== Section titles and intro text (replace the inline styles that were copied onto every page) =====
+   .clai-title            Playfair title, left aligned   + .clai-title-lg (42px, page H1) or .clai-title-md (32px)
+   .clai-title-center     centred variant
+   .clai-text             12px black intro paragraph
+   Colour, font family and weight are forced by `.section-title .title` (above, !important), as before. */
+.clai-title{
+  color: #000;
+  text-align: left;
+  display: block;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.1;
+  font-weight: 200;
+}
+.clai-title.clai-title-center{ text-align: center; }
+.clai-title.clai-title-lg{ font-size: 42px !important; }
+.clai-title.clai-title-md{ font-size: 32px !important; }
+/* the second selector outranks the theme's `.feature-box .feature-content p` (16px / 28px) */
+.clai-text,
+.feature-box .feature-content p.clai-text{
+  color: #000;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
 /* WHY CLAI / blog page: make first section sit flush under navbar */
 .blog-tight-top {
   padding-top: 0 !important;

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  One accordion card (treatment item). The markup lives here once; pages only pass data.
+  Accordion cards. The markup lives here once; pages only pass data (normally ids from content/treatments.yml).
 
     parentId : id of the surrounding <div class="accordion ivy-accordion" id="...">
     prefix   : id prefix unique to that accordion, e.g. 'antiAgeingTreatments'
@@ -12,11 +12,14 @@
 
   Generated ids: <prefix>Heading<num> and <prefix>Collapse<num>.
 
-  Use directly:
-    <div th:replace="~{fragments/accordion :: card('accordion-x', 'xTreatments', 'One', 'Title',
-                       ~{fragments/treatments/some-treatment :: content})}"></div>
-  or through a shared treatment file (preferred, keeps the title with the text):
-    <div th:replace="~{fragments/treatments/glass-skin-facial :: card('accordion-x', 'xTreatments', 'One')}"></div>
+  Treatment cards come from content/treatments.yml (bean @treatments). Normally a section fragment renders them
+  from a list of ids (fragments/sections: items='a, b, c', prefix='xTreatments'); directly:
+    <th:block th:replace="~{fragments/accordion :: treatment-cards('accordion-x', 'xTreatments', 'glass-skin-facial, sunekos')}"></th:block>
+  Cards are numbered One, Two, ... in list order. A treatment with `children` gets a nested accordion under its
+  body (ids accordion-<prefix><num><Key>, e.g. accordion-biostimulatorsTreatmentsOneSculptra).
+
+  card(...) is for a hand-written one-off card (content = a th:block fragment holding the body):
+    <div th:replace="~{fragments/accordion :: card('accordion-x', 'xTreatments', 'One', 'Title', ~{::xBody})}"></div>
 -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <body>
@@ -36,6 +39,35 @@
                          th:attr="aria-labelledby=${prefix + 'Heading' + num},data-bs-parent=${'#' + parentId}">
                       <div class="card-body">
                         <th:block th:replace="${content}"></th:block>
+                      </div>
+                    </div>
+</div>
+
+<th:block th:fragment="treatment-cards(parentId, prefix, ids)">
+  <th:block th:each="tid, st : ${@treatments.list(ids)}">
+    <div th:replace="~{fragments/accordion :: treatment-card(${parentId}, ${prefix}, ${@treatments.word(st.count)}, ${@treatments.get(tid)})}"></div>
+  </th:block>
+</th:block>
+
+<div th:fragment="treatment-card(parentId, prefix, num, t)" class="card">
+                    <div class="card-header" th:id="${prefix + 'Heading' + num}">
+                      <h5 class="accordion-title mb-0">
+                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
+                                data-bs-toggle="collapse"
+                                th:attr="data-bs-target=${'#' + prefix + 'Collapse' + num},aria-controls=${prefix + 'Collapse' + num}"
+                                aria-expanded="false"
+                                th:text="${t.title}">Title</button>
+                      </h5>
+                    </div>
+                    <div th:id="${prefix + 'Collapse' + num}"
+                         class="collapse accordion-content"
+                         th:attr="aria-labelledby=${prefix + 'Heading' + num},data-bs-parent=${'#' + parentId}">
+                      <div class="card-body">
+                        <th:block th:utext="${t.body}"></th:block>
+                        <div th:if="${t.hasChildren()}" th:with="nid=${prefix + num + t.key()}"
+                             class="accordion ivy-accordion ivy-accordion-nested mt-3" th:id="${'accordion-' + nid}">
+                          <th:block th:replace="~{fragments/accordion :: treatment-cards(${'accordion-' + nid}, ${nid}, ${t.children})}"></th:block>
+                        </div>
                       </div>
                     </div>
 </div>

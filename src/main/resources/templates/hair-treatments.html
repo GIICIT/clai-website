@@ -5,11 +5,9 @@
   <th:block th:replace="~{fragments/layout :: page-top}"></th:block>
     <!--================================= -->
 
-  <section class="service white-bg space-pt">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="section-title text-center">
+  <section th:replace="~{fragments/sections :: intro-centered(text=~{::hairTreatmentsIntro0},
+                 spacing='space-pt')}">
+    <th:block th:fragment="hairTreatmentsIntro0">
             <h1 class="title">Hair and Scalp treatments</h1>
             <p class="section-description">
 
@@ -20,115 +18,20 @@
               results both in clinic and at home.
 
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
+          </th:block>
   </section>
 
   <!-- DROP-IN SECTION: products-banner with accordion (no extra title) -->
-  <section class="products-banner ivy-tight space-p">
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-
-        <!-- ACCORDION (2nd on mobile, 1st on desktop) -->
-        <div class="col-lg-7 col-md-12 features-section amazing-features order-2 order-lg-2">
-          <div class="section-title">
-            <div class="title" style="color: #000; text-align: left; display: block; font-size:32px !important; font-family: 'Playfair Display', serif; line-height: 1.1; font-weight: 200;">
-              Hair Treatments
-            </div>
-            <div class="row" style="margin-top: 15px;">
-              <div class="col-md-9">
-
-                <div class="accordion ivy-accordion" id="accordion-hair-treatments">
-
-                  <div class="card">
-                    <div class="card-header" id="hairTreatmentsHeadingOne">
-                      <h5 class="accordion-title mb-0">
-                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#hairTreatmentsCollapseOne"
-                                aria-expanded="false"
-                                aria-controls="hairTreatmentsCollapseOne">
-                          PRF renew scalp treatment
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="hairTreatmentsCollapseOne"
-                         class="collapse accordion-content"
-                         aria-labelledby="hairTreatmentsHeadingOne"
-                         data-bs-parent="#accordion-hair-treatments">
-                      <div class="card-body">
-                        <p class="mb-0">
-                          Our advanced PRP scalp treatment combines the regenerative power of Platelet-Rich Plasma (PRP)
-                          and Platelet-Rich Fibrin (PRF) with a multi-level delivery approach for optimal results. Using
-                          a specialised mesotherapy technique, growth factors are delivered directly into the scalp to
-                          stimulate dormant follicles, improve circulation, and support natural hair regeneration. This
-                          is combined with microneedling using a customised PRP serum blended with targeted hair growth
-                          actives, enhancing absorption and maximising follicle stimulation. The result is a comprehensive,
-                          science-driven treatment designed to strengthen, restore, and support healthier, fuller hair
-                          growth over time.
-
-                          <br><br>
-                          <b>Price: R 3500</b>
-                          <br><br>
-                          <b>Time allocation: 75 minutes</b>
-
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card-header" id="hairTreatmentsHeadingTwo">
-                      <h5 class="accordion-title mb-0">
-                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#hairTreatmentsCollapseTwo"
-                                aria-expanded="false"
-                                aria-controls="hairTreatmentsCollapseTwo">
-                          PRF Scalp needling
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="hairTreatmentsCollapseTwo"
-                         class="collapse accordion-content"
-                         aria-labelledby="hairTreatmentsHeadingTwo"
-                         data-bs-parent="#accordion-hair-treatments">
-                      <div class="card-body">
-                        <p class="mb-0">
-                          Our PRP needling treatment is a regenerative, minimally invasive approach to improving hair
-                          density and scalp health. By combining Platelet-Rich Plasma (PRP) with advanced microneedling,
-                          we stimulate natural healing pathways while delivering concentrated growth factors directly to
-                          the hair follicles. The addition of targeted hair growth active serums enhances absorption and
-                          supports follicle function, helping to reduce shedding, strengthen existing hair, and encourage
-                          healthier, fuller growth over time.
-
-                          <br><br>
-                          <b>Price: R 1950</b>
-                          <br><br>
-                          <b>Time allocation: 60 minutes</b>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- IMAGE (1st on mobile, 2nd on desktop) -->
-        <div class="col-lg-5 col-md-12 order-1 order-lg-1"
-             style="background-image: url(img/treatments/hair-treatments/hair_treatments.jpg); background-position: center; background-size: cover;">
-          <img width="736" height="917" loading="lazy" decoding="async" class="img-fluid d-block d-lg-none" src="img/treatments/hair-treatments/hair_treatments.jpg" alt="Hair and scalp treatment at CLAI Durbanville">
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <section th:replace="~{fragments/sections :: accordion-split(title='Hair Treatments',
+                 accordionId='accordion-hair-treatments',
+                 image='img/treatments/hair-treatments/hair_treatments.jpg',
+                 imageW=736,
+                 imageH=917,
+                 imageAlt='Hair and scalp treatment at CLAI Durbanville',
+                 imageSide='left',
+                 spacing='space-p',
+                 prefix='hairTreatments',
+                 items='prf-renew-scalp-treatment, prf-scalp-needling')}"></section>
   <th:block th:replace="~{fragments/layout :: page-end('treatment')}"></th:block>
   </body>
 </html>

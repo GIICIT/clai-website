@@ -5,11 +5,14 @@
   <th:block th:replace="~{fragments/layout :: page-top}"></th:block>
     <!--================================= -->
 
-  <section class="service white-bg space-pt">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="section-title text-center">
+  <section th:replace="~{fragments/sections :: intro-centered(text=~{::intimateWellnessIntro0},
+                 spacing='space-pt',
+                 image='img/treatments/intimate-wellness/intimate_wellness.jpg',
+                 imageW=736,
+                 imageH=1104,
+                 imageAlt='Intimate wellness treatments at CLAI Durbanville',
+                 imageCentered=true)}">
+    <th:block th:fragment="intimateWellnessIntro0">
             <h1 class="title">Intimate Wellness</h1>
             <p class="section-description">
               Intimate wellness is an essential part of overall health, yet it is often overlooked. At CLAI, our intimate
@@ -25,113 +28,15 @@
               <br><br>
               Because true wellness includes every part of you
             </p>
-          </div>
-        </div>
-      </div>
-      <!-- Image -->
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <div class="service-img">
-            <img width="736" height="1104" class="img-fluid" src="img/treatments/intimate-wellness/intimate_wellness.jpg" alt="Intimate wellness treatments at CLAI Durbanville">
-          </div>
-        </div>
-      </div>
-      <!-- Image -->
-    </div>
+          </th:block>
   </section>
 
-  <section class="products-banner ivy-tight">
-    <div class="container-fluid p-0">
-      <div class="row g-0 justify-content-center">
-        <div class="col-lg-7 col-md-12 features-section amazing-features">
-          <div class="section-title">
-            <div class="title" style="color: #000; text-align: center; display: block; font-size:32px !important; font-family: 'Playfair Display', serif; line-height: 1.1; font-weight: 200;">
-              Intimate Wellness Treatments
-            </div>
-
-            <div class="row justify-content-center" style="margin-top: 15px;">
-              <div class="col-md-9">
-
-                <div class="accordion ivy-accordion" id="accordion-intimate-wellness-treatments">
-
-                  <div class="card">
-                    <div class="card-header" id="intimateWellnessTreatmentsHeadingOne">
-                      <h5 class="accordion-title mb-0">
-                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#intimateWellnessTreatmentsCollapseOne"
-                                aria-expanded="false"
-                                aria-controls="intimateWellnessTreatmentsCollapseOne">
-                          MELINE Intimate Peel
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="intimateWellnessTreatmentsCollapseOne"
-                         class="collapse accordion-content"
-                         aria-labelledby="intimateWellnessTreatmentsHeadingOne"
-                         data-bs-parent="#accordion-intimate-wellness-treatments">
-                      <div class="card-body">
-                        <p class="mb-0">
-                          The MELINE Intimate Peel is an advanced depigmentation treatment designed specifically for delicate
-                          intimate areas. It works to safely reduce pigmentation, even out skin tone, and improve overall
-                          skin quality while supporting the skin barrier. This specialised peel helps to restore a brighter,
-                          more uniform appearance, enhancing both confidence and skin health with minimal downtime.
-                          <br><br>
-                          <b>Price: R 1650</b>
-                          <br><br>
-                          <b>Time: 60 minutes</b>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card-header" id="intimateWellnessTreatmentsHeadingTwo">
-                      <h5 class="accordion-title mb-0">
-                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#intimateWellnessTreatmentsCollapseTwo"
-                                aria-expanded="false"
-                                aria-controls="intimateWellnessTreatmentsCollapseTwo">
-                          Dermamelan® Intimate
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="intimateWellnessTreatmentsCollapseTwo"
-                         class="collapse accordion-content"
-                         aria-labelledby="intimateWellnessTreatmentsHeadingTwo"
-                         data-bs-parent="#accordion-intimate-wellness-treatments">
-                      <div class="card-body">
-                        <p class="mb-0">
-                          The Dermamelan Intimate is a professional depigmentation treatment designed to correct more advanced
-                          or stubborn pigmentation in intimate areas. It works by regulating melanin production, reducing
-                          darkened areas, and restoring a more even, balanced skin tone. In addition to brightening, it also
-                          supports skin quality by improving hydration and overall tissue health. This treatment offers a
-                          results-driven approach to intimate pigmentation, with a structured protocol for long-lasting improvement.
-                          <br><br>
-                          <b>Price: R 8490</b>
-                          <br><br>
-                          <b>Time: 60 minutes</b>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div th:replace="~{fragments/treatments/prf-intimate-rejuvenation :: card('accordion-intimate-wellness-treatments', 'intimateWellnessTreatments', 'Three')}"></div>
-
-                  <div th:replace="~{fragments/treatments/intimate-filler :: card('accordion-intimate-wellness-treatments', 'intimateWellnessTreatments', 'Four')}"></div>
-
-                  <div th:replace="~{fragments/treatments/intimate-renewal :: card('accordion-intimate-wellness-treatments', 'intimateWellnessTreatments', 'Five')}"></div>
-
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section th:replace="~{fragments/sections :: accordion-centered(title='Intimate Wellness Treatments',
+                 accordionId='accordion-intimate-wellness-treatments',
+                 band=true,
+                 prefix='intimateWellnessTreatments',
+                 items='meline-intimate-peel, dermamelan-intimate, prf-intimate-rejuvenation,
+                        intimate-filler, intimate-renewal')}"></section>
   <th:block th:replace="~{fragments/layout :: page-end('treatment')}"></th:block>
   </body>
 </html>

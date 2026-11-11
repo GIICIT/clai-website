@@ -9,25 +9,25 @@
             </a>
             <div class="navbar-collapse collapse justify-content-center justify-content-lg-center">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item" th:classappend="${isHomeActive} ? ' active' : ''">
+                    <li class="nav-item" th:classappend="${page?.home} ? ' active' : ''">
                         <a class="nav-link" th:href="@{/home}" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa-solid"></i></a>
                     </li>
-                    <li class="nav-item dropdown" th:classappend="${isTreatmentsActive} ? ' active' : ''">
+                    <li class="nav-item dropdown" th:classappend="${page?.treatment} ? ' active' : ''">
                         <a class="nav-link" id="navbarDropdown" role="button"
                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Treatments<i
                                 class="fa-solid fa-plus"></i></a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" th:href="@{/ivy-therapy}" th:classappend="${isIvyTherapyActive} ? ' active' : ''"><span>IV Therapy</span></a></li>
-                            <li><a class="dropdown-item" th:href="@{/toxin}" th:classappend="${isToxinActive} ? ' active' : ''"><span>Toxin</span></a></li>
-                            <li><a class="dropdown-item" th:href="@{/dermal-filler}" th:classappend="${isDermalFillerActive} ? ' active' : ''"><span>Dermal Filler</span></a></li>
-                            <li><a class="dropdown-item" th:href="@{/biostimulators}" th:classappend="${isBiostimulatorsActive} ? ' active' : ''"><span>Biostimulators</span></a></li>
-                            <li><a class="dropdown-item" th:href="@{/skin-boosters}" th:classappend="${isSkinBoostersActive} ? ' active' : ''"><span>Skin Boosters</span></a></li>
-                            <li><a class="dropdown-item" th:href="@{/hyper-pigmentation}" th:classappend="${isHyperPigmentationActive} ? ' active' : ''"><span>Hyperpigmentation</span></a></li>
-                            <li><a class="dropdown-item" th:href="@{/acne-and-acne-scarring}" th:classappend="${isAcneAndAcneScarringActive} ? ' active' : ''"><span>Acne & Acne Scarring</span></a></li>
-                            <li><a class="dropdown-item" th:href="@{/rosacea-and-sensitive-skin}" th:classappend="${isRosaceaAndSensitiveSkinActive} ? ' active' : ''"><span>Rosacea & Sensitive Skin</span></a></li>
-                            <li><a class="dropdown-item" th:href="@{/hair-treatments}" th:classappend="${isHairTreatmentsActive} ? ' active' : ''"><span>Hair Treatments</span></a></li>
-                            <li><a class="dropdown-item" th:href="@{/intimate-wellness}" th:classappend="${isIntimateWellnessActive} ? ' active' : ''"><span>Intimate Wellness</span></a></li>
-                            <li><a class="dropdown-item" th:href="@{/anti-ageing}" th:classappend="${isAntiAgeingActive} ? ' active' : ''"><span>Anti Ageing</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/ivy-therapy}" th:classappend="${page?.path == '/ivy-therapy'} ? ' active' : ''"><span>IV Therapy</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/toxin}" th:classappend="${page?.path == '/toxin'} ? ' active' : ''"><span>Toxin</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/dermal-filler}" th:classappend="${page?.path == '/dermal-filler'} ? ' active' : ''"><span>Dermal Filler</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/biostimulators}" th:classappend="${page?.path == '/biostimulators'} ? ' active' : ''"><span>Biostimulators</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/skin-boosters}" th:classappend="${page?.path == '/skin-boosters'} ? ' active' : ''"><span>Skin Boosters</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/hyper-pigmentation}" th:classappend="${page?.path == '/hyper-pigmentation'} ? ' active' : ''"><span>Hyperpigmentation</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/acne-and-acne-scarring}" th:classappend="${page?.path == '/acne-and-acne-scarring'} ? ' active' : ''"><span>Acne & Acne Scarring</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/rosacea-and-sensitive-skin}" th:classappend="${page?.path == '/rosacea-and-sensitive-skin'} ? ' active' : ''"><span>Rosacea & Sensitive Skin</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/hair-treatments}" th:classappend="${page?.path == '/hair-treatments'} ? ' active' : ''"><span>Hair Treatments</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/intimate-wellness}" th:classappend="${page?.path == '/intimate-wellness'} ? ' active' : ''"><span>Intimate Wellness</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/anti-ageing}" th:classappend="${page?.path == '/anti-ageing'} ? ' active' : ''"><span>Anti Ageing</span></a></li>
                         </ul>
                     </li>
                     <li class="nav-item" th:classappend="${isPriceListActive} ? ' active' : ''">
@@ -37,17 +37,17 @@
                             Price List<i class="fa-solid"></i>
                         </a>
                     </li>
-                    <li class="nav-item dropdown" th:classappend="${isBlogActive} ? ' active' : ''">
+                    <li class="nav-item dropdown" th:classappend="${page?.blog} ? ' active' : ''">
                         <a class="nav-link" id="blogNavbarDropdown" role="button"
                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Blog<i
                                 class="fa-solid fa-plus"></i></a>
                         <ul class="dropdown-menu" aria-labelledby="blogNavbarDropdown">
-                            <li><a class="dropdown-item" th:href="@{/blog-single-why-clai}" th:classappend="${isWhyClaiActive} ? ' active' : ''"><span>Why CLAI</span></a>
+                            <li><a class="dropdown-item" th:href="@{/blog-single-why-clai}" th:classappend="${page?.path == '/blog-single-why-clai'} ? ' active' : ''"><span>Why CLAI</span></a>
                             </li>
-                            <li><a class="dropdown-item" th:href="@{/winter-skin-prep}" th:classappend="${isWinterSkinPrepActive} ? ' active' : ''"><span>Winter Skin Prep</span></a></li>
+                            <li><a class="dropdown-item" th:href="@{/winter-skin-prep}" th:classappend="${page?.path == '/winter-skin-prep'} ? ' active' : ''"><span>Winter Skin Prep</span></a></li>
                         </ul>
                     </li>
-                    <li class="nav-item d-lg-none" th:classappend="${isContactUsActive} ? ' active' : ''">
+                    <li class="nav-item d-lg-none" th:classappend="${page?.path == '/contact-us'} ? ' active' : ''">
                         <a class="nav-link" th:href="@{/contact-us}">Contact Us</a>
                     </li>
                 </ul>
@@ -59,7 +59,7 @@
                     <nav class="navbar navbar-light bg-transparent p-0"> <!-- use navbar-dark if your header uses dark -->
                         <div class="navbar-collapse show p-0"><!-- keeps selector chain: .navbar .navbar-collapse .navbar-nav .nav-link -->
                             <ul class="navbar-nav flex-row mb-0 me-3">
-                                <li class="nav-item" th:classappend="${isContactUsActive} ? ' active' : ''">
+                                <li class="nav-item" th:classappend="${page?.path == '/contact-us'} ? ' active' : ''">
                                     <a class="nav-link px-3" th:href="@{/contact-us}">Contact Us</a>
                                 </li>
                             </ul>

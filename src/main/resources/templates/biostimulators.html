@@ -4,22 +4,13 @@
   <body>
   <th:block th:replace="~{fragments/layout :: page-top}"></th:block>
 
-  <section class="products-banner">
-    <div class="container-fluid  p-0">
-      <div class="row g-0">
-        <div class="col-lg-5 col-md-12" style="background-image: url(img/treatments/biostimulators/biostimulators_1.jpg); background-position: center; background-size: cover;">
-          <img width="1800" height="1201" class="img-fluid d-block d-lg-none" src="img/treatments/biostimulators/biostimulators_1.jpg" alt="Sculptra poly-L-lactic acid biostimulator held by a CLAI practitioner">
-        </div>
-        <div class="col-lg-7 col-md-12 features-section amazing-features">
-          <div class="section-title">
-            <h1 class="title" style="color: #000; text-align: left; display: block; font-size:42px !important; font-family: 'Playfair Display', serif; line-height: 1.1; font-weight: 200;">
-              Biostimulators
-            </h1>
-            <div class="row" style="margin-top: 15px;">
-              <div class="col-md-9">
-                <div class="feature-box feature-box-style-05 mb-4 mb-md-5">
-                  <div class="feature-content">
-                    <p style="color: #000; font-size: 12px; line-height: 1.3;">
+  <section th:replace="~{fragments/sections :: hero-split(title='Biostimulators',
+                 image='img/treatments/biostimulators/biostimulators_1.jpg',
+                 imageW=1800,
+                 imageH=1201,
+                 imageAlt='Sculptra poly-L-lactic acid biostimulator held by a CLAI practitioner',
+                 text=~{::biostimulatorsIntro})}">
+    <th:block th:fragment="biostimulatorsIntro">
                       <b>What Are Biostimulators</b>
                       <br><br>
                       Biostimulators are advanced injectable treatments that stimulate your body&rsquo;s natural collagen production, helping restore skin firmness, improve elasticity, and support a more youthful appearance over time.
@@ -31,58 +22,18 @@
                       The result? Skin that looks firmer, smoother and better supported, with improvements that develop gradually over time.
                       <br><br>
                       At CLAI, every treatment begins with an individual assessment to determine the most appropriate approach for your skin, anatomy and aesthetic goals.
-                    </p>
-                  </div>
-                </div>
-                <section>
-                  <div th:insert="fragments/book-appointment :: book-appointment"></div>
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+                    </th:block>
   </section>
 
   <!-- DROP-IN SECTION: products-banner with accordion (no extra title) -->
-  <section class="products-banner ivy-tight">
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-
-        <!-- ACCORDION (2nd on mobile, 1st on desktop) -->
-        <div class="col-lg-7 col-md-12 features-section amazing-features order-2 order-lg-1">
-          <div class="section-title">
-            <div class="title" style="color: #000; text-align: left; display: block; font-size:32px !important; font-family: 'Playfair Display', serif; line-height: 1.1; font-weight: 200;">
-              Biostimulators Treatments
-            </div>
-            <div class="row" style="margin-top: 15px;">
-              <div class="col-md-9">
-
-                <div class="accordion ivy-accordion" id="accordion-biostimulators-treatments">
-
-                  <div th:replace="~{fragments/treatments/sculptra :: card('accordion-biostimulators-treatments', 'biostimulatorsTreatments', 'One')}"></div>
-
-                  <div th:replace="~{fragments/treatments/radiesse :: card('accordion-biostimulators-treatments', 'biostimulatorsTreatments', 'Two')}"></div>
-
-                  <div th:replace="~{fragments/treatments/sunekos :: card('accordion-biostimulators-treatments', 'biostimulatorsTreatments', 'Three')}"></div>
-
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- IMAGE (1st on mobile, 2nd on desktop) -->
-        <div class="col-lg-5 col-md-12 order-1 order-lg-2"
-             style="background-image: url(img/treatments/biostimulators/biostimulators_2.jpg); background-position: center; background-size: cover;">
-          <img width="1593" height="1800" loading="lazy" decoding="async" class="img-fluid d-block d-lg-none" src="img/treatments/biostimulators/biostimulators_2.jpg" alt="Biostimulator treatment at CLAI">
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <section th:replace="~{fragments/sections :: accordion-split(title='Biostimulators Treatments',
+                 accordionId='accordion-biostimulators-treatments',
+                 image='img/treatments/biostimulators/biostimulators_2.jpg',
+                 imageW=1593,
+                 imageH=1800,
+                 imageAlt='Biostimulator treatment at CLAI',
+                 prefix='biostimulatorsTreatments',
+                 items='sculptra, radiesse, sunekos')}"></section>
   <th:block th:replace="~{fragments/layout :: page-end('treatment')}"></th:block>
   </body>
 </html>

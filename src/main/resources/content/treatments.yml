@@ -1,0 +1,1688 @@
+# Every accordion card on the site: title + text, written once and referenced from pages by id.
+#
+# Pages list ids in their section calls, e.g.
+#   <section th:replace="~{fragments/sections :: accordion-split(..., prefix='toxinTreatments',
+#                  items='botox, dysport, microtox')}"></section>
+# and fragments/accordion :: treatment-cards renders them (numbered One, Two, ... in list order).
+#
+# Entry format:
+#   some-id:                      lowercase, hyphens; referenced by pages
+#     title: "Button label"       plain text (no HTML entities: write & not &amp;)
+#     body: |                     card body HTML, normally one <p class="mb-0">; paragraphs are separated
+#       <p class="mb-0">          by <br><br>, sub-headings are <b>...</b>, lists are <ul><li>
+#       ...
+#       </p>
+#     children: [a, b]            optional: nested accordion of other entries under the body (e.g. Sculptra)
+#
+# Ids ending in --<page> are page-specific versions of a treatment whose text (and sometimes price or time)
+# differs between pages. Ask the client before merging them.
+
+# ===== ivy-therapy :: accordion-iv-therapy
+
+skin-health-infusion:
+  title: "Skin health infusion"
+  body: |
+    <p class="mb-0">
+      Inflammation is how your body naturally responds to injury or illness. However, if it becomes
+      chronic, inflammation can lead to health problems. These include pain, fatigue, and even long-term
+      diseases. Thankfully, there are effective ways to manage and reduce inflammation. One of the
+      most potent methods is IV therapy. Our skin health infusion, available at CLAI, is designed to
+      help reduce inflammation and improve your overall wellness. This drip combines Glutathione,
+      Vitamin C, Selenium, zinc sulphate and Electrolytes to maximize benefits.
+      <br><br>
+      <b>Price: R 1550</b>
+    </p>
+
+beauty-booster-blemish-free-infusion:
+  title: "Beauty booster blemish-free Infusion"
+  body: |
+    <p class="mb-0">
+      Our Blemish-Free infusion is designed to target acne from the inside out, delivering a powerful
+      blend of vitamins, antioxidants and anti-inflammatory nutrients directly into your bloodstream
+      for maximum absorption. This customized formula helps reduce inflammation, regulate oil production
+      and promote clearer, healthier skin. Perfect for those struggling with persistent breakouts,
+      it supports skin healing and overall well-being, giving you a radiant, blemish-free complexion.
+      <br><br>
+      <b>Price: R 1450</b>
+    </p>
+
+skin-radiance-drip-infusion:
+  title: "Skin radiance drip infusion"
+  body: |
+    <p class="mb-0">
+      Our Pigmentation IV Infusion is specially formulated to brighten and even out skin tone by delivering
+      a potent blend of antioxidants, glutathione, and skin-rejuvenating vitamins directly into your system.
+      This infusion helps reduce dark spots, sun damage, and uneven pigmentation while promoting a radiant,
+      healthy glow from within. Ideal for those looking to achieve a clearer, more luminous complexion.
+      <br><br>
+      <b>Price: R 1300</b>
+    </p>
+
+collagen-booster-infusion:
+  title: "Collagen booster infusion"
+  body: |
+    <p class="mb-0">
+      Our Collagen booster IV Infusion is packed with powerful antioxidants, collagen-boosting nutrients,
+      and hydrating vitamins to combat the signs of aging from within. This revitalizing formula helps
+      improve skin elasticity, reduce fine lines and wrinkles, and promote a youthful, radiant glow.
+      By nourishing your body at a cellular level it supports overall skin health, leaving you looking
+      and feeling rejuvenated.
+      <br><br>
+      <b>Price: R 1600</b>
+    </p>
+
+# ===== toxin :: accordion-toxin
+
+microtox-babytox:
+  title: "Microtox / BabyTox"
+  body: |
+    <p class="mb-0">
+      Microtox, also known as Baby Botox, uses tiny, precise doses of botulinum toxin to soften fine
+      lines without creating a “frozen” look. This treatment is perfect for those who want subtle,
+      natural-looking results while maintaining facial movement and expression.
+    </p>
+
+toxin-for-migraines:
+  title: "Toxin for Migraines"
+  body: |
+    <p class="mb-0">
+      Neurotoxin injections can provide effective relief for chronic migraines. By targeting specific
+      muscles in the head and neck, the treatment relaxes tension and helps prevent migraine triggers.
+      Many patients experience a noticeable reduction in the frequency and severity of their headaches.
+    </p>
+
+toxin-for-lines-and-wrinkles:
+  title: "Toxin for Lines & Wrinkles"
+  body: |
+    <p class="mb-0">
+      One of the most popular uses of neurotoxins is to smooth wrinkles in the upper face, such as
+      frown lines, forehead lines, and crow’s feet. By temporarily relaxing the targeted muscles,
+      the skin looks smoother, softer, and more refreshed.
+    </p>
+
+bruxism-teeth-grinding:
+  title: "Bruxism (Teeth Grinding)"
+  body: |
+    <p class="mb-0">
+      Bruxism, or teeth grinding and clenching, can cause jaw pain, headaches, and damage to the teeth.
+      Neurotoxin injections relax the overactive jaw muscles, easing discomfort and protecting your
+      smile while improving overall jawline comfort.
+    </p>
+
+chin-dimpling-treatment:
+  title: "Chin Dimpling Treatment"
+  body: |
+    <p class="mb-0">
+      A “peach pit” or “orange peel” texture on the chin, as well as downturned mouth corners
+      (caused by the DAO muscle), can create an aged or tired look. With targeted neurotoxin injections,
+      we smooth chin dimpling and lift the corners of the mouth for a more refined, youthful appearance.
+    </p>
+
+hyperhidrosis-excessive-sweating:
+  title: "Hyperhidrosis (Excessive Sweating)"
+  body: |
+    <p class="mb-0">
+      Excessive sweating can be uncomfortable and affect confidence. Neurotoxin injections block the
+      signals that activate sweat glands, significantly reducing sweat production in areas like the
+      underarms, hands, or feet. The result is long-lasting dryness and comfort.
+    </p>
+
+lip-flip:
+  title: "Lip Flip"
+  body: |
+    <p class="mb-0">
+      The Lip Flip enhances the upper lip by relaxing the surrounding muscles with tiny neurotoxin
+      injections. This causes the lip to subtly “flip” outward, creating the appearance of fuller,
+      more defined lips-without adding volume or using fillers.
+    </p>
+
+platysma-band-toxin-nefertiti-lift:
+  title: "Platysma Band Toxin / Nefertiti Lift"
+  body: |
+    <p class="mb-0">
+      Over time, vertical neck bands and sagging skin can affect the jawline and neck contour.
+      The Nefertiti Lift targets the platysma muscle with neurotoxin injections to relax tight bands,
+      smooth the neck, and gently lift the jawline-restoring a more elegant profile.
+    </p>
+
+# ===== dermal-filler :: accordion-dermal-filler-treatments
+
+cheek-filler:
+  title: "Cheek Filler"
+  body: |
+    <p class="mb-0">
+      Cheek fillers restore volume and lift to the mid-face, enhancing cheekbone definition and
+      rejuvenating your overall facial profile.
+    </p>
+
+chin-and-jawline-filler:
+  title: "Chin & Jawline Filler"
+  body: |
+    <p class="mb-0">
+      By adding structure and contour, chin and jawline fillers create definition, improve facial
+      balance, and sculpt a sharper, more harmonious profile.
+    </p>
+
+hand-filler:
+  title: "Hand Filler"
+  body: |
+    <p class="mb-0">
+      Hands often show signs of aging first. Hand fillers restore volume, smooth crepey skin, and
+      reduce the visibility of veins and tendons for a more youthful look.
+    </p>
+
+liquid-facelift:
+  title: "Liquid Facelift"
+  body: |
+    <p class="mb-0">
+      The liquid facelift uses a combination of dermal fillers to lift, contour, and rejuvenate
+      multiple areas of the face without surgery, providing a refreshed and youthful appearance.
+    </p>
+
+marionette-line-filler:
+  title: "Marionette Line Filler"
+  body: |
+    <p class="mb-0">
+      Filling the lines that run downward from the corners of the mouth softens a sad or tired look,
+      restoring a lifted and more positive expression.
+    </p>
+
+nasolabial-fold-filler:
+  title: "Nasolabial Fold Filler"
+  body: |
+    <p class="mb-0">
+      These fillers smooth the deep folds between the nose and mouth, softening shadows and restoring
+      a youthful contour to the mid-face.
+    </p>
+
+neck-filler:
+  title: "Neck Filler"
+  body: |
+    <p class="mb-0">
+      Neck fillers improve skin texture, hydration, and elasticity while reducing lines and creases
+      for a smoother, more refined neck appearance.
+    </p>
+
+non-surgical-rhinoplasty:
+  title: "Non-Surgical Rhinoplasty"
+  body: |
+    <p class="mb-0">
+      This advanced filler technique reshapes and refines the nose without surgery. It can smooth
+      bumps, lift the nasal tip, and improve overall profile balance.
+    </p>
+
+tear-trough-filler:
+  title: "Tear Trough Filler"
+  body: |
+    <p class="mb-0">
+      Tear trough fillers address hollowness and dark circles under the eyes, refreshing the eye
+      area and reducing a tired appearance.
+    </p>
+
+temple-filler:
+  title: "Temple Filler"
+  body: |
+    <p class="mb-0">
+      Temple fillers restore volume loss in the upper face, softening hollowing and creating a more
+      balanced, youthful frame for the eyes.
+    </p>
+
+lip-filler:
+  title: "Lip Filler"
+  body: |
+    <p class="mb-0">
+        <b>1.CLAI Lip Plump Treatment</b>
+        <br>
+        A beautifully balanced lip enhancement designed to restore hydration, volume and natural definition to the lips. Using carefully placed hyaluronic acid filler, this treatment enhances the shape and fullness of the lips while maintaining a soft, natural look.
+        <br><br>
+        The goal is not to overfill, but to create lips that look refreshed, youthful and perfectly proportioned to your face.
+        <br><br>
+        <b>Ideal for:</b>
+        <br><br>
+      <ul>
+        <li>Enhancing lip volume</li>
+        <li>Improving lip shape and definition</li>
+        <li>Restoring hydration and softness to the lips</li>
+        <li>Creating a natural, elegant lip enhancement</li>
+      </ul>
+        <b>Price: R 4500</b>
+      </p>
+
+      <br><br>
+
+      <p class="mb-0">
+        <b>2.CLAI Lip Refine Treatment</b>
+        <br>
+        The CLAI Lip Refine Treatment goes beyond volume to focus on balance and harmony of the upper lip and smile. This treatment combines lip filler with advanced techniques such as a lip flip or treatment for a gummy smile when needed.
+        <br><br>
+        By addressing both the structure of the lips and the movement of the upper lip, we create a more refined, natural-looking smile while maintaining beautiful lip shape and proportion.
+        <br><br>
+        <b>Ideal for:</b>
+        <br><br>
+      <ul>
+        <li>Refining lip shape and symmetry</li>
+        <li>Softening a gummy smile</li>
+        <li>Enhancing lip definition with subtle lift</li>
+        <li>Achieving a more balanced and elegant smile</li>
+      </ul>
+      <b>Price: R 5200</b>
+      </p>
+
+      <br><br>
+
+      <p class="mb-0">
+        <b>3.CLAI Lip Rejuvenation Treatment</b>
+        <br>
+        The CLAI Lip Rejuvenation Treatment is a comprehensive lower-face enhancement designed to restore harmony between the lips, chin and jawline. This treatment may include lip filler a lip flip or gummy smile correction, as well as subtle chin or jawline refinement where needed.
+        <br><br>
+        By treating the lips as part of the entire lower face, we can create a more youthful, balanced and naturally beautiful result.
+        <br><br>
+        <b>Ideal for:</b>
+        <br><br>
+      <ul>
+        <li>Lip enhancement with full lower-face balance</li>
+        <li>Improving facial proportions and harmony</li>
+        <li>Enhancing the chin or jawline for better lip support</li>
+        <li>Achieving a more youthful and refined lower face</li>
+      </ul>
+      <b>Price: R 6980</b>
+    </p>
+
+# ===== biostimulators :: accordion-biostimulators-treatments
+
+sculptra:
+  title: "Sculptra"
+  body: |
+    <p class="mb-0">
+      Sculptra is a unique, collagen-stimulating injectable that works beneath the skin to gradually restore volume, improve skin quality, and enhance natural contours. Unlike traditional fillers, which provide instant volume, Sculptra encourages your body to rebuild its own collagen for results that develop subtly and last up to two years.
+      <br><br>
+      Our <b>Sculptra treatments</b> start at <b>R7,900 per vial</b>, with a <b>discounted rate</b> available when you use <b>multiple vials</b> in the same session.
+    </p>
+  children: [sculptra-face, sculptra-body]
+
+sculptra-face:
+  title: "Sculptra Face"
+  body: |
+    <p class="mb-0">
+      Facial Sculptra treatments are ideal for restoring volume in areas affected by aging, such as hollow cheeks, temples, and jawline. It smooths lines, improves skin thickness, and provides a refreshed, natural look that evolves.
+    </p>
+
+sculptra-body:
+  title: "Sculptra Body"
+  body: |
+    <p class="mb-0">
+      Sculptra can also be used to improve skin quality and contour in areas such as the buttocks, thighs, arms, and d&eacute;colletage. By stimulating collagen production, it enhances firmness, smooths crepey skin, and improves overall skin texture.
+    </p>
+
+radiesse:
+  title: "Radiesse"
+  body: |
+    <p class="mb-0">
+      Radiesse is an advanced injectable treatment that combines immediate structural support with long-term collagen stimulation. Formulated with calcium hydroxylapatite (CaHA), it helps stimulate your skin&rsquo;s natural collagen and elastin production, improving firmness, elasticity and definition over time. Treatment is tailored to your individual anatomy and aesthetic goals.
+      <br><br>
+      Our <b>Radiesse treatments</b> are priced from <b>R8,500 per vial</b>, with a <b>discounted rate</b> available when <b>multiple vials</b> are used during the same session.
+    </p>
+
+sunekos:
+  title: "Sunekos"
+  body: |
+    <p class="mb-0">
+      Sunekos is an injectable skin regeneration treatment designed to improve skin quality, hydration, elasticity and fine lines while maintaining a completely natural appearance.
+      <br><br>
+      Rather than adding volume or changing facial contours, Sunekos works within the skin to support its natural extracellular matrix and improve the quality of the tissue itself.
+      <br><br>
+      <b>How Does Sunekos Work?</b>
+      <br>
+      Sunekos combines hyaluronic acid with a specific blend of amino acids.
+      <br><br>
+      This combination is designed to support fibroblast activity and the production of important structural components within the skin, including collagen and elastin.
+      <br><br>
+      The result is gradual improvement in the skin's hydration, firmness, elasticity and overall quality.
+      <br><br>
+      <b>What Can Sunekos Help With?</b>
+      <br>
+      Sunekos is particularly suited to:
+      <br>
+      <ul>
+        <li>Fine lines</li>
+        <li>Crepey skin</li>
+        <li>Dehydration</li>
+        <li>Loss of elasticity</li>
+        <li>Dull skin</li>
+        <li>Early signs of ageing</li>
+        <li>Poor skin quality</li>
+      </ul>
+      <b>Where Can Sunekos Be Used?</b>
+      <br>
+      One of the benefits of Sunekos is its versatility. It can be used on areas where improving skin quality is the priority, including the:
+      <br>
+      Face, Under-eye area, neck, d&eacute;colletage, and Hands
+      <br><br>
+      It is particularly popular around the delicate eye area, where traditional volumising treatments may not always be appropriate.
+      <br><br>
+      <b>Sunekos Is Not a Filler</b>
+      <br>
+      Sunekos is not designed to sculpt the face or create significant volume.
+      <br><br>
+      Instead, the focus is on biostimulation and skin regeneration &mdash; helping your skin look healthier, smoother, more hydrated and naturally refreshed.
+      <br><br>
+      <b>What to Expect</b>
+      <br>
+      Sunekos is generally performed as a course of treatments, with the number and intervals determined according to your skin, age and individual concerns.
+      <br><br>
+      Improvements develop gradually as the skin responds to treatment.
+      <br><br>
+      The goal is not to make you look different.
+      <br><br>
+      <b>Price</b>
+      <br>
+      <b>Treatment 1: R 6500</b>
+      <br>
+      <b>Treatment 2-3: R 3500</b>
+      <br><br>
+      <b>Time</b>
+      <br>
+      <b>Treatment 1: 75 minutes</b>
+      <br>
+      <b>Treatment 2-3: 60 minutes</b>
+    </p>
+
+# ===== skin-boosters :: accordion-skin-boosters-treatments
+
+skin-booster:
+  title: "Skin Booster"
+  body: |
+    <p class="mb-0">
+      Designed to improve skin hydration, texture and overall quality from within. Skin boosters help support a smoother, more supple and radiant-looking complexion, with a focus on natural-looking results and healthy-looking skin.
+      <br><br>
+      <b>Ideal for:</b> Skin that needs improved hydration, softness and a refreshed appearance.
+      <br><br>
+      <b>Price: R 3250</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+glow-and-behold:
+  title: "Glow & Behold"
+  body: |
+    <p class="mb-0">
+      A skin-revitalising combination of the Mesoestetic Retiflash peel and a skin booster. This treatment brings together gentle skin resurfacing and hydration to help improve the appearance of dullness, uneven texture and a lacklustre complexion.
+      <br><br>
+      <b>Ideal for:</b> Skin that looks tired, dull or in need of a radiance boost.
+      <br><br>
+      <b>Price: R 3900</b>
+      <br><br>
+      <b>Time: 60 minutes</b>
+    </p>
+
+glow-and-behold-2:
+  title: "Glow & Behold 2.0"
+  body: |
+    <p class="mb-0">
+      Our enhanced Glow &amp; Behold combination pairs a skin booster with the Mesoestetic Retiflash peel and a targeted toxin treatment. Designed to address multiple aspects of skin appearance in one personalised treatment plan, it combines hydration, tone and the softening of targeted expression lines.
+      <br><br>
+      <b>Ideal for:</b> Those looking to address skin quality, radiance and selected expression lines.
+      <br><br>
+      <b>Price: R 5800</b>
+      <br><br>
+      <b>Time: 75 minutes</b>
+    </p>
+
+# ===== hyper-pigmentation :: accordion-hyperpigmentation
+
+post-inflammatory-hyperpigmentation-pih:
+  title: "Post-Inflammatory Hyperpigmentation (PIH)"
+  body: |
+    <p class="mb-0">
+      Dark marks left behind after acne, eczema or skin injuries.
+    </p>
+
+melasma:
+  title: "Melasma"
+  body: |
+    <p class="mb-0">
+      Often triggered by hormones (pregnancy, birth control or sun exposure). Here, melasma appears
+      as symmetrical brown or grey-brown patches, typically on the face.
+    </p>
+
+sunspots-age-spots:
+  title: "Sunspots (Age Spots)"
+  body: |
+    <p class="mb-0">
+      Flat brown spots that develop from years of sun exposure are commonly seen on the face, chest
+      and hands.
+    </p>
+
+freckles:
+  title: "Freckles"
+  body: |
+    <p class="mb-0">
+      Genetically driven, often darkening with sun exposure.
+    </p>
+
+drug-or-chemical-induced-pigmentation:
+  title: "Drug or Chemical-Induced Pigmentation"
+  body: |
+    <p class="mb-0">
+      Can result from certain medications or chemical exposure.
+    </p>
+
+# ===== hyper-pigmentation :: accordion-hyperpigmentation-treatments
+
+medical-meso-glow-facial--hyperpigmentation:
+  title: "Medical Meso Glow Facial"
+  body: |
+    <p class="mb-0">
+      This soothing treatment features a professional chemical peel that gently lifts away dead skin
+      cells, revealing a brighter, more even-toned complexion. Using advanced Mesoestetic PRO and MD
+      Peels, we specifically target hyperpigmentation by addressing excess melanin in the skin.
+      Powered by key ingredients such as azelaic acid, kojic acid and resorcinol, these peels exfoliate,
+      refine skin tone and diminish dark spots from sun exposure, melasma and post-inflammatory pigmentation
+      <br><br>
+      <b>Price: R 1280</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+qms-clai-signature-facial:
+  title: "QMS CLAI Signature Facial"
+  body: |
+    <p class="mb-0">
+      Tailored to your skin’s unique needs, this signature facial begins with skin-condition-specific
+      active ingredients and a gentle enzyme exfoliation to effectively remove dead skin cells, brighten
+      the complexion and promote a healthy skin tone.
+      <br><br>
+      This is followed by a targeted serum selected to address your specific concern - ranging from
+      sensitivity and dehydration to compromised skin - working to restore balance and skin health. A
+      customised mask is then applied to treat concerns such as acne, congestion, pigmentation, dehydration
+      or inflammation. To complete the experience, a calming facial massage is included.
+      <br><br>
+      Note that this treatment can also be safely adapted for pregnant and breastfeeding mothers,
+      using carefully selected ingredients that address skin concerns while prioritising safety and comfort.
+      <br><br>
+      <b>Price: R 1830</b>
+      <br><br>
+      <b>Time: 75 minutes</b>
+    </p>
+
+mesoesetic-touch-tca:
+  title: "Mesoesetic Touch TCA"
+  body: |
+    <p class="mb-0">
+      Tailored to your skin’s unique needs, this signature facial begins with skin-condition-specific
+      active ingredients and a gentle enzyme exfoliation to effectively remove dead skin cells,
+      brighten the complexion and promote a healthy skin tone.
+      <br><br>
+      This is followed by a targeted serum selected to address your specific concern - ranging from
+      sensitivity and dehydration to compromised skin - working to restore balance and skin health. A
+      customised mask is then applied to treat concerns such as acne, congestion, pigmentation, dehydration
+      or inflammation. To complete the experience, a calming facial massage is included
+      <br><br>
+      Note that this treatment can also be safely adapted for pregnant and breastfeeding mothers, using
+      carefully selected ingredients that address skin concerns while prioritising safety and comfort.
+      <br><br>
+      <b>Price: R 1830</b>
+      <br><br>
+      <b>Time: 75 minutes</b>
+    </p>
+
+mesoesetic-pro-md-peel--hyperpigmentation:
+  title: "Mesoesetic Pro/MD peel"
+  body: |
+    <p class="mb-0">
+      Mesoestetic PRO and MD Peels are specially formulated to treat hyperpigmentation by targeting
+      excess melanin in the skin. These professional-grade peels use powerful ingredients like azelaic
+      acid, kojic acid, tranexamic acid, retinol and resorcinol to exfoliate, even out skin tone and
+      reduce dark spots caused by sun damage, melasma or post-inflammatory pigmentation. By accelerating
+      cell turnover and inhibiting melanin production, the result is smoother, clearer and more radiant skin.
+      <br><br>
+      <b>Pro-Peel R 950</b>
+      <br><br>
+      <b>MD-Peel R 1100</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+mesoetetic-cosmalan:
+  title: "Mesoetetic Cosmalan"
+  body: |
+    <p class="mb-0">
+      Cosmelan® by Mesoestetic is a world-renowned depigmentation treatment specifically designed to
+      reduce stubborn hyperpigmentation, including melasma, sun spots and post-acne marks. This two-phase
+      treatment works by inhibiting melanin production at the source, while promoting deep exfoliation
+      and skin renewal. Unlike traditional peels, Cosmelan® offers long-lasting results by regulating
+      pigment formation, leaving the skin visibly clearer, brighter and more evenly toned over time.
+      <br><br>
+      <b>Price: R 17 600</b>
+      <br><br>
+      <b>Time: 45 minute in clinic treatment incl 1 month home care products</b>
+    </p>
+
+me-line-peel:
+  title: "Me Line Peel"
+  body: |
+    <p class="mb-0">
+      The ME LINE® Peel is a specialised depigmentation treatment formulated to target hyperpigmentation
+      in all skin types, especially darker skin tones. It effectively treats melasma, sun damage and
+      post-inflammatory pigmentation by combining powerful ingredients that reduce melanin production
+      and promote controlled exfoliation. ME LINE® works both on the surface and deep within the skin
+      to improve tone, texture and clarity-resulting in a visibly brighter, more uniform complexion
+      with minimal irritation.
+      <br><br>
+      <b>Price: R 1800</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+medical-needling-face-face-plus-neck-face-neck-plus-chest:
+  title: "Medical Needling Face/Face+Neck/Face,Neck + Chest"
+  body: |
+    <p class="mb-0">
+      Medical Needling (also known as microneedling) uses fine needles to create controlled micro-channels
+      in the skin. This process encourages skin renewal and allows brightening serums, such as tranexamic
+      acid, to penetrate more effectively. By targeting sun spots, melasma and post-inflammatory marks,
+      the treatment helps achieve a clearer, smoother and more even-toned complexion on the face and neck.
+      <br><br>
+      <b>Price: R 2500</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+exosome-needling--hyperpigmentation:
+  title: "Exosome Needling"
+  body: |
+    <p class="mb-0">
+      Exosome Needling delivers tiny vesicles packed with powerful messengers that help balance melanin
+      production and calm inflammation. This targeted action works to fade hyperpigmentation, even out
+      skin tone, and restore a brighter, more radiant complexion.
+      <br><br>
+      <b>Price: R 4450</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+signature-prp-renew-treatment--hyperpigmentation:
+  title: "Signature PRP Renew Treatment"
+  body: |
+    <p class="mb-0">
+      Platelet-Rich Plasma (PRP) treatment uses your own blood’s platelets, which are packed with growth
+      factors that stimulate skin healing and regeneration. When applied to the skin, PRP accelerates cell
+      turnover, reduces inflammation and promotes collagen production. This helps fade hyperpigmentation
+      by balancing melanin production and repairing damaged skin, resulting in a clearer, brighter and more
+      even complexion.
+      <br><br>
+      <b>Price: R 4890</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+3d-needling-with-prf--hyperpigmentation:
+  title: "3D Needling with PRF"
+  body: |
+    <p class="mb-0">
+      3D Needling combined with Platelet-Rich Fibrin (PRF) enhances the skin’s natural healing and
+      rejuvenation process. The microneedling creates controlled micro-injuries that stimulate collagen
+      production and skin renewal, while PRF - rich in growth factors and healing proteins - boosts tissue
+      repair and reduces inflammation. This powerful combination helps fade hyperpigmentation by promoting
+      balanced melanin production.
+      <br><br>
+      <b>Price: R 3500</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+lumecca-ipl:
+  title: "Lumecca IPL"
+  body: |
+    <p class="mb-0">
+      Lumecca IPL (Intense Pulsed Light) is an advanced light-based treatment that targets areas of
+      excess melanin - the pigment responsible for dark spots and uneven skin tone. The device emits
+      powerful, broad-spectrum light pulses that penetrate the skin and selectively heat pigmented cells,
+      breaking them down without damaging surrounding tissue. This process triggers the body’s natural
+      healing response to clear away the fragmented pigment.
+      <br><br>
+      <b>Price: R 2450</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+mesotherapy:
+  title: "Mesotherapy"
+  body: |
+    <p class="mb-0">
+      Mesotherapy is a minimally invasive treatment that delivers targeted skin-brightening ingredients,
+      such as tranexamic acid, directly into the middle layer of the skin using fine microinjections.
+      This approach helps inhibit excess melanin production, reducing dark spots, melasma and post-inflammatory
+      marks. By improving the penetration of active ingredients, mesotherapy works to fade hyperpigmentation
+      and reveal a clearer, more radiant and evenly toned complexion.
+      <br><br>
+      <b>Price: R 2675</b>
+      <br><br>
+      <b>Time: 75 minutes</b>
+    </p>
+
+tri-therapy-with-needling--hyperpigmentation:
+  title: "Tri-Therapy with Needling"
+  body: |
+    <p class="mb-0">
+      Tri-Therapy targets hyperpigmentation on multiple levels by combining a chemical peel, superficial
+      needling with brightening actives, and a specialized post-treatment mask. The peel exfoliates
+      and removes pigmented skin cells, while needling enhances the absorption of active ingredients
+      that reduce melanin production. The final mask calms the skin and supports ongoing brightening.
+      <br><br>
+      <b>Price: R 2675</b>
+      <br><br>
+      <b>Time: 75 minutes</b>
+    </p>
+
+tri-therapy-with-mesotherapy:
+  title: "Tri-Therapy with Mesotherapy"
+  body: |
+    <p class="mb-0">
+      Tri-Therapy targets hyperpigmentation on multiple levels by combining a chemical peel, superficial
+      mesotherapy with brightening actives and a specialised post-treatment mask. The peel exfoliates
+      and removes pigmented skin cells, while mesotherapy delivers targeted ingredients directly into the
+      skin to reduce melanin production. The final mask calms the skin and supports ongoing brightening.
+      <br><br>
+      <b>Price: R 2675</b>
+      <br><br>
+      <b>Time: 75 minutes</b>
+    </p>
+
+glass-skin-facial:   # also on: acne-and-acne-scarring, anti-ageing
+  title: "Glass Skin Facial"
+  body: |
+    <p class="mb-0">
+      The CLAI Glass Skin Facial is an advanced combination treatment designed to improve the skin from multiple levels in a single treatment session.
+      <br><br>
+      Rather than focusing on only one concern, we combine IPL, Morpheus8 RF microneedling and superficial microneedling with your own PRP to target pigmentation, skin texture, pores, collagen production and overall skin quality.
+      <br><br>
+      <b>How the treatment works</b>
+      <br><br>
+      <b>IPL = Tone &amp; Clarity</b>
+      <br>
+      IPL targets unwanted pigmentation, helping to create a clearer, brighter and more even-looking complexion.
+      <br><br>
+      <b>Morpheus8 = Firm &amp; Remodel</b>
+      <br>
+      Morpheus8 combines microneedling with radiofrequency energy to stimulate collagen and elastin within the deeper layers of the skin. This helps improve firmness, fine lines, enlarged pores and uneven texture.
+      <br><br>
+      <b>Superficial Microneedling + PRP = Repair &amp; Refine</b>
+      <br>
+      We finish with controlled superficial microneedling combined with Platelet-Rich Plasma (PRP) derived from your own blood. This supports the skin's natural repair processes while helping improve hydration, texture and overall skin quality.
+      <br><br>
+      <b>Why combine all three?</b>
+      <br>
+      Each technology works at a different level of the skin.
+      <br>
+      <ul>
+        <li>IPL &rarr; improves colour and clarity</li>
+        <li>Morpheus8 &rarr; remodels and stimulates collagen</li>
+        <li>Microneedling + PRP &rarr; supports regeneration and surface refinement</li>
+      </ul>
+      By combining these modalities strategically, we can address tone, texture and skin quality in one comprehensive treatment.
+      <br><br>
+      <b>Ideal for</b>
+      <br>
+      <ul>
+        <li>Uneven skin tone</li>
+        <li>Sun damage</li>
+        <li>Enlarged pores</li>
+        <li>Fine lines</li>
+        <li>Uneven texture</li>
+        <li>Dull or tired-looking skin</li>
+      </ul>
+      A consultation is required to determine suitability. Treatment settings and combinations are customised according to skin type, skin condition and individual treatment goals.
+      <br><br>
+      <b>Price: R 7200</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+glass-skin-touch:   # also on: acne-and-acne-scarring, anti-ageing
+  title: "Glass Skin Touch"
+  body: |
+    <p class="mb-0">
+      The CLAI Glass Skin Touch is an advanced combination treatment designed to improve skin tone, texture, firmness and overall skin quality.
+      <br><br>
+      This treatment combines a carefully selected superficial chemical peel, targeted Morpheus8 and superficial microneedling with PRP, allowing us to work at different levels of the skin within one treatment.
+      <br><br>
+      It is particularly suited to skin where we want to focus on uneven tone, texture and overall rejuvenation.
+      <br><br>
+      <b>The Treatment</b>
+      <br><br>
+      <b>RESURFACE &mdash; Professional Peel</b>
+      <br>
+      We begin with a carefully selected superficial chemical peel to gently refresh the skin and encourage a brighter, smoother complexion.
+      <br><br>
+      <b>TIGHTEN &mdash; Morpheus8</b>
+      <br>
+      Morpheus8 is used strategically, focusing predominantly on the lower face where tightening and collagen remodelling are needed most.
+      <br><br>
+      Radiofrequency energy is delivered into the deeper layers of the skin to stimulate collagen and improve firmness, definition and skin laxity.
+      <br><br>
+      <b>RENEW &mdash; Superficial Microneedling + PRP</b>
+      <br>
+      We finish with superficial microneedling combined with your own Platelet-Rich Plasma (PRP).
+      <br><br>
+      This final step focuses on overall skin quality, helping to support natural regeneration while refining texture and creating a healthier, more luminous appearance.
+      <br><br>
+      <b>Who Is Glass Skin Touch For?</b>
+      <br>
+      Ideal for concerns including:
+      <br>
+      <ul>
+        <li>Dullness</li>
+        <li>Uneven skin tone</li>
+        <li>Uneven texture</li>
+        <li>Enlarged pores</li>
+        <li>Fine lines</li>
+        <li>Loss of radiance</li>
+      </ul>
+      <b>Price: R 5800</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+# ===== acne-and-acne-scarring :: types-of-acne
+
+comedonal-acne-non-inflammatory:
+  title: "Comedonal Acne (Non-Inflammatory)"
+  body: |
+    <p class="mb-0">
+      <b>Blackheads:</b> Open pores filled with oil and debris that oxidise, giving a dark appearance.
+      <br>
+      <b>Whiteheads:</b> Closed, clogged pores that appear as small white or skin-coloured bumps.
+    </p>
+
+inflammatory-acne:
+  title: "Inflammatory Acne"
+  body: |
+    <p class="mb-0">
+      <b>Papules & Pustules:</b> Red, inflamed bumps that may contain pus and tenderness.
+      <br>
+      <b>Nodules & Cysts:</b> Deeper, more painful lesions beneath the skin’s surface that often increase the risk of scarring.
+    </p>
+
+# ===== acne-and-acne-scarring :: types-of-acne-scarring
+
+atrophic-scars-depressed-scars:
+  title: "Atrophic Scars (Depressed Scars)"
+  body: |
+    <p class="mb-0">
+      <b>Ice Pick Scars:</b> Deep, narrow indentations.
+      <br>
+      <b>Boxcar Scars:</b> Broad depressions with defined edges.
+      <br>
+      <b>Rolling Scars:</b> Shallow, wave-like depressions that create uneven texture.
+      <br>
+      <b>Hypertrophic & Keloid Scars:</b> (Raised Scars) These scars develop due to excess collagen production during healing, resulting in thicker, raised areas of skin.
+    </p>
+
+# ===== acne-and-acne-scarring :: accordion-acne-and-acne-scarring-treatments
+
+medical-meso-glow-facial--acne:
+  title: "Medical Meso Glow Facial"
+  body: |
+    <p class="mb-0">
+      We use a chemical peel in this relaxing treatment that gently removes dead skin cells, refines
+      skin texture and promotes a healthier, clearer complexion.
+      <br><br>
+      Mesoestetic PRO and MD Peels are specially formulated to target acne and acne scarring by deeply
+      exfoliating the skin and accelerating cell turnover. These professional-grade peels contain powerful
+      ingredients like azelaic acid, kojic acid and resorcinol, which work together to reduce inflammation,
+      unclog pores and improve skin clarity.
+      <br><br>
+      By promoting skin regeneration and helping to fade post-acne marks, this treatment leaves the
+      skin visibly smoother, clearer and more balanced in tone and texture - perfect for those struggling
+      with breakouts or lingering acne scars.
+      <br><br>
+      <b>Price: R 1280</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+barrier-repair-facial--acne:
+  title: "Barrier Repair Facial"
+  body: |
+    <p class="mb-0">
+      Our Barrier Repair Facial for Acne & Acne Scarring is a calming, restorative treatment designed to support compromised, breakout-prone skin while promoting healing and improving overall skin texture.
+      <br><br>
+      We use targeted formulas rich in ceramides, niacinamide, anti-inflammatory botanicals and skin-repairing antioxidants to calm irritation, reduce redness and reinforce the skin’s natural defences.
+      <br><br>
+      By strengthening the skin barrier, this facial helps soothe inflammation, minimise post-acne marks and create the ideal environment for healthy skin regeneration. The result is skin that feels hydrated, balanced and visibly smoother - with a clearer, more even-toned appearance over time.
+      <br><br>
+      <b>Price: R 1150</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+revive-deep-cleanse-facial:
+  title: "Revive Deep Cleanse Facial"
+  body: |
+    <p class="mb-0">
+      Our Revive Deep Facial for Acne & Acne Scarring is an intensive, results-driven treatment designed to purify the skin, target breakouts and support long-term skin renewal.
+      <br><br>
+      Perfect for congested, acne-prone skin or those dealing with the after-effects of breakouts, this deep-cleansing facial uses professional-grade exfoliants, steam, extractions and targeted serums to clear clogged pores, calm inflammation and stimulate cell turnover.
+      <br><br>
+      Powerful active ingredients such as salicylic acid, niacinamide and soothing botanicals work to decongest the skin, reduce active acne and gradually improve the appearance of post-acne marks and scarring.
+      <br><br>
+      By reaching deep into the pores and encouraging healthy skin regeneration, the Revive Deep Facial leaves your complexion refreshed, balanced and visibly clearer - with improved texture and tone over time.
+      <br><br>
+      <b>Price: R 1100</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+clai-signature-facial--acne:
+  title: "CLAI Signature Facial"
+  body: |
+    <p class="mb-0">
+      A chemical peel is used in this relaxing treatment that gently removes dead skin cells, brightens the complexion and promotes healthy, even-toned skin.
+      <br><br>
+      The Mesoestetic Jessner Peel is a powerful, medical-grade chemical peel that effectively treats acne and acne scarring by deeply exfoliating the skin and targeting congestion and uneven texture. Formulated with a blend of salicylic acid, lactic acid and resorcinol, it helps reduce active breakouts, refine pores and fade post-acne marks.
+      <br><br>
+      By stimulating skin renewal and improving cell turnover, the Jessner Peel reveals fresher, clearer and smoother skin with each treatment - making it an excellent option for those seeking long-term clarity and refined skin texture.
+      <br><br>
+      <b>Price: R 1830</b>
+      <br><br>
+      <b>Time: 75 minutes</b>
+    </p>
+
+mesoesetic-pro-md-peel--acne:
+  title: "Mesoesetic Pro/MD Peel"
+  body: |
+    <p class="mb-0">
+      Mesoestetic PRO and MD Peels are expertly formulated to effectively treat acne and acne scarring by targeting the root causes of breakouts and promoting skin regeneration. These professional-grade chemical peels combine potent ingredients such as azelaic acid, kojic acid and resorcinol, which work synergistically to deeply exfoliate dead skin cells, reduce excess oil sand calm inflammation.
+      <br><br>
+      By accelerating cellular turnover and encouraging the regeneration of healthy skin, these peels not only reduce active acne but also help fade stubborn post-inflammatory marks and shallow scars.
+      <br><br>
+      With consistent treatments, Mesoestetic PRO and MD Peels restore a smoother, clearer complexion and improve skin tone, revealing visibly brighter, more even and healthier-looking skin. This makes them an excellent choice for clients seeking to manage ongoing acne issues as well as minimise the long-term effects of acne-scarring.
+      <br><br>
+      <b>Pro-Peel R 950</b>
+      <br><br>
+      <b>MD-Peel R 1100</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+medical-needling--acne:
+  title: "Medical Needling"
+  body: |
+    <p class="mb-0">
+      Medical Needling (also known as microneedling) uses fine needles to create controlled micro-channels in the skin. This process encourages skin renewal and allows brightening serums, such as tranexamic acid, to penetrate more effectively. By targeting sun spots, melasma and post-inflammatory marks, the treatment helps achieve a clearer, smoother and more even-toned complexion on the face and neck.
+      <br><br>
+      To amplify the benefits, we infuse the skin with targeted Mesoestetic Ampoules, which deliver concentrated active ingredients directly into the deeper layers of the skin. These ampoules are specially formulated to hydrate, soothe inflammation, promote skin regeneration and accelerate healing - key factors in reducing acne and fading post-acne scars.
+      <br><br>
+      <b>From R 2500</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+mesotherapy-face-face-plus-neck:
+  title: "Mesotherapy Face/Face+Neck"
+  body: |
+    <p class="mb-0">
+      Mesotherapy is a minimally invasive, targeted treatment that delivers a carefully customised blend of vitamins, antioxidants, peptides, and skin-repairing agents directly into the middle layer of the skin through fine microinjections. This precise delivery method allows active ingredients to penetrate deeply where they are most effective, promoting cell regeneration and accelerating the skin’s natural healing processes.
+      <br><br>
+      For acne-prone and scarred skin, mesotherapy works to reduce inflammation, control excess sebum production and inhibit bacterial growth, all of which contribute to clearer skin and fewer active breakouts. Additionally, the treatment stimulates collagen and elastin synthesis, essential for repairing and improving the texture of damaged skin.
+      <br><br>
+      Mesotherapy also targets post-inflammatory hyperpigmentation and acne scarring by encouraging the breakdown of damaged tissue and supporting the formation of healthy, new skin cells. Increased microcirculation improves nutrient delivery and waste removal, further enhancing skin health and tone.
+      <br><br>
+      The overall result is a complexion that appears smoother, brighter and more even-toned - with diminished acne scars, reduced redness and balanced oil production. Mesotherapy offers a comprehensive approach to managing both active acne and the lingering marks it leaves behind, helping you achieve clearer, healthier and rejuvenated skin.
+      <br><br>
+      <b>Price: R 2675</b>
+      <br><br>
+      <b>Time: 75-90 minutes</b>
+    </p>
+
+signature-prp-renew-treatment--acne:
+  title: "Signature PRP Renew Treatment"
+  body: |
+    <p class="mb-0">
+      Platelet-Rich Plasma (PRP) treatment uses your body’s own platelets, rich in growth factors, to stimulate skin healing and regeneration. When applied to acne-prone or scarred skin, PRP accelerates cell turnover, reduces inflammation and boosts collagen production, helping to repair damaged tissue and smooth out textural irregularities.
+      <br><br>
+      This natural, regenerative treatment is highly effective in fading acne scars, reducing post-inflammatory redness, and improving overall skin clarity. By supporting skin renewal from within, PRP helps restore a clearer, smoother and more even complexion, making it an excellent option for those looking to heal both active breakouts and long-term scarring.
+      <br><br>
+      <b>Price: R 4890</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+prp-needling-with-botox--acne:
+  title: "PRP Needling with Botox"
+  body: |
+    <p class="mb-0">
+      PRP Needling with Botox is a cutting-edge treatment that combines the regenerative power of Platelet-Rich Plasma (PRP) with the skin-refining benefits of micro-Botox, delivered through microneedling. This synergistic approach targets both active acne and post-acne scarring, offering visible improvements in skin texture, clarity and overall health.
+      <br><br>
+      Microneedling creates controlled micro-injuries in the skin to stimulate collagen and elastin production, while the PRP, derived from your own blood, delivers a concentrated dose of growth factors that accelerate tissue repair, reduce inflammation and promote skin regeneration.
+      <br><br>
+      Adding micro-doses of Botox to the treatment helps regulate oil production, refine enlarged pores and calm the overactive sebaceous glands that contribute to breakouts - without affecting muscle movement or facial expression. This results in fewer active breakouts, less redness, and smoother, more balanced skin.
+      <br><br>
+      Together, this advanced combination treatment results in clearer, smoother and more radiant complexion, ideal for those struggling with both acne and its long-term effects.
+      <br><br>
+      <b>Price: R 3550</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+needling-with-prf:
+  title: "Needling with PRF"
+  body: |
+    <p class="mb-0">
+      Needling combined with Platelet-Rich Fibrin (PRF) is an advanced, regenerative treatment that significantly enhances the skin’s natural healing process - making it highly effective for treating acne and acne scarring.
+      <br><br>
+      Microneedling creates controlled micro-injuries in the skin, which stimulate collagen production and cellular renewal, helping to smooth out textural irregularities caused by acne scars. PRF, a next-generation treatment derived from your own blood, is rich in growth factors, stem cells and fibrin matrix that accelerate tissue repair, reduce inflammation and support deep skin regeneration.
+      <br><br>
+      <b>Price: R 3500</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+tri-therapy-with-needling--acne:
+  title: "Tri-Therapy with Needling"
+  body: |
+    <p class="mb-0">
+      Tri-Therapy is a multi-step treatment designed to target acne and acne scarring on multiple levels by combining a chemical peel, superficial needling with skin-repairing actives, and a specialised post-treatment mask.
+      <br><br>
+      The treatment begins with a chemical peel that exfoliates dead skin cells, unclogs pores and smooths the skin’s surface - helping to reduce breakouts and improve overall texture. This is followed by superficial microneedling, which enhances the penetration of active ingredients specifically formulated to calm inflammation, stimulate collagen production and promote skin regeneration to fade acne scars.
+      <br><br>
+      The treatment is completed with a calming, restorative mask that soothes the skin, reduces redness and supports the ongoing healing process.
+      <br><br>
+      Ideal for clients with congested skin, post-inflammatory pigmentation and acne scars, Tri-Therapy offers a comprehensive, results-driven solution for long-term skin clarity and renewal.
+      <br><br>
+      <b>Price: R 2675</b>
+      <br><br>
+      <b>Time: 75 minutes</b>
+    </p>
+
+tri-therapy-with-mesotherapy-face-and-neck--acne:
+  title: "Tri-Therapy with Mesotherapy Face & Neck"
+  body: |
+    <p class="mb-0">
+      Tri-Therapy is a comprehensive treatment that targets acne and acne scarring on multiple levels by combining a chemical peel, superficial mesotherapy with skin-repairing actives and a specialised post-treatment mask.
+      <br><br>
+      The treatment begins with a chemical peel to exfoliate dead skin cells, unclog pores, and smooth uneven texture - laying the foundation for clearer skin. This is followed by superficial mesotherapy, which delivers targeted ingredients such as anti-inflammatory agents, vitamins and collagen-stimulating compounds directly into the skin to help calm active acne, fade post-acne marks and promote tissue repair.
+      <br><br>
+      The session concludes with a calming mask designed to soothe the skin, reduce redness and support the healing process after the treatment. The result is clearer, smoother and more balanced skin with visible improvement in texture, tone and overall clarity.
+      <br><br>
+      <b>Price: R 2675</b>
+      <br><br>
+      <b>Time: 75 minutes</b>
+    </p>
+
+# ===== rosacea-and-sensitive-skin :: types-of-rosacea
+
+flushing-and-redness-etr:
+  title: "Flushing & Redness (ETR)"
+  body: |
+    <p class="mb-0">
+      Persistent redness with visible capillaries.
+    </p>
+
+inflammatory-papulopustular:
+  title: "Inflammatory (Papulopustular)"
+  body: |
+    <p class="mb-0">
+      Redness with bumps and breakouts.
+    </p>
+
+thickened-skin-phymatous:
+  title: "Thickened Skin (Phymatous)"
+  body: |
+    <p class="mb-0">
+      Skin becomes thickened or textured, often around the nose.
+    </p>
+
+ocular-rosacea:
+  title: "Ocular Rosacea"
+  body: |
+    <p class="mb-0">
+      Irritation and redness around the eyes.
+    </p>
+
+# ===== rosacea-and-sensitive-skin :: accordion-rosacea-and-sensitive-skin-treatments
+
+barrier-repair-facial--rosacea:
+  title: "Barrier Repair Facial"
+  body: |
+    <p class="mb-0">
+      Our Barrier Repair Facial for Rosacea & Sensitive Skin is a calming, restorative treatment designed to support delicate, reactive skin while reducing redness and enhancing resilience. This treatment is ideal for those experiencing rosacea flare-ups, chronic sensitivity or skin that has been compromised by environmental stressors or overly aggressive skincare.
+      <br><br>
+      We use carefully selected, soothing formulas rich in ceramides, niacinamide, anti-inflammatory botanicals and skin-repairing antioxidants to reduce irritation, strengthen the skin barrier and promote a calmer, more even complexion. Each step is tailored to minimise triggers and support the skin’s natural healing process.
+      <br><br>
+      By reinforcing the skin’s protective barrier, this facial helps soothe inflammation, reduce visible redness and restore hydration - creating an optimal environment for healthy, balanced skin. The result is a complexion that feels comfortable, strengthened and visibly more radiant over time.
+      <br><br>
+      <b>Price: R 1150</b>
+      <br><br>
+      <b>Time: 60 minutes</b>
+    </p>
+
+clai-signature-facial--rosacea:
+  title: "CLAI Signature Facial"
+  body: |
+    <p class="mb-0">
+      This calming, restorative treatment is thoughtfully designed for rosacea-prone and sensitive skin, combining barrier-strengthening care with the controlled exfoliation of the Mesoestetic Jessner Peel. While traditionally known for its powerful resurfacing effects, the Jessner Peel is applied with precision and in a modified protocol to suit delicate skin types, helping to brighten the complexion, smooth texture  and reduce the appearance of redness and uneven tone.
+      <br><br>
+      Formulated with a balanced combination of salicylic acid, lactic acid and resorcinol, the Jessner Peel works by gently exfoliating the skin, supporting healthy cell turnover and targeting discoloration - such as post-inflammatory redness or pigmentation - without overwhelming compromised skin.
+      <br><br>
+      By pairing this medical-grade peel with anti-inflammatory botanicals, ceramides, niacinamide and antioxidants, the treatment works to soothe, strengthen and renew the skin barrier. Over time, it helps reduce visible redness, smooth rough patches and restore a calm, radiant complexion - making it a carefully curated solution for those seeking clarity and balance, even with reactive or rosacea-affected skin.
+      <br><br>
+      <b>Price: R 1150</b>
+      <br><br>
+      <b>Time: 60-75 minutes</b>
+    </p>
+
+mesoesetic-pro-md-peel--rosacea:
+  title: "Mesoesetic Pro/MD peel"
+  body: |
+    <p class="mb-0">
+      Mesoestetic PRO and MD Peels are expertly formulated to support sensitive, rosacea-prone skin by reducing inflammation, promoting skin regeneration and improving overall tone and texture - without compromising the skin’s fragile barrier. These professional chemical peels are applied using a carefully customised protocol that prioritises comfort and barrier health while delivering visible results.
+      <br><br>
+      Featuring therapeutic ingredients such as azelaic acid, kojic acid and resorcinol, these peels work together to calm inflammation, gently exfoliate dead skin cells and address visible signs of irritation or pigmentation.
+      <br><br>
+      By supporting healthy cell turnover and strengthening the skin barrier, these treatments help reduce the appearance of redness, blotchiness and reactive skin flare-ups - leaving the skin visibly smoother, more even and radiant over time.
+      <br><br>
+      <b>Price: R 950 - R 1100</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+exosome-needling--rosacea:
+  title: "Exosome Needling"
+  body: |
+    <p class="mb-0">
+      Exosomes are tiny, powerful messengers naturally produced by the body, rich in growth factors and healing molecules. When applied during treatments like microneedling, they boost the skin’s natural repair process - stimulating collagen production, calming inflammation and encouraging healthy cell regeneration.
+      <br><br>
+      For those with rosacea or sensitive skin, exosomes offer a gentle yet effective solution. They help reduce redness, soothe irritation and strengthen the skin barrier - making the skin more resilient over time. This leads to a calmer, clearer and more balanced complexion, without triggering sensitivity or flare-ups.
+      <br><br>
+      <b>Price: R 4450</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+mesotherapy-face--rosacea:
+  title: "Mesotherapy Face"
+  body: |
+    <p class="mb-0">
+      Mesotherapy is a minimally invasive, targeted treatment that delivers a customised blend of vitamins, antioxidants, peptides and skin-repairing agents directly into the middle layer of the skin through fine microinjections. This precise delivery allows active ingredients to reach where they’re most effective - stimulating cell regeneration and enhancing the skin’s natural healing process.
+      <br><br>
+      For rosacea and sensitive skin, mesotherapy offers a gentle yet powerful solution to reduce redness, calm inflammation, and strengthen the skin barrier. The infusion of anti-inflammatory and restorative ingredients helps to soothe flare-ups, reduce skin reactivity, and support long-term skin health without overwhelming sensitive skin.
+      <br><br>
+      It also helps stimulate collagen and elastin, which are essential for strengthening and rebuilding fragile or weakened skin tissue.
+      <br><br>
+      <b>Example: Centella Asiatica Ampoule</b>
+      <br>
+      A popular choice for sensitive and rosacea-prone skin is a Centella Asiatica ampoule, known for its powerful soothing and skin-repairing properties. When used in mesotherapy, Centella Asiatica helps to reduce inflammation, calm redness and accelerate skin healing - making it ideal for reactive skin. Its natural ability to boost collagen synthesis also supports barrier repair and improves skin resilience over time.
+      <br><br>
+      The result is a calmer, more balanced complexion with visibly less redness, improved hydration and enhanced tolerance. Mesotherapy with targeted ingredients like Centella Asiatica provides a comprehensive, skin-strengthening approach ideal for managing the chronic sensitivity and visible symptoms associated with rosacea - without harsh or irritating treatments.
+      <br><br>
+      <b>Price: R 2675 - R 3100</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+signature-prp-renew-treatment--rosacea:
+  title: "Signature PRP Renew Treatment"
+  body: |
+    <p class="mb-0">
+      Platelet-Rich Plasma (PRP) therapy is a natural, regenerative treatment that uses your body’s own platelets - rich in growth factors - to stimulate healing and skin renewal. This minimally invasive procedure enhances the skin’s ability to repair itself, making it particularly beneficial for rosacea-prone and sensitive skin.
+      <br><br>
+      When applied to delicate or reactive skin, PRP helps to calm inflammation, reduce redness and support barrier repair by accelerating healthy cell turnover and stimulating collagen production. This strengthens the skin over time, helping it become more resilient and less prone to flare-ups or irritation.
+      <br><br>
+      Because PRP uses your own biological material, it is exceptionally well-tolerated by sensitive skin and carries a low risk of adverse reactions. The growth factors in PRP promote gentle skin regeneration, reduce visible capillaries and flushing and improve overall skin tone and texture - without causing additional stress or sensitivity.
+      <br><br>
+      The result is skin that looks calmer, more even-toned and healthier, with reduced redness and improved hydration.
+      <br><br>
+      <b>From R 4890</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+prp-needling-with-botox--rosacea:
+  title: "PRP Needling with Botox"
+  body: |
+    <p class="mb-0">
+      PRP Needling with Micro-Botox is an advanced, restorative treatment that combines the regenerative power of Platelet-Rich Plasma (PRP) with the calming, pore-refining effects of micro-Botox, delivered through gentle microneedling. This synergistic approach is ideal for rosacea-prone and sensitive skin, addressing inflammation, redness and compromised skin texture - without being overly aggressive or irritating.
+      <br><br>
+      Microneedling creates controlled micro-channels in the skin, stimulating collagen and elastin production to strengthen and rebuild the skin barrier. PRP, derived from your own blood, infuses the skin with growth factors that reduce inflammation, promote healing, and support long-term skin regeneration - making it especially beneficial for calming rosacea flare-ups and strengthening fragile skin.
+      <br><br>
+      Micro-Botox, delivered in tiny, superficial doses, works by gently regulating oil production, minimizing visible pores, and reducing redness - all without affecting facial movement. The result is a calmer, smoother and more resilient complexion, ideal for those with rosacea or highly sensitive skin looking for a natural, non-aggressive way to restore balance and radiance.
+      <br><br>
+      <b>Price: R 3350</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+3d-needling-with-prf--rosacea:
+  title: "3D Needling with PRF"
+  body: |
+    <p class="mb-0">
+      3D Needling with Platelet-Rich Fibrin (PRF) is an advanced, regenerative treatment that enhances the skin’s natural healing and renewal process - making it an excellent option for those with rosacea-prone and sensitive skin seeking to reduce inflammation, strengthen the skin barrier and improve texture without harsh interventions.
+      <br><br>
+      The treatment begins with microneedling, which creates precise micro-injuries in the skin to stimulate collagen production and support cellular renewal. Unlike more aggressive resurfacing techniques, this controlled stimulation helps reinforce the skin’s structure, making it more resilient and less reactive over time.
+      <br><br>
+      What makes this treatment particularly beneficial for sensitive and rosacea-affected skin is the addition of Platelet-Rich Fibrin (PRF). Derived from your own blood, PRF is a next-generation healing concentrate, rich in growth factors, white blood cells, stem cells and a fibrin matrix that promotes deep skin repair. It delivers powerful anti-inflammatory and regenerative signals to the skin, helping to calm redness, reduce sensitivity and enhance tissue recovery.
+      <br><br>
+      This cutting-edge, biologically based treatment is ideal for those seeking a natural, healing-focused approach to managing rosacea and sensitivity - helping the skin look and feel healthier, stronger and more radiant with each session.
+      <br><br>
+      <b>Price: R 2500</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+tri-therapy-with-needling-face-and-neck:
+  title: "Tri-Therapy with Needling Face & Neck"
+  body: |
+    <p class="mb-0">
+      Tri-Therapy is a gentle yet highly effective multi-step treatment designed to calm inflammation, strengthen the skin barrier, and improve texture in rosacea-prone and sensitive skin. This targeted approach combines a mild chemical peel, superficial needling with barrier-repairing actives, and a soothing post-treatment mask - all carefully selected to respect and support delicate skin.
+      <br><br>
+      The treatment begins with a low-intensity chemical peel tailored for sensitive skin, which gently exfoliates dead skin cells, reduces surface buildup and helps smooth uneven texture - without triggering irritation or redness. This is followed by superficial microneedling, which enhances the delivery of calming, restorative ingredients such as niacinamide, peptides and antioxidants. These actives help reduce inflammation, strengthen capillaries and stimulate mild collagen production to support skin repair and resilience.
+      <br><br>
+      The treatment concludes with a cooling, anti-inflammatory mask designed to instantly soothe redness, hydrate the skin, and promote recovery - leaving the skin feeling calm, nourished, and refreshed.
+      <br><br>
+      Tri-Therapy is ideal for clients with reactive, sensitised skin, including those dealing with flushing, post-inflammatory pigmentation or mild scarring. It offers a comprehensive, non-irritating solution to improve skin clarity, comfort and long-term health.
+      <br><br>
+      <b>Price: R 2675</b>
+      <br><br>
+      <b>Time: 75 minutes</b>
+    </p>
+
+tri-therapy-with-mesotherapy-face-and-neck--rosacea:
+  title: "Tri Therapy with Mesotherapy Face & Neck"
+  body: |
+    <p class="mb-0">
+      Tri-Therapy is a gentle yet comprehensive treatment designed to address the key concerns of rosacea-prone and sensitive skin, including redness, inflammation, weakened barrier function and textural irregularities. This carefully layered approach combines a mild chemical peel, superficial mesotherapy with calming actives and a soothing post-treatment mask - all tailored to restore balance without triggering irritation.
+      <br><br>
+      The treatment begins with a low-intensity chemical peel, selected specifically for sensitive skin, to gently remove dead skin cells, refine rough texture and prepare the skin for optimal absorption - without compromising the skin barrier. Next, superficial mesotherapy is used to infuse the skin with a targeted blend of anti-inflammatory agents, antioxidants and barrier-repairing compounds (such as niacinamide, panthenol and hyaluronic acid). This step helps to calm redness, reinforce the skin, and reduce sensitivity while promoting collagen production to support long-term skin health.
+      <br><br>
+      The treatment concludes with a calming, restorative mask formulated to soothe the skin, reduce flushing, and accelerate recovery - leaving the complexion feeling cool, hydrated, and comforted.
+      <br><br>
+      Tri-Therapy for rosacea and sensitive skin offers a non-aggressive, results-driven solution for clients seeking to reduce reactivity, strengthen their skin and achieve a healthier, more even-toned complexion over time.
+      <br><br>
+      <b>Price: R 2675</b>
+      <br><br>
+      <b>Time: 75-90 minutes</b>
+    </p>
+
+# ===== hair-treatments :: accordion-hair-treatments
+
+prf-renew-scalp-treatment:
+  title: "PRF renew scalp treatment"
+  body: |
+    <p class="mb-0">
+      Our advanced PRP scalp treatment combines the regenerative power of Platelet-Rich Plasma (PRP)
+      and Platelet-Rich Fibrin (PRF) with a multi-level delivery approach for optimal results. Using
+      a specialised mesotherapy technique, growth factors are delivered directly into the scalp to
+      stimulate dormant follicles, improve circulation, and support natural hair regeneration. This
+      is combined with microneedling using a customised PRP serum blended with targeted hair growth
+      actives, enhancing absorption and maximising follicle stimulation. The result is a comprehensive,
+      science-driven treatment designed to strengthen, restore, and support healthier, fuller hair
+      growth over time.
+
+      <br><br>
+      <b>Price: R 3500</b>
+      <br><br>
+      <b>Time allocation: 75 minutes</b>
+
+    </p>
+
+prf-scalp-needling:
+  title: "PRF Scalp needling"
+  body: |
+    <p class="mb-0">
+      Our PRP needling treatment is a regenerative, minimally invasive approach to improving hair
+      density and scalp health. By combining Platelet-Rich Plasma (PRP) with advanced microneedling,
+      we stimulate natural healing pathways while delivering concentrated growth factors directly to
+      the hair follicles. The addition of targeted hair growth active serums enhances absorption and
+      supports follicle function, helping to reduce shedding, strengthen existing hair, and encourage
+      healthier, fuller growth over time.
+
+      <br><br>
+      <b>Price: R 1950</b>
+      <br><br>
+      <b>Time allocation: 60 minutes</b>
+    </p>
+
+# ===== intimate-wellness :: accordion-intimate-wellness-treatments
+
+meline-intimate-peel:
+  title: "MELINE Intimate Peel"
+  body: |
+    <p class="mb-0">
+      The MELINE Intimate Peel is an advanced depigmentation treatment designed specifically for delicate
+      intimate areas. It works to safely reduce pigmentation, even out skin tone, and improve overall
+      skin quality while supporting the skin barrier. This specialised peel helps to restore a brighter,
+      more uniform appearance, enhancing both confidence and skin health with minimal downtime.
+      <br><br>
+      <b>Price: R 1650</b>
+      <br><br>
+      <b>Time: 60 minutes</b>
+    </p>
+
+dermamelan-intimate:
+  title: "Dermamelan® Intimate"
+  body: |
+    <p class="mb-0">
+      The Dermamelan Intimate is a professional depigmentation treatment designed to correct more advanced
+      or stubborn pigmentation in intimate areas. It works by regulating melanin production, reducing
+      darkened areas, and restoring a more even, balanced skin tone. In addition to brightening, it also
+      supports skin quality by improving hydration and overall tissue health. This treatment offers a
+      results-driven approach to intimate pigmentation, with a structured protocol for long-lasting improvement.
+      <br><br>
+      <b>Price: R 8490</b>
+      <br><br>
+      <b>Time: 60 minutes</b>
+    </p>
+
+prf-intimate-rejuvenation:
+  title: "PRF Intimate Rejuvenation"
+  body: |
+    <p class="mb-0">
+      The O-Shot + G-Shot is an intimate rejuvenation treatment using Platelet-Rich Fibrin (PRF) prepared from your own blood.
+      <br><br>
+      Designed to support intimate tissue quality and sensitivity, the treatment combines targeted PRF placement in both the O-Shot and G-Shot areas for a more comprehensive approach to female intimate wellness.
+      <br><br>
+      <b>What is PRF?</b>
+      <br>
+      PRF is a concentrated component of your own blood containing platelets, fibrin and naturally occurring growth factors.
+      <br><br>
+      Once prepared, it forms a fibrin-rich matrix that allows growth factors to be released gradually within the treated tissue, supporting the body's natural repair and regenerative processes.
+      <br><br>
+      <b>O-Shot = Regeneration &amp; Sensitivity</b>
+      <br>
+      PRF is carefully placed into specific areas of the external and internal intimate tissue.
+      <br><br>
+      The treatment is designed to support tissue quality, circulation and sensitivity, particularly where women have noticed changes following childbirth, hormonal changes or ageing.
+      <br><br>
+      <b>G-Shot = Targeted Enhancement</b>
+      <br>
+      PRF is placed into the G-area of the anterior vaginal wall, creating a subtle increase in tissue volume while also providing the regenerative benefits of PRF.
+      <br><br>
+      The aim is to increase prominence and awareness of this area, which may enhance sensation for some women.
+      <br><br>
+      <b>Why Combine the O-Shot + G-Shot?</b>
+      <br>
+      Combining both techniques allows us to address intimate rejuvenation from two perspectives:
+      <br>
+      <ul>
+        <li>O-Shot &rarr; tissue regeneration &amp; sensitivity</li>
+        <li>G-Shot &rarr; targeted enhancement &amp; regenerative support</li>
+      </ul>
+      <b>Who May Consider This Treatment?</b>
+      <br>
+      The O-Shot + G-Shot may be considered by women experiencing changes associated with:
+      <br>
+      <ul>
+        <li>Ageing</li>
+        <li>Hormonal changes</li>
+        <li>Postpartum changes</li>
+        <li>Reduced intimate sensitivity</li>
+        <li>Changes in sexual experience</li>
+        <li>Changes in intimate tissue quality</li>
+      </ul>
+      <b>A Treatment Using Your Own Biology</b>
+      <br>
+      Because PRF is prepared entirely from your own blood, the treatment works with your body's own biological components rather than introducing a synthetic regenerative product.
+      <br><br>
+      Every treatment begins with a private consultation to discuss your concerns, medical history and expectations and to determine whether PRF intimate rejuvenation is appropriate for you.
+      <br><br>
+      Individual responses vary. PRF intimate rejuvenation is an emerging treatment and improvements in sexual function, orgasm, sensation or urinary symptoms cannot be guaranteed.
+      <br><br>
+      <b>Price: R 5290</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+intimate-filler:
+  title: "Intimate Filler"
+  body: |
+    <p class="mb-0">
+      Intimate Filler is a non-surgical aesthetic treatment designed to restore volume, hydration and softness to the external intimate area.
+      <br><br>
+      Just like the skin on the face, the intimate area can change with ageing, hormonal changes, pregnancy, childbirth and changes in body composition. Over time, the labia majora may lose volume and appear less plump or supported.
+      <br><br>
+      <b>How Does Intimate Filler Work?</b>
+      <br>
+      A carefully selected hyaluronic acid dermal filler is placed into the labia majora to restore lost volume and improve the appearance and quality of the external intimate tissue.
+      <br><br>
+      Hyaluronic acid naturally attracts and retains water, helping to create a softer, smoother and more hydrated appearance.
+      <br><br>
+      <b>What Can Intimate Filler Help With?</b>
+      <br>
+      Intimate Filler may be considered for women wanting to improve:
+      <br>
+      <ul>
+        <li>Loss of labial volume</li>
+        <li>Deflation or flattening</li>
+        <li>Asymmetry</li>
+        <li>External tissue hydration</li>
+        <li>Age-related changes</li>
+        <li>Overall appearance of the labia majora</li>
+      </ul>
+      <b>More Than Aesthetics</b>
+      <br>
+      For some women, restoring volume to the labia majora may also provide additional cushioning and support to the external intimate area, particularly where tissue volume has reduced over time.
+      <br><br>
+      <b>A Personalised Approach</b>
+      <br>
+      There is no single ideal appearance when it comes to intimate anatomy.
+      <br><br>
+      Our approach is focused on natural-looking restoration rather than changing normal anatomy. The amount and placement of filler are carefully tailored to your individual anatomy, concerns and desired outcome.
+      <br><br>
+      Every Intimate Filler treatment begins with a private consultation to assess suitability, discuss expectations and develop an individualised treatment plan.
+      <br><br>
+      Results and longevity vary between individuals. As with all injectable treatments, potential risks, side effects and aftercare will be discussed during your consultation.
+      <br><br>
+      <b>Price: R 11 990</b>
+      <br><br>
+      <b>Time: 75 minutes</b>
+    </p>
+
+intimate-renewal:
+  title: "Intimate Renewal"
+  body: |
+    <p class="mb-0">
+      The Intimate Renewal is our comprehensive intimate rejuvenation treatment, combining PRF O-Shot + G-Shot with Intimate Filler in one personalised treatment.
+      <br><br>
+      Designed for women experiencing changes following ageing, hormonal shifts, pregnancy, childbirth or changes in intimate tissue, the treatment takes a combined approach to both internal regenerative support and external volume restoration.
+      <br><br>
+      <b>One Treatment. Two Approaches.</b>
+      <br><br>
+      <b>PRF O-Shot + G-Shot &mdash; Regenerate</b>
+      <br>
+      Platelet-Rich Fibrin (PRF) is prepared from a small sample of your own blood and carefully placed into targeted intimate areas.
+      <br><br>
+      Rich in platelets, fibrin and naturally occurring growth factors, PRF is used to support the body's natural regenerative processes and intimate tissue quality.
+      <br><br>
+      The combined O-Shot + G-Shot approach focuses on regenerative support, tissue quality and sensitivity, with targeted PRF placement according to your individual anatomy and concerns.
+      <br><br>
+      <b>Intimate Filler &mdash; Restore</b>
+      <br>
+      A carefully selected hyaluronic acid filler is placed into the labia majora to restore volume, softness and hydration to the external intimate area.
+      <br><br>
+      This can help address volume loss or deflation that may occur with hormonal changes, ageing, pregnancy, childbirth or changes in body composition.
+      <br><br>
+      <b>Why Combine Them?</b>
+      <br>
+      Intimate changes rarely involve only one aspect of the tissue.
+      <br><br>
+      By combining PRF regeneration with hyaluronic acid volume restoration, the CLAI Intimate Renewal allows us to take a more comprehensive approach:
+      <br>
+      <ul>
+        <li>REGENERATE &rarr; PRF tissue support</li>
+        <li>RESTORE &rarr; Volume &amp; external cushioning</li>
+        <li>REHYDRATE &rarr; Improved softness and hydration</li>
+        <li>RENEW &rarr; Overall intimate rejuvenation</li>
+      </ul>
+      <b>Who Is It For?</b>
+      <br>
+      The CLAI Intimate Renewal may be considered by women who have noticed:
+      <br>
+      <ul>
+        <li>Changes after childbirth</li>
+        <li>Hormonal or age-related changes</li>
+        <li>Reduced intimate tissue quality</li>
+        <li>Changes in sensitivity</li>
+        <li>Loss of labia majora volume</li>
+        <li>Deflation</li>
+        <li>External tissue dryness</li>
+        <li>Changes in the appearance of the intimate area</li>
+      </ul>
+      <b>Intimate Rejuvenation is Personalised to You</b>
+      <br>
+      Every woman's anatomy, concerns and experience are different.
+      <br><br>
+      The CLAI Intimate Renewal is therefore not a one-size-fits-all treatment. Your treatment begins with a private consultation where we assess your concerns, discuss your expectations and determine the most appropriate PRF placement and filler treatment for you.
+      <br><br>
+      Our focus is on natural restoration, regenerative support and maintaining normal intimate anatomy, not creating an artificial or overfilled result.
+      <br><br>
+      Individual results vary. PRF intimate rejuvenation is an emerging treatment, and improvements in sexual function, orgasm or sensation cannot be guaranteed. All injectable procedures carry potential risks, which will be discussed during your consultation.
+      <br><br>
+      <b>Price: R 15 990</b>
+      <br><br>
+      <b>Time: 90 minutes</b>
+    </p>
+
+# ===== anti-ageing :: accordion-anti-ageing
+
+type-i-early-ageing:
+  title: "Type I – Early Ageing"
+  body: |
+    <p class="mb-0">
+      Skin shows very minimal signs of ageing. There may be mild sun damage, slight pigmentation or early dehydration, but wrinkles are usually not visible.
+      <br><br>
+      <b>Treatment focus:</b> prevention, skin health and collagen support.
+    </p>
+
+type-ii-moderate-ageing:
+  title: "Type II – Moderate Ageing"
+  body: |
+    <p class="mb-0">
+      Fine lines begin to appear, especially with facial movement. Pigmentation and early sun damage may become more noticeable and skin elasticity may start to decrease.
+      <br><br>
+      <b>Treatment focus:</b> collagen stimulation, skin rejuvenation and correcting early damage.
+    </p>
+
+type-iii-advanced-ageing:
+  title: "Type III – Advanced Ageing"
+  body: |
+    <p class="mb-0">
+      Wrinkles may become visible even when the face is at rest. Skin texture can change, pigmentation may increase and collagen loss becomes more evident.
+      <br><br>
+      <b>Treatment focus:</b> restoring skin quality, improving skin structure and supporting regeneration.
+    </p>
+
+type-iv-severe-ageing:
+  title: "Type IV – Severe Ageing"
+  body: |
+    <p class="mb-0">
+      Deep wrinkles are present and skin may show significant sun damage and loss of elasticity.
+      <br><br>
+      <b>Treatment focus:</b> advanced skin rejuvenation and regenerative treatments to improve overall skin health.
+    </p>
+
+# ===== anti-ageing :: accordion-anti-ageing-treatments
+
+medical-meso-glow-facial--anti-ageing:
+  title: "Medical Meso Glow facial"
+  body: |
+    <p class="mb-0">
+      We use a gentle yet effective chemical peel in this rejuvenating treatment to remove dead skin
+      cells, brighten the complexion, and promote smoother, more even-toned skin - making it an ideal
+      solution for addressing the visible signs of ageing.
+      <br><br>
+      Mesoestetic PRO and MD Peels are professionally formulated to target age-related skin concerns such as dullness, fine lines, uneven pigmentation and loss of radiance. These advanced chemical peels contain azelaic acid, kojic acid and resorcinol - a powerful blend that gently exfoliates, helps regulate melanin production and supports collagen renewal.
+      <br><br>
+      By accelerating cell turnover and revitalizing tired, ageing skin, this peel reveals a smoother, clearer and more radiant complexion - with continued improvement in tone and texture over time.
+      <br><br>
+      Whether you're just starting to see signs of ageing or want to refresh and refine mature skin, this treatment offers a clinical yet skin-conscious approach to restoring a healthy, youthful glow. 
+      <br><br>
+      <b>Price: R 1280</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+clai-signature-facial--anti-ageing:
+  title: "CLAI Signature Facial"
+  body: |
+    <p class="mb-0">
+      This rejuvenating treatment is thoughtfully designed to address the visible signs of ageing, combining skin-renewing exfoliation with barrier-strengthening actives to improve texture, tone and radiance.
+      <br><br>
+      At the core of the treatment is the Mesoestetic Jessner Peel, a professional-grade chemical peel traditionally known for its resurfacing power. When applied with precision and in a controlled protocol, it becomes an effective yet balanced solution for ageing skin, helping to stimulate cell turnover, soften fine lines and fade age-related pigmentation - without compromising skin integrity.
+      <br><br>
+      Formulated with a synergistic blend of salicylic acid, lactic acid and resorcinol, the peel works to restore a smoother, firmer and more radiant complexion, making it a carefully curated option for those seeking to combat the effects of ageing with a clinical yet skin-conscious approach.
+      <br><br>
+      <b>Price: R 1830</b>
+      <br><br>
+      <b>Time: 75 minutes</b>
+    </p>
+
+mesoestetic-touch-tca:
+  title: "Mesoestetic Touch TCA"
+  body: |
+    <p class="mb-0">
+      We use a chemical peel in this treatment to gently remove dead skin cells, brighten the complexion and promote healthy, even-toned skin.
+      <br><br>
+      The Mesoestetic TCA Touch is an advanced trichloroacetic acid (TCA) peel specifically designed to address visible signs of ageing, including fine lines, wrinkles, rough texture and uneven skin tone caused by sun exposure and natural collagen loss.
+      <br><br>
+      This professional-grade peel works by deeply exfoliating the skin while stimulating collagen production and improving skin density - helping to soften wrinkles and restore a firmer, smoother appearance. By targeting melanin buildup and encouraging skin renewal, it also helps reduce age spots, sun-induced pigmentation and dullness.
+      <br><br>
+      Thanks to its controlled penetration, the TCA Touch allows for significant rejuvenation with minimal downtime and without the aggressive peeling commonly associated with deeper TCA peels.
+      <br><br>
+      The result is skin that looks visibly smoother, clearer and more radiant with ongoing improvements in texture, tone and overall luminosity.
+      <br><br>
+      <b>Price: R 1400</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+mesoestetic-phen-tca:
+  title: "Mesoestetic Phen TCA"
+  body: |
+    <p class="mb-0">
+      We use a chemical peel in this advanced treatment that removes damaged skin cells, smooths skin texture and promotes a healthier, more even complexion.
+      <br><br>
+      The Mesoestetic Phen TCA Peel is a high-performance, medical-grade peel specially formulated to target visible signs of aging. Combining trichloroacetic acid (TCA), phenol and powerful exfoliating agents, this treatment works at a deeper level to stimulate skin regeneration, reduce fine lines and wrinkles and improve overall skin firmness and tone.
+      <br><br>
+      By accelerating cell turnover and promoting collagen production, the Mesoestetic Phen TCA Peel helps to tighten enlarged pores, soften expression lines and restore radiance to dull, aging skin. After each session, the skin appears smoother, firmer and more youthful.
+      <br><br>
+      This is an ideal solution for those looking to address age-related concerns with clinical precision and long-lasting results.
+      <br><br>
+      <b>Price: R 1650</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+mesoestetic-md-peel:
+  title: "Mesoestetic MD peel"
+  body: |
+    <p class="mb-0">
+      The Mesoestetic MD Peel range is a collection of medical-grade chemical peels formulated to treat advanced skin concerns with clinical precision. When it comes to aging skin, these peels are designed to target the deeper layers of the skin to promote true rejuvenation - not just surface-level results. This peel accelerates cell turnover to remove dull, damaged skin cells, stimulates collagen and elastin, reduces fine lines, wrinkles an improves skin tone, texture and reduces age-related pigmentation
+      <br><br>
+      These peels are suitable for a range of aging concerns, from early signs like dullness and fine lines to deeper wrinkles and skin laxity.
+      <br><br>
+      <b>Price: R 1100</b>
+      <br><br>
+      <b>Time: 45 minutes</b>
+    </p>
+
+medical-needling--anti-ageing:
+  title: "Medical Needling"
+  body: |
+    <p class="mb-0">
+      Medical Needling (also known as microneedling) uses fine needles to create controlled micro-channels in the skin. This process encourages skin renewal and allows brightening serums, such as tranexamic acid, to penetrate more effectively. By targeting sun spots, melasma and post-inflammatory marks, the treatment helps achieve a clearer, smoother and more even-toned complexion on the face and neck.
+      <br><br>
+      To amplify the benefits, we infuse the skin with targeted Mesoestetic Ampoules, which deliver concentrated active ingredients directly into the deeper layers of the skin. This powerful combination maximises collagen stimulation while addressing age-related skin concerns holistically, delivering both immediate radiance and long-term skin rejuvenation.
+      <br><br>
+      <b>From: R 2500</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+exosome-needling--anti-ageing:
+  title: "Exosome Needling"
+  body: |
+    <p class="mb-0">
+      Needling with Exosomes enhances the skin’s natural healing by creating tiny micro-injuries that trigger collagen production and skin renewal. Exosomes - tiny vesicles rich in growth factors - supercharge this healing process by delivering key signals that reduce inflammation, promote cell regeneration and support tissue repair.
+      <br><br>
+      This combined action helps to calm active acne, reduce redness and swelling and significantly improve the appearance of acne scars. The result is smoother skin texture, diminished scarring and a clearer, more balanced complexion. Overall this treatment reduces inflammation and oxidative stress that contribute to skin aging, enhance skin density reduces fine lines and wrinkles.
+      <br><br>
+      <b>From: R 4450</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+mesotherapy-face--anti-ageing:
+  title: "Mesotherapy Face"
+  body: |
+    <p class="mb-0">
+        Mesotherapy is a minimally invasive, clinically advanced treatment that delivers a customised blend of vitamins, antioxidants, peptides and skin-repairing agents directly into the mesoderm - the middle layer of the skin - using ultra-fine microinjections. This targeted delivery ensures active ingredients reach the precise depth where they’re most effective in stimulating collagen, enhancing cellular regeneration and reversing signs of aging.
+        <br><br>
+        Mesotherapy directly addresses concerns by stimulating collagen, improving hydration, enhancing microcirculation and by delivering antioxidants and peptides to oxidative stress and signs of aging.
+        <br><br>
+        <b>Example: Mesoestetic Proteoglycans Ampoules</b>
+        <br>
+        A top choice for anti-aging mesotherapy is the Mesoestetic Proteoglycans Ampoule, formulated to:
+        <br>
+        <ul>
+          <li>Deeply hydrate and restore skin volume</li>
+          <li>Improve elasticity and firmness through collagen stimulation</li>
+          <li>Provide antioxidant protection against environmental aging factors</li>
+          <li>Instantly brighten and smooth the complexion</li>
+        </ul>
+      Ideal for dry, mature or devitalised skin, Proteoglycans Ampoules help achieve a visibly more youthful and radiant appearance with each session.
+        <br><br>
+        <b>From: R 2675</b>
+        <br><br>
+        <b>Time: 90 minutes</b>
+    </p>
+
+signature-prp-renew-treatment--anti-ageing:
+  title: "Signature PRP Renew Treatment"
+  body: |
+    <p class="mb-0">
+      Platelet-Rich Plasma (PRP) therapy is a powerful, natural anti-aging treatment that uses your body’s own platelets - rich in growth factors and healing proteins - to stimulate skin repair, collagen production and overall rejuvenation. This minimally invasive procedure taps into your body’s natural regenerative ability to restore smoother, firmer and more youthful-looking skin. PRP works by stimulating collagen and elastin to firm and plump the skin, accelerating cell renewal for smoother texture and improving fine lines and wrinkles.
+      <br><br>
+      Because PRP uses your own biological material, it’s a highly biocompatible treatment with minimal risk of sensitivity or reaction - making it ideal even for delicate or aging skin.
+      <br><br>
+      <b>From: R 4890</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+prp-needling-with-botox--anti-ageing:
+  title: "PRP Needling with Botox"
+  body: |
+    <p class="mb-0">
+      PRP Needling with Micro-Botox is a cutting-edge, regenerative treatment that combines the collagen-stimulating power of microneedling, the healing and growth factor-rich benefits of Platelet-Rich Plasma (PRP) and the pore-refining, skin-smoothing effects of Micro-Botox. Together, this synergy offers a highly effective, non-surgical solution for treating visible signs of aging - naturally and without compromising facial expression.
+      <br><br>
+      The microneedling creates controlled micro-injuries in the skin, triggering a healing cascade that stimulates collagen and elastin, firms skin and improves texture.
+      <br><br>
+      PRP, derived from your own blood, is packed with growth factors that boost cell turnover, accelerate tissue repair and enhance overall skin vitality - making it ideal for fine lines, skin laxity and dullness. Lastly, Micro-Botox is delivered superficially in micro-droplets, smoothing the skin’s surface without freezing facial movement. It helps to tighten pores, balance oil production and refine skin texture, while subtly reducing dynamic fine lines.
+      <br><br>
+      <b>From: R 4890</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+3d-needling-with-prf--anti-ageing:
+  title: "3D Needling with PRF"
+  body: |
+    <p class="mb-0">
+      3D Needling with PRF is a cutting-edge, biologically driven treatment that combines the collagen-boosting power of microneedling with the regenerative strength of Platelet-Rich Fibrin (PRF) - a next-generation healing concentrate derived from your own blood. This synergistic approach delivers remarkable anti-aging results by activating your skin’s natural ability to heal, firm and renew itself from within.
+      <br><br>
+      Microneedling creates controlled micro-injuries in the skin, which stimulate collagen and elastin production, enhance texture and reduce the appearance of fine lines and wrinkles. Platelet-Rich Fibrin (PRF), a richer and more advanced version of PRP, contains not only growth factors but also stem cells, white blood cells and a fibrin matrix. This allows for slower, sustained release of healing properties for deeper, longer-lasting rejuvenation.
+      <br><br>
+      <b>From: R 2500</b>
+      <br><br>
+      <b>Time: 120 minutes</b>
+    </p>
+
+tca-lumecca-ipl-combo:
+  title: "TCA Lumecca IPL Combo"
+  body: |
+    <p class="mb-0">
+      The TCA Peel + Lumecca IPL combination treatment is a high-performance, clinical-grade solution designed to target multiple signs of aging - both at the surface and deeper within the skin. By combining the resurfacing effects of a TCA (Trichloroacetic Acid) chemical peel with the advanced light-based technology of Lumecca IPL, this treatment delivers dramatic rejuvenation with minimal downtime.
+      <br><br>
+      TCA is a powerful chemical exfoliant that penetrates into the deeper layers of the skin to stimulate collagen and elastin production, remove damaged or pigmented skin cells, smooth fine lines, wrinkles and improve overall skin tone.
+      <br><br>
+      Lumecca is a powerful Intense Pulsed Light (IPL) device that uses advanced light therapy to break down sun spots, age spots, and hyperpigmentation. It additionally reduces broken capillaries and redness and evens out skin tone for a brighter, clearer complexion.
+      <br><br>
+      <b>From: R 3275</b>
+      <br><br>
+      <b>Time: 60 minutes</b>
+    </p>
+
+tri-therapy-with-mesotherapy-face-plus-neck:
+  title: "Tri-Therapy with Mesotherapy (Face + Neck)"
+  body: |
+    <p class="mb-0">
+      Tri-Therapy is a sophisticated, three-step anti-aging treatment designed to rejuvenate mature or aging skin without irritation or downtime. Perfect for clients with delicate, thinning or sensitive skin, this protocol combines a mild chemical peel, superficial mesotherapy infused with regenerative actives and a calming post-treatment mask - all carefully curated to restore firmness, improve texture and enhance overall skin vitality.
+      <br><br>
+      Tri-Therapy offers a gentle yet highly effective way to renew and strengthen aging skin - restoring clarity, comfort and a youthful glow over time.
+      <br><br>
+      <b>From: R 2675</b>
+      <br><br>
+      <b>Time: 75 minutes</b>
+    </p>

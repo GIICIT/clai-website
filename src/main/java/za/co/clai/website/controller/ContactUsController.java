@@ -25,7 +25,6 @@ public class ContactUsController {
     @GetMapping(value = {"/contact-us"})
     public String contactUsPage(Model model) {
         model.addAttribute("emailModel", new EmailModel());
-        model.addAttribute("isContactUsActive", true);
         return "contact-us";
     }
 

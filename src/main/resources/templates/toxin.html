@@ -4,22 +4,13 @@
   <body>
   <th:block th:replace="~{fragments/layout :: page-top}"></th:block>
 
-  <section class="products-banner">
-    <div class="container-fluid  p-0">
-      <div class="row g-0">
-        <div class="col-lg-5 col-md-12" style="background-image: url(img/treatments/toxin/toxin_1.jpg); background-position: center; background-size: cover;">
-          <img width="1232" height="817" class="img-fluid d-block d-lg-none" src="img/treatments/toxin/toxin_1.jpg" alt="Botox and Dysport treatment at CLAI Durbanville">
-        </div>
-        <div class="col-lg-7 col-md-12 features-section amazing-features">
-          <div class="section-title">
-            <h1 class="title" style="color: #000; text-align: left; display: block; font-size:42px !important; font-family: 'Playfair Display', serif; line-height: 1.1; font-weight: 200;">
-              Botox and Dysport Treatments
-            </h1>
-            <div class="row" style="margin-top: 15px;">
-              <div class="col-md-9">
-                <div class="feature-box feature-box-style-05 mb-4 mb-md-5">
-                  <div class="feature-content">
-                    <p style="color: #000; font-size: 12px; line-height: 1.3;">
+  <section th:replace="~{fragments/sections :: hero-split(title='Botox and Dysport Treatments',
+                 image='img/treatments/toxin/toxin_1.jpg',
+                 imageW=1232,
+                 imageH=817,
+                 imageAlt='Botox and Dysport treatment at CLAI Durbanville',
+                 text=~{::toxinIntro})}">
+    <th:block th:fragment="toxinIntro">
                       At CLAI, we offer a range of specialized neurotoxin treatments designed to deliver natural results,
                       enhance facial harmony, and address both cosmetic and medical concerns.
 
@@ -28,260 +19,20 @@
 
                       Our neurotoxin treatment prices start from <b>R90 per unit of Botox</b>.
 
-                    </p>
-                  </div>
-                </div>
-                <section>
-                  <div th:insert="fragments/book-appointment :: book-appointment"></div>
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+                    </th:block>
   </section>
 
   <!-- DROP-IN SECTION: products-banner with accordion (no extra title) -->
-  <section class="products-banner ivy-tight">
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-
-        <!-- ACCORDION (2nd on mobile, 1st on desktop) -->
-        <div class="col-lg-7 col-md-12 features-section amazing-features order-2 order-lg-1">
-          <div class="section-title">
-            <div class="title" style="color: #000; text-align: left; display: block; font-size:32px !important; font-family: 'Playfair Display', serif; line-height: 1.1; font-weight: 200;">
-              Toxin Treatments
-            </div>
-            <div class="row" style="margin-top: 15px;">
-              <div class="col-md-9">
-
-                <div class="accordion ivy-accordion" id="accordion-toxin">
-
-                  <div class="card">
-                    <div class="card-header" id="toxinHeadingOne">
-                      <h5 class="accordion-title mb-0">
-                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#toxinCollapseOne"
-                                aria-expanded="false"
-                                aria-controls="toxinCollapseOne">
-                          Microtox / BabyTox
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="toxinCollapseOne"
-                         class="collapse accordion-content"
-                         aria-labelledby="toxinHeadingOne"
-                         data-bs-parent="#accordion-toxin">
-                      <div class="card-body">
-                        <p class="mb-0">
-                          Microtox, also known as Baby Botox, uses tiny, precise doses of botulinum toxin to soften fine
-                          lines without creating a “frozen” look. This treatment is perfect for those who want subtle,
-                          natural-looking results while maintaining facial movement and expression.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card-header" id="toxinHeadingTwo">
-                      <h5 class="accordion-title mb-0">
-                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#toxinCollapseTwo"
-                                aria-expanded="false"
-                                aria-controls="toxinCollapseTwo">
-                          Toxin for Migraines
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="toxinCollapseTwo"
-                         class="collapse accordion-content"
-                         aria-labelledby="toxinHeadingTwo"
-                         data-bs-parent="#accordion-toxin">
-                      <div class="card-body">
-                        <p class="mb-0">
-                          Neurotoxin injections can provide effective relief for chronic migraines. By targeting specific
-                          muscles in the head and neck, the treatment relaxes tension and helps prevent migraine triggers.
-                          Many patients experience a noticeable reduction in the frequency and severity of their headaches.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card-header" id="toxinHeadingThree">
-                      <h5 class="accordion-title mb-0">
-                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#toxinCollapseThree"
-                                aria-expanded="false"
-                                aria-controls="toxinCollapseThree">
-                          Toxin for Lines & Wrinkles
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="toxinCollapseThree"
-                         class="collapse accordion-content"
-                         aria-labelledby="toxinHeadingThree"
-                         data-bs-parent="#accordion-toxin">
-                      <div class="card-body">
-                        <p class="mb-0">
-                          One of the most popular uses of neurotoxins is to smooth wrinkles in the upper face, such as
-                          frown lines, forehead lines, and crow’s feet. By temporarily relaxing the targeted muscles,
-                          the skin looks smoother, softer, and more refreshed.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card-header" id="toxinHeadingFour">
-                      <h5 class="accordion-title mb-0">
-                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#toxinCollapseFour"
-                                aria-expanded="false"
-                                aria-controls="toxinCollapseFour">
-                          Bruxism (Teeth Grinding)
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="toxinCollapseFour"
-                         class="collapse accordion-content"
-                         aria-labelledby="toxinHeadingFour"
-                         data-bs-parent="#accordion-toxin">
-                      <div class="card-body">
-                        <p class="mb-0">
-                          Bruxism, or teeth grinding and clenching, can cause jaw pain, headaches, and damage to the teeth.
-                          Neurotoxin injections relax the overactive jaw muscles, easing discomfort and protecting your
-                          smile while improving overall jawline comfort.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card-header" id="toxinHeadingFive">
-                      <h5 class="accordion-title mb-0">
-                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#toxinCollapseFive"
-                                aria-expanded="false"
-                                aria-controls="toxinCollapseFive">
-                          Chin Dimpling Treatment
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="toxinCollapseFive"
-                         class="collapse accordion-content"
-                         aria-labelledby="toxinHeadingFive"
-                         data-bs-parent="#accordion-toxin">
-                      <div class="card-body">
-                        <p class="mb-0">
-                          A “peach pit” or “orange peel” texture on the chin, as well as downturned mouth corners
-                          (caused by the DAO muscle), can create an aged or tired look. With targeted neurotoxin injections,
-                          we smooth chin dimpling and lift the corners of the mouth for a more refined, youthful appearance.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card-header" id="toxinHeadingSix">
-                      <h5 class="accordion-title mb-0">
-                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#toxinCollapseSix"
-                                aria-expanded="false"
-                                aria-controls="toxinCollapseSix">
-                          Hyperhidrosis (Excessive Sweating)
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="toxinCollapseSix"
-                         class="collapse accordion-content"
-                         aria-labelledby="toxinHeadingSix"
-                         data-bs-parent="#accordion-toxin">
-                      <div class="card-body">
-                        <p class="mb-0">
-                          Excessive sweating can be uncomfortable and affect confidence. Neurotoxin injections block the
-                          signals that activate sweat glands, significantly reducing sweat production in areas like the
-                          underarms, hands, or feet. The result is long-lasting dryness and comfort.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card-header" id="toxinHeadingSeven">
-                      <h5 class="accordion-title mb-0">
-                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#toxinCollapseSeven"
-                                aria-expanded="false"
-                                aria-controls="toxinCollapseSeven">
-                          Lip Flip
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="toxinCollapseSeven"
-                         class="collapse accordion-content"
-                         aria-labelledby="toxinHeadingSeven"
-                         data-bs-parent="#accordion-toxin">
-                      <div class="card-body">
-                        <p class="mb-0">
-                          The Lip Flip enhances the upper lip by relaxing the surrounding muscles with tiny neurotoxin
-                          injections. This causes the lip to subtly “flip” outward, creating the appearance of fuller,
-                          more defined lips-without adding volume or using fillers.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card-header" id="toxinHeadingEight">
-                      <h5 class="accordion-title mb-0">
-                        <button class="btn btn-link d-flex align-items-center me-auto collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#toxinCollapseEight"
-                                aria-expanded="false"
-                                aria-controls="toxinCollapseEight">
-                          Platysma Band Toxin / Nefertiti Lift
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="toxinCollapseEight"
-                         class="collapse accordion-content"
-                         aria-labelledby="toxinHeadingEight"
-                         data-bs-parent="#accordion-toxin">
-                      <div class="card-body">
-                        <p class="mb-0">
-                          Over time, vertical neck bands and sagging skin can affect the jawline and neck contour.
-                          The Nefertiti Lift targets the platysma muscle with neurotoxin injections to relax tight bands,
-                          smooth the neck, and gently lift the jawline-restoring a more elegant profile.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- IMAGE (1st on mobile, 2nd on desktop) -->
-        <div class="col-lg-5 col-md-12 order-1 order-lg-2"
-             style="background-image: url(img/treatments/toxin/toxin_2.jpg); background-position: center; background-size: cover;">
-          <img width="1477" height="1800" loading="lazy" decoding="async" class="img-fluid d-block d-lg-none" src="img/treatments/toxin/toxin_2.jpg" alt="Toxin treatments at CLAI">
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <section th:replace="~{fragments/sections :: accordion-split(title='Toxin Treatments',
+                 accordionId='accordion-toxin',
+                 image='img/treatments/toxin/toxin_2.jpg',
+                 imageW=1477,
+                 imageH=1800,
+                 imageAlt='Toxin treatments at CLAI',
+                 prefix='toxin',
+                 items='microtox-babytox, toxin-for-migraines, toxin-for-lines-and-wrinkles,
+                        bruxism-teeth-grinding, chin-dimpling-treatment, hyperhidrosis-excessive-sweating,
+                        lip-flip, platysma-band-toxin-nefertiti-lift')}"></section>
   <th:block th:replace="~{fragments/layout :: page-end('treatment')}"></th:block>
   </body>
 </html>

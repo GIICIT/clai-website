@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+  Page sections. Pages pass their own content in as a fragment, so the layout markup lives here once.
+  Call with NAMED parameters (any not passed are null and fall back to the default noted):
+
+  1. hero-split: image left, H1 + intro text + Book button right (top of Toxin, Dermal Filler, ...)
+     <section th:replace="~{fragments/sections :: hero-split(title='Skin Boosters',
+                image='/img/treatments/skin-boosters/skin_boosters_1.jpg', imageW=705, imageH=747,
+                imageAlt='...', text=~{::skinBoostersIntro})}">
+       <th:block th:fragment="skinBoostersIntro">Intro text, <br> and <b> allowed (it goes inside one p)</th:block>
+     </section>
+
+  2. accordion-split: section title + accordion beside a photo
+     accordion-split(title, accordionId, items + prefix | cards=~{::xCards}, image, imageW, imageH, imageAlt,
+                     imageSide='right'|'left' (default right), mobileFirst='image'|'text' (default image),
+                     imagePosition (CSS background-position, default 'center'), spacing='space-p'|'space-pt'|null)
+
+  3. accordion-centered: centred section title + accordion, no side photo
+     accordion-centered(title, accordionId, items + prefix | cards=~{::xCards},
+                        band=true (full-width band, 7/12 column) | false/null (narrow 8/12 container),
+                        spacing, image/imageW/imageH/imageAlt (optional full-width photo under it, narrow only))
+
+  4. intro-centered: white intro block (H1 or H2, paragraphs, h3s) with an optional full-width photo
+     intro-centered(text=~{::xIntro}, spacing, image/imageW/imageH/imageAlt, imageCentered=true|null)
+     The text fragment holds everything inside the centred column (headings included).
+
+  Accordion content: items='id-one, id-two' + prefix='xTreatments' renders those cards from content/treatments.yml
+  (preferred); or cards=~{::xCards} for hand-written markup. Cards inside `cards` are normal accordion cards (fragments/accordion :: card),
+  and their parentId must equal accordionId. Fragment names (xCards, xIntro) must be unique on the page
+  and must not be HTML tag names.
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<section class="products-banner" th:fragment="hero-split">
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+      <div class="col-lg-5 col-md-12" th:style="|background-image: url(${image}); background-position: center; background-size: cover;|">
+        <img th:width="${imageW}" th:height="${imageH}" class="img-fluid d-block d-lg-none" th:src="${image}" th:alt="${imageAlt}">
+      </div>
+      <div class="col-lg-7 col-md-12 features-section amazing-features">
+        <div class="section-title">
+          <h1 class="title clai-title clai-title-lg" th:text="${title}">Title</h1>
+          <div class="row" style="margin-top: 15px;">
+            <div class="col-md-9">
+              <div class="feature-box feature-box-style-05 mb-4 mb-md-5">
+                <div class="feature-content">
+                  <p class="clai-text" th:insert="${text}"></p>
+                </div>
+              </div>
+              <section>
+                <div th:insert="~{fragments/book-appointment :: book-appointment}"></div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products-banner ivy-tight" th:fragment="accordion-split" th:classappend="${spacing}"
+         th:with="textFirst=${mobileFirst == 'text'}, imageLeft=${imageSide == 'left'}">
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+      <div class="col-lg-7 col-md-12 features-section amazing-features"
+           th:classappend="|${textFirst ? 'order-1' : 'order-2'} ${imageLeft ? 'order-lg-2' : 'order-lg-1'}|">
+        <div class="section-title">
+          <div class="title clai-title clai-title-md" th:text="${title}">Title</div>
+          <div class="row" style="margin-top: 15px;">
+            <div class="col-md-9">
+              <div class="accordion ivy-accordion" th:id="${accordionId}">
+                <th:block th:if="${items != null}" th:with="cardPrefix=${prefix}">
+                  <th:block th:replace="~{fragments/accordion :: treatment-cards(${accordionId}, ${cardPrefix}, ${items})}"></th:block>
+                </th:block>
+                <th:block th:if="${cards != null}"><th:block th:replace="${cards}"></th:block></th:block>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-12"
+           th:classappend="|${textFirst ? 'order-2' : 'order-1'} ${imageLeft ? 'order-lg-1' : 'order-lg-2'}|"
+           th:style="|background-image: url(${image}); background-position: ${imagePosition ?: 'center'}; background-size: cover;|">
+        <img th:width="${imageW}" th:height="${imageH}" loading="lazy" decoding="async" class="img-fluid d-block d-lg-none" th:src="${image}" th:alt="${imageAlt}">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products-banner ivy-tight" th:fragment="accordion-centered" th:classappend="${spacing}">
+  <div th:class="${band} ? 'container-fluid p-0' : 'container'">
+    <div th:class="${band} ? 'row g-0 justify-content-center' : 'row justify-content-center'">
+      <div th:class="${band} ? 'col-lg-7 col-md-12 features-section amazing-features' : 'col-lg-8'">
+        <div class="section-title">
+          <div class="title clai-title clai-title-md clai-title-center" th:text="${title}">Title</div>
+          <div class="row justify-content-center" style="margin-top: 15px;">
+            <div class="col-md-9">
+              <div class="accordion ivy-accordion" th:id="${accordionId}">
+                <th:block th:if="${items != null}" th:with="cardPrefix=${prefix}">
+                  <th:block th:replace="~{fragments/accordion :: treatment-cards(${accordionId}, ${cardPrefix}, ${items})}"></th:block>
+                </th:block>
+                <th:block th:if="${cards != null}"><th:block th:replace="${cards}"></th:block></th:block>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row space-p" th:if="${image != null}">
+      <div class="col-lg-12">
+        <div class="service-img">
+          <img th:width="${imageW}" th:height="${imageH}" loading="lazy" decoding="async" class="img-fluid" th:src="${image}" th:alt="${imageAlt}">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service white-bg" th:fragment="intro-centered" th:classappend="${spacing}">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center" th:insert="${text}"></div>
+      </div>
+    </div>
+    <div class="row" th:if="${image != null}">
+      <div class="col-lg-12" th:classappend="${imageCentered} ? 'text-center'">
+        <div class="service-img">
+          <img th:width="${imageW}" th:height="${imageH}" class="img-fluid" th:src="${image}" th:alt="${imageAlt}">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

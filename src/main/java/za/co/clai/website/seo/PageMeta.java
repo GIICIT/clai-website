@@ -9,7 +9,7 @@ package za.co.clai.website.seo;
  * @param description   meta description (and og:description)
  * @param image         sharing image path (site-relative) or null for the site default
  * @param lastmod       last content change, YYYY-MM-DD (sitemap)
- * @param type          "blog" for blog posts, otherwise null
+ * @param type          "treatment" (Treatments menu), "blog" (Blog menu), or null
  * @param datePublished blog posts: YYYY-MM-DD
  * @param author        blog posts: author name
  */
@@ -18,6 +18,10 @@ public record PageMeta(String path, String name, String title, String descriptio
 
     public boolean isBlog() {
         return "blog".equals(type);
+    }
+
+    public boolean isTreatment() {
+        return "treatment".equals(type);
     }
 
     public boolean isHome() {

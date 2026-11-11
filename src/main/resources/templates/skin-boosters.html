@@ -6,75 +6,29 @@
 
   <!-- Intro: image left, heading + intro + Book button right (same layout as Dermal Filler) -->
   <!-- Layout mirrors dermal-filler.html exactly: sections alternate (image left, then image right). -->
-  <section class="products-banner">
-    <div class="container-fluid  p-0">
-      <div class="row g-0">
-        <div class="col-lg-5 col-md-12" style="background-image: url(/img/treatments/skin-boosters/skin_boosters_1.jpg); background-position: center; background-size: cover;">
-          <img width="705" height="747" class="img-fluid d-block d-lg-none" src="/img/treatments/skin-boosters/skin_boosters_1.jpg" alt="Skin booster consultation at CLAI">
-        </div>
-        <div class="col-lg-7 col-md-12 features-section amazing-features">
-          <div class="section-title">
-            <h1 class="title" style="color: #000; text-align: left; display: block; font-size:42px !important; font-family: 'Playfair Display', serif; line-height: 1.1; font-weight: 200;">
-              Skin Boosters
-            </h1>
-            <div class="row" style="margin-top: 15px;">
-              <div class="col-md-9">
-                <div class="feature-box feature-box-style-05 mb-4 mb-md-5">
-                  <div class="feature-content">
-                    <p style="color: #000; font-size: 12px; line-height: 1.3;">
+  <section th:replace="~{fragments/sections :: hero-split(title='Skin Boosters',
+                 image='/img/treatments/skin-boosters/skin_boosters_1.jpg',
+                 imageW=705,
+                 imageH=747,
+                 imageAlt='Skin booster consultation at CLAI',
+                 text=~{::skinBoostersIntro})}">
+    <th:block th:fragment="skinBoostersIntro">
                       Skin boosters are injectable treatments designed to improve the skin&rsquo;s hydration, texture and overall quality from within. By delivering hydrating ingredients, such as hyaluronic acid, into the skin, they help support a smoother, more supple and radiant complexion.
                       <br><br>
                       At CLAI, every treatment is tailored to your skin&rsquo;s needs and aesthetic goals, with a focus on natural-looking results, improved skin quality and a healthy, refreshed appearance.
-                    </p>
-                  </div>
-                </div>
-                <section>
-                  <div th:insert="fragments/book-appointment :: book-appointment"></div>
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+                    </th:block>
   </section>
 
   <!-- Treatments: accordion left, image right on desktop; image first on mobile (same layout as Dermal Filler) -->
-  <section class="products-banner ivy-tight">
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-
-        <div class="col-lg-7 col-md-12 features-section amazing-features order-2 order-lg-1">
-          <div class="section-title">
-            <div class="title" style="color: #000; text-align: left; display: block; font-size:32px !important; font-family: 'Playfair Display', serif; line-height: 1.1; font-weight: 200;">
-              Skin Booster Treatments
-            </div>
-            <div class="row" style="margin-top: 15px;">
-              <div class="col-md-9">
-
-                <div class="accordion ivy-accordion" id="accordion-skin-boosters-treatments">
-
-                  <div th:replace="~{fragments/treatments/skin-booster :: card('accordion-skin-boosters-treatments', 'skinBoostersTreatments', 'One')}"></div>
-
-                  <div th:replace="~{fragments/treatments/glow-and-behold :: card('accordion-skin-boosters-treatments', 'skinBoostersTreatments', 'Two')}"></div>
-
-                  <div th:replace="~{fragments/treatments/glow-and-behold-2 :: card('accordion-skin-boosters-treatments', 'skinBoostersTreatments', 'Three')}"></div>
-
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-5 col-md-12 order-1 order-lg-2"
-             style="background-image: url(/img/treatments/skin-boosters/skin_boosters_2.jpg); background-position: center 30%; background-size: cover;">
-          <img width="610" height="752" loading="lazy" decoding="async" class="img-fluid d-block d-lg-none" src="/img/treatments/skin-boosters/skin_boosters_2.jpg" alt="Skin booster treatment at CLAI">
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <section th:replace="~{fragments/sections :: accordion-split(title='Skin Booster Treatments',
+                 accordionId='accordion-skin-boosters-treatments',
+                 image='/img/treatments/skin-boosters/skin_boosters_2.jpg',
+                 imageW=610,
+                 imageH=752,
+                 imageAlt='Skin booster treatment at CLAI',
+                 imagePosition='center 30%',
+                 prefix='skinBoostersTreatments',
+                 items='skin-booster, glow-and-behold, glow-and-behold-2')}"></section>
   <th:block th:replace="~{fragments/layout :: page-end('treatment')}"></th:block>
   </body>
 </html>
