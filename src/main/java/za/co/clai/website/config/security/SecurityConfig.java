@@ -4,6 +4,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
@@ -28,5 +30,14 @@ public class SecurityConfig {
                         .anyRequest().permitAll()
                 );
         return http.build();
+    }
+
+    /**
+     * No user accounts. Without this bean Spring Boot creates a default "user" and prints its random password in the
+     * log on every start (harmless here since nothing requires a login, but a password in the logs is noise).
+     */
+    @Bean
+    public UserDetailsService noUserAccounts() {
+        return new InMemoryUserDetailsManager();
     }
 }

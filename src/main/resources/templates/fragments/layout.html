@@ -150,7 +150,7 @@
 <!-- Top of every page: WhatsApp button, preloader, sticky header with navbar -->
 <th:block th:fragment="page-top">
   <!-- Floating WhatsApp Button with Official Logo -->
-  <div th:insert="fragments/whatsapp-float :: whatsapp-button"></div>
+  <div th:insert="~{fragments/whatsapp-float :: whatsapp-button}"></div>
 
     <!--=================================
     preloader -->
@@ -161,7 +161,7 @@
     <!--=================================
     Header -->
     <header class="header header-sticky default">
-        <div th:insert="fragments/navbar :: nav-bar"></div>
+        <div th:insert="~{fragments/navbar :: nav-bar}"></div>
     </header>
 </th:block>
 
@@ -170,12 +170,12 @@
   <!--=================================
   footer-->
   <section>
-      <div th:insert="fragments/footer :: footer"></div>
+      <div th:insert="~{fragments/footer :: footer}"></div>
   </section>
 
   <!--=================================
   PDF Price List (opened from the navbar "Price List" item)-->
-  <div th:replace="fragments/pdf-modal :: pdf-modal(
+  <div th:replace="~{fragments/pdf-modal :: pdf-modal(
     'pdfModal',
     'pdfModalLabel',
     'pdf-viewer',
@@ -183,7 +183,7 @@
     'total-pages',
     '/docs/pricelist.pdf',
     'Price List'
-)"></div>
+)}"></div>
 
     <!--=================================
     Javascript -->

@@ -1,11 +1,11 @@
 package za.co.clai.website;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -180,9 +180,9 @@ class SitePagesTest {
                     .replaceAll("(?<=\\d)[ ,](?=\\d{3}\\b)", "");   // "R 15 990" / "R7,900" -> 15990 / 7900
             List<Integer> prices = new ArrayList<>();
             for (String block : all(JSON_LD, html)) {
-                com.fasterxml.jackson.databind.JsonNode node = json.readTree(block);
+                tools.jackson.databind.JsonNode node = json.readTree(block);
                 if (!node.has("hasOfferCatalog")) continue;
-                for (com.fasterxml.jackson.databind.JsonNode offer : node.get("hasOfferCatalog").get("itemListElement")) {
+                for (tools.jackson.databind.JsonNode offer : node.get("hasOfferCatalog").get("itemListElement")) {
                     assertThat(offer.at("/itemOffered/name").asText()).as("offer name on %s", page.path()).isNotBlank();
                     for (String f : List.of("/price", "/priceSpecification/minPrice", "/priceSpecification/maxPrice")) {
                         if (!offer.at(f).isMissingNode()) prices.add(offer.at(f).asInt());
