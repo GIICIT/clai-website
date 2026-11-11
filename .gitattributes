@@ -1,2 +1,5 @@
 /mvnw text eol=lf
 *.cmd text eol=crlf
+# Run on the Linux server: must keep LF line endings even when checked out on Windows (Jenkins, core.autocrlf=true)
+*.sh text eol=lf
+Dockerfile text eol=lf
