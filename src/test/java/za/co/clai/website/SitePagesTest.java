@@ -50,8 +50,8 @@ class SitePagesTest {
     /** Routes that are not content pages (redirects, generated files, form endpoints, error handling). */
     private static final Set<String> NON_PAGE_ROUTES = Set.of("/home", "/acne-and-acne-scaring", "/sitemap.xml", "/email", "/error");
 
-    /** Templates that are deliberately not pages: skin-treatments.html is an old unrouted orphan. */
-    private static final Set<String> UNLISTED_TEMPLATES = Set.of("/skin-treatments");
+    /** Templates that are deliberately not pages (none since skin-treatments.html was deleted in Phase 3). */
+    private static final Set<String> UNLISTED_TEMPLATES = Set.of();
 
     private static final Pattern ITEMS = Pattern.compile("items='([^']*)'");
 

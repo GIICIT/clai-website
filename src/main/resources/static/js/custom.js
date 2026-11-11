@@ -405,6 +405,7 @@ POTENZA.searchbar = function () {
   *************************/
   POTENZA.animatedcircletext = function () {
     const text = document.querySelector(".text");
+    if (!text) return; // only the home page has the circle text; without this every other page threw a TypeError
     text.innerHTML = text.innerText
       .split("")
       .map(
