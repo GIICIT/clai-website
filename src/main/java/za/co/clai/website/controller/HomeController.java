@@ -1,5 +1,6 @@
 package za.co.clai.website.controller;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,14 +19,23 @@ public class HomeController {
     @GetMapping("/")
     public String homePage(Model model) {
         model.addAttribute("isHomeActive", true);
-        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
-        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "index";
     }
 
+    /** Old duplicate URL: permanent (301) redirect so search engines keep only "/". */
     @GetMapping("/home")
     public RedirectView redirectToRoot() {
-        return new RedirectView("/", true);
+        RedirectView redirect = new RedirectView("/", true);
+        redirect.setStatusCode(HttpStatus.MOVED_PERMANENTLY);
+        return redirect;
+    }
+
+    /** Old misspelled URL (renamed Nov 2026): 301 so links and search rankings carry over. */
+    @GetMapping("/acne-and-acne-scaring")
+    public RedirectView redirectOldAcneUrl() {
+        RedirectView redirect = new RedirectView("/acne-and-acne-scarring", true);
+        redirect.setStatusCode(HttpStatus.MOVED_PERMANENTLY);
+        return redirect;
     }
 
 }

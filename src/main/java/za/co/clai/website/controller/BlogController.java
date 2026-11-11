@@ -17,8 +17,6 @@ public class BlogController {
     public String blogPageWhyClai(Model model) {
         model.addAttribute("isBlogActive", true);
         model.addAttribute("isWhyClaiActive", true);
-        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
-        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "blog-single-why-clai";
     }
 
@@ -26,8 +24,6 @@ public class BlogController {
     public String blogPageWinterSkinPrep(Model model) {
         model.addAttribute("isBlogActive", true);
         model.addAttribute("isWinterSkinPrepActive", true);
-        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
-        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "winter-skin-prep";
     }
 }

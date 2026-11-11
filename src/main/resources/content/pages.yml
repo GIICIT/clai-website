@@ -1,0 +1,120 @@
+# Single source of truth for every public page's SEO data.
+# Used by: the <head> (title, description, canonical, Open Graph/Twitter), structured data (breadcrumbs,
+# blog posts) and the generated /sitemap.xml (SitemapController).
+#
+# Adding a page: add an entry here (path must match the controller mapping).
+# Changing a page's content: update its lastmod (YYYY-MM-DD) so search engines re-crawl it.
+# Guidelines: title <= 60 characters, "<Topic> in Durbanville | CLAI"; description <= 155 characters,
+# taken from the page's own copy (no prices: they change and would drift from the treatment text).
+site:
+  baseUrl: https://clai.co.za
+  name: CLAI
+  defaultImage: /img/full-logo-lockup-black-50.png
+
+pages:
+  - path: /
+    name: Home
+    title: "CLAI | Aesthetic & Skin Clinic in Durbanville, Cape Town"
+    description: "Aesthetic and skin clinic in Durbanville, Cape Town. Every journey starts with a doctor consultation and VISIA Skin Analysis for natural-looking results."
+    lastmod: 2026-11-11
+
+  - path: /ivy-therapy
+    name: IV Therapy
+    title: "IV Therapy & Vitamin Drips in Durbanville | CLAI"
+    description: "IV therapy at CLAI Durbanville: vitamins, minerals, antioxidants and amino acids delivered directly into the bloodstream to support you from the inside out."
+    image: /img/ivy-therapy/ivy_therapy_1.jpg
+    lastmod: 2026-11-11
+
+  - path: /toxin
+    name: Botox & Dysport
+    title: "Botox & Dysport Treatments in Durbanville | CLAI"
+    description: "Botox and Dysport treatments at CLAI Durbanville, including Microtox and toxin for migraines, designed to deliver natural results and facial harmony."
+    image: /img/treatments/toxin/toxin_1.jpg
+    lastmod: 2026-11-11
+
+  - path: /dermal-filler
+    name: Dermal Filler
+    title: "Dermal Filler Treatments in Durbanville | CLAI"
+    description: "Dermal filler treatments at CLAI Durbanville to restore lost volume, enhance natural features and create a balanced appearance tailored to your face."
+    image: /img/treatments/dermal-filler/dermal_filler_1.jpg
+    lastmod: 2026-11-11
+
+  - path: /biostimulators
+    name: Biostimulators
+    title: "Sculptra, Radiesse & Sunekos Biostimulators | CLAI"
+    description: "Biostimulators at CLAI Durbanville: Sculptra, Radiesse and Sunekos injectables that stimulate natural collagen for firmer, smoother skin over time."
+    image: /img/treatments/biostimulators/biostimulators_1.jpg
+    lastmod: 2026-11-11
+
+  - path: /skin-boosters
+    name: Skin Boosters
+    title: "Skin Booster Treatments in Durbanville | CLAI"
+    description: "Skin boosters at CLAI Durbanville: hyaluronic acid injectables and Glow & Behold combinations to improve hydration, texture and radiance from within."
+    image: /img/treatments/skin-boosters/skin_boosters_1.jpg
+    lastmod: 2026-11-11
+
+  - path: /hyper-pigmentation
+    name: Hyperpigmentation
+    title: "Hyperpigmentation Treatment in Durbanville | CLAI"
+    description: "Hyperpigmentation treatment at CLAI Durbanville: peels, medical needling, IPL and more to address dark spots and uneven skin tone."
+    image: /img/treatments/hyper-pigmentation/hyper_pigmentation.jpg
+    lastmod: 2026-11-11
+
+  - path: /acne-and-acne-scarring
+    name: Acne & Acne Scarring
+    title: "Acne & Acne Scarring Treatment in Durbanville | CLAI"
+    description: "Acne and acne scarring treatment at CLAI Durbanville: facials, peels, medical needling, PRP and more, tailored to your skin."
+    image: /img/treatments/acne-and-acne-scarring/acne_and_acne_scarring.jpg
+    lastmod: 2026-11-11
+
+  - path: /rosacea-and-sensitive-skin
+    name: Rosacea & Sensitive Skin
+    title: "Rosacea & Sensitive Skin Treatment | CLAI Durbanville"
+    description: "Calming treatments for rosacea and sensitive skin at CLAI Durbanville, designed to reduce redness, soothe inflammation and strengthen the skin barrier."
+    image: /img/treatments/rosacea-and-sensitive-skin/rosacea_and_sensitive_skin.jpg
+    lastmod: 2026-11-11
+
+  - path: /hair-treatments
+    name: Hair Treatments
+    title: "Hair & Scalp Treatments in Durbanville | CLAI"
+    description: "Hair and scalp treatments at CLAI Durbanville focusing on scalp health, circulation and follicle function to support long-term hair restoration."
+    image: /img/treatments/hair-treatments/hair_treatments.jpg
+    lastmod: 2026-11-11
+
+  - path: /intimate-wellness
+    name: Intimate Wellness
+    title: "Intimate Wellness Treatments in Durbanville | CLAI"
+    description: "Intimate wellness at CLAI Durbanville: intimate peels, PRF O-Shot + G-Shot, intimate filler and Intimate Renewal, with a private consultation."
+    image: /img/treatments/intimate-wellness/intimate_wellness.jpg
+    lastmod: 2026-11-11
+
+  - path: /anti-ageing
+    name: Anti-Ageing
+    title: "Anti-Ageing Treatments in Durbanville | CLAI"
+    description: "Anti-ageing treatments at CLAI Durbanville that support healthy ageing, skin quality and collagen production, from medical facials to injectables."
+    image: /img/treatments/anti-ageing/anti_ageing.jpg
+    lastmod: 2026-11-11
+
+  - path: /contact-us
+    name: Contact Us
+    title: "Contact & Book an Appointment | CLAI Durbanville"
+    description: "Contact CLAI at 22 Van der Byl Avenue, Durbanville. Call +27 77 370 5689 or email info@clai.co.za to book your consultation."
+    lastmod: 2026-11-11
+
+  - path: /blog-single-why-clai
+    name: Why CLAI?
+    type: blog
+    title: "Why CLAI? Inside the Future of Aesthetic Wellbeing | CLAI"
+    description: "Why CLAI? Science-driven, personalised skincare that combines advanced aesthetic treatments with internal wellness for healthy, radiant skin."
+    datePublished: 2025-02-14
+    author: Kim Van Zyl
+    lastmod: 2025-02-14
+
+  - path: /winter-skin-prep
+    name: Winter Skin Prep
+    type: blog
+    title: "Winter Skin Prep: Barrier Repair & Hydration Guide | CLAI"
+    description: "Prepare your skin for winter: barrier repair, hydration and smart routine swaps for the colder months, from the CLAI team."
+    datePublished: 2025-05-07
+    author: Kim Van Zyl
+    lastmod: 2025-05-07

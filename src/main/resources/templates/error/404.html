@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- Shown by Spring Boot for any unknown URL (HTTP 404). Search engines need a real 404, not a redirect. -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="~{fragments/layout :: head('blog')}"></head>
+  <body>
+  <th:block th:replace="~{fragments/layout :: page-top}"></th:block>
+
+  <section class="service white-bg space-pt space-pb">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h1 class="title">Page not found</h1>
+            <p class="section-description">
+              Sorry, the page you were looking for doesn&rsquo;t exist or has moved.
+            </p>
+            <p class="section-description">
+              <a th:href="@{/}">Return to the home page</a>
+              &nbsp;&middot;&nbsp;
+              <a th:href="@{/contact-us}">Contact us</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <th:block th:replace="~{fragments/layout :: page-end('blog')}"></th:block>
+  </body>
+</html>

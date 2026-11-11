@@ -7,6 +7,14 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
+/**
+ * The site has no login: every page and static file is public. Spring Security is kept for
+ * CSRF protection on the contact form (POST /email) and its default security headers
+ * (HSTS, X-Frame-Options, X-Content-Type-Options).
+ *
+ * Unknown URLs now fall through to Spring MVC and get a real 404 page (templates/error/404.html)
+ * instead of the previous redirect to "/", which search engines treated as soft 404s.
+ */
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
@@ -17,18 +25,7 @@ public class SecurityConfig {
                         .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
                 )
                 .authorizeHttpRequests(requests -> requests
-                        .requestMatchers("/css/**", "/fonts/**", "/img/**", "/js/**", "/sass/**", "/docs/**", "/videos/**",
-                                "/", "/home", "/ivy-therapy", "/toxin", "/dermal-filler", "/biostimulators", "/skin-boosters", "/hyper-pigmentation",
-                                "/acne-and-acne-scaring", "/rosacea-and-sensitive-skin", "/hair-treatments", "/intimate-wellness",
-                                "/anti-ageing", "/contact-us", "/email", "/blog-single-why-clai", "/winter-skin-prep",
-                                "/sitemap.xml", "/robots.txt")
-                        .permitAll()
-                        .anyRequest().authenticated()
-                )
-                .exceptionHandling(exceptionHandling -> exceptionHandling
-                        .authenticationEntryPoint((request, response, authException) -> {
-                            response.sendRedirect("/");
-                        })
+                        .anyRequest().permitAll()
                 );
         return http.build();
     }

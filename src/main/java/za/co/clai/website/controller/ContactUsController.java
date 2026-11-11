@@ -26,8 +26,6 @@ public class ContactUsController {
     public String contactUsPage(Model model) {
         model.addAttribute("emailModel", new EmailModel());
         model.addAttribute("isContactUsActive", true);
-        model.addAttribute("facebook", socialMediaLinksModel.getFacebook());
-        model.addAttribute("instagram", socialMediaLinksModel.getInstagram());
         return "contact-us";
     }
 
