@@ -9088,6 +9088,18 @@ Blog Style 01
   font-size: 18px !important;
 }
 
+/* ===== Blog post title is the page's <h1> (SEO) but keeps the look of the theme's h5 ===== */
+.blog-post .blog-post-title h1{
+  font-size: 22px;
+  line-height: 1.2;
+}
+@media (max-width: 991px) {
+  .blog-post .blog-post-title h1{ font-size: 20px; }
+}
+@media (max-width: 767px) {
+  .blog-post .blog-post-title h1{ font-size: 18px; }
+}
+
 /* WHY CLAI / blog page: make first section sit flush under navbar */
 .blog-tight-top {
   padding-top: 0 !important;
