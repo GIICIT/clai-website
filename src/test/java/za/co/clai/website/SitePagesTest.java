@@ -168,6 +168,35 @@ class SitePagesTest {
         });
     }
 
+    /**
+     * Structured data must match what visitors see: every offer price in the JSON-LD appears in the page's text,
+     * and every treatment page with prices in its cards publishes an offer catalogue.
+     */
+    @TestFactory
+    Stream<DynamicTest> offerPricesMatchTheVisiblePage() {
+        return sitePages.all().stream().filter(PageMeta::isTreatment).map(page -> DynamicTest.dynamicTest(page.path(), () -> {
+            String html = render(page.path(), 200);
+            String digits = html.replaceAll("(?s)<script.*?</script>", " ").replaceAll("<[^>]+>", " ")
+                    .replaceAll("(?<=\\d)[ ,](?=\\d{3}\\b)", "");   // "R 15 990" / "R7,900" -> 15990 / 7900
+            List<Integer> prices = new ArrayList<>();
+            for (String block : all(JSON_LD, html)) {
+                com.fasterxml.jackson.databind.JsonNode node = json.readTree(block);
+                if (!node.has("hasOfferCatalog")) continue;
+                for (com.fasterxml.jackson.databind.JsonNode offer : node.get("hasOfferCatalog").get("itemListElement")) {
+                    assertThat(offer.at("/itemOffered/name").asText()).as("offer name on %s", page.path()).isNotBlank();
+                    for (String f : List.of("/price", "/priceSpecification/minPrice", "/priceSpecification/maxPrice")) {
+                        if (!offer.at(f).isMissingNode()) prices.add(offer.at(f).asInt());
+                    }
+                }
+            }
+            boolean cardsShowPrices = html.matches("(?s).*class=\"card-body\".*\\bR\\s?\\d.*");
+            if (cardsShowPrices) assertThat(prices).as("offer catalogue on %s", page.path()).isNotEmpty();
+            for (int price : prices) {
+                assertThat(digits).as("price %s from the JSON-LD shown on %s", price, page.path()).containsPattern("R\\s?" + price + "\\b");
+            }
+        }));
+    }
+
     @Test
     void sitemapListsEveryPage() throws Exception {
         MvcResult result = mvc.perform(get("/sitemap.xml")).andReturn();

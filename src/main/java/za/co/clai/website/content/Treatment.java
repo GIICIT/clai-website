@@ -9,8 +9,10 @@ import java.util.List;
  * @param title    button label (plain text; it is HTML-escaped when rendered)
  * @param body     card body HTML, normally one {@code <p class="mb-0">...</p>}
  * @param children ids of cards shown in a nested accordion under the body (e.g. Sculptra Face / Body), or empty
+ * @param price    price parsed from the body text (for structured data), or null when the card states none
+ * @param summary  the body's first paragraph as plain text, at most ~300 characters (structured data description)
  */
-public record Treatment(String id, String title, String body, List<String> children) {
+public record Treatment(String id, String title, String body, List<String> children, TreatmentPrice price, String summary) {
 
     /** Part of the nested accordion's ids: "sculptra" -> "Sculptra", "glow-and-behold" -> "GlowAndBehold". */
     public String key() {

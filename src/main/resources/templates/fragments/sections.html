@@ -25,7 +25,7 @@
      The text fragment holds everything inside the centred column (headings included).
 
   Accordion content: items='id-one, id-two' + prefix='xTreatments' renders those cards from content/treatments.yml
-  (preferred); or cards=~{::xCards} for hand-written markup. Cards inside `cards` are normal accordion cards (fragments/accordion :: card),
+  (preferred; the section then also outputs JSON-LD offers for the cards whose text states a price); or cards=~{::xCards} for hand-written markup. Cards inside `cards` are normal accordion cards (fragments/accordion :: card),
   and their parentId must equal accordionId. Fragment names (xCards, xIntro) must be unique on the page
   and must not be HTML tag names.
 -->
@@ -86,6 +86,11 @@
       </div>
     </div>
   </div>
+  <!-- Structured data: the priced treatments of this section as the clinic's offer catalogue (Treatments.offerCatalog) -->
+  <th:block th:if="${items != null and page != null}"
+            th:with="catalog=${@treatments.offerCatalog(items, #strings.isEmpty(title) ? page.name : title, site.absolute(page.path), site.absolute('/') + '#business')}">
+    <script th:if="${catalog != null}" type="application/ld+json" th:inline="javascript">[[${catalog}]]</script>
+  </th:block>
 </section>
 
 <section class="products-banner ivy-tight" th:fragment="accordion-centered" th:classappend="${spacing}">
@@ -115,6 +120,11 @@
       </div>
     </div>
   </div>
+  <!-- Structured data: the priced treatments of this section as the clinic's offer catalogue (Treatments.offerCatalog) -->
+  <th:block th:if="${items != null and page != null}"
+            th:with="catalog=${@treatments.offerCatalog(items, #strings.isEmpty(title) ? page.name : title, site.absolute(page.path), site.absolute('/') + '#business')}">
+    <script th:if="${catalog != null}" type="application/ld+json" th:inline="javascript">[[${catalog}]]</script>
+  </th:block>
 </section>
 
 <section class="service white-bg" th:fragment="intro-centered" th:classappend="${spacing}">

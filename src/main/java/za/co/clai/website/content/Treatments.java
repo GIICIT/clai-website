@@ -42,7 +42,7 @@ public class Treatments {
             String body = required(t, "body", id).strip();
             List<String> children = t.get("children") == null ? List.of()
                     : List.copyOf((Collection<String>) t.get("children"));
-            map.put(id, new Treatment(id, title, body, children));
+            map.put(id, new Treatment(id, title, body, children, TreatmentPrice.parse(body), summary(body)));
         }
         for (Treatment t : map.values()) {
             for (String child : t.children()) {
@@ -86,6 +86,78 @@ public class Treatments {
             throw new IllegalArgumentException("accordion has more than " + WORDS.length + " cards");
         }
         return WORDS[n - 1];
+    }
+
+    /**
+     * schema.org data for the priced treatments in a section, as the clinic's offer catalogue:
+     * {"@type": "MedicalBusiness", "@id": business, "hasOfferCatalog": {OfferCatalog of Offer -> Service}}.
+     * Rendered as JSON-LD by fragments/sections; the @id merges it into the site-wide MedicalBusiness.
+     * Returns null when none of the cards states a price (e.g. "Types of Acne").
+     */
+    public Map<String, Object> offerCatalog(Object ids, String name, String pageUrl, String businessId) {
+        List<Object> offers = new ArrayList<>();
+        for (String id : list(ids)) {
+            Treatment t = get(id);
+            if (t.price() == null) {
+                continue;
+            }
+            Map<String, Object> service = new LinkedHashMap<>();
+            service.put("@type", "Service");
+            service.put("name", t.title());
+            if (!t.summary().isEmpty()) {
+                service.put("description", t.summary());
+            }
+            service.put("url", pageUrl);
+            service.put("provider", Map.of("@id", businessId));
+            Map<String, Object> offer = new LinkedHashMap<>();
+            offer.put("@type", "Offer");
+            offer.put("itemOffered", service);
+            TreatmentPrice p = t.price();
+            if (p.exact() != null) {
+                offer.put("price", p.exact());
+                offer.put("priceCurrency", "ZAR");
+            } else {
+                Map<String, Object> spec = new LinkedHashMap<>();
+                spec.put("@type", "PriceSpecification");
+                spec.put("priceCurrency", "ZAR");
+                spec.put("minPrice", p.min());
+                if (p.max() != null) {
+                    spec.put("maxPrice", p.max());
+                }
+                if (p.unit() != null) {
+                    spec.put("unitText", p.unit());
+                }
+                offer.put("priceSpecification", spec);
+            }
+            offers.add(offer);
+        }
+        if (offers.isEmpty()) {
+            return null;
+        }
+        Map<String, Object> catalog = new LinkedHashMap<>();
+        catalog.put("@type", "OfferCatalog");
+        catalog.put("name", name);
+        catalog.put("url", pageUrl);
+        catalog.put("itemListElement", offers);
+        Map<String, Object> root = new LinkedHashMap<>();
+        root.put("@context", "https://schema.org");
+        root.put("@type", "MedicalBusiness");
+        root.put("@id", businessId);
+        root.put("hasOfferCatalog", catalog);
+        return root;
+    }
+
+    /** First paragraph (up to the first blank line break or list) as plain text, cut at a word near 300 chars. */
+    static String summary(String bodyHtml) {
+        String first = bodyHtml.split("<br>\\s*<br>|<ul", 2)[0];
+        String text = first.replaceAll("<[^>]+>", " ")
+                .replace("&amp;", "&").replace("&rsquo;", "’").replace("&nbsp;", " ")
+                .replaceAll("&[a-z]+;", " ").replaceAll("\\s+", " ").trim();
+        if (text.length() <= 300) {
+            return text;
+        }
+        int cut = text.lastIndexOf(' ', 297);
+        return text.substring(0, cut > 0 ? cut : 297) + "…";
     }
 
     private static String required(Map<String, Object> m, String key, String id) {
