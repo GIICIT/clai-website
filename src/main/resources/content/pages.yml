@@ -59,6 +59,14 @@ pages:
     image: /img/treatments/skin-boosters/skin_boosters_1.jpg
     lastmod: 2026-11-11
 
+  - path: /signature-eye-treatments
+    name: Signature Eye Treatments
+    type: treatment
+    title: "Signature Eye Treatments in Durbanville | CLAI"
+    description: "Signature eye treatments at CLAI Durbanville: PRF, polynucleotides, tear trough filler and Sunekos for fine lines, dark circles and under-eye hollowing."
+    image: /img/treatments/signature-eye-treatments/signature_eye_treatments_1.jpg
+    lastmod: 2026-11-13
+
   - path: /hyper-pigmentation
     name: Hyperpigmentation
     type: treatment

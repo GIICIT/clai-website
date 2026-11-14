@@ -9124,6 +9124,18 @@ Blog Style 01
   line-height: 1.3;
 }
 
+/* Home: a category row with a single card (Signature Eye Treatments, KAN-10), centred under the 3-card rows.
+   Its carousel has data-loop/autoplay off (no cloned cards); the card keeps Owl's computed width (= a grid card),
+   the stage shrinks to it and centres. Owl sets stage width and item margin inline, hence !important. */
+.category-row-single .owl-stage {
+  width: fit-content !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.category-row-single .owl-item {
+  margin-right: 0 !important;
+}
+
 /* WHY CLAI / blog page: make first section sit flush under navbar */
 .blog-tight-top {
   padding-top: 0 !important;

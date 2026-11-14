@@ -1686,3 +1686,57 @@ tri-therapy-with-mesotherapy-face-plus-neck:
       <br><br>
       <b>Time: 75 minutes</b>
     </p>
+
+# shown-on: signature-eye-treatments. ticket: KAN-10.
+advanced-eye-renewal:
+  title: "The Advanced Eye Renewal"
+  body: |
+    <p class="mb-0">
+      <b>PRF + Polynucleotides</b>
+      <br>
+      A combination approach bringing together PRF and polynucleotides to target under-eye skin quality. Designed to support a smoother, healthier-looking appearance, this treatment combines two approaches used in regenerative aesthetics.
+      <br><br>
+      Best suited to selected patients seeking a more comprehensive approach to under-eye skin rejuvenation.
+      <br><br>
+      <b>Price: R4300</b>
+      <br><br>
+      <b>Time: 60 minutes</b>
+    </p>
+
+# shown-on: signature-eye-treatments. ticket: KAN-10.
+eye-contour:
+  title: "The Eye Contour"
+  body: |
+    <p class="mb-0">
+      <b>Tear Trough Filler</b>
+      <br>
+      A carefully assessed hyaluronic acid filler treatment designed to address selected cases of under-eye hollowing and volume loss. The aim is to soften the appearance of the tear trough and create a more rested, balanced appearance.
+      <br><br>
+      Best suited to appropriate candidates with under-eye hollowing, following assessment by our aesthetic doctor.
+      <br><br>
+      <b>Price: R5100</b>
+      <br><br>
+      <b>Time: 60 minutes</b>
+    </p>
+
+# shown-on: signature-eye-treatments. ticket: KAN-10.
+eye-revive:
+  title: "The Eye Revive"
+  body: |
+    <p class="mb-0">
+      <b>Sunekos</b>
+      <br>
+      An injectable treatment combining hyaluronic acid with amino acids, designed to support the skin's quality and hydration. Sunekos may help improve the appearance of fine lines and skin texture in suitable patients.
+      <br><br>
+      <b>Treatment 1</b>
+      <br>
+      <b>Price: R4200</b>
+      <br>
+      <b>Time: 60 minutes</b>
+      <br><br>
+      <b>Treatment 2</b>
+      <br>
+      <b>Price: R2500</b>
+      <br>
+      <b>Time: 60 minutes</b>
+    </p>

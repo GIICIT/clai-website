@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="~{fragments/layout :: head('treatment')}"></head>
+  <body>
+  <th:block th:replace="~{fragments/layout :: page-top}"></th:block>
+  <section th:replace="~{fragments/sections :: hero-split(title='Signature Eye Treatments',
+                 image='img/treatments/signature-eye-treatments/signature_eye_treatments_1.jpg',
+                 imageW=659,
+                 imageH=988,
+                 imageAlt='Signature eye treatment at CLAI Durbanville',
+                 text=~{::signatureEyeIntro})}">
+    <th:block th:fragment="signatureEyeIntro">
+                      The eye area is often one of the first places to show signs of fatigue and ageing. From fine lines
+                      and dark circles to under-eye hollowing, puffiness and changes in skin quality, each concern requires
+                      an individual approach.
+
+                      <br>
+                      <br>
+
+                      At CLAI, our Signature Eye Treatments combine advanced aesthetic and regenerative techniques with a
+                      personalised, science-led approach. From PRF and polynucleotides to targeted filler treatments and
+                      Sunekos, every recommendation begins with an assessment by our aesthetic doctor to understand your
+                      anatomy, skin quality and aesthetic goals.
+
+                      <br>
+                      <br>
+
+                      Whether your focus is improving skin quality, softening the appearance of fine lines or restoring a
+                      brighter, more refreshed look, we tailor our approach to your individual needs.
+
+                      <br>
+                      <br>
+
+                      Our philosophy is simple: subtle, considered treatments that help you look refreshed while
+                      preserving what makes you, you.
+
+                    </th:block>
+  </section>
+
+  <!-- DROP-IN SECTION: products-banner with accordion (no extra title) -->
+  <section th:replace="~{fragments/sections :: accordion-split(title='Eye Treatments',
+                 accordionId='accordion-signature-eye-treatments',
+                 image='img/treatments/signature-eye-treatments/signature_eye_treatments_2.jpg',
+                 imageW=659,
+                 imageH=988,
+                 imageAlt='Eye treatments at CLAI',
+                 prefix='signatureEyeTreatments',
+                 items='advanced-eye-renewal, eye-contour, eye-revive')}"></section>
+  <th:block th:replace="~{fragments/layout :: page-end('treatment')}"></th:block>
+  </body>
+</html>

@@ -329,4 +329,44 @@
             </div>
         </div>
     </section>
+    <!-- Row 4: a single category card, centred (KAN-10) -->
+    <section class="category-section category-row-single space-pb position-relative px-md-5">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-xl-8">
+                    <div class="owl-carousel owl-nav-bottom-center"
+                         data-loop="false" data-autoplay="false"
+                         data-nav-dots="false" data-nav-arrow="false"
+                         data-items="3" data-lg-items="3" data-md-items="3"
+                         data-sm-items="2" data-xs-items="1" data-xx-items="1"
+                         data-space="20" data-autoheight="true">
+
+                        <!-- Card 1 -->
+                        <div class="item">
+                            <div class="category-box">
+                                <div class="category-img">
+                                    <img width="659" height="823" loading="lazy" decoding="async" class="img-fluid" src="/img/category/signature-eye-treatments.jpg" alt="Signature eye treatments">
+                                </div>
+
+                                <div class="category-panel js-category-panel">
+                                    <div class="category-title text-center js-category-toggle">
+                                        <h4><a>Signature Eye Treatments +</a></h4>
+                                    </div>
+                                    <div class="category-tray">
+                                        <ul class="tray-list">
+                                            <li><a class="tray-link" th:href="@{/signature-eye-treatments}" th:classappend="${page?.path == '/signature-eye-treatments'} ? ' active' : ''"><span>The Advanced Eye Renewal</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/signature-eye-treatments}" th:classappend="${page?.path == '/signature-eye-treatments'} ? ' active' : ''"><span>The Eye Contour</span></a></li>
+                                            <li><a class="tray-link" th:href="@{/signature-eye-treatments}" th:classappend="${page?.path == '/signature-eye-treatments'} ? ' active' : ''"><span>The Eye Revive</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
